@@ -1,0 +1,5 @@
+apps:
+  - script: 'server/index.js'
+    name: 'Vue App'
+    exec_mode: 'cluster'
+    instances: 4

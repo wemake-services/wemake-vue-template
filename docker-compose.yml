@@ -1,0 +1,13 @@
+version: "3"
+services:
+  vue:
+    build: .
+    volumes:
+      - .:/code
+    networks:
+      - webnet
+    ports:
+      - "3000:3000"
+
+networks:
+  webnet:

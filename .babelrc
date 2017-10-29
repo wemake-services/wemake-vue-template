@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["vue-app", {
+      "useBuiltIns": true
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./client"],
+      "alias": {
+        "root": "./client",
+        "components": "./client/components"
+      }
+    }]
+  ]
+}

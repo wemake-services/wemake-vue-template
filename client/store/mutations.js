@@ -1,11 +1,13 @@
+// @flow
+
 import * as types from './types'
 
 export default {
-  [types.INCREMENT]: (state) => {
+  [types.INCREMENT]: (state: { count: number }) => {
     state.count++
   },
 
-  [types.DECREMENT]: (state) => {
+  [types.DECREMENT]: (state: { count: number }) => {
     state.count--
   }
 }

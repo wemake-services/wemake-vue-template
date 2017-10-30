@@ -22,7 +22,7 @@ router.onReady(() => {
       return diffed || (diffed = (prevMatched[i] !== c))
     })
 
-    if (!activated.length) {
+    if (activated.length === 0) {
       return next()
     }
 

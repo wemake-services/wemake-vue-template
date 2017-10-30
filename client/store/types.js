@@ -1,3 +1,5 @@
+// @flow
+
 const INCREMENT = 'increment'
 const DECREMENT = 'decrement'
 

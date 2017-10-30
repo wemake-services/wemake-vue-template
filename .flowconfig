@@ -1,0 +1,15 @@
+[ignore]
+./dist
+<PROJECT_ROOT>/node_modules/.*config-chain/test/broken.json
+
+[include]
+<PROJECT_ROOT>/client
+<PROJECT_ROOT>/
+
+[libs]
+
+[lints]
+
+[options]
+module.file_ext=.vue
+module.file_ext=.js

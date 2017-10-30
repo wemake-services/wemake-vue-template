@@ -9,4 +9,4 @@ ADD . /code
 EXPOSE 3000
 
 RUN npm install -g yarn pm2 && yarn install
-CMD ["pm2-docker", "process.yml"]
+CMD ["pm2-docker", "./docker/vue/process.yml"]

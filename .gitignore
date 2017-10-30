@@ -130,4 +130,5 @@ bower_components/
 *.log
 
 dist/
-
+#### custom ####
+flow-typed/

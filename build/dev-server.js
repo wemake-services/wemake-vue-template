@@ -31,7 +31,7 @@ try {
   compiler = webpack(webpackConfig)
 } catch (err) {
   console.log(err.message)
-  process.exit(1)
+  process.exit(1) // eslint-disable-line unicorn/no-process-exit
 }
 
 const server = new Server(compiler, Object.assign({

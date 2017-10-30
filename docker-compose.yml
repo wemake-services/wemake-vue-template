@@ -1,7 +1,9 @@
 version: "3"
 services:
   vue:
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/vue/Dockerfile
     volumes:
       - .:/code
     networks:

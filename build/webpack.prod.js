@@ -3,8 +3,10 @@ process.env.NODE_ENV = 'production'
 
 const webpack = require('webpack')
 const merge = require('webpack-merge')
+const analyzer = require('webpack-bundle-analyzer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 const base = require('./webpack.base')
 const _ = require('./utils')
 
@@ -41,11 +43,21 @@ module.exports = merge(base, {
   devtool: 'source-map',
 
   plugins: [
+    // Analyze and visualize webpack bundle size:
+    new analyzer.BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    }),
+
     new ProgressPlugin(),
     new ExtractTextPlugin('styles.[contenthash:8].css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
+
+    // webpack@3 dark magic:
+    new webpack.optimize.ModuleConcatenationPlugin(),
+
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
@@ -64,6 +76,16 @@ module.exports = merge(base, {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest'
+    }),
+
+    // Create .gz files:
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|html)$/,
+      threshold: 10240,
+      minRatio: 0.8
+      // deleteOriginalAssets: true
     })
   ],
 

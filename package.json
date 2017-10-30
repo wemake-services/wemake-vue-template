@@ -9,35 +9,51 @@
     "npm": "^5.4.2"
   },
   "scripts": {
-    "test:unit": "jest",
-    "test": "npm run test:unit",
-    "start": "cross-env NODE_ENV=production node server",
+    "postinstall": "flow-typed install",
+    "test:security": "nsp check",
+    "test:unit": "cross-env NODE_ENV=test jest --no-cache",
+    "test": "npm run test:unit && npm run test:security && npm run lint",
     "clean": "rimraf dist",
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
     "build:server": "cross-env NODE_ENV=production webpack --config build/webpack.server.js",
     "build": "npm run clean && npm run build:client && npm run build:server",
-    "dev": "node build/dev-server.js",
-    "lint": "eslint test build client --ext .js --ext .vue"
+    "dev": "cross-env NODE_ENV=development node build/dev-server.js",
+    "start": "cross-env NODE_ENV=production node server",
+    "lint:js": "eslint --ext .js,.vue client server test build",
+    "lint:css": "stylelint '**/*.{vue,scss}' --syntax scss",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",
   "postcss": {
     "plugins": {
       "autoprefixer": {},
-      "postcss-nested": {}
+      "cssnano": {},
+      "css-mqpacker": {}
     }
   },
   "browserslist": [
     "last 2 versions",
     "ie > 8"
   ],
+  "stylelint": {
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "processors": [
+      "stylelint-processor-html"
+    ],
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null
+    }
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
       "vue"
     ],
     "collectCoverage": true,
-    "coverageFormats": ["json", "html"],
     "verbose": true,
     "globals": {
       "NODE_ENV": "test"
@@ -71,34 +87,46 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-vue-app": "^1.1.1",
     "chalk": "^1.1.3",
+    "compression-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^2.0.0",
     "css-loader": "^0.23.1",
+    "css-mqpacker": "^6.0.1",
+    "cssnano": "^3.10.0",
     "eslint": "^4.10.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype-errors": "^3.3.5",
     "eslint-plugin-html": "^3.2.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^3.13.1",
+    "eslint-plugin-unicorn": "^2.1.2",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.9.0",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.1",
     "friendly-errors-webpack-plugin": "^1.1.2",
     "html-webpack-plugin": "^2.22.0",
     "jest": "^21.2.1",
     "node-sass": "^4.5.3",
+    "nsp": "^2.8.1",
     "postcss-loader": "^0.9.1",
-    "postcss-nested": "^1.0.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-processor-html": "^1.0.0",
+    "stylelint-scss": "^2.1.0",
+    "stylelint-webpack-plugin": "^0.9.0",
     "vue-jest": "^1.0.0",
     "vue-loader": "^11.0.0",
     "vue-server-renderer": "^2.5.2",
@@ -106,6 +134,7 @@
     "vue-template-compiler": "^2.2.0",
     "vue-test-utils": "^1.0.0-beta.3",
     "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.6.1",
     "webpack-hot-middleware": "^2.20.0",
     "webpack-merge": "^4.1.0"

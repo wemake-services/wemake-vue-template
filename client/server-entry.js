@@ -6,7 +6,7 @@ export default (context) => {
     router.push(context.url)
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents()
-      if (!matchedComponents.length) {
+      if (matchedComponents.length === 0) {
         // eslint-disable-next-line prefer-promise-reject-errors
         return reject({ code: 404 })
       }

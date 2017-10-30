@@ -2,14 +2,14 @@
   "presets": [
     ["vue-app", {
       "useBuiltIns": true
-    }]
+    }],
+    "flow"
   ],
   "plugins": [
     ["module-resolver", {
       "root": ["./client"],
       "alias": {
-        "root": "./client",
-        "components": "./client/components"
+        "client": "./client"
       }
     }]
   ]

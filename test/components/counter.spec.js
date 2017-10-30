@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { mount, createLocalVue } from 'vue-test-utils'
-import Counter from 'root/components/Counter'
-import createStore from 'root/store'
-import * as types from 'root/store/types'
+import Counter from 'client/components/Counter'
+import createStore from 'client/store'
+import * as types from 'client/store/types'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

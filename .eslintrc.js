@@ -1,9 +1,12 @@
 module.exports = {
   "extends": [
-    "standard"
+    "standard",
+    "plugin:unicorn/recommended"
   ],
   "plugins": [
-    "html"
+    "html",
+    "flowtype-errors",
+    "unicorn"
   ],
   "rules": {
     "import/no-unresolved": 0,
@@ -17,10 +20,17 @@ module.exports = {
     // allow paren-less arrow functions
     "arrow-parens": 0,
     // allow async-await
-    "generator-star-spacing": 0
+    "generator-star-spacing": 0,
+
+    // raise flow errors
+    "flowtype-errors/show-errors": 2,
+
+    // leave files alone
+    "unicorn/filename-case": 0
   },
   "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 2017,
     "sourceType": "module"
   }
 }

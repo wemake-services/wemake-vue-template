@@ -3,6 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const StyleLintPlugin = require('stylelint-webpack-plugin')
 const config = require('./config')
 const _ = require('./utils')
 
@@ -30,7 +31,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue: 'vue/dist/vue.js',
+      client: _.cwd('./client')
     },
     modules: [
       // This means you can get rid of dot hell
@@ -78,6 +80,10 @@ module.exports = {
   },
 
   plugins: [
+    new StyleLintPlugin({
+      syntax: 'scss',
+      files: '**/*.{vue,scss}'
+    }),
     new HtmlWebpackPlugin({
       title: config.title,
       template: path.resolve(__dirname, 'index.html'),

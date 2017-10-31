@@ -8,9 +8,9 @@
       This data is async too!
     </p>
 
-    <ul v-if="item">
-      <li>ID: {{ item.id }}</li>
-      <li>Name: {{ item.name }}</li>
+    <ul class="item" v-if="item">
+      <li class="item-id">ID: {{ item.id }}</li>
+      <li class="item-name">Name: {{ item.name }}</li>
     </ul>
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
   mixins: [AsyncDataMixin],
 
   asyncData ({ store }) {
-    console.log('dispatch')
     return store.dispatch('fetchAsync')
   },
 

@@ -1,7 +1,7 @@
 FROM node:8.8-alpine
 
 LABEL maintainer="sobolevn@wemake.services"
-
+ARG APP_ENV=production
 
 # System deps:
 
@@ -22,4 +22,4 @@ ADD . /code
 # Project initialization:
 
 EXPOSE 3000 4000
-RUN npm install -g yarn pm2 && yarn install
+RUN npm install -g yarn pm2 && test "$APP_ENV" == production && yarn install --production --frozen-lockfile || yarn install --frozen-lockfile

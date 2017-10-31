@@ -12,7 +12,7 @@ export default {
     state.count--
   },
 
-  [types.FETCH_ITEM]: (state: State, payload: ?Item) => {
+  [types.FETCH_ITEM]: (state: State, payload: Item) => {
     state.item = payload
   }
 }

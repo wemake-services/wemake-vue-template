@@ -9,8 +9,6 @@ export default {
   },
 
   fetchAsync ({ commit }) {
-    console.log('working')
-
     setTimeout(() => {
       const item: Item = {
         id: 4,

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="async.spec"
+    errors="0" failures="0" hostname="" id="" package="async.spec" skipped="0"
+    tests="1" time="2.326" timestamp="Tue, 31 Oct 2017 21:55:57 GMT">
+  
+    <testcase name="default e2e tests" classname="async.spec" time="2.326" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

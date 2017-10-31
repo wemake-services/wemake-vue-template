@@ -8,9 +8,8 @@
   "plugins": [
     ["module-resolver", {
       "root": ["./client"],
-      "alias": {
-        "client": "./client"
-      }
+      "cwd": "./client",
+      "extensions": [".js", "vue"]
     }]
   ]
 }

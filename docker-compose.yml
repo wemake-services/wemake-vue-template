@@ -4,12 +4,17 @@ services:
     build:
       context: .
       dockerfile: ./docker/vue/Dockerfile
+    command: yarn dev
     volumes:
       - .:/code
+      - /code/node_modules
     networks:
       - webnet
     ports:
-      - "3000:3000"
+      - "4000:4000"
+    env_file: ./config/.env
+    environment:
+      DEV_HOST: "0.0.0.0"
 
 networks:
   webnet:

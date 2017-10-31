@@ -1,8 +1,13 @@
+'use strict'
+
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
 // const favicon = require('serve-favicon')
 const resolve = (file) => path.resolve(__dirname, file)
+
+// Loading env files:
+require('dotenv').config({ path: resolve('../config/.env') })
 
 const app = express()
 
@@ -23,10 +28,6 @@ function createRenderer (bundle, template) {
   })
 }
 
-const serve = (path, cache) => express.static(resolve(path), {
-  maxAge: cache ? 60 * 60 * 24 * 30 : 0
-})
-
 app.use(express.static(resolve('../dist')))
 // app.use(favicon(path.resolve(__dirname, 'src/assets/logo.png')))
 // app.use('/service-worker.js', serve('./dist/service-worker.js'))
@@ -40,7 +41,7 @@ app.get('*', (req, res) => {
 
   res.setHeader('Content-Type', 'text/html')
 
-  const errorHandler = err => {
+  const errorHandler = (err) => {
     if (err && err.code === 404) {
       res.status(404).end('404 | Page Not Found')
     } else {
@@ -57,8 +58,8 @@ app.get('*', (req, res) => {
     .pipe(res)
 })
 
-const port = process.env.PORT || 3000
-const host = process.env.HOST || '0.0.0.0'
+const port = process.env.SSR_PORT
+const host = process.env.SSR_HOST
 
 app.listen(port, host, () => {
   console.log(`server started at http://${host}:${port}`)

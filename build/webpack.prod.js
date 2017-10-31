@@ -1,5 +1,4 @@
 'use strict'
-process.env.NODE_ENV = 'production'
 
 const webpack = require('webpack')
 const merge = require('webpack-merge')
@@ -12,7 +11,7 @@ const _ = require('./utils')
 
 // Extract css in standalone css files
 const styleLoaders = []
-_.cssProcessors.forEach(processor => {
+_.cssProcessors.forEach((processor) => {
   let loaders
   if (processor.loader === '') {
     loaders = ['postcss-loader']
@@ -21,6 +20,7 @@ _.cssProcessors.forEach(processor => {
   }
   styleLoaders.push({
     test: processor.test,
+    options: processor.options,
     loader: ExtractTextPlugin.extract({
       use: [_.cssLoader].concat(loaders),
       fallback: 'style-loader'
@@ -67,16 +67,22 @@ module.exports = merge(base, {
         comments: false
       }
     }),
+
+    // Keep module.id stable when vender modules does not change
+    new webpack.HashedModuleIdsPlugin(),
+
     // Extract vendor chunks
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: module => {
-        return module.resource && /\.(js|css|es6)$/.test(module.resource) && module.resource.indexOf('node_modules') !== -1
+      minChunks: (module) => {
+        const isModule = module.resource && /\.(js|css|es6)$/.test(
+          module.resource
+        )
+        const isVendor = module.resource.indexOf('node_modules') !== -1
+        return isModule && isVendor
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest'
-    }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
 
     // Create .gz files:
     new CompressionPlugin({

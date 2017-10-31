@@ -1,5 +1,4 @@
 'use strict'
-process.env.NODE_ENV = 'development'
 
 const webpack = require('webpack')
 const merge = require('webpack-merge')
@@ -8,7 +7,7 @@ const base = require('./webpack.base')
 const _ = require('./utils')
 
 const styleLoaders = []
-_.cssProcessors.forEach(processor => {
+_.cssProcessors.forEach((processor) => {
   let loaders
   if (processor.loader === '') {
     loaders = ['postcss-loader']

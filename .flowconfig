@@ -11,5 +11,7 @@
 [lints]
 
 [options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=client
 module.file_ext=.vue
 module.file_ext=.js

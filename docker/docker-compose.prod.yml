@@ -1,0 +1,6 @@
+version: "3"
+services:
+  vue:
+    command: pm2-docker ./docker/vue/process.yml
+    ports:
+      - "3000:3000"

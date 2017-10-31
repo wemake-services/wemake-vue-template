@@ -1,7 +1,7 @@
 'use strict'
+
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const config = require('./config')
 
 const _ = module.exports = {}
 
@@ -10,10 +10,14 @@ _.cwd = (file) => {
 }
 
 _.cssLoader = 'css-loader?-autoprefixer'
+_.sassLoader = 'sass-loader?sourceMap'
 
 _.cssProcessors = [
   { loader: '', test: /\.css$/ },
-  { loader: 'sass-loader?sourceMap', test: /\.scss$/ }
+  {
+    loader: _.sassLoader,
+    test: /\.scss$/
+  }
 ]
 
 _.outputPath = path.join(__dirname, '../dist')
@@ -43,7 +47,7 @@ _.loadersOptions = () => {
       vue: {
         loaders: {
           css: generateLoader([]),
-          scss: generateLoader(['sass-loader?sourceMap']),
+          scss: generateLoader([_.sassLoader]),
           js: 'babel-loader'
         }
       }

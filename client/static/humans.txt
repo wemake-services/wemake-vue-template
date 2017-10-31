@@ -1,0 +1,14 @@
+# The humans responsible & technology colophon
+# http://humanstxt.org/
+
+
+## wemake.services
+
+Team:
+
+
+## Technologies
+
+Language: English
+Doctype: HTML5
+Technologies: Javascript, Vue

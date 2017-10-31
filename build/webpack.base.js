@@ -31,8 +31,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
-      vue: 'vue/dist/vue.js',
-      client: _.cwd('./client')
+      vue: 'vue/dist/vue.js'
     },
     modules: [
       // This means you can get rid of dot hell
@@ -62,10 +61,6 @@ module.exports = {
         exclude: [/node_modules/]
       },
       {
-        test: /\.es6$/,
-        loaders: ['babel-loader']
-      },
-      {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file-loader',
         query: {
@@ -84,17 +79,27 @@ module.exports = {
       syntax: 'scss',
       files: '**/*.{vue,scss}'
     }),
+
     new HtmlWebpackPlugin({
       title: config.title,
       template: path.resolve(__dirname, 'index.html'),
-      filename: _.outputIndexPath
+      filename: _.outputIndexPath,
+      inject: true,
+      minify: {
+        removeComments: false, // comments are require for SSR
+        collapseWhitespace: true
+      },
+      // Necessary to consistently work with multiple chunks
+      chunksSortMode: 'dependency'
     }),
+
     new webpack.LoaderOptionsPlugin(_.loadersOptions()),
     new CopyWebpackPlugin([
       {
         from: _.cwd('./client/static'),
         // To the root of dist path
-        to: './'
+        to: './',
+        ignore: ['.*']
       }
     ])
   ],

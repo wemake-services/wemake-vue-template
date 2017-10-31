@@ -1,18 +1,22 @@
 'use strict'
-const fs = require('fs')
+
 const path = require('path')
-const chalk = require('chalk')
-const express = require('express')
 const webpack = require('webpack')
 const Server = require('webpack-dev-server')
 const webpackConfig = require('./webpack.dev')
 const config = require('./config')
 const LogPlugin = require('./log-plugin')
+const _ = require('./utils')
 
-const app = express()
+require('dotenv').config({ path: _.cwd('./config/.env') })
 
 const devServerOptions = Object.assign(
-  {}, webpackConfig.devServer, config.devServer
+  {},
+  webpackConfig.devServer,
+  {
+    host: process.env.DEV_HOST,
+    port: process.env.DEV_PORT
+  }
 )
 
 const host = devServerOptions.host

@@ -10,8 +10,7 @@
 <script>
 // @flow
 
-// eslint-disable-next-line flowtype-errors/show-errors
-import Counter from '../components/Counter'
+import Counter from 'components/Counter'
 
 export default {
   components: {
@@ -19,10 +18,10 @@ export default {
   },
 
   data () {
-    const flowTyped: string = './client'
+    const path: string = './client'
 
     return {
-      path: flowTyped
+      path
     }
   }
 }

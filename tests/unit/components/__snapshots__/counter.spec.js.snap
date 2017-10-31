@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component unit tests should match the snapshot 1`] = `
+"<div class=\\"counter-wrapper\\"><div class=\\"counter\\">
+    0
+  </div> <button>Increment</button> <button>Decrement</button> <button>Increment Async</button></div>"
+`;

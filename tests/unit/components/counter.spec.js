@@ -39,4 +39,10 @@ describe('Counter component unit tests', () => {
     wrapper.vm.$store.commit(types.DECREMENT)
     expect(wrapper.vm.count).toBe(-1)
   })
+
+  it('should match the snapshot', () => {
+    const wrapper = mount(Counter, { store, localVue })
+    console.log(wrapper.html())
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })

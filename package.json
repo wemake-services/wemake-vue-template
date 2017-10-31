@@ -11,7 +11,7 @@
   "scripts": {
     "postinstall": "flow-typed install",
     "test:security": "nsp check",
-    "test:unit": "cross-env NODE_ENV=test jest --no-cache",
+    "test:unit": "cross-env NODE_ENV=test jest --no-cache tests/unit",
     "test": "npm run test:unit && npm run test:security && npm run lint",
     "clean": "rimraf dist",
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",

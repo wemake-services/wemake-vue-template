@@ -31,7 +31,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
     alias: {
-      vue: 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.esm.js'
     },
     modules: [
       // This means you can get rid of dot hell

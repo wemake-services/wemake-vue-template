@@ -2,8 +2,10 @@
 
 const INCREMENT = 'increment'
 const DECREMENT = 'decrement'
+const FETCH_ITEM = 'fetchItem'
 
 export {
   INCREMENT,
-  DECREMENT
+  DECREMENT,
+  FETCH_ITEM
 }

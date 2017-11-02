@@ -15,7 +15,6 @@ module.exports = {
     start_process: false,
     server_path: '',
     log_path: '',
-    port: 4444,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path
     }
@@ -26,12 +25,7 @@ module.exports = {
       launch_url: 'http://127.0.0.1:3000',
       selenium_port: 9515,
       selenium_host: 'localhost',
-      default_path_prefix: '',
-      silent: true,
-      screenshots: {
-        enabled: false,
-        path: ''
-      }
+      default_path_prefix: ''
     },
     desiredCapabilities: {
       browserName: 'chrome',

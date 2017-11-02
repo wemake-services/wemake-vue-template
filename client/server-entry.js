@@ -5,6 +5,12 @@ export default (context) => {
     const { app, router, store } = createApp()
     router.push(context.url)
 
+    context.meta = {
+      inject: function () {
+        Object.assign(this, app.$meta().inject())
+      }
+    }
+
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents()
       if (matchedComponents.length === 0) {

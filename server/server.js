@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
-// const favicon = require('serve-favicon')
+const injectToTemplate = require('./seo')
 const resolve = (file) => path.resolve(__dirname, file)
 
 // Loading env files:
@@ -29,16 +29,12 @@ function createServer () {
     })
   }
 
-  app.use(express.static(resolve('../dist')))
-  // app.use(favicon(path.resolve(__dirname, 'src/assets/logo.png')))
-  // app.use('/service-worker.js', serve('./dist/service-worker.js'))
+  app.use(express.static(resolve('../dist'), { index: false }))
 
   app.get('*', (req, res) => {
     if (!renderer) {
       return res.end('waiting for compilation... refresh in a moment.')
     }
-
-    const s = Date.now()
 
     res.setHeader('Content-Type', 'text/html')
 
@@ -48,15 +44,19 @@ function createServer () {
       } else {
         // Render Error Page or Redirect
         res.status(500).end('500 | Internal Server Error')
+        // eslint-disable-next-line no-console
         console.error(`error during render : ${req.url}`)
+        // eslint-disable-next-line no-console
         console.error(err)
       }
     }
 
-    renderer.renderToStream({ url: req.url })
-      .on('error', errorHandler)
-      .on('end', () => console.log(`whole request: ${Date.now() - s}ms`))
-      .pipe(res)
+    const context = { url: req.url }
+    renderer.renderToString(context, (error, html) => {
+      if (error) return errorHandler(error)
+
+      res.send(injectToTemplate(html, context))
+    })
   })
 
   return app

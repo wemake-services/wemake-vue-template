@@ -12,6 +12,7 @@ module.exports = class LogPlugin {
       const url = chalk.yellow(
         `http://${this.options.host}:${this.options.port}`
       )
+      // eslint-disable-next-line no-console
       console.log(`> Server is running at ${url}\n`)
     })
   }

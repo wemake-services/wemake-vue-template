@@ -34,6 +34,7 @@ let compiler
 try {
   compiler = webpack(webpackConfig)
 } catch (err) {
+  // eslint-disable-next-line no-console
   console.log(err.message)
   process.exit(1) // eslint-disable-line unicorn/no-process-exit
 }

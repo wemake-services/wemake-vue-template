@@ -9,7 +9,6 @@ Vue.use(Vuex)
 export default function () {
   return new Vuex.Store({
     state: createState(),
-    strict: process.env.NODE_ENV !== 'production',
     mutations,
     actions
   })

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="missing.spec"
+    errors="0" failures="0" hostname="" id="" package="missing.spec" skipped="0"
+    tests="1" time="0.9330" timestamp="Thu, 02 Nov 2017 10:17:17 GMT">
+  
+    <testcase name="component does not exists" classname="missing.spec" time="0.9330" assertions="1">
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

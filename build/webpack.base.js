@@ -1,4 +1,5 @@
 'use strict'
+
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -81,14 +82,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      title: config.title,
       template: path.resolve(__dirname, 'index.html'),
       filename: _.outputIndexPath,
-      inject: true,
-      minify: {
-        removeComments: false, // comments are require for SSR
-        collapseWhitespace: true
-      },
       // Necessary to consistently work with multiple chunks
       chunksSortMode: 'dependency'
     }),

@@ -1,10 +1,11 @@
 'use strict'
 
 module.exports = {
-  'default e2e tests': function (browser) {
+  'async component': (browser) => {
     browser
-      .url(browser.launch_url + '/#/async')
+      .url(browser.launch_url + '/async')
       .waitForElementVisible('#app', 5000)
+      .assert.title('wemake-vue-template')
       .waitForElementVisible('.page', 5000)
       .waitForElementVisible('.item', 5000)
       .assert.containsText('.item-id', 'ID: 4')

@@ -42,7 +42,6 @@ describe('Counter component unit tests', () => {
 
   it('should match the snapshot', () => {
     const wrapper = mount(Counter, { store, localVue })
-    console.log(wrapper.html())
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

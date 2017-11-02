@@ -132,3 +132,4 @@ bower_components/
 dist/
 #### custom ####
 flow-typed/
+tests/e2e/reports/

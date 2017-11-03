@@ -6,9 +6,12 @@ import actions from './actions'
 
 Vue.use(Vuex)
 
+const strict = process.env.NODE_ENV === 'production'
+
 export default function () {
   return new Vuex.Store({
     state: createState(),
+    strict,
     mutations,
     actions
   })

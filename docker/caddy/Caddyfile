@@ -1,0 +1,13 @@
+www.{$DOMAIN_NAME} {
+    redir https://{$DOMAIN_NAME}
+}
+
+{$DOMAIN_NAME} {
+  tls {$TLS_EMAIL}
+
+  proxy / vue:4000
+
+  log stdout
+  errors stdout
+  gzip
+}

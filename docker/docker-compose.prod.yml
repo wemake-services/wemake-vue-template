@@ -1,6 +1,34 @@
 version: "3"
 services:
-  vue:
-    command: pm2-docker ./docker/vue/process.yml
+  caddy:
+    image: "wemakeservices/caddy-docker:v0.10.9"
+    env_file: ./config/.env
+    volumes:
+      - ./docker/caddy:/root/.caddy
     ports:
-      - "3000:3000"
+      - "80:80"
+      - "443:443"
+      - "2015:2015"
+    depends_on:
+      - vue
+    networks:
+      - webnet
+
+  vue:
+    build:
+      context: .
+      dockerfile: ./docker/vue/Dockerfile
+      args:
+        APP_ENV: production
+    command: pm2-docker ./docker/vue/process.yml
+    environment:
+      SSR_PORT: 4000
+      SSR_HOST: '0.0.0.0'
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: 100M
+      restart_policy:
+        condition: on-failure

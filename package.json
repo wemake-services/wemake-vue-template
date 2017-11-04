@@ -20,7 +20,7 @@
     "build": "npm run clean && npm run build:client && npm run build:server",
     "dev": "cross-env NODE_ENV=development node build/dev-server.js",
     "start": "cross-env NODE_ENV=production node server",
-    "lint:js": "eslint --ext .js,.vue client server tests build",
+    "lint:js": "eslint --ext .js,.vue,.json client server tests build",
     "lint:css": "stylelint '**/*.{vue,scss}' --syntax scss",
     "lint": "npm run lint:js && npm run lint:css"
   },
@@ -114,6 +114,7 @@
     "eslint-plugin-flowtype-errors": "^3.3.5",
     "eslint-plugin-html": "^3.2.2",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",

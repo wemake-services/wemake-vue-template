@@ -6,7 +6,8 @@ module.exports = {
   "plugins": [
     "html",
     "flowtype-errors",
-    "unicorn"
+    "unicorn",
+    "json"
   ],
   "rules": {
     "import/prefer-default-export": "off",

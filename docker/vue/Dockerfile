@@ -21,5 +21,5 @@ ADD . /code
 
 # Project initialization:
 
-EXPOSE 3000 4000
-RUN npm install -g yarn pm2 && test "$APP_ENV" == production && yarn install --production --frozen-lockfile || yarn install --frozen-lockfile
+EXPOSE 4000
+RUN npm install -g yarn pm2 && test "$APP_ENV" == production && yarn install --production --frozen-lockfile || yarn install --frozen-lockfile; yarn cache clean; npm cache clean --force

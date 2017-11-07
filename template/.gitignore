@@ -130,3 +130,6 @@ bower_components/
 *.log
 
 dist/
+#### custom ####
+flow-typed/
+tests/e2e/reports/

@@ -18,6 +18,7 @@
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
     "build:server": "cross-env NODE_ENV=production webpack --config build/webpack.server.js",
     "build": "npm run clean && npm run build:client && npm run build:server",
+    "ci": "npm run build && npm run test",
     "dev": "cross-env NODE_ENV=development node build/dev-server.js",
     "start": "cross-env NODE_ENV=production node server",
     "lint:js": "eslint --ext .js,.vue,.json client server tests build",

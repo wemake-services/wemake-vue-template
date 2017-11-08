@@ -1,5 +1,7 @@
 language: node_js
 
+sudo: true
+
 cache:
   directories:
     - node_modules
@@ -10,7 +12,7 @@ services:
   - docker
 
 install:
-  - apt-get update && apt-get install expect
+  - sudo apt-get update && sudo apt-get install expect
   - yarn install
 
 script:

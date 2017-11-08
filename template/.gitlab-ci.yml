@@ -4,8 +4,8 @@ variables:
   # When using dind, it's wise to use the overlayfs driver for
   # improved performance:
   DOCKER_DRIVER: overlay2
-  PROJECT_NAME: "canon_widgets"
-  GROUP_NAME: "wemake.services"
+  PROJECT_NAME: "{{ name }}"
+  GROUP_NAME: "{{ author }}"
   CONTAINER_TEST_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:$CI_BUILD_REF_NAME"
   CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:latest"
 
@@ -50,3 +50,5 @@ release-image:
     - docker push $CONTAINER_RELEASE_IMAGE
   only:
     - master
+  environment:
+    name: production

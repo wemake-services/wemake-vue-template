@@ -1,0 +1,21 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+
+node_js: 8
+
+services:
+  - docker
+
+install:
+  - yarn install
+
+script:
+  - sh test.sh
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change

@@ -1,7 +1,9 @@
 {
-  "name": "wemake-vue-template",
+  "name": "{{ name }}",
   "version": "0.1.0",
-  "description": "My Superb Vue Project",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "license": "MIT",
   "main": "client/index.js",
   "private": true,
   "engines": {
@@ -25,8 +27,6 @@
     "lint:css": "stylelint '**/*.{vue,scss}' --syntax scss",
     "lint": "npm run lint:js && npm run lint:css"
   },
-  "author": "sobolevn <mail@sobolevn.me>",
-  "license": "MIT",
   "postcss": {
     "plugins": {
       "autoprefixer": {},

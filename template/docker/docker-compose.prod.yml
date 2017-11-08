@@ -1,3 +1,11 @@
+# This compose-file is production only. So, it should not be called directly.
+# Instead, it should be a part of your deploy strategy.
+# Including something like:
+#
+#  $ docker-compose -f docker-compose.yml -f docker/docker-compose.prod.yml > docker-compose.deploy.yml
+#
+# This setup is supposed to be used with `docker-swarm`.
+
 version: "3"
 services:
   caddy:
@@ -21,6 +29,8 @@ services:
       args:
         APP_ENV: production
     command: pm2-docker ./docker/vue/process.yml
+    exposes:
+      - 4000
     environment:
       SSR_PORT: 4000
       SSR_HOST: '0.0.0.0'

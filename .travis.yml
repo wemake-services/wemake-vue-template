@@ -10,6 +10,7 @@ services:
   - docker
 
 install:
+  - apt-get update && apt-get install expect
   - yarn install
 
 script:

@@ -24,7 +24,6 @@ Bleeding edge `vue` template focused on code quality and development happiness.
 You will need:
 
 - `node` (version 8 at least)
-- `npm`
 
 
 ## Installation

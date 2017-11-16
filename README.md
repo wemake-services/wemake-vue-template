@@ -9,6 +9,7 @@ Bleeding edge `vue` template focused on code quality and development happiness.
 
 ## Features
 
+- Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - `Vue` + `vuex` + `vue-router` with latest `es` features
 - Strict optional typing with `flow`
 - Server side rendering

@@ -2412,9 +2412,9 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-flowtype-errors@^3.3.5:
-  version "3.3.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype-errors/-/eslint-plugin-flowtype-errors-3.3.5.tgz#eeeba3231a33aea6f70c22c4c5a42c16dae0ed21"
+eslint-plugin-flowtype-errors@^3.3.6:
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype-errors/-/eslint-plugin-flowtype-errors-3.3.6.tgz#e9fc9aed13df6615240b6c28faea40768a4d37ec"
   dependencies:
     babel-runtime "^6.26.0"
     slash "^1.0.0"

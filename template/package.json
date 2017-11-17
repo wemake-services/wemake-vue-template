@@ -150,6 +150,6 @@
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-server": "^2.9.4",
     "webpack-hot-middleware": "^2.20.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.1"
   }
 }

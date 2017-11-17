@@ -7298,9 +7298,9 @@ vue-router@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
-vue-server-renderer@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.5.3.tgz#cac10b4a9d147b04cf70cd8bc3ac95f5e630794b"
+vue-server-renderer@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.5.4.tgz#161de43e19105ddcc658dbd46923b28e7c4d6747"
   dependencies:
     chalk "^1.1.3"
     hash-sum "^1.0.2"

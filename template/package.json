@@ -128,7 +128,7 @@
     "html-webpack-plugin": "^2.22.0",
     "jest": "^21.2.1",
     "nightwatch": "^0.9.16",
-    "node-sass": "^4.7.1",
+    "node-sass": "^4.7.2",
     "nsp": "^3.1.0",
     "postcss-loader": "^2.0.8",
     "raw-loader": "^0.5.1",

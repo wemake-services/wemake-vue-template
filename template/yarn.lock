@@ -7742,9 +7742,9 @@ vue-test-utils@^1.0.0-beta.3:
   dependencies:
     lodash "^4.17.4"
 
-vue@^2.5.8:
-  version "2.5.8"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.8.tgz#f855c1c27255184a82225f4bef225473e8faf15b"
+vue@^2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.9.tgz#b2380cd040915dca69881dafd121d760952e65f7"
 
 vuex-router-sync@^5.0.0:
   version "5.0.0"

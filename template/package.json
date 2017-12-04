@@ -88,7 +88,7 @@
     "ajv": "^5.5.1",
     "autoprefixer": "^7.2.1",
     "babel-core": "^6.16.0",
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^8.0.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",

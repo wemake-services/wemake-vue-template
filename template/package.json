@@ -127,7 +127,7 @@
     "friendly-errors-webpack-plugin": "^1.1.2",
     "html-webpack-plugin": "^2.22.0",
     "jest": "^21.2.1",
-    "nightwatch": "^0.9.16",
+    "nightwatch": "^0.9.19",
     "node-sass": "^4.7.2",
     "nsp": "^3.1.0",
     "postcss-loader": "^2.0.9",

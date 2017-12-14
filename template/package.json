@@ -101,7 +101,7 @@
     "babel-register": "^6.26.0",
     "chalk": "^2.3.0",
     "chromedriver": "^2.33.2",
-    "compression-webpack-plugin": "^1.0.1",
+    "compression-webpack-plugin": "^1.1.0",
     "copy-webpack-plugin": "^4.2.3",
     "cross-env": "^5.1.1",
     "cross-spawn": "^5.1.0",

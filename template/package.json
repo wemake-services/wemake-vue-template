@@ -142,7 +142,7 @@
     "stylelint-scss": "^2.2.0",
     "stylelint-webpack-plugin": "^0.9.0",
     "vue-jest": "^1.4.0",
-    "vue-loader": "^13.5.0",
+    "vue-loader": "^13.6.0",
     "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.5.11",
     "vue-test-utils": "^1.0.0-beta.3",

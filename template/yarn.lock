@@ -8156,8 +8156,8 @@ vue-jest@^1.4.0:
     vue-template-es2015-compiler "^1.5.3"
 
 vue-loader@^13.6.0:
-  version "13.6.0"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-13.6.0.tgz#c1c9570e1e57475f8acb02cda35551b812f88086"
+  version "13.6.1"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-13.6.1.tgz#3ad365271b3db382722ab2eb0d6936d8d52ec2ce"
   dependencies:
     consolidate "^0.14.0"
     hash-sum "^1.0.2"

@@ -1,4 +1,4 @@
-FROM node:8.8-alpine
+FROM node:9.3-alpine
 
 LABEL maintainer="sobolevn@wemake.services"
 ARG APP_ENV=production

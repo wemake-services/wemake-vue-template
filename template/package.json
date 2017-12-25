@@ -76,7 +76,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "lru-cache": "^4.1.1",
-    "promise-polyfill": "^6.1.0",
+    "promise-polyfill": "^7.0.0",
     "vue": "^2.5.13",
     "vue-meta": "^1.4.0",
     "vue-router": "^3.0.1",

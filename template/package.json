@@ -145,7 +145,7 @@
     "vue-loader": "^13.7.0",
     "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.5.13",
-    "vue-test-utils": "^1.0.0-beta.8",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-server": "^2.10.1",

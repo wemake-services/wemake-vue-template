@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "ajv": "^6.0.1",
-    "autoprefixer": "^7.2.4",
+    "autoprefixer": "^7.2.5",
     "babel-core": "^6.16.0",
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

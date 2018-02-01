@@ -104,7 +104,7 @@
     "compression-webpack-plugin": "^1.1.6",
     "copy-webpack-plugin": "^4.3.1",
     "cross-env": "^5.1.1",
-    "cross-spawn": "^6.0.3",
+    "cross-spawn": "^6.0.4",
     "css-loader": "^0.28.9",
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",

@@ -6,6 +6,6 @@
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",
   "devDependencies": {
-    "vue-cli": "^2.9.2"
+    "vue-cli": "^2.9.3"
   }
 }

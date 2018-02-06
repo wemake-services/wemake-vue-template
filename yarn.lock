@@ -1369,9 +1369,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vue-cli@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/vue-cli/-/vue-cli-2.9.2.tgz#fb247c0f41c50c865e8d77caba18eb2b3936372c"
+vue-cli@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/vue-cli/-/vue-cli-2.9.3.tgz#c363ec48a7f55f72b76d90f44c001cc52d2fe0a8"
   dependencies:
     uid "0.0.2"
     async "^2.4.0"

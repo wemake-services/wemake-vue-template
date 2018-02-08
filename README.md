@@ -34,6 +34,13 @@ You will need:
 npx vue-cli init wemake-services/wemake-vue-template ideal-vue-project
 ```
 
+## Running the project
+
+First, copy file ‘/config/.env.template‘ to ‘/config/.env‘. Modify as fits per your requirements, then
+
+‘yarn dev‘ 
+
+starts the development server (default: localhost:4000).
 
 ## Alternatives
 

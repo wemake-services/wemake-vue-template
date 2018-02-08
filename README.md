@@ -36,11 +36,17 @@ npx vue-cli init wemake-services/wemake-vue-template ideal-vue-project
 
 ## Running the project
 
-First, copy file ‘/config/.env.template‘ to ‘/config/.env‘. Modify as fits per your requirements, then
+First, create a same-folder copy of the file `/config/.env.template` and name it `/config/.env`. Modify as fits per your requirements, then
 
-‘yarn dev‘ 
+### Development server
 
-starts the development server (default: localhost:4000).
+- `yarn dev` starts the development server (default: `http://localhost:4000`).
+
+### Production build
+
+- `yarn build` starts the production build and creates the files in `/dist` folder.
+
+- `yarn start` runs the production code in a node server (default: `http://0.0.0.0:3000`). 
 
 ## Alternatives
 

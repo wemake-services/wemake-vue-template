@@ -7495,9 +7495,9 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
 
-selenium-server@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/selenium-server/-/selenium-server-3.9.0.tgz#9e214ad82bce0099b138537f475b18fbd560cf76"
+selenium-server@^3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/selenium-server/-/selenium-server-3.9.1.tgz#e582eee011aed9fca5d71735ea18d0d23a30bb56"
 
 selfsigned@^1.9.1:
   version "1.10.1"

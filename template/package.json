@@ -136,7 +136,7 @@
     "sass-loader": "^6.0.6",
     "selenium-server": "^3.9.1",
     "style-loader": "^0.20.2",
-    "stylelint": "^8.4.0",
+    "stylelint": "^9.0.0",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-scss": "^2.3.0",

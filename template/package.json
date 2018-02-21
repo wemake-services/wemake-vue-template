@@ -108,7 +108,7 @@
     "css-loader": "^0.28.9",
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
-    "eslint": "^4.18.0",
+    "eslint": "^4.18.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",

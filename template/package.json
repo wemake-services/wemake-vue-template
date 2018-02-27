@@ -85,7 +85,7 @@
     "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
-    "ajv": "^6.1.1",
+    "ajv": "^6.2.0",
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.16.0",
     "babel-eslint": "^8.2.2",

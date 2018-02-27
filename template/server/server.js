@@ -2,7 +2,9 @@
 
 const fs = require('fs')
 const path = require('path')
+
 const express = require('express')
+
 const injectToTemplate = require('./seo')
 const resolve = (file) => path.resolve(__dirname, file)
 
@@ -10,16 +12,16 @@ const resolve = (file) => path.resolve(__dirname, file)
 require('dotenv').config({ path: resolve('../config/.env') })
 
 function createServer () {
-  const app = express()
-
   const bundle = require(resolve('../dist/vue-ssr-bundle.json'))
+
+  const app = express()
   // src/index.template.html is processed by html-webpack-plugin to inject
   // build assets and output as dist/index.html.
   const template = fs.readFileSync(resolve('../dist/index.html'), 'utf-8')
   const renderer = createRenderer(bundle, template)
 
   function createRenderer (bundle, template) {
-    // https://github.com/vuejs/vue/blob/dev/packages/vue-server-renderer/README.md#why-use-bundlerenderer
+    // https://github.com/vuejs/vue/blob/dev/packages/vue-server-renderer
     return require('vue-server-renderer').createBundleRenderer(bundle, {
       template,
       cache: require('lru-cache')({
@@ -29,7 +31,9 @@ function createServer () {
     })
   }
 
-  app.use(express.static(resolve('../dist'), { index: false }))
+  app.use('/static', express.static(
+    resolve('../dist/static'), { index: false }
+  ))
 
   app.get('*', (req, res) => {
     if (!renderer) {

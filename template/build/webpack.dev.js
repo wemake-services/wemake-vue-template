@@ -3,32 +3,10 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const FriendlyErrors = require('friendly-errors-webpack-plugin')
-const base = require('./webpack.base')
-const _ = require('./utils')
 
-const styleLoaders = []
-_.cssProcessors.forEach((processor) => {
-  let loaders
-  if (processor.loader === '') {
-    loaders = ['postcss-loader']
-  } else {
-    loaders = ['postcss-loader', processor.loader]
-  }
-  styleLoaders.push(
-    {
-      test: processor.test,
-      loaders: ['style-loader', _.cssLoader].concat(loaders)
-    }
-  )
-})
+const base = require('./webpack.base')
 
 module.exports = merge(base, {
-  module: {
-    loaders: [
-      ...styleLoaders
-    ]
-  },
-
   devtool: '#cheap-module-source-map',
 
   plugins: [
@@ -38,5 +16,10 @@ module.exports = merge(base, {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new FriendlyErrors()
-  ]
+  ],
+
+  devServer: {
+    host: process.env.DEV_HOST,
+    port: process.env.DEV_PORT
+  }
 })

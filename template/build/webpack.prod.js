@@ -6,38 +6,24 @@ const analyzer = require('webpack-bundle-analyzer')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
 const CompressionPlugin = require('compression-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 const base = require('./webpack.base')
 const _ = require('./utils')
-
-// Extract css in standalone css files
-const styleLoaders = []
-_.cssProcessors.forEach((processor) => {
-  let loaders
-  if (processor.loader === '') {
-    loaders = ['postcss-loader']
-  } else {
-    loaders = ['postcss-loader', processor.loader]
-  }
-  styleLoaders.push({
-    test: processor.test,
-    options: processor.options,
-    loader: ExtractTextPlugin.extract({
-      use: [_.cssLoader].concat(loaders),
-      fallback: 'style-loader'
-    })
-  })
-})
 
 module.exports = merge(base, {
   output: {
     // Use hash filename to support long-term caching
-    filename: '[name].[chunkhash:8].js'
+    filename: 'js/[name].[chunkhash:8].js',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
 
   module: {
-    loaders: [
-      ...styleLoaders
-    ]
+    rules: _.styleLoaders({
+      sourceMap: false,
+      extract: true,
+      usePostCSS: true
+    })
   },
 
   devtool: 'source-map',
@@ -50,7 +36,12 @@ module.exports = merge(base, {
     }),
 
     new ProgressPlugin(),
-    new ExtractTextPlugin('styles.[contenthash:8].css'),
+    new ExtractTextPlugin({
+      filename: 'css/styles.[contenthash:8].css',
+      // Setting the following option to `false` will
+      // not extract CSS from codesplit chunks.
+      allChunks: true
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
@@ -92,14 +83,24 @@ module.exports = merge(base, {
       threshold: 10240,
       minRatio: 0.8
       // deleteOriginalAssets: true
-    })
+    }),
+
+    new CopyWebpackPlugin([
+      {
+        from: _.cwd('./client/static'),
+        // To the root of dist path
+        to: '../',
+        ignore: ['.*']
+      }
+    ])
   ],
 
   // Minimize webpack output
   stats: {
     // Add children information
     children: false,
-    // Add chunk information (setting this to `false` allows for a less verbose output)
+    // Add chunk information,
+    // setting this to `false` allows for a less verbose output
     chunks: false,
     // Add built modules information to chunk information
     chunkModules: false,

@@ -1,56 +1,83 @@
 'use strict'
 
 const path = require('path')
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const _ = module.exports = {}
+const config = require('./config')
 
+const _ = module.exports = {}
 _.cwd = (file) => {
   return path.join(process.cwd(), file || '')
 }
 
-_.cssLoader = 'css-loader?-autoprefixer'
-_.sassLoader = 'sass-loader?sourceMap'
+_.assetsPath = (file) => {
+  return path.join(config.outputAssetsPath, file)
+}
 
-_.cssProcessors = [
-  { loader: '', test: /\.css$/ },
-  {
-    loader: _.sassLoader,
-    test: /\.scss$/
-  }
-]
+_.cssLoaders = (options) => {
+  options = options || {}
 
-_.outputPath = path.join(__dirname, '../dist')
-_.outputIndexPath = path.join(__dirname, '../dist/index.html')
-_.target = 'web'
-
-// https://github.com/egoist/vbuild/blob/master/lib/vue-loaders.js
-_.loadersOptions = () => {
-  const isProd = process.env.NODE_ENV === 'production'
-
-  function generateLoader (langs) {
-    langs.unshift('css-loader?sourceMap&-autoprefixer')
-    if (!isProd) {
-      return ['vue-style-loader'].concat(langs).join('!')
+  const cssLoader = {
+    loader: 'css-loader',
+    options: {
+      sourceMap: options.sourceMap
     }
-    return ExtractTextPlugin.extract({
-      fallback: 'vue-style-loader',
-      use: langs.join('!')
+  }
+
+  const postcssLoader = {
+    loader: 'postcss-loader',
+    options: {
+      sourceMap: options.sourceMap
+    }
+  }
+
+  // generate loader string to be used with extract text plugin
+  function generateLoaders (loader, loaderOptions) {
+    const loaders = options.usePostCSS
+      ? [cssLoader, postcssLoader] : [cssLoader]
+
+    if (loader) {
+      loaders.push({
+        loader: loader + '-loader',
+        options: Object.assign({}, loaderOptions, {
+          sourceMap: options.sourceMap
+        })
+      })
+    }
+
+    // Extract CSS when that option is specified
+    // (which is the case during production build)
+    if (options.extract) {
+      return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader'
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
+  }
+
+  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
+  return {
+    css: generateLoaders(),
+    postcss: generateLoaders(),
+    scss: generateLoaders('sass')
+  }
+}
+
+// Generate loaders for standalone style files (outside of .vue)
+_.styleLoaders = (options) => {
+  const output = []
+  const loaders = _.cssLoaders(options)
+
+  for (const extension in loaders) {
+    const loader = loaders[extension]
+    output.push({
+      test: new RegExp('\\.' + extension + '$'),
+      use: loader
     })
   }
 
-  return {
-    minimize: isProd,
-    options: {
-      // css-loader relies on context
-      context: process.cwd(),
-      vue: {
-        loaders: {
-          css: generateLoader([]),
-          scss: generateLoader([_.sassLoader]),
-          js: 'babel-loader'
-        }
-      }
-    }
-  }
+  return output
 }

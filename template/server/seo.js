@@ -41,7 +41,7 @@ function injectToTemplate (template, context) {
     injectBody
   ]
 
-  for (let processor of processors) {
+  for (const processor of processors) {
     template = processor.call(this, template, context)
   }
 

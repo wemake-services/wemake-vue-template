@@ -1,12 +1,15 @@
 'use strict'
 
 const path = require('path')
-const webpack = require('webpack')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+
 const config = require('./config')
+const vueLoaderConfig = require('./vue-loader.config')
 const _ = require('./utils')
+
+require('dotenv').config({ path: _.cwd('./config/.env') })
 
 module.exports = {
   entry: {
@@ -14,7 +17,7 @@ module.exports = {
   },
 
   output: {
-    path: _.outputPath,
+    path: config.outputAssetsPath,
     filename: '[name].js',
     publicPath: config.publicPath,
     // Point sourcemap entries to original disk location
@@ -42,7 +45,7 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -54,18 +57,19 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loaders: ['vue-loader']
+        loader: 'vue-loader',
+        options: vueLoaderConfig
       },
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        loader: 'babel-loader',
         exclude: [/node_modules/]
       },
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file-loader',
         query: {
-          name: 'static/media/[name].[hash:8].[ext]'
+          name: 'static/assets/[name].[hash:8].[ext]'
         }
       },
       {
@@ -83,21 +87,12 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'index.html'),
-      filename: _.outputIndexPath,
+      filename: config.outputIndexPath,
+      inject: true,
       // Necessary to consistently work with multiple chunks
       chunksSortMode: 'dependency'
-    }),
-
-    new webpack.LoaderOptionsPlugin(_.loadersOptions()),
-    new CopyWebpackPlugin([
-      {
-        from: _.cwd('./client/static'),
-        // To the root of dist path
-        to: './',
-        ignore: ['.*']
-      }
-    ])
+    })
   ],
 
-  target: _.target
+  target: config.target
 }

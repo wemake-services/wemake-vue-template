@@ -8,7 +8,7 @@
 
     <% for (var chunk of webpack.chunks) {
         for (var file of chunk.files) {
-          if (file.match(/\.(js|css)$/)) { %>
+          if (file.match(/\.(js)$/)) { %>
     <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
   </head>
   <body>

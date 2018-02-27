@@ -1,6 +1,7 @@
 'use strict'
 
 const spawn = require('cross-spawn')
+
 const createServer = require('../../server/server.js')
 const app = createServer()
 

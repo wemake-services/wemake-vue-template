@@ -9,6 +9,7 @@ Bleeding edge `vue` template focused on code quality and development happiness.
 
 ## Features
 
+- Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - `Vue` + `vuex` + `vue-router` with latest `es` features
 - Strict optional typing with `flow`
 - Server side rendering
@@ -32,6 +33,19 @@ You will need:
 npx vue-cli init wemake-services/wemake-vue-template ideal-vue-project
 ```
 
+## Running the project
+
+First, create a same-folder copy of the file `/config/.env.template` and name it `/config/.env`. Modify as fits per your requirements, then
+
+### Development server
+
+- `yarn dev` starts the development server (default: `http://localhost:4000`).
+
+### Production build
+
+- `yarn build` starts the production build and creates the files in `/dist` folder.
+
+- `yarn start` runs the production code in a node server (default: `http://0.0.0.0:3000`). 
 
 ## Alternatives
 

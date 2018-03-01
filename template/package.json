@@ -124,7 +124,7 @@
     "flow-bin": "^0.66.0",
     "flow-typed": "^2.3.0",
     "friendly-errors-webpack-plugin": "^1.1.2",
-    "html-webpack-plugin": "^2.22.0",
+    "html-webpack-plugin": "^3.0.0",
     "jest": "^22.4.2",
     "nightwatch": "^0.9.19",
     "node-sass": "^4.7.2",

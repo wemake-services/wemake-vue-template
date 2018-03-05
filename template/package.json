@@ -134,7 +134,7 @@
     "raw-loader": "^0.5.1",
     "request": "^2.83.0",
     "rimraf": "^2.6.1",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "selenium-server": "^3.9.1",
     "style-loader": "^0.20.2",
     "stylelint": "^9.1.1",

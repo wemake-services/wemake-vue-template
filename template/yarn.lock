@@ -5713,9 +5713,9 @@ nice-try@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
 
-nightwatch@^0.9.19:
-  version "0.9.19"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-0.9.19.tgz#4bd9757273d30b845f04847a98b71be9bb7c4b3b"
+nightwatch@^0.9.20:
+  version "0.9.20"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-0.9.20.tgz#156d17cd058cbc31f43ab18e915f7ec297fb53e0"
   dependencies:
     chai-nightwatch "~0.1.x"
     ejs "2.5.7"

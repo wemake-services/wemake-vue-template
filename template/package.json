@@ -101,7 +101,7 @@
     "chalk": "^2.3.2",
     "chromedriver": "^2.36.0",
     "compression-webpack-plugin": "^1.1.11",
-    "copy-webpack-plugin": "^4.5.0",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.4",
     "cross-spawn": "^6.0.5",
     "css-loader": "^0.28.10",

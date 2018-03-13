@@ -132,7 +132,7 @@
     "postcss": "^6.0.19",
     "postcss-loader": "^2.1.1",
     "raw-loader": "^0.5.1",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.7",
     "selenium-server": "^3.10.0",

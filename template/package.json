@@ -143,7 +143,7 @@
     "stylelint-processor-html": "^1.0.0",
     "stylelint-scss": "^2.5.0",
     "stylelint-webpack-plugin": "^0.10.3",
-    "vue-jest": "^2.1.1",
+    "vue-jest": "^2.2.1",
     "vue-loader": "^14.2.1",
     "vue-ssr-webpack-plugin": "^3.0.0",
     "vue-template-compiler": "^2.5.16",

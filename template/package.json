@@ -130,7 +130,7 @@
     "node-sass": "^4.7.2",
     "nsp": "^3.2.1",
     "postcss": "^6.0.20",
-    "postcss-loader": "^2.1.1",
+    "postcss-loader": "^2.1.2",
     "raw-loader": "^0.5.1",
     "request": "^2.85.0",
     "rimraf": "^2.6.1",

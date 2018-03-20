@@ -77,7 +77,7 @@
     "lru-cache": "^4.1.2",
     "promise-polyfill": "^7.1.0",
     "vue": "^2.5.16",
-    "vue-meta": "^1.4.4",
+    "vue-meta": "^1.5.0",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.16",
     "vuex": "^3.0.1",

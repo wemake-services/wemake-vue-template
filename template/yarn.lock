@@ -598,13 +598,6 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-jest@^22.4.1, babel-jest@^22.4.3:
-  version "22.4.3"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.4.3.tgz#4b7a0b6041691bbd422ab49b3b73654a49a6627a"
-  dependencies:
-    babel-plugin-istanbul "^4.1.5"
-    babel-preset-jest "^22.4.3"
-
 babel-jest@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.4.3.tgz#4b7a0b6041691bbd422ab49b3b73654a49a6627a"
@@ -639,10 +632,6 @@ babel-plugin-istanbul@^4.1.5:
     find-up "^2.1.0"
     istanbul-lib-instrument "^1.7.5"
     test-exclude "^4.1.1"
-
-babel-plugin-jest-hoist@^22.4.3:
-  version "22.4.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
 
 babel-plugin-jest-hoist@^22.4.3:
   version "22.4.3"
@@ -969,13 +958,6 @@ babel-preset-flow@^6.23.0:
   resolved "https://registry.yarnpkg.com/babel-preset-flow/-/babel-preset-flow-6.23.0.tgz#e71218887085ae9a24b5be4169affb599816c49d"
   dependencies:
     babel-plugin-transform-flow-strip-types "^6.22.0"
-
-babel-preset-jest@^22.4.3:
-  version "22.4.3"
-  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz#e92eef9813b7026ab4ca675799f37419b5a44156"
-  dependencies:
-    babel-plugin-jest-hoist "^22.4.3"
-    babel-plugin-syntax-object-rest-spread "^6.13.0"
 
 babel-preset-jest@^22.4.3:
   version "22.4.3"
@@ -8700,9 +8682,9 @@ vue-hot-reload-api@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"
 
-vue-jest@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-2.2.1.tgz#a3a5299548a15fdbc5a00409a3aab5f48c625c57"
+vue-jest@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vue-jest/-/vue-jest-2.3.0.tgz#803605b549d6c3b2cb32e7e8c1951d919fb10601"
   dependencies:
     babel-plugin-transform-es2015-modules-commonjs "^6.26.0"
     chalk "^2.1.0"

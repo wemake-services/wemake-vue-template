@@ -129,7 +129,7 @@
     "nightwatch": "^0.9.20",
     "node-sass": "^4.7.2",
     "nsp": "^3.2.1",
-    "postcss": "^6.0.20",
+    "postcss": "^6.0.21",
     "postcss-loader": "^2.1.3",
     "raw-loader": "^0.5.1",
     "request": "^2.85.0",

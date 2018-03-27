@@ -6754,9 +6754,9 @@ promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
 
-promise-polyfill@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-7.1.0.tgz#4d749485b44577c14137591c6f36e5d7e2dd3378"
+promise-polyfill@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-7.1.1.tgz#3af26a57795f270c6f546f9a7497c7a204556729"
 
 proto-list@~1.2.1:
   version "1.2.4"

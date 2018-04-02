@@ -8223,9 +8223,9 @@ stylelint-scss@^3.0.0:
     postcss-selector-parser "^3.1.1"
     postcss-value-parser "^3.3.0"
 
-stylelint-webpack-plugin@^0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.10.3.tgz#1b80048df3b38a8559207e12b12c6e987b28f317"
+stylelint-webpack-plugin@^0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-0.10.4.tgz#08d52666bcdc1e9808ebcdabfde555b15a839a34"
   dependencies:
     arrify "^1.0.1"
     micromatch "^3.1.8"

@@ -8047,9 +8047,9 @@ stylelint-processor-html@^1.0.0:
   dependencies:
     htmlparser2 "^3.9.1"
 
-stylelint-scss@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-2.5.0.tgz#ac4c83474c53b19cc1f9e93d332786cf89c8d217"
+stylelint-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-3.0.0.tgz#15beb887117ccef20668a3f4728eb5be5fbda045"
   dependencies:
     lodash "^4.17.4"
     postcss-media-query-parser "^0.2.3"

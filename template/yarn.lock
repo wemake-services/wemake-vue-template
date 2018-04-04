@@ -4029,9 +4029,9 @@ html-tags@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/html-tags/-/html-tags-2.0.0.tgz#10b30a386085f43cede353cc8fa7cb0deeea668b"
 
-html-webpack-plugin@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.1.0.tgz#6e02baaedb1e906310917f03239c793a75af2885"
+html-webpack-plugin@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.2.0.tgz#b01abbd723acaaa7b37b6af4492ebda03d9dd37b"
   dependencies:
     html-minifier "^3.2.3"
     loader-utils "^0.2.16"

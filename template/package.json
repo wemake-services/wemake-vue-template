@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "nuxt-sass-resources-loader": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -34,6 +34,9 @@
     "eslint-plugin-unicorn": "^4.0.2",
     "eslint-plugin-vue": "^4.4.0",
     "flow-bin": "^0.69.0",
+    "node-sass": "^4.8.3",
+    "nuxt": "^1.4.0",
+    "sass-loader": "^6.0.7",
     "webpack": "^4.5.0"
   }
 }

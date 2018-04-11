@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -20,9 +22,18 @@ module.exports = {
   loading: { color: '#3B8070' },
 
   /**
-   * Specify nuxt source directory
-   */
+  ** Specify nuxt source directory
+  */
   srcDir: 'client',
+
+  /**
+  ** Extra nuxt modules
+  */
+  modules: [
+    ['nuxt-sass-resources-loader', [
+      path.resolve(__dirname, './client/scss/partials/mixins.scss')
+    ]],
+  ],
 
   /*
   ** Build configuration
@@ -42,10 +53,9 @@ module.exports = {
         ]
     },
 
-    /*
-    ** Run ESLint on save
-    */
     extend (config, { isDev, isClient }) {
+      config.resolve.alias['~'] = '/Users/sobolev/Documents/github/wemake-vue-template/template/client'
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

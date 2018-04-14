@@ -16,24 +16,10 @@ module.exports = {
     ]
   },
 
-  /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
-
   /**
   ** Specify nuxt source directory
   */
   srcDir: 'client',
-
-  /**
-  ** Extra nuxt modules
-  */
-  modules: [
-    ['nuxt-sass-resources-loader', [
-      path.resolve(__dirname, './client/scss/partials/mixins.scss')
-    ]],
-  ],
 
   /*
   ** Build configuration
@@ -54,7 +40,7 @@ module.exports = {
     },
 
     extend (config, { isDev, isClient }) {
-      config.resolve.alias['~'] = '/Users/sobolev/Documents/github/wemake-vue-template/template/client'
+      config.resolve.alias['scss'] = path.resolve(__dirname, 'client', 'scss')
 
       if (isDev && isClient) {
         config.module.rules.push({
@@ -63,6 +49,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+
+        config.plugins.push(
+          require('stylelint-webpack-plugin')({
+            syntax: 'scss',
+            files: '**/*.{vue,scss}'
+          })
+        )
       }
     }
   }

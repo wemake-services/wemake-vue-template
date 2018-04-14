@@ -5,7 +5,14 @@
 </template>
 
 <style lang="scss" scoped>
+@import '~scss/partials/mixins';
+
 .wemake-services__component {
   @include centered();
+
+  td,
+  tr {
+    width: sasd;
+  }
 }
 </style>

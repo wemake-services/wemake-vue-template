@@ -134,4 +134,4 @@ dist/
 #### custom ####
 flow-typed/
 tests/e2e/reports/
-.nuxt
+.nuxt/

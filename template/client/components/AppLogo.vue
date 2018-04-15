@@ -9,10 +9,5 @@
 
 .wemake-services__component {
   @include centered();
-
-  td,
-  tr {
-    width: sasd;
-  }
 }
 </style>

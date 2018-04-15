@@ -1,4 +1,10 @@
 const path = require('path')
+const fs = require('fs')
+
+const envPath = path.resolve(__dirname, 'config', '.env')
+require('dotenv').config({ path: envPath })
+
+const babel = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.babelrc')))
 
 module.exports = {
   /*
@@ -13,31 +19,41 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+
+    htmlAttrs: {
+      lang: 'en'
+    }
   },
 
-  /**
-  ** Specify nuxt source directory
+  /*
+  ** Specify Nuxt source directory
   */
   srcDir: 'client',
+
+  /*
+  ** Extra Nuxt modules
+  */
+  modules: [
+    ['@nuxtjs/dotenv', { path: envPath }],
+    '@nuxtjs/axios'
+  ],
+
+  /*
+  ** Axios settings
+  */
+  axios: {
+    proxyHeadersIgnore: ['accept-encoding', 'host'],
+    https: true,
+    progress: true,
+    debug: false
+  },
 
   /*
   ** Build configuration
   */
   build: {
-    babel: {
-      presets: [
-          ['vue-app', { 'useBuiltIns': true }],
-          'flow'
-        ],
-        plugins: [
-          ['module-resolver', {
-            cwd: './client',
-            extensions: ['.js', 'vue'],
-            '~': './client'
-          }]
-        ]
-    },
+    babel,
 
     extend (config, { isDev, isClient }) {
       config.resolve.alias['scss'] = path.resolve(__dirname, 'client', 'scss')
@@ -56,6 +72,22 @@ module.exports = {
             files: '**/*.{vue,scss}'
           })
         )
+      }
+    },
+
+    /*
+    ** postcss configuration
+    */
+    postcss: {
+      plugins: {
+        // Default plugins:
+        'postcss-import': {},
+        'postcss-url': {},
+        'postcss-cssnext': {},
+
+        // Custom:
+        'cssnano': {},
+        'css-mqpacker': {}
       }
     }
   }

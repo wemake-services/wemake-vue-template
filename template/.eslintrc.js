@@ -17,10 +17,6 @@ module.exports = {
     // styling imports
     // 'sort-imports': 2,
     'import/prefer-default-export': 'off',
-    'import/order': [2, {
-      'groups': ['builtin', 'external', 'parent', 'sibling', 'index'],
-      'newlines-between': 'always'
-    }],
 
     // warn about using console
     'no-console': 1,

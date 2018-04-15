@@ -10,10 +10,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test:unit": "cross-env NODE_ENV=test jest --no-cache tests/unit",
+    "test:unit": "cross-env NODE_ENV=test jest tests/unit",
     "test:security": "nsp check",
     "test": "npm run test:unit && npm run test:security && npm run lint",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:js": "eslint --ext .js,.vue client tests",
     "lint:css": "stylelint 'client/**/*.{vue,scss}' --syntax scss",
     "lint": "npm run lint:js && npm run lint:css",
     "precommit": "npm run lint"
@@ -44,19 +44,14 @@
       "vue"
     ],
     "transform": {
-      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.vue$": "vue-jest",
       "^.+\\.js$": "babel-jest"
     },
-    "globals": {
-      "NODE_ENV": "test"
-    },
-    "moduleDirectories": [
-      "node_modules",
-      "client"
-    ],
     "moduleNameMapper": {
       "^~/(.*)$": "<rootDir>/client/$1"
-    }
+    },
+    "collectCoverage": true,
+    "verbose": true
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
@@ -77,6 +72,7 @@
     "babel-preset-vue-app": "^2.0.0",
     "css-mqpacker": "^6.0.2",
     "cssnano": "^3.10.0",
+    "deepcopy": "^0.6.3",
     "eslint": "^4.18.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",

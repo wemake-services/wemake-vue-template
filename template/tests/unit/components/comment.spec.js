@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import deepcopy from 'deepcopy'
 import { mount, createLocalVue } from '@vue/test-utils'
 
 import Comment from '~/components/Comment'
@@ -9,10 +10,10 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 
 function createStore (customState) {
-  const mixedState = Object.assign(state, customState)
+  const mixedState = Object.assign(state(), customState)
 
   return new Vuex.Store({
-    state: mixedState,
+    state: deepcopy(mixedState),
     mutations
   })
 }
@@ -47,22 +48,29 @@ describe('Comment component unit tests', () => {
     expect(wrapper.find('.comment-author').text().trim()).toBe(comment.email)
     expect(wrapper.find('.comment-body').text().trim()).toBe(comment.body)
     expect(wrapper.find('.comment-rating-value').text().trim()).toBe(
-      String(comment.rating))
+      String(comment.rating)
+    )
   })
 
-  // it('should increment counter', () => {
-  //   const wrapper = mount(Counter, { store, localVue })
+  it('should increment rating', () => {
+    const wrapper = mount(Comment, { store, localVue, propsData })
 
-  //   wrapper.vm.$store.commit(types.INCREMENT)
-  //   expect(wrapper.vm.count).toBe(1)
-  // })
+    wrapper.vm.$store.commit(types.UPDATE_RATING, {
+      commentId: comment.id,
+      delta: 1
+    })
+    expect(wrapper.vm.$store.state.comments[0].rating).toBe(1)
+  })
 
-  // it('should decrement counter', () => {
-  //   const wrapper = mount(Counter, { store, localVue })
+  it('should decrement rating', () => {
+    const wrapper = mount(Comment, { store, localVue, propsData })
 
-  //   wrapper.vm.$store.commit(types.DECREMENT)
-  //   expect(wrapper.vm.count).toBe(-1)
-  // })
+    wrapper.vm.$store.commit(types.UPDATE_RATING, {
+      commentId: comment.id,
+      delta: -1
+    })
+    expect(wrapper.vm.$store.state.comments[0].rating).toBe(-1)
+  })
 
   it('should match the snapshot', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })

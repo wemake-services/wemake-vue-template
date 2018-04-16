@@ -46,7 +46,7 @@ export default {
   max-width: 15.6rem;
   border: 0.12rem solid;
   padding: 0.74rem;
-  margin: 0.3rem;
+  margin: 0.5rem;
   position: relative;
 
   .comment-author {
@@ -62,10 +62,11 @@ export default {
     transform: translateX(-50%);
 
     button {
-      margin: 0 0.3rem;
+      margin: 0 0.5rem;
       border: none;
       outline: none;
       cursor: pointer;
+      width: 2rem;
 
       &.comment-rating-up {
         background: #a2dca2;

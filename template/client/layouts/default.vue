@@ -4,6 +4,9 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+// Note that this component has unscoped styles.
+// Here you can import any other styles that are required for this
+// particular layout.
+@import '~normalize.css/normalize';
 </style>

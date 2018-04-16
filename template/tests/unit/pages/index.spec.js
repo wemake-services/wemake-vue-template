@@ -5,7 +5,6 @@ import MockAdapter from 'axios-mock-adapter'
 
 import Index from '~/pages/index'
 import { actions, getters, state, mutations } from '~/store'
-import * as types from '~/types/mutations'
 
 import { createStore } from '../../utils/store'
 

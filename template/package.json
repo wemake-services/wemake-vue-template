@@ -14,7 +14,7 @@
     "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
     "test:security": "nsp check",
     "test": "npm run test:unit && npm run test:security && npm run lint",
-    "lint:js": "eslint --ext .js,.vue client tests",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}' --syntax scss",
     "lint": "npm run lint:js && npm run lint:css",
     "precommit": "npm run lint"
@@ -40,6 +40,8 @@
     }
   },
   "jest": {
+    "globalSetup": "<rootDir>/tests/utils/global-setup.js",
+    "setupFiles": ["<rootDir>/tests/utils/test-setup.js"],
     "moduleFileExtensions": [
       "js",
       "vue",
@@ -60,10 +62,12 @@
     "await-to-js": "^2.0.1",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
+    "normalize.css": "^8.0.0",
     "nuxt": "^1.4.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.14",
+    "axios-mock-adapter": "^1.15.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.4.3",

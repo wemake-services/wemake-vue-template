@@ -13,8 +13,8 @@ function maybeHandleError (error: ?Error) {
 
 export default {
   async fetchComments (app: Vue): Promise<Array<RawComment>> {
-    const [error, response] = await to(app.$axios.$get('comments'))
+    const [error, response] = await to(app.$axios.get('comments'))
     maybeHandleError(error)
-    return response
+    return response.data
   }
 }

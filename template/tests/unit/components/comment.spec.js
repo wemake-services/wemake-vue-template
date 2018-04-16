@@ -1,22 +1,14 @@
 import Vuex from 'vuex'
-import deepcopy from 'deepcopy'
 import { mount, createLocalVue } from '@vue/test-utils'
 
 import Comment from '~/components/Comment'
 import { state, mutations } from '~/store'
 import * as types from '~/types/mutations'
 
+import { createStore } from '../../utils/store'
+
 const localVue = createLocalVue()
 localVue.use(Vuex)
-
-function createStore (customState) {
-  const mixedState = Object.assign(state(), customState)
-
-  return new Vuex.Store({
-    state: deepcopy(mixedState),
-    mutations
-  })
-}
 
 const comment = {
   id: 1,
@@ -31,7 +23,7 @@ describe('Comment component unit tests', () => {
   let store
 
   beforeEach(() => {
-    store = createStore({
+    store = createStore({ state, mutations }, {
       comments: [comment]
     })
   })

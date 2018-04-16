@@ -34,7 +34,6 @@ export default {
 
   methods: {
     changeRating (commentId: number, delta: number) {
-      console.log(Nuxt, Builder)
       this.$store.commit(mutationTypes.UPDATE_RATING, { commentId, delta })
     }
   }

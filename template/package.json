@@ -10,7 +10,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test:unit": "cross-env NODE_ENV=test jest tests/unit",
+    "test:e2e": "cross-env NODE_ENV=test jest tests/e2e",
+    "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
     "test:security": "nsp check",
     "test": "npm run test:unit && npm run test:security && npm run lint",
     "lint:js": "eslint --ext .js,.vue client tests",
@@ -41,7 +42,8 @@
   "jest": {
     "moduleFileExtensions": [
       "js",
-      "vue"
+      "vue",
+      "json"
     ],
     "transform": {
       "^.+\\.vue$": "vue-jest",
@@ -50,7 +52,6 @@
     "moduleNameMapper": {
       "^~/(.*)$": "<rootDir>/client/$1"
     },
-    "collectCoverage": true,
     "verbose": true
   },
   "dependencies": {
@@ -63,7 +64,6 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.14",
-    "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.4.3",
@@ -80,6 +80,7 @@
     "eslint-plugin-flowtype-errors": "^3.5.0",
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",

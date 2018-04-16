@@ -7,16 +7,22 @@ module.exports = {
     'html',
     'flowtype-errors',
     'unicorn',
-    'json'
+    'json',
+    'jest'
   ],
+  'env': {
+    'node': true,
+    'browser': true,
+    'jest/globals': true
+  },
   'rules': {
     // base
     'object-curly-spacing': [2, 'always'],
     'arrow-parens': [2, 'always'],
 
     // styling imports
-    // 'sort-imports': 2,
     'import/prefer-default-export': 'off',
+    'import/first': 2,
 
     // warn about using console
     'no-console': 1,

@@ -30,6 +30,7 @@ module.exports = {
   ** Specify Nuxt source directory
   */
   srcDir: 'client',
+  rootDir: path.resolve(__dirname),
 
   /*
   ** Extra Nuxt modules

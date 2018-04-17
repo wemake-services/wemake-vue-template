@@ -11,9 +11,8 @@ This project was generated with [`wemake-vue-template`](https://github.com/wemak
 
 You will need:
 
-- `node` 8 (see `.nvmrc` file. You can use `nvm` to manage versions)
-- `docker` with version at least `17.07`
-- `jdk` only for `e2e` tests
+- `node@9` (see `.nvmrc` file. You can use `nvm` to manage versions)
+- `docker` with version at least `18.02`
 
 
 ## Development

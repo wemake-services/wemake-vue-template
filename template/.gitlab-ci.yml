@@ -1,0 +1,55 @@
+---
+
+image: docker:latest
+
+variables:
+  # When using dind, it's wise to use the overlayfs driver for
+  # improved performance:
+  DOCKER_DRIVER: overlay2
+  PROJECT_NAME: "{{ name }}"
+  GROUP_NAME: "{{ author }}"
+  CONTAINER_TEST_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:$CI_BUILD_REF_NAME"
+  CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:latest"
+
+services:
+  - docker:dind
+
+before_script:
+  # Installing docker-compose:
+  - apk update && apk upgrade
+  - apk add python python-dev py-pip git build-base
+  - pip install dump-env docker-compose
+  # Creating `.env` configuration file:
+  - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+  # Login into Docker registry:
+  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" registry.gitlab.com
+  # Debug information:
+  - docker info && docker-compose --version && git --version
+
+# Build Docker container and push it to the Gitlab's registry:
+build:
+  stage: build
+  script:
+    - docker build -t "$CONTAINER_TEST_IMAGE" --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
+    - docker push "$CONTAINER_TEST_IMAGE"
+  only:
+    - master
+
+# Testing application:
+test:
+  stage: test
+  script:
+    - docker-compose run vue yarn test
+  coverage: '/All files\s*\|\s*([\d\.]+)/'
+
+# Releasing image, when tests pass:
+release-image:
+  stage: deploy
+  script:
+    - docker pull "$CONTAINER_TEST_IMAGE"
+    - docker tag "$CONTAINER_TEST_IMAGE" "$CONTAINER_RELEASE_IMAGE"
+    - docker push "$CONTAINER_RELEASE_IMAGE"
+  only:
+    - master
+  environment:
+    name: production  # used to track time with 'cycle analytics'

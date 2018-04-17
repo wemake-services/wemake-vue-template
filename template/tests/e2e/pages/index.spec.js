@@ -18,9 +18,10 @@ describe('e2e tests for index page', () => {
   beforeEach(async () => {
     config.dev = false
 
+    // This part can be moved to a separate function:
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
-    nuxt.listen(4000, 'localhost')
+    nuxt.listen(4001, 'localhost')
   }, 30000)
 
   // Example of testing only generated html

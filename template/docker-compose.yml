@@ -1,0 +1,27 @@
+---
+
+# Default compose file for development.
+# Should be used directly only in development.
+
+version: "3.6"
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: ./docker/vue/Dockerfile
+      args:
+        NODE_ENV: "development"
+    command: yarn dev
+    volumes:
+      - .:/code
+      - /code/node_modules
+    ports:
+      - "4000:4000"
+    networks:
+      - webnet
+    env_file: ./config/.env
+    environment:
+      HOST: "0.0.0.0"
+
+networks:
+  webnet:

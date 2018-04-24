@@ -4,11 +4,11 @@ set -o errexit
 set -o nounset
 
 # Scaffolding a project:
-expect scaffold.sh
-cd "test-project"
+expect 'tests/scaffold.sh'
+cd 'test-project'
 
 # Using default configuration:
-cp config/.env.template config/.env
+cp 'config/.env.template' 'config/.env'
 
 # Running integration tests with docker:
 docker-compose run vue yarn ci

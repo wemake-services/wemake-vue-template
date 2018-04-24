@@ -2,7 +2,7 @@
 
 {{ description }}
 
-This project was generated with [`wemake-vue-template`](https://github.com/wemake-services/wemake-vue-template).
+This project was generated with [`wemake-vue-template`](https://github.com/wemake-services/wemake-vue-template). Current template version is: [{{ gitcommit }}](https://github.com/wemake-services/wemake-vue-template/tree/{{ gitcommit }}). See what is [updated](https://github.com/wemake-services/wemake-vue-template/compare/{{ gitcommit }}...master) since then.
 
 [![build status](https://gitlab.com/{{ author }}/{{ name }}/badges/master/build.svg)](https://gitlab.com/{{ author }}/{{ name }}/commits/master) [![coverage report](https://gitlab.com/{{ author }}/{{ name }}/badges/master/coverage.svg)](https://gitlab.com/{{ author }}/{{ name }}/commits/master)
 

@@ -8,6 +8,5 @@ spawn ./node_modules/.bin/vue init . "test-project"
 # https://github.com/vuejs/vue-cli/issues/291
 expect "Project name" { send "\n" }
 expect "Project description" { send "\n" }
-expect "Project URL" { send "\n" }
 expect "Organization" { send "\n" }
 expect "vue-cli · Generated" { send "\n" }

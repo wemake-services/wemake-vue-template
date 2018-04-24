@@ -16,7 +16,7 @@ install:
   - yarn install
 
 script:
-  - sh test.sh
+  - sh tests/test.sh
 
 notifications:
   email:

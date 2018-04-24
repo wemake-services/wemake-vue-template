@@ -1,4 +1,16 @@
 module.exports = {
+  metalsmith: (metalsmith, opts, _helpers) => {
+    const hash = require('child_process')
+      .execSync(`git -C ${metalsmith._directory} rev-parse HEAD`)
+      .toString()
+      .trim()
+
+    if (!opts.helpers) {
+      opts.helpers = {}
+    }
+
+    metalsmith._metadata.gitcommit = hash
+  },
   prompts: {
     name: {
       type: 'string',

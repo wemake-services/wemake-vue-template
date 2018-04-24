@@ -11,4 +11,4 @@ cd 'test-project'
 cp 'config/.env.template' 'config/.env'
 
 # Running integration tests with docker:
-docker-compose run vue yarn ci
+docker-compose run vue yarn test

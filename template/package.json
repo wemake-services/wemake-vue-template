@@ -112,6 +112,6 @@
     "stylelint-scss": "^3.0.0",
     "stylelint-webpack-plugin": "^0.10.4",
     "vue-jest": "^2.5.0",
-    "webpack": "^4.5.0"
+    "webpack": "^4.6.0"
   }
 }

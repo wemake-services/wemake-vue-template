@@ -16,8 +16,12 @@ cache:
 services:
   - docker
 
-install:
+before_install:
   - sudo apt-get update && sudo apt-get install expect
+  - pip install -U docker-compose
+  - docker --version && docker-compose --version
+
+install:
   - yarn install
 
 script:

@@ -11,12 +11,6 @@ module.exports = {
       message: 'Project description',
       default: 'A Vue.js project'
     },
-    project_url: {
-      type: 'string',
-      required: true,
-      message: 'Project URL',
-      default: 'myapp.com'
-    },
     author: {
       type: 'string',
       required: true,

@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "{{ name }}",
   "version": "0.1.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -12,12 +12,17 @@
     "generate": "nuxt generate",
     "test:e2e": "cross-env NODE_ENV=test jest tests/e2e",
     "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
-    "test:security": "nsp check",
-    "test": "npm run test:unit && npm run test:security && npm run lint && npm run test:e2e",
+    "test:sec": "nsp check",
+    "test": "npm run test:unit && npm run test:sec && npm run lint && npm run test:e2e",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}' --syntax scss",
     "lint": "npm run lint:js && npm run lint:css",
     "precommit": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:unit && npm run test:sec && npm run lint"
+    }
   },
   "stylelint": {
     "plugins": [
@@ -41,7 +46,9 @@
   },
   "jest": {
     "globalSetup": "<rootDir>/tests/utils/global-setup.js",
-    "setupFiles": ["<rootDir>/tests/utils/test-setup.js"],
+    "setupFiles": [
+      "<rootDir>/tests/utils/test-setup.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "vue",
@@ -93,6 +100,7 @@
     "eslint-plugin-vue": "^4.4.0",
     "flow-bin": "^0.69.0",
     "flow-typed": "^2.4.0",
+    "husky": "^0.14.3",
     "jest": "^22.4.3",
     "node-sass": "^4.8.3",
     "nsp": "^3.2.1",

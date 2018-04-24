@@ -58,10 +58,7 @@ describe('Index page unit tests', () => {
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
     expect(wrapper.vm.$store.state.comments.length).toBe(1)
     expect(wrapper.vm.$store.state.comments[0].email).toBe(mockedComment.email)
-
-    wrapper.vm.$nextTick(() => {
-      expect(wrapper.findAll('.comment__component').length).toBe(1)
-    })
+    expect(wrapper.findAll('.comment__component').length).toBe(1)
   })
 
   it('should match the snapshot', () => {

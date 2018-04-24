@@ -39,7 +39,10 @@ npx vue-cli init wemake-services/wemake-vue-template your-vue-project
 
 ## Running the project
 
-First, create a same-folder copy of the file `/config/.env.template` and name it `/config/.env`. Modify as fits per your requirements, then
+First, make sure that `./config/.env` exists.
+If not, you need to create a same-folder copy of the file
+`./config/.env.template` and name it `./config/.env`.
+Modify as fits per your requirements.
 
 ### Development server
 
@@ -57,6 +60,7 @@ First, create a same-folder copy of the file `/config/.env.template` and name it
 This project is influenced by:
 
 - https://github.com/nuxt-community/starter-template
+- https://github.com/nuxt-community/typescript-template
 - https://github.com/egoist/vuepack
 - https://github.com/vuejs-templates/webpack
 

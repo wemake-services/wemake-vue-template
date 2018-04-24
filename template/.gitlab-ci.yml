@@ -1,5 +1,3 @@
----
-
 image: docker:latest
 
 variables:
@@ -8,8 +6,8 @@ variables:
   DOCKER_DRIVER: overlay2
   PROJECT_NAME: "{{ name }}"
   GROUP_NAME: "{{ author }}"
-  CONTAINER_TEST_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:$CI_BUILD_REF_NAME"
-  CONTAINER_RELEASE_IMAGE: "registry.gitlab.com/$GROUP_NAME/$PROJECT_NAME:latest"
+  REGISTRY: "registry.gitlab.com"
+  CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
 
 services:
   - docker:dind
@@ -22,18 +20,9 @@ before_script:
   # Creating `.env` configuration file:
   - dump-env -t config/.env.template -p 'SECRET_' > config/.env
   # Login into Docker registry:
-  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" registry.gitlab.com
+  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
   # Debug information:
   - docker info && docker-compose --version && git --version
-
-# Build Docker container and push it to the Gitlab's registry:
-build:
-  stage: build
-  script:
-    - docker build -t "$CONTAINER_TEST_IMAGE" --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
-    - docker push "$CONTAINER_TEST_IMAGE"
-  only:
-    - master
 
 # Testing application:
 test:
@@ -46,8 +35,7 @@ test:
 release-image:
   stage: deploy
   script:
-    - docker pull "$CONTAINER_TEST_IMAGE"
-    - docker tag "$CONTAINER_TEST_IMAGE" "$CONTAINER_RELEASE_IMAGE"
+    - docker build -t "$CONTAINER_RELEASE_IMAGE" --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

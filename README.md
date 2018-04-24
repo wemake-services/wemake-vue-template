@@ -15,12 +15,11 @@ This project is used to scaffold new `vue` project structure.
 ## Features
 
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
-- `nuxt` for server-side rendering
+- [`nuxt`](https://nuxtjs.org/) for server-side rendering
 - `Vue` + `vuex` + `vue-router` with latest `es` features
-- Optional typing with `flow`
-- Server side rendering
+- Optional typing with [`flow`](https://flow.org/)
 - Linting with `eslint` + `stylelint`
-- `jest` for unit tests and `jsdom` for end-to-end testing
+- [`jest`](https://facebook.github.io/jest/) for unit tests and `jsdom` for end-to-end testing
 - `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
 
 
@@ -28,14 +27,17 @@ This project is used to scaffold new `vue` project structure.
 
 You will need:
 
-- `node@9` (see `template/.nvmrc`)
+- `node@9` (see [`template/.nvmrc`](https://github.com/wemake-services/wemake-vue-template/blob/master/template/.nvmrc))
 
 
 ## Installation
 
 ```bash
-npx vue-cli init wemake-services/wemake-vue-template your-vue-project
+git clone https://github.com/wemake-services/wemake-vue-template.git
+npx vue-cli init ./wemake-vue-template your-vue-project
 ```
+
+We are required to clone the project, since we need the `.git` folder.
 
 ## Running the project
 
@@ -50,8 +52,7 @@ Modify as fits per your requirements.
 
 ### Production build
 
-- `yarn build` starts the production build and creates the files in `/dist` folder
-- `yarn start` runs the production code in a node server (default: `http://0.0.0.0:4000`)
+- `yarn start` runs the production code in a node server
 - `yarn generate` generates static files to be deployed [anywhere](https://nuxtjs.org/guide/commands/)
 
 

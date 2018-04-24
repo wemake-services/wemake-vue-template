@@ -2,21 +2,30 @@ language: node_js
 
 sudo: true
 
+node_js: 9.4
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
 cache:
   directories:
     - node_modules
 
-node_js: 8
-
 services:
   - docker
 
-install:
+before_install:
   - sudo apt-get update && sudo apt-get install expect
+  - sudo pip install -U docker-compose
+  - docker --version && docker-compose --version
+
+install:
   - yarn install
 
 script:
-  - sh test.sh
+  - sh tests/test.sh
 
 notifications:
   email:

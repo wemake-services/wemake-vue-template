@@ -1,41 +1,48 @@
 # wemake-vue-template
 
-[![wemake.services](https://img.shields.io/badge/style-wemake.services-green.svg?label=&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](http://wemake.services) [![Build Status](https://travis-ci.org/wemake-services/wemake-vue-template.svg?branch=master)](https://travis-ci.org/wemake-services/wemake-vue-template)
+[![wemake.services](https://img.shields.io/badge/style-wemake.services-green.svg?label=&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](http://wemake.services) [![Build Status](https://travis-ci.org/wemake-services/wemake-vue-template.svg?branch=master)](https://travis-ci.org/wemake-services/wemake-vue-template) [![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 
 
 Bleeding edge `vue` template focused on code quality and development happiness.
 
 ---
 
+## Purpose
+
+This project is used to scaffold new `vue` project structure.
+
+
 ## Features
 
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
+- `nuxt` for server-side rendering
 - `Vue` + `vuex` + `vue-router` with latest `es` features
-- Strict optional typing with `flow`
+- Optional typing with `flow`
 - Server side rendering
-- `eslint` + `stylelint`
-- `jest` for unit tests and `nightwatch.js` for end-to-end testing
-- `docker-compose` for development and production
+- Linting with `eslint` + `stylelint`
+- `jest` for unit tests and `jsdom` for end-to-end testing
 - `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
-- [`Caddy`](https://caddyserver.com/) with [`https`](https://caddyserver.com/docs/automatic-https) and `http/2` turned on by default
 
 
 ## Requirements
 
 You will need:
 
-- `node` (version 8 at least)
+- `node@9` (see `template/.nvmrc`)
 
 
 ## Installation
 
 ```bash
-npx vue-cli init wemake-services/wemake-vue-template ideal-vue-project
+npx vue-cli init wemake-services/wemake-vue-template your-vue-project
 ```
 
 ## Running the project
 
-First, create a same-folder copy of the file `/config/.env.template` and name it `/config/.env`. Modify as fits per your requirements, then
+First, make sure that `./config/.env` exists.
+If not, you need to create a same-folder copy of the file
+`./config/.env.template` and name it `./config/.env`.
+Modify as fits per your requirements.
 
 ### Development server
 
@@ -43,16 +50,18 @@ First, create a same-folder copy of the file `/config/.env.template` and name it
 
 ### Production build
 
-- `yarn build` starts the production build and creates the files in `/dist` folder.
+- `yarn build` starts the production build and creates the files in `/dist` folder
+- `yarn start` runs the production code in a node server (default: `http://0.0.0.0:4000`)
+- `yarn generate` generates static files to be deployed [anywhere](https://nuxtjs.org/guide/commands/)
 
-- `yarn start` runs the production code in a node server (default: `http://0.0.0.0:3000`). 
 
 ## Alternatives
 
 This project is influenced by:
 
+- https://github.com/nuxt-community/starter-template
+- https://github.com/nuxt-community/typescript-template
 - https://github.com/egoist/vuepack
-- https://github.com/doabit/vue-ssr-starter-kit
 - https://github.com/vuejs-templates/webpack
 
 

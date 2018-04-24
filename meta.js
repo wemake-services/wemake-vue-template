@@ -1,4 +1,16 @@
 module.exports = {
+  metalsmith: (metalsmith, opts, _helpers) => {
+    const hash = require('child_process')
+      .execSync(`git -C ${metalsmith._directory} rev-parse HEAD`)
+      .toString()
+      .trim()
+
+    if (!opts.helpers) {
+      opts.helpers = {}
+    }
+
+    metalsmith._metadata.gitcommit = hash
+  },
   prompts: {
     name: {
       type: 'string',
@@ -10,12 +22,6 @@ module.exports = {
       required: false,
       message: 'Project description',
       default: 'A Vue.js project'
-    },
-    project_url: {
-      type: 'string',
-      required: true,
-      message: 'Project URL',
-      default: 'myapp.com'
     },
     author: {
       type: 'string',

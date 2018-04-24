@@ -1,9 +1,0 @@
-{
-  "globals": {
-    "it": false,
-    "describe": false,
-    "expect": false,
-    "beforeEach": false,
-    "jest": false
-  }
-}

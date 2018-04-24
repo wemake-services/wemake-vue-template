@@ -98,7 +98,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-unicorn": "^4.0.2",
     "eslint-plugin-vue": "^4.4.0",
-    "flow-bin": "^0.69.0",
+    "flow-bin": "^0.70.0",
     "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",

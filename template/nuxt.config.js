@@ -4,8 +4,6 @@ const fs = require('fs')
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ path: envPath })
 
-const babel = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.babelrc')))
-
 module.exports = {
   /*
   ** Headers of the page
@@ -36,6 +34,7 @@ module.exports = {
   ** Extra Nuxt modules
   */
   modules: [
+    'nuxt-babel',
     ['@nuxtjs/dotenv', { path: envPath }],
     '@nuxtjs/axios'
   ],
@@ -54,8 +53,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    babel,
-
     vendor: [
       'babel-polyfill'
     ],

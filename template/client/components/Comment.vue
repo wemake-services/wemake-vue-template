@@ -7,14 +7,20 @@
 
     <div class="comment-rating">
       <button
+        class="comment-rating-up"
         @click="changeRating(comment.id, 1)"
-        class="comment-rating-up">+</button>
+      >
+        +
+      </button>
 
       <span class="comment-rating-value">{{ comment.rating }}</span>
 
       <button
+        class="comment-rating-down"
         @click="changeRating(comment.id, -1)"
-        class="comment-rating-down">-</button>
+      >
+        -
+      </button>
     </div>
   </div>
 </template>

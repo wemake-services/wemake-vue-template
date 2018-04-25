@@ -2770,12 +2770,6 @@ eslint-plugin-flowtype-errors@^3.5.0:
     babel-runtime "^6.26.0"
     slash "^1.0.0"
 
-eslint-plugin-html@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-4.0.3.tgz#97d52dcf9e22724505d02719fbd02754013c8a17"
-  dependencies:
-    htmlparser2 "^3.8.2"
-
 eslint-plugin-import@^2.9.0:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.10.0.tgz#fa09083d5a75288df9c6c7d09fe12255985655e7"
@@ -3851,7 +3845,7 @@ htmlparser2@3.8.x:
     entities "1.0"
     readable-stream "1.1"
 
-htmlparser2@^3.8.2, htmlparser2@^3.9.1, htmlparser2@^3.9.2:
+htmlparser2@^3.9.1, htmlparser2@^3.9.2:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.9.2.tgz#1bdf87acca0f3f9e53fa4fcceb0f4b4cbb00b338"
   dependencies:

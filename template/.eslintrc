@@ -1,10 +1,10 @@
 {
   "extends": [
     "standard",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:vue/recommended"
   ],
   "plugins": [
-    "html",
     "flowtype-errors",
     "unicorn",
     "json"
@@ -57,8 +57,8 @@
     // leave files alone, since js and vue files have different cases
     "unicorn/filename-case": 0
   },
-  "parser": "babel-eslint",
   "parserOptions": {
+    "parser": "babel-eslint",
     "ecmaVersion": 2017,
     "sourceType": "module"
   }

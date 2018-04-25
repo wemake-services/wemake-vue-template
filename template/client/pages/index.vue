@@ -3,7 +3,10 @@
     <div>
       <app-logo />
 
-      <section v-if="hasComments" class="comments__component">
+      <section
+        v-if="hasComments"
+        class="comments__component"
+      >
         <comment
           v-for="comment in comments"
           :comment="comment"
@@ -25,17 +28,18 @@ import Comment from '~/components/Comment'
 
 export default {
   fetch ({ store, app }: any) {
+    // See https://nuxtjs.org/api/pages-fetch
     return store.dispatch('fetchComments', app)
-  },
-
-  computed: {
-    ...mapState(['comments']),
-    ...mapGetters(['hasComments'])
   },
 
   components: {
     AppLogo,
     Comment
+  },
+
+  computed: {
+    ...mapState(['comments']),
+    ...mapGetters(['hasComments'])
   }
 }
 </script>

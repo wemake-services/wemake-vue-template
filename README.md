@@ -48,7 +48,7 @@ Modify as fits per your requirements.
 
 ### Development server
 
-- `yarn dev` starts the development server (default: `http://localhost:4000`).
+- `yarn dev` starts the development server
 
 ### Production build
 

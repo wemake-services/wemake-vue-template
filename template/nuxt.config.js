@@ -56,6 +56,10 @@ module.exports = {
   build: {
     babel,
 
+    vendor: [
+      'babel-polyfill'
+    ],
+
     extend (config, { isDev, isClient }) {
       config.resolve.alias['scss'] = path.resolve(__dirname, 'client', 'scss')
 

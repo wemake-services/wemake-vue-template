@@ -5738,6 +5738,12 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
+nuxt-babel@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/nuxt-babel/-/nuxt-babel-0.1.1.tgz#0326ff84b982061bed27e7e6db78dca047aa4948"
+  dependencies:
+    find-babel-config "^1.1.0"
+
 nuxt@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.4.0.tgz#66df9ede68daf2ef4cfbcc329da7dda0003e0420"

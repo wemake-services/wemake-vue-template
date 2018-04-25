@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index page unit tests should match the snapshot 1`] = `"<section class=\\"container\\"><div><div class=\\"wemake-services__component\\"><h1>wemake-vue-template</h1></div> <section class=\\"comments__component\\"><div class=\\"comment__component\\"><p class=\\"comment-author\\">test@mail.com</p> <p class=\\"comment-body\\">some text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">+</button> <span class=\\"comment-rating-value\\">-4</span> <button class=\\"comment-rating-down\\">-</button></div></div><div class=\\"comment__component\\"><p class=\\"comment-author\\">other@mail.com</p> <p class=\\"comment-body\\">other text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">+</button> <span class=\\"comment-rating-value\\">2</span> <button class=\\"comment-rating-down\\">-</button></div></div></section></div></section>"`;
+exports[`Index page unit tests should match the snapshot 1`] = `
+"<section class=\\"container\\"><div><div class=\\"wemake-services__component\\"><h1>wemake-vue-template</h1></div> <section class=\\"comments__component\\"><div class=\\"comment__component\\"><p class=\\"comment-author\\">test@mail.com</p> <p class=\\"comment-body\\">some text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">
+      +
+    </button> <span class=\\"comment-rating-value\\">-4</span> <button class=\\"comment-rating-down\\">
+      -
+    </button></div></div><div class=\\"comment__component\\"><p class=\\"comment-author\\">other@mail.com</p> <p class=\\"comment-body\\">other text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">
+      +
+    </button> <span class=\\"comment-rating-value\\">2</span> <button class=\\"comment-rating-down\\">
+      -
+    </button></div></div></section></div></section>"
+`;

@@ -36,7 +36,7 @@
       "ignoreRegExpLiterals": false
     }],
 
-    // Use new syntax
+    // use new syntax
     "prefer-promise-reject-errors": 2,
     "prefer-arrow-callback": 2,
     "generator-star-spacing": 0,
@@ -55,7 +55,19 @@
     "flowtype-errors/show-errors": 2,
 
     // leave files alone, since js and vue files have different cases
-    "unicorn/filename-case": 0
+    "unicorn/filename-case": 0,
+
+    // rules for vue components:
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "always"
+    }],
+    "vue/html-closing-bracket-spacing": ["error", {
+        "startTag": "never",
+        "endTag": "never",
+        "selfClosingTag": "always"
+    }],
+    "vue/prop-name-casing": ["error", "camelCase"]
   },
   "parserOptions": {
     "parser": "babel-eslint",

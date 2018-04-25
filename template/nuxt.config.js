@@ -1,5 +1,7 @@
+// This is Nuxt configuration file
+// See: https://nuxtjs.org/guide/configuration/
+
 const path = require('path')
-const fs = require('fs')
 
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ path: envPath })

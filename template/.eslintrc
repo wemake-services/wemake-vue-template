@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": [
     "standard",
     "plugin:unicorn/recommended",
@@ -22,8 +23,9 @@
     "import/prefer-default-export": "off",
     "import/first": 2,
 
-    // warn about using console
+    // warn about using console or debugger
     "no-console": 1,
+    "no-debugger": 1,
 
     // raise errors on long lines
     "max-len": [2, {
@@ -57,7 +59,7 @@
     // leave files alone, since js and vue files have different cases
     "unicorn/filename-case": 0,
 
-    // rules for vue components:
+    // rules for vue components
     "vue/html-closing-bracket-newline": ["error", {
       "singleline": "never",
       "multiline": "always"

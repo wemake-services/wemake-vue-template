@@ -26,6 +26,9 @@ import { mapGetters, mapState } from 'vuex'
 import AppLogo from '~/components/AppLogo'
 import Comment from '~/components/Comment'
 
+/**
+* Index page. By default is mounted as `/`.
+*/
 export default {
   fetch ({ store, app }: any) {
     // See https://nuxtjs.org/api/pages-fetch

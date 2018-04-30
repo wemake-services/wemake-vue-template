@@ -12,6 +12,14 @@ to your webserver.
 Use `yarn generate` to create static files. Then just deploy them.
 
 
+## Native 
+
+You can create new virtual server, install `node` there, 
+then configure [`nginx`](https://nuxtjs.org/faq/nginx-proxy).
+
+There are a lot of tutorials about it. Here's [an example](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04).
+
+
 ## Docker
 
 We have already mentioned some [downsides](docker.md#production) of `docker` deployment.
@@ -27,6 +35,10 @@ but it was to confusing for other people.
 So, we removed it.
 
 One more thing. Check out our [backend template](https://github.com/wemake-services/wemake-django-template). 
+
+### Extending GitLab CI to run deployment
+
+`GitLab CI` can run deploys for you. [Check it out](https://docs.gitlab.com/ee/ci/environments.html).
 
 
 ## Other methods

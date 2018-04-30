@@ -5,13 +5,24 @@ import to from 'await-to-js'
 
 import type { RawComment } from '~/types'
 
-function maybeHandleError (error: ?Error) {
+/**
+* Throws error when there is one.
+*
+* @param error: error instance to be thrown
+*/
+function maybeHandleError (error: ?Error): void {
   if (error) {
     throw new Error(error)
   }
 }
 
 export default {
+  /**
+  * Fetches comments from the remote API.
+  *
+  * @param app: injected `Vue` instance to make API calls with correct `$axios`
+  * @returns parsed response data
+  */
   async fetchComments (app: Vue): Promise<Array<RawComment>> {
     const [error, response] = await to(app.$axios.get('comments'))
     maybeHandleError(error)

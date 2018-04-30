@@ -25,6 +25,10 @@ You can enable `flow` on a per-file basis.
 When file starts with `// @flow` it means that `flow` is enabled. 
 Otherwise file is ignored by `flow` checker.
 
+There are two ways to handle `type` imports:
+1. Explicitly importing each type when you need it
+2. Implicitly including all your types by preloading them from [`[libs]`](https://flow.org/en/docs/config/libs/) section in `.flowconfig`
+
 ### Running and configuration
 
 All configuration can be found inside `.eslintrc`.

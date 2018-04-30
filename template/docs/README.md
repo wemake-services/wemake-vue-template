@@ -22,6 +22,14 @@ You can always preview the docs live with `yarn docs:serve`.
 If you want to add new pages, change order or rename something, go to `SUMMARY.md`.
 
 
+## documentation.js
+
+We also use [`documentation.js`](https://github.com/documentationjs/documentation) to build our API docs.
+
+It is then included as `project/api.md`. See [an example](api.md).
+To build it run: `yarn docs:api`.
+
+
 ## Where to go next
 
 You can jump start reading this docs from the `template/` part.

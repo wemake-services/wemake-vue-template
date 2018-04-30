@@ -19,6 +19,14 @@ In this case you will just need to copy `config/.env.template` and fill in all v
 
 Make sure that `config/.env` is kept **secret**!
 
+### nuxt-axios
+
+By default we configure `nuxt-axios` to use relative urls to `API_URL` 
+environment variable.
+
+So, when you need to change your API from production to development,
+just change this single line.
+
 
 ## nuxt.config.js
 

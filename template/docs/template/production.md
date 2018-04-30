@@ -1,1 +1,38 @@
 # Production
+
+When going to production you have several options with this template.
+Let's cover all of them.
+
+
+## Static files
+
+The easiest way to deploy your application is just pushing some static files
+to your webserver.
+
+Use `yarn generate` to create static files. Then just deploy them.
+
+
+## Docker
+
+We have already mentioned some [downsides](docker.md#production) of `docker` deployment.
+But sometimes you really need the whole power of `nuxt` and its server side rendering.
+Or maybe you already have a micro-services architecture.
+
+This way you already have the basics of the `docker` deployment.
+It may be wise to add [`pm2`](http://pm2.keymetrics.io/) within `docker`, using [`process.yml`](http://pm2.keymetrics.io/docs/usage/application-declaration/).
+
+We [used to have](https://github.com/wemake-services/wemake-vue-template/blob/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/docker/docker-compose.prod.yml) 
+the full `docker` production pipeline configured out of the box, 
+but it was to confusing for other people.
+So, we removed it.
+
+One more thing. Check out our [backend template](https://github.com/wemake-services/wemake-django-template). 
+
+
+## Other methods
+
+Very easy. Some of them are totally free. 
+
+- [`now.sh`](https://nuxtjs.org/faq/now-deployment)
+- [`heroku`](https://nuxtjs.org/faq/heroku-deployment)
+- [`github`](https://nuxtjs.org/faq/github-pages)

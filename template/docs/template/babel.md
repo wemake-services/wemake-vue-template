@@ -1,10 +1,13 @@
 # Babel
 
-We use [`babel`](https://babeljs.io/) to write modern `javascript` today. Our `babel` setup is rather simple.
+We use [`babel`](https://babeljs.io/) to write modern `javascript` today.
+Our `babel` setup is rather simple.
+
 
 ## Configuration
 
-Everything is configured inside `.babelrc`. This file is needed for both `nuxt` and `jest`.
+Everything is configured inside `.babelrc`.
+This file is needed for both `nuxt` and `jest`.
 
 Our configuration does two things:
 
@@ -13,13 +16,14 @@ Our configuration does two things:
 
 That's it.
 
+
 ## babel and nuxt
 
 We use [`nuxt-babel`](https://github.com/wemake-services/nuxt-babel) module to be able to use `.babelrc` with `nuxt`.
 
-## Polyfills
+
+## Polyfills 
 
 We also use [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/) to fix old browsers and environments.
 
 You can found it inside `nuxt.config.js`.
-

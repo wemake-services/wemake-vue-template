@@ -4,6 +4,10 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "private": true,
+  "engines": {
+    "node": "9",
+    "yarn": "1.3"
+  },
   "scripts": {
     "postinstall": "command -v flow-typed && flow-typed install || true",
     "dev": "nuxt",

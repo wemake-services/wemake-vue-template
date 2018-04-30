@@ -134,3 +134,4 @@ dist/
 #### custom ####
 flow-typed/
 .nuxt/
+docs/_book/

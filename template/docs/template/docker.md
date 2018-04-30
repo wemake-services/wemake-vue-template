@@ -37,7 +37,7 @@ docker-compose run --rm vue yarn test
 
 ## Production
 
-We use [`GitLab CI`](./gitlab-ci.html) to build production ready `docker` images.
+We use [`GitLab CI`](gitlab-ci.html) to build production ready `docker` images.
 
 However, we do not 100% recommend to use `docker` for production in this case.
 Because you need to answer some questions before doing it:

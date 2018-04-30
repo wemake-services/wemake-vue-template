@@ -6,7 +6,7 @@ There are two options for the local development:
 2. `docker` development
 
 In this part we will discuss native development. 
-Read more about [`docker`](./docker.html) here.
+Read more about [`docker`](docker.html) here.
 Choose the one that fits the best for you.
 
 

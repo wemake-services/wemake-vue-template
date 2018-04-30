@@ -6,14 +6,12 @@ There are two options for the local development:
 2. `docker` development
 
 In this part we will discuss native development. 
-Read more about [`docker`](docker.html) here.
+Read more about [`docker`](docker.md) here.
 Choose the one that fits the best for you.
-
 
 ## Prerequisites
 
 You will need to install [`nvm`](https://github.com/creationix/nvm/blob/master/README.md) before starting.
-
 
 ## Setting up
 
@@ -29,22 +27,20 @@ nvm use
 
 While `nvm install` is a one time action, that just downloads the required `node` version, do not forget to run `nvm use` each time you open a new terminal window.
 
-
 ## Dependencies
 
-After you have activated the correct `node` version it is time to install 
-dependencies. Run:
+After you have activated the correct `node` version it is time to install dependencies. Run:
 
 ```bash
 yarn install
 ```
 
-You will see that two new folders are created: 
+You will see that two new folders are created:
 
-- `node_modules` with all your dependencies
-- `flow-typed` with external `flow` type definitions
-
+* `node_modules` with all your dependencies
+* `flow-typed` with external `flow` type definitions
 
 ## Running
 
 After your dependencies are installed, run `yarn dev` to start a development server.
+

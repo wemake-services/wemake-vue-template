@@ -1,13 +1,13 @@
-# Summary
+# Table of contents
 
-This file is required for a `gitbook.io` to build beautiful table of contents.
+* [Introduction](README.md)
+* [Architecture](architecture.md)
+* [Configuration](configuration.md)
+* [Development](development.md)
+* [Babel](babel.md)
+* [Linting](linting.md)
+* [Testing](testing.md)
+* [Docker](docker.md)
+* [GitLab CI](gitlab-ci.md)
+* [Production](production.md)
 
-- [Architecture](template/architecture.md)
-- [Configuration](template/configuration.md)
-- [Development](template/development.md)
-- [Babel](template/babel.md)
-- [Linting](template/linting.md)
-- [Testing](template/testing.md)
-- [Docker](template/docker.md)
-- [GitLab CI](template/gitlab-ci.md)
-- [Production](template/production.md)

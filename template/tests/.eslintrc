@@ -1,5 +1,7 @@
 {
   "plugins": [
+    // This is required, because otherwise `describe` and `it` will
+    // be marked as undefined values during linting
     "jest"
   ],
   "env": {

@@ -55,6 +55,8 @@
 
     // raise flow errors
     "flowtype-errors/show-errors": 2,
+    "flowtype-errors/show-warnings": 1,
+    // "flowtype-errors/enforce-min-coverage": [2, 50],
 
     // leave files alone, since js and vue files have different cases
     "unicorn/filename-case": 0,

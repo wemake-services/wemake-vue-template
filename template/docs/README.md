@@ -9,7 +9,19 @@ This documentation is separated in three main parts:
 3. `documents/` folder contains binary files, such as: images, word documents, and spreadsheets
 
 
+## Gitbook
+
+We use [`gitbook`](https://github.com/GitbookIO/gitbook) to build and host our documentation.
+Make sure to create an account there to store your own copy.
+
+The [configuration](https://toolchain.gitbook.com/config.html) can be found [here](https://github.com/wemake-services/wemake-vue-template/blob/master/book.json).
+
+To build local version of docs, run: `yarn docs:build`.
+You can always preview the docs live with `yarn docs:serve`.
+
+If you want to add new pages, change order or rename something, go to `SUMMARY.md`.
+
+
 ## Where to go next
 
 You can jump start reading this docs from the `template/` part.
-

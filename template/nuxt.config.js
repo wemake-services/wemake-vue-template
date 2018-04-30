@@ -52,6 +52,11 @@ module.exports = {
   },
 
   /*
+  ** Custom plugins
+  */
+  plugins: [],
+
+  /*
   ** Build configuration
   */
   build: {

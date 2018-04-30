@@ -4,12 +4,5 @@
       "useBuiltIns": true
     }],
     "flow"
-  ],
-  "plugins": [
-    ["module-resolver", {
-      "root": ["./client"],
-      "cwd": "./client",
-      "extensions": [".js", "vue"]
-    }]
   ]
 }

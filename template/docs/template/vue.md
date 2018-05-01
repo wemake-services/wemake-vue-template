@@ -8,6 +8,7 @@ Here we would like to go through some most important parts.
 
 First of all, we use `class`es to define components. 
 We do it with the help of several libraries:
+
 1. [`nuxt-class-component`](https://github.com/nuxt-community/nuxt-class-component) - pretty much the same as [`vue-class-component`](https://github.com/vuejs/vue-class-component), but with special `nuxt` callback defined
 2. [`vue-property-decorator`](https://github.com/kaorun343/vue-property-decorator) that allows to define some useful properties using decorators
 3. [`vuex-class`](https://github.com/ktsn/vuex-class/) that allows to define bindings to `vuex`
@@ -21,10 +22,12 @@ some linting from [`eslint-plugin-vue`](https://github.com/vuejs/eslint-plugin-v
 ### Fallback to good-old simple components
 
 However, you can fallback to `export default {}` at any time you want.
-This way you won't have almost none type support, but you will have linting from `eslint-plugin-vue` which is a good thing.
-Sadly, this particular plugin does not work for the `js` 
-part of the class-based components. 
-However, `html` is always linted.
+This way you won't have almost none type support, but you will have full 
+linting support from `eslint-plugin-vue` which is a good thing.
+
+It would be also easier for newcomers.
+You can even mix styles for different components.
+So, the choice is yours.
 
 
 ## vuex

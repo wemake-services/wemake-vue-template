@@ -15,6 +15,7 @@ describe('e2e tests for index page', () => {
   let nuxt
 
   // Init Nuxt.js and create a server listening on localhost:4000
+  // Can be modified to run once before all tests to speed up the process.
   beforeEach(async () => {
     config.dev = false
 

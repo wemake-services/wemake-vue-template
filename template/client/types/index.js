@@ -1,16 +1,21 @@
 // @flow
 
-export type RawComment = {
+export type RawCommentType = {
   id: number,
   body: string,
   email: string,
 };
 
 // We add rating only on the client (for demo purposes)
-export type Comment = RawComment & {
+export type CommentType = RawCommentType & {
   rating: number
 };
 
-export type State = {
-  comments: ?Array<Comment>
+export type CommentPayloadType = {
+  commentId: number,
+  delta: number
+};
+
+export type StateType = {
+  comments: ?Array<CommentType>
 };

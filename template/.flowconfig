@@ -9,9 +9,16 @@
 [libs]
 
 [lints]
+all=warn
+unclear-type=error
+untyped-import=off
+untyped-type-import=error
+unsafe-getters-setters=off
+sketchy-null=error
 
 [options]
 include_warnings=true
+esproposal.decorators=ignore
 module.name_mapper='^~' -> '<PROJECT_ROOT>/client'
 module.system.node.resolve_dirname=node_modules
 module.system.node.resolve_dirname=client

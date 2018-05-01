@@ -28,20 +28,39 @@
 <script>
 // @flow
 
+import Vue from 'vue'
+import Component from 'nuxt-class-component'
+import { Prop } from 'vue-property-decorator'
+import { Mutation } from 'vuex-class'
+
 import * as mutationTypes from '~/types/mutations'
+import type { CommentType, CommentPayloadType } from '~/types'
 
-export default {
-  props: {
-    comment: {
-      type: Object,
-      required: true
-    }
-  },
+// @vue/component
+@Component()
+/**
+* Test decorated export.
+*/
+export default class Comment extends Vue {
+  @Mutation(mutationTypes.UPDATE_RATING)
+  /**
+  * This is a wrapped mutation from the vuex.
+  */
+  updateRating: (CommentPayloadType) => void
 
-  methods: {
-    changeRating (commentId: number, delta: number) {
-      this.$store.commit(mutationTypes.UPDATE_RATING, { commentId, delta })
-    }
+  @Prop()
+  /**
+  * Passed comment from the parent component.
+  */
+  comment: CommentType
+
+  /**
+  * This is a custom method.
+  */
+  changeRating (commentId: number, delta: number) {
+    // Uncomment next line to test typing:
+    // console.log(this.comment.missingKey)
+    this.updateRating({ commentId, delta })
   }
 }
 </script>

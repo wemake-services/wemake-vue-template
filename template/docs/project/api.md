@@ -2,9 +2,43 @@
 
 ### Table of Contents
 
--   [maybeHandleError][1]
--   [fetchComments][2]
--   [index][3]
+-   [Comment][1]
+    -   [updateRating][2]
+    -   [comment][3]
+    -   [changeRating][4]
+-   [maybeHandleError][5]
+-   [fetchComments][6]
+-   [Index][7]
+    -   [comments][8]
+    -   [hasComments][9]
+    -   [fetch][10]
+
+## Comment
+
+**Extends Vue**
+
+Test decorated export.
+
+### updateRating
+
+This is a wrapped mutation from the vuex.
+
+Type: function (CommentPayloadType): void
+
+### comment
+
+Passed comment from the parent component.
+
+Type: CommentType
+
+### changeRating
+
+This is a custom method.
+
+**Parameters**
+
+-   `commentId` **[number][10]** 
+-   `delta` **[number][10]** 
 
 ## maybeHandleError
 
@@ -12,7 +46,7 @@ Throws error when there is one.
 
 **Parameters**
 
--   `error` **[Error][4]?** : error instance to be thrown
+-   `error` **[Error][11]?** : error instance to be thrown
 
 Returns **void** 
 
@@ -24,20 +58,68 @@ Fetches comments from the remote API.
 
 -   `app` **Vue** : injected `Vue` instance to make API calls with correct `$axios`
 
-Returns **[Promise][5]&lt;[Array][6]&lt;RawComment>>** parsed response data
+Returns **[Promise][12]&lt;[Array][13]&lt;RawCommentType>>** parsed response data
 
-## index
+## IndexPage
 
-Index page. By default it is mounted as `/`.
+**Extends Vue**
 
-[1]: #maybehandleerror
+Main page. Mounted as `/` by default.
 
-[2]: #fetchcomments
+### comments
 
-[3]: #index
+List of predownloaded comments, bound from Vuex
 
-[4]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error
+Type: [Array][13]&lt;CommentType>
 
-[5]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+### hasComments
 
-[6]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+Returns either we have any comments or not.
+
+Type: [boolean][14]
+
+### fetch
+
+Fetches comments from external API from the server side.
+This method should preload Vuex store.
+See: [https://nuxtjs.org/api/pages-fetch][15]
+
+**Parameters**
+
+-   `$0` **any** 
+    -   `$0.store`  
+    -   `$0.app`  
+
+Returns **[Promise][12]&lt;[Array][13]&lt;[Comment][16]>>** list of downloaded comments
+
+[1]: #comment
+
+[2]: #updaterating
+
+[3]: #changerating
+
+[4]: #maybehandleerror
+
+[5]: #fetchcomments
+
+[6]: #indexpage
+
+[7]: #comments
+
+[8]: #hascomments
+
+[9]: #fetch
+
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error
+
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[15]: https://nuxtjs.org/api/pages-fetch
+
+[16]: #comment

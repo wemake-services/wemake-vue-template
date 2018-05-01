@@ -9,17 +9,18 @@ Bleeding edge `vue` template focused on code quality and developer happiness.
 
 ## Purpose
 
-This project is used to scaffold new `vue` project structure.
+This project is used to scaffold new `Vue` project structure.
 
 
 ## Features
 
+- Proven to work on both small and large scale projects
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - [`nuxt`](https://nuxtjs.org/) for server-side rendering
 - `Vue` + `vuex` + `vue-router` with latest `es` features
 - Optional typing with [`flow`](https://flow.org/)
 - Linting with `eslint` + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
-- [`jest`](https://facebook.github.io/jest/) for unit tests and `jsdom` for end-to-end testing
+- [`jest`](https://facebook.github.io/jest/) for unit tests and [`jsdom`](https://github.com/jsdom/jsdom) for end-to-end testing
 - `Gitlab CI` with full `build`, `test`, and `deploy` pipeline configured by default
 - Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project
 

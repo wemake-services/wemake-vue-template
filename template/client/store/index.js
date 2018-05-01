@@ -1,28 +1,34 @@
 // @flow
 
 import Vue from 'vue'
+import { ActionContext } from 'vuex'
 
 import comments from '~/logics/api/comments'
 import * as mutationTypes from '~/types/mutations'
-import type { Comment, State, RawComment } from '~/types'
+import type {
+  CommentType,
+  CommentPayloadType,
+  StateType,
+  RawCommentType
+} from '~/types'
 
-function state (): State {
+function state (): StateType {
   return {
     comments: null
   }
 }
 
 const getters = {
-  hasComments (state: State): boolean {
+  hasComments (state: StateType): boolean {
     return Boolean(state.comments && state.comments.length > 0)
   }
 }
 
 const mutations = {
   [mutationTypes.SET_COMMENTS]: (
-    state: State, comments: Array<RawComment>
+    state: StateType, comments: Array<RawCommentType>
   ) => {
-    const updatedComments: Array<Comment> = []
+    const updatedComments: Array<CommentType> = []
 
     for (const comment of comments.slice(0, 10)) {
       const newOne = {
@@ -36,11 +42,11 @@ const mutations = {
   },
 
   [mutationTypes.UPDATE_RATING]: (
-    state: State, { commentId, delta }: { commentId: number, delta: number }
+    state: StateType, { commentId, delta }: CommentPayloadType
   ) => {
     if (!state.comments) return
 
-    const commentIndex = state.comments.findIndex((c: Comment) => {
+    const commentIndex = state.comments.findIndex((c: CommentType) => {
       return c.id === commentId
     })
 
@@ -51,7 +57,7 @@ const mutations = {
 }
 
 const actions = {
-  async fetchComments ({ commit }: any, app: Vue) {
+  async fetchComments ({ commit }: ActionContext, app: Vue) {
     const data = await comments.fetchComments(app)
     commit(mutationTypes.SET_COMMENTS, data)
 

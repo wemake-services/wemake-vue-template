@@ -21,28 +21,55 @@
 <script>
 // @flow
 
-import { mapGetters, mapState } from 'vuex'
+import Vue from 'vue'
+import { Store } from 'vuex'
 
 import AppLogo from '~/components/AppLogo'
 import Comment from '~/components/Comment'
 
-/**
-* Index page. By default is mounted as `/`.
-*/
-export default {
-  fetch ({ store, app }: any) {
-    // See https://nuxtjs.org/api/pages-fetch
-    return store.dispatch('fetchComments', app)
-  },
+import Component from 'nuxt-class-component'
+import { Getter, State } from 'vuex-class'
 
+import type { CommentType } from '~/types'
+
+// @vue/component
+@Component({
   components: {
     AppLogo,
     Comment
-  },
+  }
+})
+/**
+* Main page. Or index page. Mounted as `/` by default.
+*/
+export default class Index extends Vue {
+  @State('comments')
+  /**
+  * List of predownloaded comments, bound from Vuex
+  */
+  comments: Array<CommentType>
 
-  computed: {
-    ...mapState(['comments']),
-    ...mapGetters(['hasComments'])
+  @Getter('hasComments')
+  /**
+  * Returns either we have any comments or not.
+  */
+  hasComments: boolean
+
+  /**
+  * Fetches comments from external API from the server side.
+  * This method should preload Vuex store.
+  * See: https://nuxtjs.org/api/pages-fetch
+  *
+  * @param context.store: current Vuex store
+  * @param context.app: current Vue instance
+  * @returns list of downloaded comments
+  */
+  fetch (
+    { store, app }: { store: Store, app: Vue }
+  ): Promise<Array<CommentType>> {
+    // Uncomment the next line to test flow types:
+    // console.log(this.comments + 12)
+    return store.dispatch('fetchComments', app)
   }
 }
 </script>

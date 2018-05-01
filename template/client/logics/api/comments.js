@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import to from 'await-to-js'
 
-import type { RawComment } from '~/types'
+import type { RawCommentType } from '~/types'
 
 /**
 * Throws error when there is one.
@@ -23,7 +23,7 @@ export default {
   * @param app: injected `Vue` instance to make API calls with correct `$axios`
   * @returns parsed response data
   */
-  async fetchComments (app: Vue): Promise<Array<RawComment>> {
+  async fetchComments (app: Vue): Promise<Array<RawCommentType>> {
     const [error, response] = await to(app.$axios.get('comments'))
     maybeHandleError(error)
     return response.data

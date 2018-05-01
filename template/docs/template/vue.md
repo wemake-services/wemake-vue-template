@@ -4,6 +4,21 @@ We use a lot of non-standard things in our `Vue` components.
 Here we would like to go through some most important parts.
 
 
+## nuxt
+
+We use `nuxt` because it gives no overhead, but gives tons of features, including:
+
+1. server side rendering
+2. single page applications
+3. static assets generation
+4. zero-configuration build tool
+5. routing
+6. middlewares
+7. much more
+
+We do not recommend to switch to raw `Vue`, unless you 100% sure.
+
+
 ## nuxt-class-component
 
 First of all, we use `class`es to define components. 
@@ -33,6 +48,8 @@ So, the choice is yours.
 ## vuex
 
 We use [`vuex-modules`](https://vuex.vuejs.org/en/modules.html) that comes with [`nuxt`](https://nuxtjs.org/guide/vuex-store/). 
+
+You can switch to [classic mode](https://nuxtjs.org/guide/vuex-store#classic-mode) if you want to.
 
 
 ## routing

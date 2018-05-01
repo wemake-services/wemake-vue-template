@@ -3,6 +3,9 @@
 When going to production you have several options with this template.
 Let's cover all of them.
 
+Before going to production make sure, 
+that you have checked your modules' size with `yarn build --analyze`.
+
 
 ## Static files
 

@@ -1,6 +1,7 @@
 // @flow
 
 import Vue from 'vue'
+import { ActionContext } from 'vuex'
 
 import comments from '~/logics/api/comments'
 import * as mutationTypes from '~/types/mutations'
@@ -56,7 +57,7 @@ const mutations = {
 }
 
 const actions = {
-  async fetchComments ({ commit }: any, app: Vue) {
+  async fetchComments ({ commit }: ActionContext, app: Vue) {
     const data = await comments.fetchComments(app)
     commit(mutationTypes.SET_COMMENTS, data)
 

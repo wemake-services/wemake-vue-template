@@ -40,9 +40,8 @@
     }],
 
     // use new syntax
-    "prefer-promise-reject-errors": 2,
     "prefer-arrow-callback": 2,
-    "generator-star-spacing": 0,
+    "generator-star-spacing": [2, "after"],
 
     "func-style": [2, "declaration", {
       "allowArrowFunctions": true

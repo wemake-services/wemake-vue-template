@@ -14,9 +14,8 @@ describe('e2e tests for index page', () => {
   // So we can close them at the end of the test
   let nuxt
 
-  // Init Nuxt.js and create a server listening on localhost:4000
-  // Can be modified to run once before all tests to speed up the process.
-  beforeEach(async () => {
+  // Init Nuxt.js and create a server listening on localhost:4001
+  beforeAll(async () => {
     config.dev = false
 
     // This part can be moved to a separate function:
@@ -37,13 +36,16 @@ describe('e2e tests for index page', () => {
   it('Route / exits and render HTML with CSS applied', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
-    const element = window.document.querySelector('.comments__component')
+    
+    const mainHeader = window.document.querySelector('h1')
+    const comments = window.document.querySelector('.comments__component')
 
-    expect(window.getComputedStyle(element).display).toBe('flex')
+    expect(mainHeader.textContent).toBe('wemake-vue-template')
+    expect(window.getComputedStyle(comments).display).toBe('flex')
   })
 
   // Close server and ask nuxt to stop listening to file changes
-  afterEach(() => {
+  afterAll(() => {
     nuxt.close()
   })
 })

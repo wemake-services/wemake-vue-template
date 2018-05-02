@@ -105,7 +105,7 @@
     "postcss": "^6.0.22",
     "sass-loader": "^7.0.1",
     "stylelint": "^8.0.0",
-    "stylelint-config-strict-scss": "^0.1.0",
+    "stylelint-config-strict-scss": "^0.2.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.10.4",
     "vue-jest": "^2.5.0",

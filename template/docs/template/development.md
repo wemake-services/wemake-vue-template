@@ -57,3 +57,12 @@ We use [`husky`](https://github.com/typicode/husky) to handle pre-commit hooks.
 
 Indeed you don't even have to install or configure anything.
 It just works out of the box. 
+
+
+## Dev tools
+
+If you are wondering what tools to use for the best development experience,
+we can recommend [`vscode`](https://code.visualstudio.com/) with [`vetur`](https://github.com/vuejs/vetur) extension.
+
+Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools) is an essential add-on for your browser.
+Make sure to install it.

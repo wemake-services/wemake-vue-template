@@ -37,6 +37,8 @@ module.exports = {
   */
   modules: [
     'nuxt-babel',
+    'nuxt-imagemin',
+
     ['@nuxtjs/dotenv', { path: envPath }],
     '@nuxtjs/axios'
   ],

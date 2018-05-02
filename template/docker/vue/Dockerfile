@@ -9,7 +9,19 @@ ENV NODE_ENV $NODE_ENV
 
 # System deps:
 
-RUN apk update && apk add --no-cache ca-certificates wget git \
+RUN apk update && apk add --no-cache \
+    bash \
+    ca-certificates \
+    git \
+    lcms2-dev \
+    libpng-dev \
+    libjpeg-turbo-dev \
+    gcc \
+    g++ \
+    make \
+    autoconf \
+    automake \
+    wget \
   && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
   && wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.27-r0/glibc-2.27-r0.apk \
   && apk add glibc-2.27-r0.apk \

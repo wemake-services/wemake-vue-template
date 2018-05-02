@@ -67,6 +67,7 @@
     "nuxt": "^1.4.0",
     "nuxt-babel": "^0.1.2",
     "nuxt-class-component": "^1.2.1",
+    "nuxt-imagemin": "^0.1.1",
     "vue-property-decorator": "^6.0.0",
     "vuex-class": "^0.3.0"
   },
@@ -102,7 +103,6 @@
     "jest": "^22.4.3",
     "node-sass": "^4.9.0",
     "nsp": "^3.2.1",
-    "nuxt-imagemin": "^0.1.1",
     "postcss": "^6.0.22",
     "sass-loader": "^7.0.1",
     "stylelint": "^8.0.0",

@@ -36,7 +36,7 @@ describe('e2e tests for index page', () => {
   it('Route / exits and render HTML with CSS applied', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
-    
+
     const mainHeader = window.document.querySelector('h1')
     const comments = window.document.querySelector('.comments__component')
 

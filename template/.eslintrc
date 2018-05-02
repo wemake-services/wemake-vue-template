@@ -3,7 +3,8 @@
   "extends": [
     "standard",
     "plugin:unicorn/recommended",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
+    "flowtype-essential"
   ],
   "plugins": [
     "flowtype-errors",

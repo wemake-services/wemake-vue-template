@@ -84,6 +84,7 @@
     "deepcopy": "^0.6.3",
     "documentation": "^6.3.2",
     "eslint": "^4.18.1",
+    "eslint-config-flowtype-essential": "^0.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^2.0.0",

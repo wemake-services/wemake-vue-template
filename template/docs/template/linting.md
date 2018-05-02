@@ -29,6 +29,8 @@ There are two ways to handle `type` imports:
 1. Explicitly importing each type when you need it
 2. Implicitly including all your types by preloading them from [`[libs]`](https://flow.org/en/docs/config/libs/) section in `.flowconfig`
 
+We also lint `flow` types themselfs. We are using [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype).
+
 ### Running and configuration
 
 All configuration can be found inside `.eslintrc`.

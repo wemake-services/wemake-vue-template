@@ -38,10 +38,12 @@ describe('e2e tests for index page', () => {
     const { window } = new JSDOM(html).window
 
     const mainHeader = window.document.querySelector('h1')
-    const comments = window.document.querySelector('.comments__component')
+    const comments = window.document.querySelector(
+      '.comments__component .comments-container'
+    )
 
-    expect(mainHeader.textContent).toBe('wemake-vue-template')
-    expect(window.getComputedStyle(comments).display).toBe('flex')
+    expect(mainHeader.textContent.trim()).toEqual('wemake-vue-template')
+    expect(window.getComputedStyle(comments).display).toEqual('flex')
   })
 
   // Close server and ask nuxt to stop listening to file changes

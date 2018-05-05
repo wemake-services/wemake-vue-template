@@ -35,7 +35,7 @@ test:
 release-image:
   stage: deploy
   script:
-    - docker build -t "$CONTAINER_RELEASE_IMAGE" --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
+    - docker build -t "$CONTAINER_RELEASE_IMAGE" --build-arg NODE_ENV=production -f docker/django/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

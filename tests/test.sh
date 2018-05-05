@@ -7,8 +7,5 @@ set -o nounset
 expect 'tests/scaffold.sh'
 cd 'test-project'
 
-# Using default configuration:
-cp 'config/.env.template' 'config/.env'
-
 # Running integration tests with docker:
 docker-compose run vue yarn test

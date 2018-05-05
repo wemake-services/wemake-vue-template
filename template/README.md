@@ -12,7 +12,7 @@ This project was generated with [`wemake-vue-template`](https://github.com/wemak
 You will need:
 
 - `node@9` (see `.nvmrc` file. You can use [`nvm`](https://github.com/creationix/nvm) to manage versions)
-- `docker` with version at least `18.02`
+- [`docker`](https://www.docker.com/community-edition) with version at least `18.02`
 
 
 ## Development
@@ -20,4 +20,4 @@ You will need:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- `yarn` (**required**)
+- [`yarn`](https://yarnpkg.com) (**required**)

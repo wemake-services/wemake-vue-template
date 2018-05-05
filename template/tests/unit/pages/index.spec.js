@@ -41,13 +41,13 @@ describe('Index page unit tests', () => {
     })
   })
 
-  it('should have two comments', () => {
+  test('should have two comments', () => {
     const wrapper = mount(Index, { store, localVue, propsData })
 
-    expect(wrapper.findAll('.comment__component').length).toBe(2)
+    expect(wrapper.findAll('.comment__component')).toHaveLength(2)
   })
 
-  it('should load new comments on actions', async () => {
+  test('should load new comments on actions', async () => {
     expect.assertions(3)
     const wrapper = mount(Index, { store, localVue, propsData })
     wrapper.vm.$axios = axios
@@ -56,12 +56,12 @@ describe('Index page unit tests', () => {
     mock.onGet('/comments').reply(200, [mockedComment])
 
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
-    expect(wrapper.vm.$store.state.comments.length).toBe(1)
+    expect(wrapper.vm.$store.state.comments).toHaveLength(1)
     expect(wrapper.vm.$store.state.comments[0].email).toBe(mockedComment.email)
-    expect(wrapper.findAll('.comment__component').length).toBe(1)
+    expect(wrapper.findAll('.comment__component')).toHaveLength(1)
   })
 
-  it('should match the snapshot', () => {
+  test('should match the snapshot', () => {
     const wrapper = mount(Index, { store, localVue, propsData })
     expect(wrapper.html()).toMatchSnapshot()
   })

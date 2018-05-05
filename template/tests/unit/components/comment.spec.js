@@ -28,13 +28,13 @@ describe('Comment component unit tests', () => {
     })
   })
 
-  it('should have two buttons', () => {
+  test('should have two buttons', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
-    expect(wrapper.findAll('button').length).toBe(2)
+    expect(wrapper.findAll('button')).toHaveLength(2)
   })
 
-  it('should have correct values', () => {
+  test('should have correct values', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
     expect(wrapper.find('.comment-author').text().trim()).toBe(comment.email)
@@ -44,7 +44,7 @@ describe('Comment component unit tests', () => {
     )
   })
 
-  it('should increment rating', () => {
+  test('should increment rating', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
@@ -54,7 +54,7 @@ describe('Comment component unit tests', () => {
     expect(wrapper.vm.$store.state.comments[0].rating).toBe(1)
   })
 
-  it('should decrement rating', () => {
+  test('should decrement rating', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
@@ -64,7 +64,7 @@ describe('Comment component unit tests', () => {
     expect(wrapper.vm.$store.state.comments[0].rating).toBe(-1)
   })
 
-  it('should match the snapshot', () => {
+  test('should match the snapshot', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
     expect(wrapper.html()).toMatchSnapshot()
   })

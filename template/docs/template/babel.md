@@ -9,10 +9,11 @@ Our `babel` setup is rather simple.
 Everything is configured inside `.babelrc`.
 This file is needed for both `nuxt` and `jest`.
 
-Our configuration does two things:
+Our configuration does several things:
 
 1. Uses [`vue-app`](https://www.npmjs.com/package/babel-preset-vue-app) preset to be able to work with the latest `js` features, `jsx` and `async` functions
 2. Uses [`flow`](https://www.npmjs.com/package/babel-preset-flow) preset to strip away `flow` types at build time
+3. When running tests we ensure that [`jest` assertions](https://github.com/mattphillips/babel-jest-assertions) will run as expected 
 
 That's it.
 
@@ -26,4 +27,4 @@ We use [`nuxt-babel`](https://github.com/wemake-services/nuxt-babel) module to b
 
 We also use [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/) to fix old browsers and environments.
 
-You can found it inside `nuxt.config.js`.
+You can found it inside `nuxt.config.js` in `vendor` block.

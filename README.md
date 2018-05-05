@@ -22,6 +22,7 @@ This project is used to scaffold new `Vue` project structure.
 - Linting with `eslint` + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`jsdom`](https://github.com/jsdom/jsdom) for end-to-end testing
 - [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test`, and `deploy` pipeline configured by default
+- Easy update process, so your template will always be up-to-date
 - Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project
 
 

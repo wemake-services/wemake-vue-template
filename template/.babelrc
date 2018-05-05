@@ -1,12 +1,15 @@
 {
   "presets": [
-    ["vue-app", {
-      "useBuiltIns": true
-    }],
+    ["vue-app", { "useBuiltIns": true }],
     "flow"
   ],
   "plugins": [
     "transform-decorators-legacy",
     "transform-class-properties"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["babel-jest-assertions"]
+    }
+  }
 }

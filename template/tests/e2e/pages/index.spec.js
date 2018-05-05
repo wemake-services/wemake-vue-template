@@ -25,7 +25,7 @@ describe('e2e tests for index page', () => {
   }, 30000)
 
   // Example of testing only generated html
-  it('Route / exits and render HTML', async () => {
+  test('route / exits and render HTML', async () => {
     expect.assertions(1)
 
     const { html } = await nuxt.renderRoute('/', {})
@@ -33,7 +33,7 @@ describe('e2e tests for index page', () => {
   })
 
   // Example of testing via dom checking
-  it('Route / exits and render HTML with CSS applied', async () => {
+  test('route / exits and render HTML with CSS applied', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
 

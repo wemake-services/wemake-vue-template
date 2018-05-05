@@ -12,6 +12,7 @@
     -   [comments][8]
     -   [hasComments][9]
     -   [fetch][10]
+    -   [handleReload][11]
 
 ## Comment
 
@@ -37,8 +38,8 @@ This is a custom method.
 
 **Parameters**
 
--   `commentId` **[number][10]** 
--   `delta` **[number][10]** 
+-   `commentId` **[number][12]** 
+-   `delta` **[number][12]** 
 
 ## maybeHandleError
 
@@ -46,7 +47,7 @@ Throws error when there is one.
 
 **Parameters**
 
--   `error` **[Error][11]?** : error instance to be thrown
+-   `error` **[Error][13]?** : error instance to be thrown
 
 Returns **void** 
 
@@ -56,33 +57,34 @@ Fetches comments from the remote API.
 
 **Parameters**
 
--   `app` **Vue** : injected `Vue` instance to make API calls with correct `$axios`
+-   `app` **any** : injected `Vue` instance to make API calls with correct `$axios`
+    -   `app.$axios`  : slightly modified `Axios` instance
 
-Returns **[Promise][12]&lt;[Array][13]&lt;RawCommentType>>** parsed response data
+Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** parsed response data
 
-## IndexPage
+## Index
 
 **Extends Vue**
 
-Main page. Mounted as `/` by default.
+Main page. Or index page. Mounted as `/` by default.
 
 ### comments
 
 List of predownloaded comments, bound from Vuex
 
-Type: [Array][13]&lt;CommentType>
+Type: [Array][15]&lt;CommentType>
 
 ### hasComments
 
 Returns either we have any comments or not.
 
-Type: [boolean][14]
+Type: [boolean][16]
 
 ### fetch
 
 Fetches comments from external API from the server side.
 This method should preload Vuex store.
-See: [https://nuxtjs.org/api/pages-fetch][15]
+See: [https://nuxtjs.org/api/pages-fetch][17]
 
 **Parameters**
 
@@ -90,36 +92,42 @@ See: [https://nuxtjs.org/api/pages-fetch][15]
     -   `$0.store`  
     -   `$0.app`  
 
-Returns **[Promise][12]&lt;[Array][13]&lt;[Comment][16]>>** list of downloaded comments
+Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** list of downloaded comments
+
+### handleReload
+
+Reloads comments from external API.
 
 [1]: #comment
 
 [2]: #updaterating
 
-[3]: #changerating
+[3]: #comment-1
 
-[4]: #maybehandleerror
+[4]: #changerating
 
-[5]: #fetchcomments
+[5]: #maybehandleerror
 
-[6]: #indexpage
+[6]: #fetchcomments
 
-[7]: #comments
+[7]: #index
 
-[8]: #hascomments
+[8]: #comments
 
-[9]: #fetch
+[9]: #hascomments
 
-[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[10]: #fetch
 
-[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error
+[11]: #handlereload
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[15]: https://nuxtjs.org/api/pages-fetch
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[16]: #comment
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[17]: https://nuxtjs.org/api/pages-fetch

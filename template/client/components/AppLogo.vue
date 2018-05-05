@@ -1,6 +1,16 @@
 <template>
   <div class="wemake-services__component">
-    <h1>wemake-vue-template</h1>
+    <h1>
+      <a href="https://github.com/wemake-services/wemake-vue-template">
+        wemake-vue-template
+      </a>
+    </h1>
+
+    <h2>
+      <a href="https://wemake-services.gitbook.io/wemake-vue-template/">
+        Documentation
+      </a>
+    </h2>
   </div>
 </template>
 
@@ -9,5 +19,11 @@
 
 .wemake-services__component {
   @include centered();
+
+  a,
+  a:visited,
+  a:active {
+    color: black;
+  }
 }
 </style>

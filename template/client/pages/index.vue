@@ -1,11 +1,20 @@
 <template>
-  <section class="container">
+  <section class="comments__component">
     <div>
       <app-logo />
 
+      <div class="comments-actions">
+        <button
+          class="comments-action-reload"
+          @click="handleReload"
+        >
+          reload comments
+        </button>
+      </div>
+
       <section
         v-if="hasComments"
-        class="comments__component"
+        class="comments-container"
       >
         <comment
           v-for="comment in comments"
@@ -23,12 +32,11 @@
 
 import Vue from 'vue'
 import { Store } from 'vuex'
+import Component from 'nuxt-class-component'
+import { Getter, State } from 'vuex-class'
 
 import AppLogo from '~/components/AppLogo'
 import Comment from '~/components/Comment'
-
-import Component from 'nuxt-class-component'
-import { Getter, State } from 'vuex-class'
 
 import type { CommentType } from '~/types'
 
@@ -71,13 +79,39 @@ export default class Index extends Vue {
     // console.log(this.comments + 12)
     return store.dispatch('fetchComments', app)
   }
+
+  /**
+  * Reloads comments from external API.
+  */
+  handleReload () {
+    return this.$store.dispatch('fetchComments', this)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .comments__component {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  .comments-actions {
+    text-align: center;
+
+    .comments-action-reload {
+      $button-color: #409eff;
+      $button-text-color: #fff;
+
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      padding: 5px 10px;
+      color: $button-text-color;
+      background-color: $button-color;
+      border-color: $button-color;
+    }
+  }
+
+  .comments-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 </style>

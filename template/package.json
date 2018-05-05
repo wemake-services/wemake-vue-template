@@ -61,6 +61,7 @@
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",
     "await-to-js": "^2.0.1",
+    "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
     "normalize.css": "^8.0.0",

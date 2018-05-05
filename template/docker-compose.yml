@@ -13,6 +13,7 @@ services:
     volumes:
       - .:/code
       - /code/node_modules
+      - /code/flow-typed
     ports:
       - "4000:4000"
     networks:

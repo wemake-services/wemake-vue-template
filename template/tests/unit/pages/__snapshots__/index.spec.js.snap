@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Index page unit tests should match the snapshot 1`] = `
-"<section class=\\"container\\"><div><div class=\\"wemake-services__component\\"><h1>wemake-vue-template</h1></div> <section class=\\"comments__component\\"><div class=\\"comment__component\\"><p class=\\"comment-author\\">test@mail.com</p> <p class=\\"comment-body\\">some text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">
+"<section class=\\"comments__component\\"><div><div class=\\"wemake-services__component\\"><h1><a href=\\"https://github.com/wemake-services/wemake-vue-template\\">
+      wemake-vue-template
+    </a></h1> <h2><a href=\\"https://wemake-services.gitbook.io/wemake-vue-template/\\">
+      Documentation
+    </a></h2></div> <div class=\\"comments-actions\\"><button class=\\"comments-action-reload\\">
+        reload comments
+      </button></div> <section class=\\"comments-container\\"><div class=\\"comment__component\\"><p class=\\"comment-author\\">test@mail.com</p> <p class=\\"comment-body\\">some text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">
       +
     </button> <span class=\\"comment-rating-value\\">-4</span> <button class=\\"comment-rating-down\\">
       -

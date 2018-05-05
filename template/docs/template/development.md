@@ -53,7 +53,7 @@ After your dependencies are installed, run `yarn dev` to start a development ser
 ## Making commit
 
 We run tests and linting on each commit to be sure that nothing will break.
-We use [`husky`](https://github.com/typicode/husky) to handle pre-commit hooks.
+We use [`husky`](https://github.com/typicode/husky) to handle [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 
 Indeed you don't even have to install or configure anything.
 It just works out of the box. 

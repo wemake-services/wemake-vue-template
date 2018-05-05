@@ -81,7 +81,6 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-vue-app": "^2.0.0",
     "css-mqpacker": "^6.0.2",
-    "cssnano": "^3.10.0",
     "deepcopy": "^0.6.3",
     "documentation": "^6.3.2",
     "eslint": "^4.18.1",

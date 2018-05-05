@@ -59,9 +59,21 @@ module.exports = {
   plugins: [],
 
   /*
+  ** Global CSS
+  */
+  css: [
+    'normalize.css/normalize.css'
+  ],
+
+  /*
   ** Build configuration
   */
   build: {
+    analyze: {
+      analyzerMode: 'static',
+      openAnalyzer: false
+    },
+
     vendor: [
       'babel-polyfill'
     ],
@@ -97,7 +109,6 @@ module.exports = {
         'postcss-cssnext': {},
 
         // Custom:
-        'cssnano': {},
         'css-mqpacker': {}
       }
     }

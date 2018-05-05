@@ -37,6 +37,7 @@ Parts that you will need the most:
 1. [`vendor`](https://nuxtjs.org/api/configuration-build#vendor) option, which specifies what packages should be packed as `vendor` bundle
 2. [`head`](https://nuxtjs.org/api/configuration-head) option, which specifies meta-data for your `html` pages
 3. [`plugins`](https://nuxtjs.org/api/configuration-plugins) option, which specifies what files should be run before creating root `Vue` instance
+4. [`css`](https://nuxtjs.org/api/configuration-css/) option, which specifies global `css` options
 
 
 ## package.json

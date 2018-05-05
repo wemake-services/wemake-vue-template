@@ -37,9 +37,9 @@ describe('Comment component unit tests', () => {
   test('should have correct values', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
-    expect(wrapper.find('.comment-author').text().trim()).toBe(comment.email)
-    expect(wrapper.find('.comment-body').text().trim()).toBe(comment.body)
-    expect(wrapper.find('.comment-rating-value').text().trim()).toBe(
+    expect(wrapper.find('.comment-author').text().trim()).toEqual(comment.email)
+    expect(wrapper.find('.comment-body').text().trim()).toEqual(comment.body)
+    expect(wrapper.find('.comment-rating-value').text().trim()).toEqual(
       String(comment.rating)
     )
   })
@@ -51,7 +51,7 @@ describe('Comment component unit tests', () => {
       commentId: comment.id,
       delta: 1
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toBe(1)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(1)
   })
 
   test('should decrement rating', () => {
@@ -61,7 +61,7 @@ describe('Comment component unit tests', () => {
       commentId: comment.id,
       delta: -1
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toBe(-1)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(-1)
   })
 
   test('should match the snapshot', () => {

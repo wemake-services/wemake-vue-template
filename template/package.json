@@ -5,7 +5,7 @@
   "author": "{{ author }}",
   "private": true,
   "engines": {
-    "node": "9.4",
+    "node": "9.10",
     "yarn": "1.6"
   },
   "scripts": {
@@ -62,27 +62,34 @@
     "@nuxtjs/dotenv": "^1.1.1",
     "await-to-js": "^2.0.1",
     "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-vue-app": "^2.0.0",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
+    "css-mqpacker": "^6.0.2",
+    "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.0",
     "nuxt-babel": "^0.1.2",
     "nuxt-class-component": "^1.2.1",
     "nuxt-imagemin": "^0.1.1",
+    "postcss": "^6.0.22",
+    "sass-loader": "^7.0.1",
     "vue-property-decorator": "^6.0.0",
-    "vuex-class": "^0.3.0"
+    "vuex-class": "^0.3.0",
+    "webpack": "^3.11.0"
   },
   "devDependencies": {
     "@vue-flow-typed/vuex": "^0.1.4",
     "@vue/test-utils": "^1.0.0-beta.15",
     "axios-mock-adapter": "^1.15.0",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
     "babel-jest-assertions": "^0.1.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-vue-app": "^2.0.0",
-    "css-mqpacker": "^6.0.2",
     "deepcopy": "^0.6.3",
     "documentation": "^6.3.2",
     "eslint": "^4.18.1",
@@ -105,15 +112,11 @@
     "gitbook-cli": "^2.3.2",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
-    "node-sass": "^4.9.0",
     "nsp": "^3.2.1",
-    "postcss": "^6.0.22",
-    "sass-loader": "^7.0.1",
     "stylelint": "^8.0.0",
     "stylelint-config-strict-scss": "^0.2.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.10.4",
-    "vue-jest": "^2.5.0",
-    "webpack": "^4.6.0"
+    "vue-jest": "^2.5.0"
   }
 }

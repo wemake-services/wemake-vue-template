@@ -48,6 +48,6 @@ One more thing. Check out our [backend template](https://github.com/wemake-servi
 
 Very easy. Some of them are totally free. 
 
-- [`now.sh`](https://nuxtjs.org/faq/now-deployment)
+- [`now.sh`](https://nuxtjs.org/faq/now-deployment), [dotenv example](https://github.com/maxbeatty/example-zeit-now-dotenv)
 - [`heroku`](https://nuxtjs.org/faq/heroku-deployment)
 - [`github`](https://nuxtjs.org/faq/github-pages)

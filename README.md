@@ -7,9 +7,15 @@ Bleeding edge `vue` template focused on code quality and developer happiness.
 
 ---
 
-## Purpose
-
 This project is used to scaffold new `Vue` project structure.
+
+
+## Demo
+
+Demo link: https://wemake-vue-demo.now.sh/
+
+Right after the start you will have the same app.
+Demo source code is [here](https://wemake-vue-demo.now.sh/_src).
 
 
 ## Features

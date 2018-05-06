@@ -1,4 +1,4 @@
-FROM node:9.4-alpine
+FROM node:9.10-alpine
 
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"

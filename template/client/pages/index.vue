@@ -38,7 +38,7 @@ import { Getter, State } from 'vuex-class'
 import AppLogo from '~/components/AppLogo'
 import Comment from '~/components/Comment'
 
-import type { CommentType } from '~/types'
+import type { CommentType, StateType } from '~/types'
 
 // @vue/component
 @Component({
@@ -75,7 +75,7 @@ export default class Index extends Vue {
   * @returns List of downloaded comments.
   */
   fetch (
-    { store, app }: { store: Store, app: Vue }
+    { store, app }: { store: Store<StateType>, app: Vue }
   ): Promise<Array<CommentType>> {
     // Uncomment the next line to test flow types:
     // console.log(this.comments + 12)

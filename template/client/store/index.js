@@ -1,7 +1,7 @@
 // @flow
 
 import Vue from 'vue'
-import { ActionContext } from 'vuex'
+import type { ActionContext } from 'vuex'
 
 import comments from '~/logics/api/comments'
 import * as mutationTypes from '~/types/mutations'
@@ -57,9 +57,13 @@ const mutations = {
 }
 
 const actions = {
-  async fetchComments ({ commit }: ActionContext, app: Vue) {
+  async fetchComments (
+    { commit, state }: ActionContext<StateType>, app: Vue
+  ) {
     const data = await comments.fetchComments(app)
     commit(mutationTypes.SET_COMMENTS, data)
+    // Uncomment next line to see typing in action:
+    // console.log(state.comments, state.fake)
 
     return data
   }

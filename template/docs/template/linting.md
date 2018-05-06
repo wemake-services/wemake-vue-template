@@ -16,12 +16,19 @@ Use `yarn lint` to run everything we have.
 We use `eslint` to lint `javascript`. We stick to `standard` code style.
 But, we have some additional checks that make our style even more stricter.
 
-### flow
+### Running and configuration
 
-On this step `flow` comes in. `flow` is an optional strict typing.
-We use [`eslint-plugin-flowtype-errors`](https://www.npmjs.com/package/eslint-plugin-flowtype-errors) to run these checks.
+All configuration can be found inside `.eslintrc`.
+To run `js` linting execute: `yarn lint:js`.
 
-You can enable `flow` on a per-file basis. 
+
+## flow
+
+`flow` is an optional strict typing.
+We use [`eslint-plugin-flowtype-errors`](https://www.npmjs.com/package/eslint-plugin-flowtype-errors) 
+to run these checks during linting stage.
+
+You can enable `flow` on a per-file basis. So, it very easy to start.
 When file starts with `// @flow` it means that `flow` is enabled. 
 Otherwise file is ignored by `flow` checker.
 
@@ -29,12 +36,15 @@ There are two ways to handle `type` imports:
 1. Explicitly importing each type when you need it
 2. Implicitly including all your types by preloading them from [`[libs]`](https://flow.org/en/docs/config/libs/) section in `.flowconfig`
 
-We also lint `flow` types themselfs. We are using [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype).
+### vue-flow-typed
 
-### Running and configuration
+We use 3rd party typings for `vue`-related libraries: [`vue-flow-typed`](https://github.com/sobolevn/vue-flow-typed).
+You can install and use each package individually depending on what 
+packages are you using the most. And what types you need.
 
-All configuration can be found inside `.eslintrc`.
-To run `js` linting execute: `yarn lint:js`.
+### eslint-plugin-flowtype
+
+We also lint `flow` type annotations themselfs. We are using [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype).
 
 
 ## jsdoc

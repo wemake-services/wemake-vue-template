@@ -13,6 +13,7 @@ ENV YARN_VERSION 1.6.0
 RUN apk update && apk add --no-cache \
     bash \
     ca-certificates \
+    curl \
     git \
     lcms2-dev \
     libpng-dev \

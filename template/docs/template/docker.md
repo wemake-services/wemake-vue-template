@@ -6,7 +6,8 @@ Because it is really easy!
 
 ## Prerequisites 
 
-Before going any further make sure that you have `docker` installed on your machine.
+Before going any further make sure that 
+you have `docker` installed on your machine.
 It comes for [Mac, Linux, and Windows](https://www.docker.com/community-edition).
 
 Minimal versions:

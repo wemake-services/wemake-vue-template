@@ -25,8 +25,10 @@ There are a lot of tutorials about it. Here's [an example](https://www.digitaloc
 
 ## Docker
 
-We have already mentioned some [downsides](docker.md#production) of `docker` deployment.
-But sometimes you really need the whole power of `nuxt` and its server side rendering.
+We have already mentioned some [downsides](docker.md#production) 
+of `docker` deployment.
+But sometimes you really need the whole power 
+of `nuxt` and its server side rendering.
 Or maybe you already have a micro-services architecture.
 
 This way you already have the basics of the `docker` deployment.

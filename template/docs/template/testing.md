@@ -6,7 +6,8 @@ In this section we will discuss two types of tests and describe our toolset.
 Everything comes configured, so you can just start using it.
 Run `yarn test` to run everything we have.
 
-We use [`jest`](https://facebook.github.io/jest/en/) as our test runner for unit tests.
+We use [`jest`](https://facebook.github.io/jest/en/) 
+as our test runner for unit tests.
 We configure `jest` inside our `package.json`.
 Since configuration is rather simple.
 
@@ -37,11 +38,14 @@ That's how it works:
 
 That's covers 99% percent of uses case with a simple setup.
 
-We do not want to use things like [`cypress`](https://www.cypress.io/) or [`puppeteer`](https://github.com/GoogleChrome/puppeteer) because these things are very hard to configure and maintain.
+We do not want to use things like [`cypress`](https://www.cypress.io/) or [`puppeteer`](https://github.com/GoogleChrome/puppeteer) 
+because these things are very hard to configure and maintain.
 And it offers not significant value over our setup.
-We have used [`nightwatch`](http://nightwatchjs.org/) [before](https://github.com/wemake-services/wemake-vue-template/tree/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/tests/e2e), and not recommend it anymore.
+We have used [`nightwatch`](http://nightwatchjs.org/) [before](https://github.com/wemake-services/wemake-vue-template/tree/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/tests/e2e), 
+and not recommend it anymore.
 
-We have also [used](https://github.com/wemake-services/wemake-vue-template/blob/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/Vagrantfile) [`Vagrant`](https://www.vagrantup.com/intro/index.html) to manually test our application on `IE10` and `IE11`.
+We have also [used](https://github.com/wemake-services/wemake-vue-template/blob/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/Vagrantfile) [`Vagrant`](https://www.vagrantup.com/intro/index.html) 
+to manually test our application on `IE10` and `IE11`.
 
 Use `yarn test:e2e` to run end-to-end tests.
 
@@ -51,7 +55,8 @@ Use `yarn test:e2e` to run end-to-end tests.
 We also run security checks on each CI step.
 We even have special `yarn test:sec` command to run these checks.
 
-What it does? It queries some 3rd party database for known security issues for your dependencies.
+What it does? It queries some 3rd party database 
+for known security issues for your dependencies.
 We use [`nsp`](https://github.com/nodesecurity/nsp) for that task.
 
 This way you can lower the risks.

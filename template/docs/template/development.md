@@ -12,12 +12,14 @@ Choose the one that fits the best for you.
 
 ## Prerequisites
 
-You will need to install [`nvm`](https://github.com/creationix/nvm/blob/master/README.md) before starting.
+You will need to install [`nvm`](https://github.com/creationix/nvm/blob/master/README.md) 
+before starting.
 
 
 ## Setting up
 
-You will need to install the same `node` version that we use to be able to run this project.
+You will need to install the same `node` version 
+that we use to be able to run this project.
 
 Hopefully, it is very easy. Just run:
 
@@ -27,7 +29,9 @@ nvm install
 nvm use
 ```
 
-While `nvm install` is a one time action, that just downloads the required `node` version, do not forget to run `nvm use` each time you open a new terminal window.
+While `nvm install` is a one time action, 
+that just downloads the required `node` version, 
+do not forget to run `nvm use` each time you open a new terminal window.
 
 
 ## Dependencies
@@ -45,9 +49,16 @@ You will see that two new folders are created:
 - `flow-typed` with external `flow` type definitions
 
 
+## Configuration
+
+Do not miss a configuration step. 
+You will totally need to [copy/modify `config/.env`](configuration.md#env) file.
+
+
 ## Running
 
-After your dependencies are installed, run `yarn dev` to start a development server.
+After your dependencies are installed, run `yarn dev` 
+to start a development server.
 
 
 ## Making commit
@@ -64,5 +75,6 @@ It just works out of the box.
 If you are wondering what tools to use for the best development experience,
 we can recommend [`vscode`](https://code.visualstudio.com/) with [`vetur`](https://github.com/vuejs/vetur) extension.
 
-Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools) is an essential add-on for your browser.
+Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools) 
+is an essential add-on for your browser.
 Make sure to install it.

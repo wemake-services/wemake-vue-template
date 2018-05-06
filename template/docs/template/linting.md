@@ -44,7 +44,8 @@ packages are you using the most. And what types you need.
 
 ### eslint-plugin-flowtype
 
-We also lint `flow` type annotations themselfs. We are using [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype).
+We also lint `flow` type annotations themselfs. 
+We are using [`eslint-plugin-flowtype`](https://github.com/gajus/eslint-plugin-flowtype).
 
 
 ## jsdoc
@@ -66,10 +67,14 @@ These checks are executed together with `javascript` linting.
 
 ## stylelint
 
-We use awesome [`stylelint`](https://github.com/stylelint/stylelint) to validate our `css` and `scss` files.
-We also use strict config here. We stick to [`stylelint-config-strict-scss`](https://github.com/wemake-services/stylelint-config-strict-scss).
+We use awesome [`stylelint`](https://github.com/stylelint/stylelint) 
+to validate our `css` and `scss` files.
+We also use strict config here. 
+We stick to [`stylelint-config-strict-scss`](https://github.com/wemake-services/stylelint-config-strict-scss).
 
 `stylelint` is not related with `eslint` at all. It is a standalone tool.
+Other plugins for languages like `stylus`, `sass`, 
+and `post-css` can also be installed if you need them.
 
 ### Running and configuration
 

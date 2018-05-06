@@ -7,7 +7,8 @@ We will try to cover the most important parts here.
 
 ## .env
 
-We use [`dotenv`](https://www.npmjs.com/package/dotenv) configuration files to configure many things at once:
+We use [`dotenv`](https://www.npmjs.com/package/dotenv) 
+configuration files to configure many things at once:
 
 1. We configure `nuxt` loader at build time inside `nuxt.config.js`
 2. We configure `nuxt` app with the help of [`dotenv-module`](https://github.com/nuxt-community/dotenv-module)
@@ -15,7 +16,12 @@ We use [`dotenv`](https://www.npmjs.com/package/dotenv) configuration files to c
 
 It is possible that you may miss `config/.env` file, because it is ignored
 and excluded from `git`. 
-In this case you will just need to copy `config/.env.template` and fill in all values that you need.
+In this case you will just need to copy `config/.env.template` 
+and fill in all values that you need:
+
+```bash
+cp config/.env.template config/.env
+```
 
 Make sure that `config/.env` is kept **secret**!
 
@@ -25,7 +31,7 @@ By default we configure `nuxt-axios` to use relative urls to `API_URL`
 environment variable.
 
 So, when you need to change your API from production to development,
-just change this single line.
+just change this single value.
 
 
 ## nuxt.config.js

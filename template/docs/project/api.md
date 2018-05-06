@@ -48,7 +48,7 @@ Throws error when there is one.
 
 **Parameters**
 
--   `error` **[Error][13]?** Error instance to be thrown.
+-   `error` **$AxiosError&lt;T>?** Error instance to be thrown.
 
 Returns **void** 
 
@@ -61,7 +61,10 @@ Fetches comments from the remote API.
 -   `app` **any** Injected Vue instance to make API calls with correct `$axios`.
     -   `app.$axios`  Slightly modified `Axios` instance.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** Parsed response data.
+
+-   Throws **$AxiosError** If there is one.
+
+Returns **[Promise][13]&lt;[Array][14]&lt;RawCommentType>>** Parsed response data.
 
 ## Index
 
@@ -74,17 +77,17 @@ Mounted as `/` by default.
 
 List of predownloaded comments, bound from Vuex
 
-Type: [Array][15]&lt;CommentType>
+Type: [Array][14]&lt;CommentType>
 
 ### hasComments
 
 Returns either we have any comments or not.
 
-Type: [boolean][16]
+Type: [boolean][15]
 
 ### fetch
 
--   **See: [https://nuxtjs.org/api/pages-fetch][17]**
+-   **See: [https://nuxtjs.org/api/pages-fetch][16]**
 
 Fetches comments from external API from the server side.
 This method should preload Vuex store.
@@ -95,7 +98,7 @@ This method should preload Vuex store.
     -   `context.store`  Current Vuex store.
     -   `context.app`  Current Vue instance.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** List of downloaded comments.
+Returns **[Promise][13]&lt;[Array][14]&lt;CommentType>>** List of downloaded comments.
 
 ### handleReload
 
@@ -125,12 +128,10 @@ Reloads comments from external API.
 
 [12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-
-[17]: https://nuxtjs.org/api/pages-fetch
+[16]: https://nuxtjs.org/api/pages-fetch

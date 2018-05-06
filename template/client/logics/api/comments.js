@@ -22,6 +22,7 @@ export default {
   *
   * @param app - Injected Vue instance to make API calls with correct `$axios`.
   * @param app.$axios - Slightly modified `Axios` instance.
+  * @throws { $AxiosError } If there is one.
   * @returns Parsed response data.
   */
   async fetchComments (

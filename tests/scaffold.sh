@@ -2,7 +2,7 @@
 
 set timeout 360
 
-spawn ./node_modules/.bin/vue init . "test-project"
+spawn ./node_modules/.bin/vue init . "wemake-vue-demo"
 
 # This happens because of
 # https://github.com/vuejs/vue-cli/issues/291

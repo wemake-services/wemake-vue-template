@@ -86,6 +86,7 @@ export default class Index extends Vue {
   * Reloads comments from external API.
   */
   handleReload () {
+    // This is unsafe. Use annotated `@Action()` for type safety.
     return this.$store.dispatch('fetchComments', this)
   }
 }

@@ -8,7 +8,7 @@
 
     <h2>
       <a href="https://wemake-services.gitbook.io/wemake-vue-template/">
-        Documentation
+        documentation
       </a>
     </h2>
   </div>

@@ -1,7 +1,7 @@
 {
   "name": "wemake-vue-template",
   "version": "1.0.0",
-  "description": "Bleeding edge vue template focused on code quality and development happiness.",
+  "description": "Bleeding edge vue template focused on code quality and developer happiness",
   "repository": "https://github.com/wemake-services/wemake-vue-template.git",
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",

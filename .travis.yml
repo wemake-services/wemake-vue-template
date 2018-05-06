@@ -16,6 +16,9 @@ cache:
 services:
   - docker
 
+env:
+  - PROJECT_NAME: wemake-vue-demo
+
 before_install:
   - sudo apt-get update && sudo apt-get install expect
   - sudo pip install -U docker-compose
@@ -27,8 +30,11 @@ install:
 script:
   - sh tests/test.sh
 
-after_script:
-  - sh tests/deploy.sh
+deploy:
+  provider: script
+  script: sh tests/deploy.sh
+  on:
+    branch: master
 
 notifications:
   email:

@@ -5,7 +5,7 @@ set -o nounset
 
 # Scaffolding a project:
 expect 'tests/scaffold.sh'
-cd 'wemake-vue-demo'
+cd '$PROJECT_NAME'
 
 # Running integration tests with docker:
 docker-compose run vue yarn test

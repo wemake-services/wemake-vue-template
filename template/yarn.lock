@@ -2539,6 +2539,12 @@ commander@~2.8.1:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
+comment-parser@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/comment-parser/-/comment-parser-0.4.2.tgz#fa5a3f78013070114866dc7b8e9cf317a9635f74"
+  dependencies:
+    readable-stream "^2.0.4"
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -3853,6 +3859,12 @@ eslint-config-flowtype-essential@^0.1.0:
   dependencies:
     eslint-plugin-flowtype "^2.46.3"
 
+eslint-config-jsdoc-essential@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-jsdoc-essential/-/eslint-config-jsdoc-essential-0.1.1.tgz#1ab3bd14466686ed2ce37766f72c9de3dfde9889"
+  dependencies:
+    eslint-plugin-jsdoc "^3.6.3"
+
 eslint-config-standard@^11.0.0:
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
@@ -3922,6 +3934,14 @@ eslint-plugin-import@^2.9.0:
 eslint-plugin-jest@^21.15.1:
   version "21.15.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.15.1.tgz#662a3f0888002878f0f388efd09c190a95c33d82"
+
+eslint-plugin-jsdoc@^3.6.3:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-3.6.3.tgz#8ac4b962964c2893fb0f58c621904203f07bd462"
+  dependencies:
+    comment-parser "^0.4.2"
+    jsdoctypeparser "^2.0.0-alpha-8"
+    lodash "^4.17.4"
 
 eslint-plugin-json@^1.2.0:
   version "1.2.0"
@@ -6709,6 +6729,10 @@ js-yaml@~3.7.0:
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
+
+jsdoctypeparser@^2.0.0-alpha-8:
+  version "2.0.0-alpha-8"
+  resolved "https://registry.yarnpkg.com/jsdoctypeparser/-/jsdoctypeparser-2.0.0-alpha-8.tgz#baf137fb8e2a558810adcf19d2d2a2f680e90a5f"
 
 jsdom@^11.5.1:
   version "11.7.0"

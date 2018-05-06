@@ -39,7 +39,7 @@ import type { CommentType, CommentPayloadType } from '~/types'
 // @vue/component
 @Component()
 /**
-* Test decorated export.
+* Comment component is used to represent a single user's comment.
 */
 export default class Comment extends Vue {
   @Mutation(mutationTypes.UPDATE_RATING)
@@ -55,7 +55,11 @@ export default class Comment extends Vue {
   comment: CommentType
 
   /**
-  * This is a custom method.
+  * Changes comment's rating.
+  * Can be used to increase or decrease comment's rating.
+  *
+  * @param commentId - Comment's identifier to change rating.
+  * @param delta - Delta value to change rating value.
   */
   changeRating (commentId: number, delta: number) {
     // Uncomment next line to test typing:
@@ -81,6 +85,9 @@ export default class Comment extends Vue {
   }
 
   .comment-rating {
+    $button-color-green: #a2dca2;
+    $button-color-red: #efbcd1;
+
     position: absolute;
     bottom: 0.3rem;
     left: 50%;
@@ -94,11 +101,11 @@ export default class Comment extends Vue {
       width: 2rem;
 
       &.comment-rating-up {
-        background: #a2dca2;
+        background: $button-color-green;
       }
 
       &.comment-rating-down {
-        background: #efbcd1;
+        background: $button-color-red;
       }
     }
   }

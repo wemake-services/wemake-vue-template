@@ -37,6 +37,16 @@ All configuration can be found inside `.eslintrc`.
 To run `js` linting execute: `yarn lint:js`.
 
 
+## jsdoc
+
+We lint [`jsdoc`](http://usejsdoc.org/) annotation. 
+The rule is simple: if you write `jsdoc` you should write a correct one.
+You may not write them at all (however, that's not good).
+
+We use [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc) 
+to lint them.
+
+
 ## vue
 
 We also lint `.vue` files with the help of [`eslint-plugin-vue`](https://github.com/vuejs/eslint-plugin-vue).

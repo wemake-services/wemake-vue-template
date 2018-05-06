@@ -31,6 +31,7 @@ This project is used to scaffold new `Vue` project structure.
 You will need:
 
 - `node@9` (see [`template/.nvmrc`](https://github.com/wemake-services/wemake-vue-template/blob/master/template/.nvmrc))
+- [`yarn@1.6`](https://yarnpkg.com/lang/en/)
 
 
 ## Installation

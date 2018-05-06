@@ -18,7 +18,7 @@
 
 **Extends Vue**
 
-Test decorated export.
+Comment component is used to represent a single user's comment.
 
 ### updateRating
 
@@ -34,12 +34,13 @@ Type: CommentType
 
 ### changeRating
 
-This is a custom method.
+Changes comment's rating.
+Can be used to increase or decrease comment's rating.
 
 **Parameters**
 
--   `commentId` **[number][12]** 
--   `delta` **[number][12]** 
+-   `commentId` **[number][12]** Comment's identifier to change rating.
+-   `delta` **[number][12]** Delta value to change rating value.
 
 ## maybeHandleError
 
@@ -47,7 +48,7 @@ Throws error when there is one.
 
 **Parameters**
 
--   `error` **[Error][13]?** : error instance to be thrown
+-   `error` **[Error][13]?** Error instance to be thrown.
 
 Returns **void** 
 
@@ -57,16 +58,17 @@ Fetches comments from the remote API.
 
 **Parameters**
 
--   `app` **any** : injected `Vue` instance to make API calls with correct `$axios`
-    -   `app.$axios`  : slightly modified `Axios` instance
+-   `app` **any** Injected Vue instance to make API calls with correct `$axios`.
+    -   `app.$axios`  Slightly modified `Axios` instance.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** parsed response data
+Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** Parsed response data.
 
 ## Index
 
 **Extends Vue**
 
-Main page. Or index page. Mounted as `/` by default.
+Main page (or index page).
+Mounted as `/` by default.
 
 ### comments
 
@@ -82,17 +84,18 @@ Type: [boolean][16]
 
 ### fetch
 
+-   **See: [https://nuxtjs.org/api/pages-fetch][17]**
+
 Fetches comments from external API from the server side.
 This method should preload Vuex store.
-See: [https://nuxtjs.org/api/pages-fetch][17]
 
 **Parameters**
 
--   `$0` **any** 
-    -   `$0.store`  
-    -   `$0.app`  
+-   `context` **any** Nuxt `context` instance.
+    -   `context.store`  Current Vuex store.
+    -   `context.app`  Current Vue instance.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** list of downloaded comments
+Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** List of downloaded comments.
 
 ### handleReload
 

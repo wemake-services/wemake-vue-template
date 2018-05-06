@@ -8,7 +8,7 @@ import type { RawCommentType } from '~/types'
 /**
 * Throws error when there is one.
 *
-* @param error: error instance to be thrown
+* @param error - Error instance to be thrown.
 */
 function maybeHandleError (error: ?Error): void {
   if (error) {
@@ -20,9 +20,9 @@ export default {
   /**
   * Fetches comments from the remote API.
   *
-  * @param app: injected `Vue` instance to make API calls with correct `$axios`
-  * @param app.$axios: slightly modified `Axios` instance
-  * @returns parsed response data
+  * @param app - Injected Vue instance to make API calls with correct `$axios`.
+  * @param app.$axios - Slightly modified `Axios` instance.
+  * @returns Parsed response data.
   */
   async fetchComments (
     { $axios }: { $axios: Axios }

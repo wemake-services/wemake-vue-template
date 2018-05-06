@@ -40,7 +40,7 @@ describe('Comment component unit tests', () => {
     expect(wrapper.find('.comment-author').text().trim()).toEqual(comment.email)
     expect(wrapper.find('.comment-body').text().trim()).toEqual(comment.body)
     expect(wrapper.find('.comment-rating-value').text().trim()).toEqual(
-      String(comment.rating)
+      comment.rating.toString()
     )
   })
 

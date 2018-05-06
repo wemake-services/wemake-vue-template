@@ -48,7 +48,8 @@ import type { CommentType } from '~/types'
   }
 })
 /**
-* Main page. Or index page. Mounted as `/` by default.
+* Main page (or index page).
+* Mounted as `/` by default.
 */
 export default class Index extends Vue {
   @State('comments')
@@ -66,11 +67,12 @@ export default class Index extends Vue {
   /**
   * Fetches comments from external API from the server side.
   * This method should preload Vuex store.
-  * See: https://nuxtjs.org/api/pages-fetch
   *
-  * @param context.store: current Vuex store
-  * @param context.app: current Vue instance
-  * @returns list of downloaded comments
+  * @see https://nuxtjs.org/api/pages-fetch
+  * @param context - Nuxt `context` instance.
+  * @param context.store - Current Vuex store.
+  * @param context.app - Current Vue instance.
+  * @returns List of downloaded comments.
   */
   fetch (
     { store, app }: { store: Store, app: Vue }

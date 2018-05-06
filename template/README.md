@@ -20,4 +20,4 @@ You will need:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`yarn`](https://yarnpkg.com) (**required**)
+- [`yarn`](https://yarnpkg.com) with version `1.6` (**required**)

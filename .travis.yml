@@ -27,6 +27,9 @@ install:
 script:
   - sh tests/test.sh
 
+after_script:
+  - sh tests/deploy.sh
+
 notifications:
   email:
     on_success: never

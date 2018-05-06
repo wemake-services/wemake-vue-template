@@ -16,7 +16,7 @@
     "generate": "nuxt generate",
     "test:e2e": "cross-env NODE_ENV=test jest tests/e2e",
     "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
-    "test:sec": "nsp check",
+    "test:sec": "nsp check --threshold 4",
     "test": "npm run test:unit && npm run test:sec && npm run lint && npm run test:e2e",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}' --syntax scss",

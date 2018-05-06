@@ -135,3 +135,4 @@ dist/
 flow-typed/
 .nuxt/
 docs/_book/
+jest_*/

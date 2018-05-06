@@ -39,7 +39,6 @@ ADD . /code
 
 EXPOSE 4000
 RUN set -ex; \
-  npm install -g yarn; \
   if [ "$NODE_ENV" = "production" ]; then \
     yarn install --no-cache --frozen-lockfile --production; \
   elif [ "$NODE_ENV" = "development" ]; then \

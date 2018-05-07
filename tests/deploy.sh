@@ -8,6 +8,11 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
   # https://travis-ci.org/wemake-services/wemake-vue-template/builds/375684628
   npm install -g now
 
+  pwd
+  cat "../now.json"
+  cat "config/.env"
+  echo "$NOW_TOKEN $PROJECT_NAME"
+
   cd "$PROJECT_NAME"
 
   # Building new instance:

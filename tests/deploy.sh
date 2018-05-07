@@ -9,11 +9,13 @@ if [ "$TRAVIS_BRANCH" = "master" ]; then
   npm install -g now
 
   pwd
+
+  cd "$PROJECT_NAME"
+
+  pwd
   cat "../now.json"
   cat "config/.env"
   echo "$NOW_TOKEN $PROJECT_NAME"
-
-  cd "$PROJECT_NAME"
 
   # Building new instance:
   now deploy \

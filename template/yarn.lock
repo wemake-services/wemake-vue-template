@@ -3839,9 +3839,9 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-flowtype-essential@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-essential/-/eslint-config-flowtype-essential-0.1.0.tgz#bcd291a0ee812d8982c998707df7b6249736180d"
+eslint-config-flowtype-essential@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-essential/-/eslint-config-flowtype-essential-0.1.1.tgz#c3655551f29a0adf3bcd4e0030eff245d4cc5986"
   dependencies:
     eslint-plugin-flowtype "^2.46.3"
 

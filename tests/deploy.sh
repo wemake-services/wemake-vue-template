@@ -6,11 +6,7 @@ set -o nounset
 cd "$PROJECT_NAME"
 
 # Building new instance:
-npx now deploy \
-  --token "$NOW_TOKEN" \
-  --public \
-  --dotenv=config/.env \
-  --local-config=../now.json
+now deploy --token="$NOW_TOKEN" --public --npm --dotenv=config/.env --local-config=../now.json
 
 # Setting new instance as a default one:
-npx now alias
+now alias --token="$NOW_TOKEN" --local-config=../now.json

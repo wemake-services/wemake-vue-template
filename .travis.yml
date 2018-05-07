@@ -30,6 +30,9 @@ install:
 script:
   - sh tests/test.sh
 
+before_deploy:
+  - npm install -g now
+
 deploy:
   provider: script
   script: sh tests/deploy.sh

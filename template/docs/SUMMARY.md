@@ -3,6 +3,7 @@
 This file is required for a `gitbook.io` to build beautiful table of contents.
 
 - [Architecture](template/architecture.md)
+- [FAQ](template/faq.md)
 - [Configuration](template/configuration.md)
 - [Development](template/development.md)
 - [Babel](template/babel.md)

@@ -182,6 +182,13 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@mapbox/stylelint-processor-arbitrary-tags@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mapbox/stylelint-processor-arbitrary-tags/-/stylelint-processor-arbitrary-tags-0.2.0.tgz#4c2b50711bd9033a6c4f7f19e418b5f43f1a1e51"
+  dependencies:
+    execall "^1.0.0"
+    split-lines "^1.1.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2412,10 +2419,6 @@ coa@~2.0.1:
   dependencies:
     q "^1.1.2"
 
-coalescy@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/coalescy/-/coalescy-1.0.0.tgz#4b065846b836361ada6c4b4a4abf4bc1cac31bf1"
-
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -3854,16 +3857,6 @@ eslint-config-jsdoc-essential@^0.1.1:
 eslint-config-standard@^11.0.0:
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
-
-eslint-friendly-formatter@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-friendly-formatter/-/eslint-friendly-formatter-3.0.0.tgz#278874435a6c46ec1d94fa0b1ff494e30ef04290"
-  dependencies:
-    chalk "^1.0.0"
-    coalescy "1.0.0"
-    extend "^3.0.0"
-    minimist "^1.2.0"
-    text-table "^0.2.0"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -5519,7 +5512,7 @@ htmlparser2@3.8.x:
     entities "1.0"
     readable-stream "1.1"
 
-htmlparser2@^3.9.1, htmlparser2@^3.9.2:
+htmlparser2@^3.9.2:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.9.2.tgz#1bdf87acca0f3f9e53fa4fcceb0f4b4cbb00b338"
   dependencies:
@@ -11052,6 +11045,10 @@ specificity@^0.3.1:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.3.2.tgz#99e6511eceef0f8d9b57924937aac2cb13d13c42"
 
+split-lines@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/split-lines/-/split-lines-1.1.0.tgz#3abba8f598614142f9db8d27ab6ab875662a1e09"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -11375,12 +11372,6 @@ stylelint-order@^0.8.1:
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
 
-stylelint-processor-html@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-processor-html/-/stylelint-processor-html-1.0.0.tgz#6892b6b2855a45f0291cd845191d6908130a2918"
-  dependencies:
-    htmlparser2 "^3.9.1"
-
 stylelint-scss@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-3.1.0.tgz#aa46503014d1a6edb2fb4c5fefb73a7d0d5bc644"
@@ -11671,7 +11662,7 @@ test-exclude@^4.2.1:
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
 
-text-table@^0.2.0, text-table@~0.2.0:
+text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 

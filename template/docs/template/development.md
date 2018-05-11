@@ -72,9 +72,8 @@ It just works out of the box.
 
 ## Dev tools
 
-If you are wondering what tools to use for the best development experience,
-we can recommend [`vscode`](https://code.visualstudio.com/) with [`vetur`](https://github.com/vuejs/vetur) extension.
+For the best development experience, we can recommend [`vscode`](editors.md).
 
 Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools) 
 is an essential add-on for your browser.
-Make sure to install it.
+Make sure you have it.

@@ -16,7 +16,7 @@
     "generate": "nuxt generate",
     "test:e2e": "cross-env NODE_ENV=test jest tests/e2e",
     "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
-    "test:sec": "nsp check --threshold 4",
+    "test:sec": "nsp check --warn-only",
     "test": "npm run test:unit && npm run test:sec && npm run lint && npm run test:e2e",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}' --syntax scss",
@@ -33,7 +33,7 @@
   "stylelint": {
     "extends": "stylelint-config-strict-scss",
     "processors": [
-      "stylelint-processor-html"
+      "@mapbox/stylelint-processor-arbitrary-tags"
     ],
     "rules": {
       "no-empty-source": null
@@ -84,6 +84,7 @@
     "webpack": "^3.11.0"
   },
   "devDependencies": {
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
     "@vue-flow-typed/vuex": "^0.1.4",
     "@vue/test-utils": "^1.0.0-beta.15",
     "axios-mock-adapter": "^1.15.0",
@@ -96,7 +97,6 @@
     "eslint-config-flowtype-essential": "^0.1.1",
     "eslint-config-jsdoc-essential": "^0.1.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-flowtype-errors": "^3.5.0",
     "eslint-plugin-import": "^2.9.0",
@@ -115,7 +115,6 @@
     "nsp": "^3.2.1",
     "stylelint": "^8.0.0",
     "stylelint-config-strict-scss": "^0.2.1",
-    "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.10.4",
     "vue-jest": "^2.5.0"
   }

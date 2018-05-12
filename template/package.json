@@ -30,15 +30,6 @@
       "pre-commit": "npm run test:unit && npm run test:sec && npm run lint"
     }
   },
-  "stylelint": {
-    "extends": "stylelint-config-strict-scss",
-    "processors": [
-      "@mapbox/stylelint-processor-arbitrary-tags"
-    ],
-    "rules": {
-      "no-empty-source": null
-    }
-  },
   "jest": {
     "setupFiles": [
       "<rootDir>/tests/utils/test-setup.js"

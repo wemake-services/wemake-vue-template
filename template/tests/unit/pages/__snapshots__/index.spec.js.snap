@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index page unit tests should match the snapshot 1`] = `
+exports[`unit tests for Index page should match the snapshot 1`] = `
 "<section class=\\"comments__component\\"><div><div class=\\"wemake-services__component\\"><h1><a href=\\"https://github.com/wemake-services/wemake-vue-template\\">
       wemake-vue-template
     </a></h1> <h2><a href=\\"https://wemake-services.gitbook.io/wemake-vue-template/\\">

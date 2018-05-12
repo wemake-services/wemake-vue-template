@@ -1,6 +1,5 @@
 import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
-import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 
 import Index from '~/pages/index'
@@ -32,7 +31,7 @@ const mockedComment = {
 
 const propsData = { comments }
 
-describe('Index page unit tests', () => {
+describe('unit tests for Index page', () => {
   let store
 
   beforeEach(() => {
@@ -43,16 +42,13 @@ describe('Index page unit tests', () => {
 
   test('should have two comments', () => {
     const wrapper = mount(Index, { store, localVue, propsData })
-
     expect(wrapper.findAll('.comment__component')).toHaveLength(2)
   })
 
   test('should load new comments on actions', async () => {
-    expect.assertions(3)
     const wrapper = mount(Index, { store, localVue, propsData })
-    wrapper.vm.$axios = axios
 
-    const mock = new MockAdapter(wrapper.vm.$axios)
+    const mock = new MockAdapter(store.$axios)
     mock.onGet('/comments').reply(200, [mockedComment])
 
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)

@@ -5,7 +5,7 @@ variables:
   # improved performance:
   DOCKER_DRIVER: overlay2
   PROJECT_NAME: "{{ name }}"
-  GROUP_NAME: "{{ author }}"
+  GROUP_NAME: "{{ organization }}"
   REGISTRY: "registry.gitlab.com"
   CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
 

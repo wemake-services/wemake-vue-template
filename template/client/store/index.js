@@ -1,6 +1,5 @@
 // @flow
 
-import Vue from 'vue'
 import type { ActionContext } from 'vuex'
 
 import comments from '~/logics/api/comments'
@@ -33,7 +32,7 @@ const mutations = {
     for (const comment of comments.slice(0, 10)) {
       const newOne = {
         ...comment,
-        rating: 0
+        rating: 0 // try to comment out this line
       }
       updatedComments.push(newOne)
     }
@@ -58,10 +57,11 @@ const mutations = {
 
 const actions = {
   async fetchComments (
-    { commit, state }: ActionContext<StateType>, app: Vue
+    { commit, state }: ActionContext<StateType>
   ) {
-    const data = await comments.fetchComments(app)
+    const data = await comments.fetchComments(this.$axios)
     commit(mutationTypes.SET_COMMENTS, data)
+
     // Uncomment next line to see typing in action:
     // console.log(state.comments, state.fake)
 

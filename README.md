@@ -22,14 +22,14 @@ Demo source code is [here](https://wemake-vue-demo.now.sh/_src).
 
 - Proven to work on both small and large scale projects
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
+- `Vue` + `vuex` + `vue-router` with the latest `es` features
 - [`nuxt`](https://nuxtjs.org/) for server-side rendering
-- `Vue` + `vuex` + `vue-router` with latest `es` features
-- Optional typing with [`flow`](https://flow.org/)
+- Optional strict typing with [`flow`](https://flow.org/)
 - Linting with [`eslint`](https://eslint.org/) + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`jsdom`](https://github.com/jsdom/jsdom) for end-to-end testing
-- [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test`, and `deploy` pipeline configured by default
+- [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test` and `deploy` pipeline configured by default
 - Easy [update process](https://wemake-services.gitbook.io/wemake-vue-template/#updating-template), so your template will always be up-to-date
-- Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project, including [`jsdoc`](http://usejsdoc.org/)
+- Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project, including [`jsdoc`](http://usejsdoc.org/) annotations
 
 
 ## Requirements

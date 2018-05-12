@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comment component unit tests should match the snapshot 1`] = `
+exports[`unit tests for Comment component should match the snapshot 1`] = `
 "<div class=\\"comment__component\\"><p class=\\"comment-author\\">test@mail.com</p> <p class=\\"comment-body\\">some text</p> <div class=\\"comment-rating\\"><button class=\\"comment-rating-up\\">
       +
     </button> <span class=\\"comment-rating-value\\">0</span> <button class=\\"comment-rating-down\\">

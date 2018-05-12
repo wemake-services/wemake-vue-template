@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Vuex from 'vuex'
 import deepcopy from 'deepcopy'
 
@@ -7,10 +8,13 @@ export function createStore (
   const callableState = state instanceof Function ? state : () => state
   const mixedState = Object.assign(callableState(), customState)
 
-  return new Vuex.Store({
+  const store = new Vuex.Store({
     state: deepcopy(mixedState),
     actions,
     getters,
     mutations
   })
+
+  store.$axios = axios
+  return store
 }

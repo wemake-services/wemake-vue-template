@@ -58,8 +58,7 @@ Fetches comments from the remote API.
 
 **Parameters**
 
--   `app` **any** Injected Vue instance to make API calls with correct `$axios`.
-    -   `app.$axios`  Slightly modified `Axios` instance.
+-   `$axios` **Axios** Slightly modified `Axios` instance from nuxt-axios module.
 
 
 -   Throws **$AxiosError** If there is one.
@@ -96,7 +95,6 @@ This method should preload Vuex store.
 
 -   `context` **any** Nuxt `context` instance.
     -   `context.store`  Current Vuex store.
-    -   `context.app`  Current Vue instance.
 
 Returns **[Promise][13]&lt;[Array][14]&lt;CommentType>>** List of downloaded comments.
 

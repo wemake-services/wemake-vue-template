@@ -24,16 +24,14 @@ describe('e2e tests for index page', () => {
     nuxt.listen(4001, 'localhost')
   }, 30000)
 
-  // Example of testing only generated html
-  test('route / exits and render HTML', async () => {
-    expect.assertions(1)
-
+  // Example of testing only generated html (as text)
+  test('route / exits', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     expect(html.includes('wemake-vue-template')).toBeTruthy()
   })
 
-  // Example of testing via dom checking
-  test('route / exits and render HTML with CSS applied', async () => {
+  // Example of testing via dom checking, using jsdom
+  test('route / renders HTML with CSS applied', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
 
@@ -44,6 +42,23 @@ describe('e2e tests for index page', () => {
 
     expect(mainHeader.textContent.trim()).toEqual('wemake-vue-template')
     expect(window.getComputedStyle(comments).display).toEqual('flex')
+  })
+
+  // Example of server side rendered async data, no mocks are used
+  test('route / renders async data', async () => {
+    expect.assertions(11)
+
+    const { html } = await nuxt.renderRoute('/', {})
+    const { window } = new JSDOM(html).window
+
+    const commentRatings = window.document.querySelectorAll(
+      '.comment__component .comment-rating-value'
+    )
+    expect(commentRatings).toHaveLength(10)
+
+    for (let i = 0; i < commentRatings.length; i++) {
+      expect(commentRatings[i].textContent.trim()).toEqual('0')
+    }
   })
 
   // Close server and ask nuxt to stop listening to file changes

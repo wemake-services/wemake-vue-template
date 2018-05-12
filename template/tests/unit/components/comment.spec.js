@@ -19,7 +19,7 @@ const comment = {
 
 const propsData = { comment }
 
-describe('Comment component unit tests', () => {
+describe('unit tests for Comment component', () => {
   let store
 
   beforeEach(() => {
@@ -30,7 +30,6 @@ describe('Comment component unit tests', () => {
 
   test('should have two buttons', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
-
     expect(wrapper.findAll('button')).toHaveLength(2)
   })
 

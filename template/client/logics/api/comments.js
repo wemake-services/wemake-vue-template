@@ -20,14 +20,11 @@ export default {
   /**
   * Fetches comments from the remote API.
   *
-  * @param app - Injected Vue instance to make API calls with correct `$axios`.
-  * @param app.$axios - Slightly modified `Axios` instance.
+  * @param $axios - Slightly modified `Axios` instance from nuxt-axios module.
   * @throws { $AxiosError } If there is one.
   * @returns Parsed response data.
   */
-  async fetchComments (
-    { $axios }: { $axios: Axios }
-  ): Promise<Array<RawCommentType>> {
+  async fetchComments ($axios: Axios): Promise<Array<RawCommentType>> {
     // Note, that $axios has some custom methods, that are not used on purpose
     // https://github.com/nuxt-community/axios-module#-features
     const [error, response]: [

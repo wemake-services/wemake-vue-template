@@ -25,6 +25,12 @@ module.exports = {
     author: {
       type: 'string',
       required: true,
+      message: 'Author',
+      default: 'Awesome Person'
+    },
+    organization: {
+      type: 'string',
+      required: true,
       message: 'Organization',
       default: 'wemake.services'
     }

@@ -50,4 +50,11 @@ We also have strong linting rules and CI step.
 So any improperly formatted code won't make its way into the build.
 
 We also do not encourage using `eslint --fix`.
+
+
+## Why do you use `now` for a demo project?
+
+This allows us to show how easy it is to deploy a full featured isomorphic app.
+The main idea of this example is to demonstrate server side rendering features.
+Both with basic client interactions.
  

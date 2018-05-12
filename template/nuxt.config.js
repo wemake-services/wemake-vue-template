@@ -47,10 +47,14 @@ module.exports = {
   ** Axios settings
   */
   axios: {
-    proxyHeadersIgnore: ['accept-encoding', 'host'],
+    proxyHeadersIgnore: ['accept', 'accept-encoding', 'host'],
     https: true,
     progress: true,
-    debug: false
+    // See https://axios.nuxtjs.org/options.html#retry
+    retry: true,
+    // See https://axios.nuxtjs.org/options.html#proxy
+    proxy: false,
+    debug: process.env.NODE_ENV === 'development'
   },
 
   /*

@@ -71,15 +71,14 @@ export default class Index extends Vue {
   * @see https://nuxtjs.org/api/pages-fetch
   * @param context - Nuxt `context` instance.
   * @param context.store - Current Vuex store.
-  * @param context.app - Current Vue instance.
   * @returns List of downloaded comments.
   */
   fetch (
-    { store, app }: { store: Store<StateType>, app: Vue }
+    { store }: { store: Store<StateType> }
   ): Promise<Array<CommentType>> {
     // Uncomment the next line to test flow types:
-    // console.log(this.comments + 12)
-    return store.dispatch('fetchComments', app)
+    // console.log(this.comments + store.state.comments.length)
+    return store.dispatch('fetchComments')
   }
 
   /**
@@ -87,7 +86,7 @@ export default class Index extends Vue {
   */
   handleReload () {
     // This is unsafe. Use annotated `@Action()` for type safety.
-    return this.$store.dispatch('fetchComments', this)
+    return this.$store.dispatch('fetchComments')
   }
 }
 </script>

@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "{{ name }}",
   "version": "0.1.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -87,6 +87,7 @@
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
     "@vue-flow-typed/vuex": "^0.1.4",
     "@vue/test-utils": "^1.0.0-beta.16",
+    "axios-mock-adapter": "^1.15.0",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
     "babel-jest-assertions": "^0.1.0",

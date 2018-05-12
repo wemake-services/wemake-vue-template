@@ -238,9 +238,9 @@
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.1.4.tgz#1125335dc322e03cddb501102177acb51b56b191"
 
-"@vue/test-utils@^1.0.0-beta.15":
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.15.tgz#9f8d85b9f2312217c81d72eba97e176fba23da09"
+"@vue/test-utils@^1.0.0-beta.16":
+  version "1.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.16.tgz#dcf7a30304391422e382b5f97db6eb9508112906"
   dependencies:
     lodash "^4.17.4"
 

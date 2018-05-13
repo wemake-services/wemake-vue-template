@@ -15,5 +15,9 @@ exports[`unit tests for Index page should match the snapshot 1`] = `
       +
     </button> <span class=\\"number\\">2</span> <button class=\\"ratingDown\\">
       -
+    </button></div></div><div class=\\"commentComponent\\"><p class=\\"author\\">zero@mail.com</p> <p class=\\"body\\">zero test</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+      +
+    </button> <span class=\\"number\\">0</span> <button class=\\"ratingDown\\">
+      -
     </button></div></div></section></div></section>"
 `;

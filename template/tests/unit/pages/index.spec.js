@@ -20,10 +20,15 @@ const comments = [{
   email: 'other@mail.com',
   body: 'other text',
   rating: 2
+}, {
+  id: 3,
+  email: 'zero@mail.com',
+  body: 'zero test',
+  rating: 0
 }]
 
 const mockedComment = {
-  id: 3,
+  id: 4,
   email: 'mock@mail.com',
   body: 'mock text',
   rating: 19
@@ -38,9 +43,9 @@ describe('unit tests for Index page', () => {
     })
   })
 
-  test('should have two comments', () => {
+  test('should have three comments', () => {
     const wrapper = mount(Index, { store, localVue, propsData: { comments } })
-    expect(wrapper.findAll('.commentComponent')).toHaveLength(2)
+    expect(wrapper.findAll('.commentComponent')).toHaveLength(3)
   })
 
   test('should load new comments on actions', async () => {

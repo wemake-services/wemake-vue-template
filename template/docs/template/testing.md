@@ -8,25 +8,43 @@ Run `yarn test` to run everything we have.
 
 We use [`jest`](https://facebook.github.io/jest/en/) 
 as our test runner for unit tests.
-We configure `jest` inside our `package.json`.
-Since configuration is rather simple.
-
-
-## Types of tests
+We configure `jest` inside [our `package.json`](configuration.md#package-json).
 
 We have two types of test: unit and end-to-end. 
 They differ in complexity, tools, and reasoning.
 
-### Unit tests
+
+## Unit tests
 
 Unit tests are considered much easier to write, but header to maintain.
 Because they are simple and there should be a lot of them.
 
-To make our lives easier we use [`vue-test-utils`](https://github.com/vuejs/vue-test-utils) to mount and check our test components.
+To make our lives easier we use [`vue-test-utils`](https://github.com/vuejs/vue-test-utils) 
+to mount and check our test components.
 
 Use `yarn test:unit` to run unit tests.
 
-### End-to-end tests
+### Snapshots
+
+We use [`jest` snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html)
+to be sure that our components rendering did not change without noticing.
+It saved us million times! 
+
+```js
+// An example from 'tests/unit/pages/index.spec.js':
+const wrapper = mount(Index, { store, localVue, propsData })
+expect(wrapper.html()).toMatchSnapshot()
+```
+
+These two lines will create fake `Index` component, mount it to the page,
+then render it to string, and serialize to the text file inside `__snapshots__`
+folder near the test itself.
+There can be multiple snapshots for different component states.
+
+Run `yarn test:unit -u` to update existing snapshots with the updated state.
+
+
+## End-to-end tests
 
 End-to-end tests are looking at the situation from much higher point.
 We use [`jsdom`](https://github.com/jsdom/jsdom) and [`nuxt-builder`](https://github.com/nuxt/nuxt.js/tree/dev/lib/builder) to run these tests.

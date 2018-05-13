@@ -124,7 +124,7 @@ module.exports = {
         // Default plugins:
         'postcss-import': {},
         'postcss-url': {},
-        'postcss-cssnext': { features: { customProperties: false }},
+        'postcss-cssnext': { features: { customProperties: false } },
 
         // Custom:
         'css-mqpacker': {}

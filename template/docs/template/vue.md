@@ -45,6 +45,31 @@ You can even mix styles for different components.
 So, the choice is yours.
 
 
+## jsx
+
+It is totally possible to fallback to [`jsx`](https://vuejs.org/v2/guide/render-function.html)
+instead of `<temaplte>` when needed.
+However, we do not recommend doing it, 
+since it is not a standard way of doing things in `Vue`.
+
+Here's an example of how `jsx` is used in `Vue`:
+
+```js
+render () {
+  return (
+    <div class={this.$style.actions}>
+      <button
+        class={this.$style.reload}
+        onClick={this.fetchComments}
+      >
+        reload comments
+      </button>
+    </div>
+  )
+}
+```
+
+
 ## vuex
 
 We use [`vuex-modules`](https://vuex.vuejs.org/en/modules.html) that comes with [`nuxt`](https://nuxtjs.org/guide/vuex-store/). 

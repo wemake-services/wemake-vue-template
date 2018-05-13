@@ -2,15 +2,7 @@
   <section>
     <div>
       <app-logo />
-
-      <div :class="$style.actions">
-        <button
-          :class="$style.reload"
-          @click="handleReload"
-        >
-          reload comments
-        </button>
-      </div>
+      <action-bar />
 
       <section
         v-if="hasComments"
@@ -35,6 +27,7 @@ import { Store } from 'vuex'
 import Component from 'nuxt-class-component'
 import { Getter, State } from 'vuex-class'
 
+import ActionBar from '~/components/ActionBar'
 import AppLogo from '~/components/AppLogo'
 import Comment from '~/components/Comment'
 
@@ -43,6 +36,7 @@ import type { CommentType, StateType } from '~/types'
 // @vue/component
 @Component({
   components: {
+    ActionBar,
     AppLogo,
     Comment
   }
@@ -80,34 +74,10 @@ export default class Index extends Vue {
     // console.log(this.comments + store.state.comments.length)
     return store.dispatch('fetchComments')
   }
-
-  /**
-  * Reloads comments from external API.
-  */
-  handleReload () {
-    // This is unsafe. Use annotated `@Action()` for type safety.
-    return this.$store.dispatch('fetchComments')
-  }
 }
 </script>
 
 <style lang="scss" module>
-@import "~/scss/variables";
-
-.actions {
-  text-align: center;
-}
-
-.reload {
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  padding: 5px 10px;
-  color: $color-white;
-  background-color: $button-color-main;
-  border-color: $button-color-main;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;

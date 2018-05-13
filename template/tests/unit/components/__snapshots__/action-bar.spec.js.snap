@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit tests for ActionBar component should match the snapshot 1`] = `"<div class=\\"actions\\"><button class=\\"reload\\">reload comments</button></div>"`;

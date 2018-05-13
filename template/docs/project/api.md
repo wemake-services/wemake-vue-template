@@ -2,18 +2,43 @@
 
 ### Table of Contents
 
--   [Comment][1]
-    -   [updateRating][2]
-    -   [comment][3]
-    -   [changeRating][4]
-    -   [computedClasses][5]
--   [maybeHandleError][6]
--   [fetchComments][7]
--   [Index][8]
-    -   [comments][9]
-    -   [hasComments][10]
-    -   [fetch][11]
-    -   [handleReload][12]
+-   [ActionBar][1]
+    -   [fetchComments][2]
+    -   [render][3]
+-   [Comment][4]
+    -   [updateRating][5]
+    -   [comment][6]
+    -   [changeRating][7]
+    -   [computedClasses][8]
+-   [maybeHandleError][9]
+-   [fetchComments][10]
+-   [Index][11]
+    -   [comments][12]
+    -   [hasComments][13]
+    -   [fetch][14]
+
+## ActionBar
+
+**Extends Vue**
+
+Actions bar component written in jsx.
+The main idea of this example is to demostrate flexibility of Vue and jsx.
+We discourage using `jsx` in a real world apps,
+unless you know what are you doing!
+
+### fetchComments
+
+Typed alias to Vuex `fetchComments` action.
+
+Type: function (): [Promise][15]&lt;[Array][16]&lt;CommentType>>
+
+### render
+
+-   **See: [https://vuejs.org/v2/guide/render-function.html][17]**
+
+Render function. It is an equavalent of `<template>` tag.
+
+Returns **VNode** to be rendered by Vue.
 
 ## Comment
 
@@ -40,8 +65,8 @@ Can be used to increase or decrease comment's rating.
 
 **Parameters**
 
--   `commentId` **[number][13]** Comment's identifier to change rating.
--   `delta` **[number][13]** Delta value to change rating value.
+-   `commentId` **[number][18]** Comment's identifier to change rating.
+-   `delta` **[number][18]** Delta value to change rating value.
 
 ### computedClasses
 
@@ -71,7 +96,7 @@ Fetches comments from the remote API.
 
 -   Throws **$AxiosError** If there is one.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** Parsed response data.
+Returns **[Promise][15]&lt;[Array][16]&lt;RawCommentType>>** Parsed response data.
 
 ## Index
 
@@ -84,17 +109,17 @@ Mounted as `/` by default.
 
 List of predownloaded comments, bound from Vuex
 
-Type: [Array][15]&lt;CommentType>
+Type: [Array][16]&lt;CommentType>
 
 ### hasComments
 
 Returns either we have any comments or not.
 
-Type: [boolean][16]
+Type: [boolean][19]
 
 ### fetch
 
--   **See: [https://nuxtjs.org/api/pages-fetch][17]**
+-   **See: [https://nuxtjs.org/api/pages-fetch][20]**
 
 Fetches comments from external API from the server side.
 This method should preload Vuex store.
@@ -104,42 +129,44 @@ This method should preload Vuex store.
 -   `context` **any** Nuxt `context` instance.
     -   `context.store`  Current Vuex store.
 
-Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** List of downloaded comments.
+Returns **[Promise][15]&lt;[Array][16]&lt;CommentType>>** List of downloaded comments.
 
-### handleReload
+[1]: #actionbar
 
-Reloads comments from external API.
+[2]: #fetchcomments
 
-[1]: #comment
+[3]: #render
 
-[2]: #updaterating
+[4]: #comment
 
-[3]: #comment-1
+[5]: #updaterating
 
-[4]: #changerating
+[6]: #comment-1
 
-[5]: #computedclasses
+[7]: #changerating
 
-[6]: #maybehandleerror
+[8]: #computedclasses
 
-[7]: #fetchcomments
+[9]: #maybehandleerror
 
-[8]: #index
+[10]: #fetchcomments-1
 
-[9]: #comments
+[11]: #index
 
-[10]: #hascomments
+[12]: #comments
 
-[11]: #fetch
+[13]: #hascomments
 
-[12]: #handlereload
+[14]: #fetch
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[17]: https://vuejs.org/v2/guide/render-function.html
 
-[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[17]: https://nuxtjs.org/api/pages-fetch
+[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[20]: https://nuxtjs.org/api/pages-fetch

@@ -53,6 +53,9 @@
       "ignoreReadBeforeAssign": false
     }],
 
+    // jsx
+    "jsx-quotes": ["error", "prefer-single"],
+
     // raise flow errors
     "flowtype-errors/show-errors": 2,
     "flowtype-errors/show-warnings": 1,
@@ -73,9 +76,15 @@
     }],
     "vue/prop-name-casing": ["error", "camelCase"]
   },
+
+  "parser": "vue-eslint-parser",
   "parserOptions": {
     "parser": "babel-eslint",
     "ecmaVersion": 2017,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
     "sourceType": "module"
   }
 }

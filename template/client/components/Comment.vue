@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.commentComponent">
+  <div :class="computedClasses">
     <p :class="$style.author">{{ comment.email }}</p>
 
     <p :class="$style.body">{{ comment.body }}</p>
@@ -65,6 +65,19 @@ export default class Comment extends Vue {
     // console.log(this.comment.missingKey)
     this.updateRating({ commentId, delta })
   }
+
+  /**
+  * Defines which color borders are.
+  * Uses `comment`'s rating to choose color.
+  * @returns 'className: shouldApply' pair.
+  */
+  get computedClasses () {
+    return {
+      [this.$style.commentComponent]: true,
+      [this.$style.commentPositive]: this.comment.rating > 0,
+      [this.$style.commentNegative]: this.comment.rating < 0
+    }
+  }
 }
 </script>
 
@@ -78,6 +91,14 @@ export default class Comment extends Vue {
   padding: 0.74rem;
   margin: 0.5rem;
   position: relative;
+}
+
+.commentPositive {
+  border-color: $button-color-green;
+}
+
+.commentNegative {
+  border-color: $button-color-red;
 }
 
 .author {
@@ -96,7 +117,7 @@ export default class Comment extends Vue {
   left: 50%;
   transform: translateX(-50%);
 
-  .number {
+  .number { // this will be available as `this.$style.number`
     font-weight: bold;
   }
 

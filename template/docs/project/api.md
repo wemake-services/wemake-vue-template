@@ -6,13 +6,14 @@
     -   [updateRating][2]
     -   [comment][3]
     -   [changeRating][4]
--   [maybeHandleError][5]
--   [fetchComments][6]
--   [Index][7]
-    -   [comments][8]
-    -   [hasComments][9]
-    -   [fetch][10]
-    -   [handleReload][11]
+    -   [computedClasses][5]
+-   [maybeHandleError][6]
+-   [fetchComments][7]
+-   [Index][8]
+    -   [comments][9]
+    -   [hasComments][10]
+    -   [fetch][11]
+    -   [handleReload][12]
 
 ## Comment
 
@@ -39,8 +40,15 @@ Can be used to increase or decrease comment's rating.
 
 **Parameters**
 
--   `commentId` **[number][12]** Comment's identifier to change rating.
--   `delta` **[number][12]** Delta value to change rating value.
+-   `commentId` **[number][13]** Comment's identifier to change rating.
+-   `delta` **[number][13]** Delta value to change rating value.
+
+### computedClasses
+
+Defines which color borders are.
+Uses `comment`'s rating to choose color.
+
+Returns **any** 'className: shouldApply' pair.
 
 ## maybeHandleError
 
@@ -63,7 +71,7 @@ Fetches comments from the remote API.
 
 -   Throws **$AxiosError** If there is one.
 
-Returns **[Promise][13]&lt;[Array][14]&lt;RawCommentType>>** Parsed response data.
+Returns **[Promise][14]&lt;[Array][15]&lt;RawCommentType>>** Parsed response data.
 
 ## Index
 
@@ -76,17 +84,17 @@ Mounted as `/` by default.
 
 List of predownloaded comments, bound from Vuex
 
-Type: [Array][14]&lt;CommentType>
+Type: [Array][15]&lt;CommentType>
 
 ### hasComments
 
 Returns either we have any comments or not.
 
-Type: [boolean][15]
+Type: [boolean][16]
 
 ### fetch
 
--   **See: [https://nuxtjs.org/api/pages-fetch][16]**
+-   **See: [https://nuxtjs.org/api/pages-fetch][17]**
 
 Fetches comments from external API from the server side.
 This method should preload Vuex store.
@@ -96,7 +104,7 @@ This method should preload Vuex store.
 -   `context` **any** Nuxt `context` instance.
     -   `context.store`  Current Vuex store.
 
-Returns **[Promise][13]&lt;[Array][14]&lt;CommentType>>** List of downloaded comments.
+Returns **[Promise][14]&lt;[Array][15]&lt;CommentType>>** List of downloaded comments.
 
 ### handleReload
 
@@ -110,26 +118,28 @@ Reloads comments from external API.
 
 [4]: #changerating
 
-[5]: #maybehandleerror
+[5]: #computedclasses
 
-[6]: #fetchcomments
+[6]: #maybehandleerror
 
-[7]: #index
+[7]: #fetchcomments
 
-[8]: #comments
+[8]: #index
 
-[9]: #hascomments
+[9]: #comments
 
-[10]: #fetch
+[10]: #hascomments
 
-[11]: #handlereload
+[11]: #fetch
 
-[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[12]: #handlereload
 
-[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[13]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[16]: https://nuxtjs.org/api/pages-fetch
+[16]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[17]: https://nuxtjs.org/api/pages-fetch

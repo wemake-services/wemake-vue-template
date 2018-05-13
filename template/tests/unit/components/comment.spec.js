@@ -17,8 +17,6 @@ const comment = {
   rating: 0
 }
 
-const propsData = { comment }
-
 describe('unit tests for Comment component', () => {
   let store
 
@@ -29,7 +27,7 @@ describe('unit tests for Comment component', () => {
   })
 
   test('should have two buttons', () => {
-    const wrapper = mount(Comment, { store, localVue, propsData })
+    const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.is(Comment)).toBeTruthy()
@@ -37,7 +35,7 @@ describe('unit tests for Comment component', () => {
   })
 
   test('should have correct values', () => {
-    const wrapper = mount(Comment, { store, localVue, propsData })
+    const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     expect(wrapper.find('.body').text().trim()).toEqual(comment.body)
     expect(wrapper.find('.author').text().trim()).toEqual(comment.email)
@@ -47,27 +45,41 @@ describe('unit tests for Comment component', () => {
   })
 
   test('should increment rating', () => {
-    const wrapper = mount(Comment, { store, localVue, propsData })
+    const delta = 1
+    const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
       commentId: comment.id,
-      delta: 1
+      delta
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(1)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(delta)
+
+    // See https://vue-test-utils.vuejs.org/en/guides/common-tips.html
+    wrapper.setProps({ comment: wrapper.vm.$store.state.comments[0] })
+
+    expect(wrapper.props().comment.rating).toEqual(delta)
+    expect(wrapper.classes()).toContain(wrapper.vm.$style.commentPositive)
   })
 
-  test('should decrement rating', () => {
-    const wrapper = mount(Comment, { store, localVue, propsData })
+  test('should decrement rating', async () => {
+    const delta = -2
+    const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
       commentId: comment.id,
-      delta: -1
+      delta
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(-1)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(delta)
+
+    // See https://vue-test-utils.vuejs.org/en/guides/common-tips.html
+    wrapper.setProps({ comment: wrapper.vm.$store.state.comments[0] })
+
+    expect(wrapper.props().comment.rating).toEqual(delta)
+    expect(wrapper.classes()).toContain(wrapper.vm.$style.commentNegative)
   })
 
   test('should match the snapshot', () => {
-    const wrapper = mount(Comment, { store, localVue, propsData })
+    const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

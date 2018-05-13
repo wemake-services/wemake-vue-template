@@ -29,8 +29,6 @@ const mockedComment = {
   rating: 19
 }
 
-const propsData = { comments }
-
 describe('unit tests for Index page', () => {
   let store
 
@@ -41,12 +39,12 @@ describe('unit tests for Index page', () => {
   })
 
   test('should have two comments', () => {
-    const wrapper = mount(Index, { store, localVue, propsData })
+    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
     expect(wrapper.findAll('.commentComponent')).toHaveLength(2)
   })
 
   test('should load new comments on actions', async () => {
-    const wrapper = mount(Index, { store, localVue, propsData })
+    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
 
     const mock = new MockAdapter(store.$axios)
     mock.onGet('/comments').reply(200, [mockedComment])
@@ -58,7 +56,7 @@ describe('unit tests for Index page', () => {
   })
 
   test('should match the snapshot', () => {
-    const wrapper = mount(Index, { store, localVue, propsData })
+    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

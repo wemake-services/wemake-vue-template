@@ -78,10 +78,11 @@ and `post-css` can also be installed if you need them.
 
 ### Running and configuration
 
-All configuration is done inside `package.json`. 
+All configuration is done [inside `package.json`](configuration.md#stylelint). 
 Since configuration is rather simple.
 
-If your configuration requires some complex logic, consider moving to [`stylelint.config.js`](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md)
+If your configuration requires some complex logic, 
+consider moving to [`stylelint.config.js`](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md)
 
 To run `css` linting execute: `yarn lint:css`.
 

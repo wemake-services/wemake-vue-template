@@ -1,22 +1,21 @@
 <template>
-  <div
-    class="comment__component"
-  >
-    <p class="comment-author">{{ comment.email }}</p>
-    <p class="comment-body">{{ comment.body }}</p>
+  <div :class="$style.commentComponent">
+    <p :class="$style.author">{{ comment.email }}</p>
 
-    <div class="comment-rating">
+    <p :class="$style.body">{{ comment.body }}</p>
+
+    <div :class="$style.rating">
       <button
-        class="comment-rating-up"
+        :class="$style.ratingUp"
         @click="changeRating(comment.id, 1)"
       >
         +
       </button>
 
-      <span class="comment-rating-value">{{ comment.rating }}</span>
+      <span :class="$style.number">{{ comment.rating }}</span>
 
       <button
-        class="comment-rating-down"
+        :class="$style.ratingDown"
         @click="changeRating(comment.id, -1)"
       >
         -
@@ -69,45 +68,52 @@ export default class Comment extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-.comment__component {
-  background: white;
+<style lang="scss" module>
+@import "~/scss/variables";
+
+.commentComponent {
+  background: $color-white;
   max-width: 15.6rem;
   border: 0.12rem solid;
   padding: 0.74rem;
   margin: 0.5rem;
   position: relative;
+}
 
-  .comment-author {
-    padding-bottom: 0.74rem;
+.author {
+  padding-bottom: 0.74rem;
+  font-weight: bold;
+  border-bottom: 0.12rem solid;
+}
+
+.body {
+  text-align: justify;
+}
+
+.rating {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .number {
     font-weight: bold;
-    border-bottom: 0.12rem solid;
   }
 
-  .comment-rating {
-    $button-color-green: #a2dca2;
-    $button-color-red: #efbcd1;
-
-    position: absolute;
-    bottom: 0.3rem;
-    left: 50%;
-    transform: translateX(-50%);
-
-    button {
-      margin: 0 0.5rem;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      width: 2rem;
-
-      &.comment-rating-up {
-        background: $button-color-green;
-      }
-
-      &.comment-rating-down {
-        background: $button-color-red;
-      }
-    }
+  button {
+    margin: 0 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 2rem;
   }
+}
+
+.ratingUp {
+  background: $button-color-green;
+}
+
+.ratingDown {
+  background: $button-color-red;
 }
 </style>

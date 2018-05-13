@@ -1,11 +1,11 @@
 <template>
-  <section class="comments__component">
+  <section>
     <div>
       <app-logo />
 
-      <div class="comments-actions">
+      <div :class="$style.actions">
         <button
-          class="comments-action-reload"
+          :class="$style.reload"
           @click="handleReload"
         >
           reload comments
@@ -14,7 +14,7 @@
 
       <section
         v-if="hasComments"
-        class="comments-container"
+        :class="$style.container"
       >
         <comment
           v-for="comment in comments"
@@ -91,29 +91,26 @@ export default class Index extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-.comments__component {
-  .comments-actions {
-    text-align: center;
+<style lang="scss" module>
+@import "~/scss/variables";
 
-    .comments-action-reload {
-      $button-color: #409eff;
-      $button-text-color: #fff;
+.actions {
+  text-align: center;
+}
 
-      display: inline-block;
-      cursor: pointer;
-      outline: none;
-      padding: 5px 10px;
-      color: $button-text-color;
-      background-color: $button-color;
-      border-color: $button-color;
-    }
-  }
+.reload {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 10px;
+  color: $color-white;
+  background-color: $button-color-main;
+  border-color: $button-color-main;
+}
 
-  .comments-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 </style>

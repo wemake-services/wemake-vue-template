@@ -15,6 +15,7 @@ Here we define all files and folders that are used in this project.
 - [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/) - this file specifies `docker` services that are needed for development and testing
 - `.dockerignore` - specifies what files should not be copied to the `docker` image
 - [`.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/) - GitLab CI configuration file. It basically defines what to do with your project after pushing it to the repository. Currently is used for testing and releasing a `docker` image
+- [`.vscode/`](https://code.visualstudio.com/docs/getstarted/settings) - `vscode` IDE integration. We store different settings, plugins, and tasks inside this folder
 
 
 ## Client

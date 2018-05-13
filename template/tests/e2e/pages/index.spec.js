@@ -25,7 +25,7 @@ describe('e2e tests for index page', () => {
   }, 30000)
 
   // Example of testing only generated html (as text)
-  test('route / exits', async () => {
+  test('route / exists', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     expect(html.includes('wemake-vue-template')).toBeTruthy()
   })
@@ -36,9 +36,7 @@ describe('e2e tests for index page', () => {
     const { window } = new JSDOM(html).window
 
     const mainHeader = window.document.querySelector('h1')
-    const comments = window.document.querySelector(
-      '.comments__component .comments-container'
-    )
+    const comments = window.document.querySelector('.index__container_0')
 
     expect(mainHeader.textContent.trim()).toEqual('wemake-vue-template')
     expect(window.getComputedStyle(comments).display).toEqual('flex')
@@ -52,7 +50,7 @@ describe('e2e tests for index page', () => {
     const { window } = new JSDOM(html).window
 
     const commentRatings = window.document.querySelectorAll(
-      '.comment__component .comment-rating-value'
+      '.Comment__commentComponent_0 .Comment__number_0'
     )
     expect(commentRatings).toHaveLength(10)
 

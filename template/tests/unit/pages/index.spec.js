@@ -42,7 +42,7 @@ describe('unit tests for Index page', () => {
 
   test('should have two comments', () => {
     const wrapper = mount(Index, { store, localVue, propsData })
-    expect(wrapper.findAll('.comment__component')).toHaveLength(2)
+    expect(wrapper.findAll('.commentComponent')).toHaveLength(2)
   })
 
   test('should load new comments on actions', async () => {
@@ -54,7 +54,7 @@ describe('unit tests for Index page', () => {
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
     expect(wrapper.vm.$store.state.comments).toHaveLength(1)
     expect(wrapper.vm.$store.state.comments[0].email).toBe(mockedComment.email)
-    expect(wrapper.findAll('.comment__component')).toHaveLength(1)
+    expect(wrapper.findAll('.commentComponent')).toHaveLength(1)
   })
 
   test('should match the snapshot', () => {

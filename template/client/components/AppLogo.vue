@@ -1,5 +1,5 @@
 <template>
-  <div class="wemake-services__component">
+  <div :class="$style.logo">
     <h1>
       <a href="https://github.com/wemake-services/wemake-vue-template">
         wemake-vue-template
@@ -14,10 +14,10 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import '~scss/partials/mixins';
+<style lang="scss" module>
+@import '~/scss/mixins';
 
-.wemake-services__component {
+.logo {
   @include centered();
 
   a,

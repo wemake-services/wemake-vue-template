@@ -30,15 +30,18 @@ describe('unit tests for Comment component', () => {
 
   test('should have two buttons', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
+
+    expect(wrapper.isVueInstance()).toBeTruthy()
+    expect(wrapper.is(Comment)).toBeTruthy()
     expect(wrapper.findAll('button')).toHaveLength(2)
   })
 
   test('should have correct values', () => {
     const wrapper = mount(Comment, { store, localVue, propsData })
 
-    expect(wrapper.find('.comment-author').text().trim()).toEqual(comment.email)
-    expect(wrapper.find('.comment-body').text().trim()).toEqual(comment.body)
-    expect(wrapper.find('.comment-rating-value').text().trim()).toEqual(
+    expect(wrapper.find('.body').text().trim()).toEqual(comment.body)
+    expect(wrapper.find('.author').text().trim()).toEqual(comment.email)
+    expect(wrapper.find('.number').text().trim()).toEqual(
       comment.rating.toString()
     )
   })

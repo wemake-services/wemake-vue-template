@@ -57,4 +57,13 @@ We also do not encourage using `eslint --fix`.
 This allows us to show how easy it is to deploy a full featured isomorphic app.
 The main idea of this example is to demonstrate server side rendering features.
 Both with basic client interactions.
+
+
+## Why do use vscode and not vim/sublime/emacs/webstorm?
+
+First of all, you don't have to use `vscode`. Use the editor you love.
+Secondly, `vscode` is free (as in freedom), actively supported, 
+has lot of `js` plugins.
+
+That's why we recommend it.
  

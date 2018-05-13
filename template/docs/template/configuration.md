@@ -25,13 +25,15 @@ cp config/.env.template config/.env
 
 Make sure that `config/.env` is kept **secret**!
 
-### nuxt-axios
+### API_URL
 
-By default we configure `nuxt-axios` to use relative urls to `API_URL` 
-environment variable.
+Variable `API_URL` represent your API server base url.
+It is used a base url for all relative urls we use to make `axios` calls.
 
-So, when you need to change your API from production to development,
-just change this single value.
+There are situations when you need to switch between different versions of
+your API: development or production, v1 or v2.
+
+In this case modify this single value inside your `config/.env` file.
 
 
 ## nuxt.config.js
@@ -44,13 +46,67 @@ Parts that you will need the most:
 2. [`head`](https://nuxtjs.org/api/configuration-head) option, which specifies meta-data for your `html` pages
 3. [`plugins`](https://nuxtjs.org/api/configuration-plugins) option, which specifies what files should be run before creating root `Vue` instance
 4. [`css`](https://nuxtjs.org/api/configuration-css/) option, which specifies global `css` options
+5. [`build`](https://nuxtjs.org/api/configuration-build) option, which allows to extend the default `webpack` build configuration. Add your own loaders and plugins here in case you need them
+
+### axios
+
+We use [`axios-module`](https://github.com/nuxt-community/axios-module) 
+for `nuxt` instead of a regular `axios` because
+there are tons of goodies that are already included: 
+retries, loading indicators, server-side proxy calls, 
+`https` enforcement, and so on.
+
+It is all configured under `axios` key in `nuxt.config.js`.
+See list of available options [here](https://axios.nuxtjs.org/options.html).
+
+### build
+
+Currently we extend build with several rules:
+
+- enable linting with `eslint` and `stylelint` in development
+- settings handy alias for `scss` imports
+- disabling crazy `css` classes names during tests
 
 
 ## package.json
 
 We also configure several tools inside `package.json` itself.
-Here's a list of these tools:
+Here's a list of these tools.
 
-1. `husky` - pre-commit hooks manager
-2. `jest` - test runner
-3. `stylelint` - linter for `css` and `scss` files
+### husky
+
+[`husky`](https://github.com/typicode/husky) is a pre-commit hooks manager.
+It's configuration is pretty simple. 
+It specifies which task to run on `git` commit event.
+
+See how it [is used](development.md#making-commit).
+
+### stylelint
+
+[`stylelint`](https://github.com/stylelint/stylelint) is a linter 
+for your `css`, `scss`, and `postcss`.
+
+It's configuration specifies which styles it should use.
+Pretty similar to `eslint`.
+
+Basically we use two configurations: for [`scss`](https://github.com/wemake-services/stylelint-config-strict-scss) 
+and for [`css-modules`](https://github.com/pascalduez/stylelint-config-css-modules).
+
+Rules defined there are just some hacks and 
+fixes to make our development experience better.
+
+Read more about linting [here](linting.md#stylelint).
+
+### jest
+
+[`jest`](https://facebook.github.io/jest/) is a test runner that 
+is used for both unit and e2e tests.
+
+It has a lot of options:
+
+- `setupFiles` is used to specify which files should be executed before tests start
+- `moduleFileExtensions` specifies which module we can safely import from `jest`
+- `transform` specifies which parsers to use when importing different files
+- `moduleNameMapper` is used to match our [`webpack` aliases](https://webpack.js.org/configuration/resolve/#resolve-alias) in `jest`
+
+Read more about testing [here](testing.md).

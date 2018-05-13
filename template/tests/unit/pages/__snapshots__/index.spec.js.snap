@@ -7,11 +7,11 @@ exports[`unit tests for Index page should match the snapshot 1`] = `
       documentation
     </a></h2></div> <div class=\\"actions\\"><button class=\\"reload\\">
         reload comments
-      </button></div> <section class=\\"container\\"><div class=\\"commentComponent\\"><p class=\\"author\\">test@mail.com</p> <p class=\\"body\\">some text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+      </button></div> <section class=\\"container\\"><div class=\\"commentComponent commentNegative\\"><p class=\\"author\\">test@mail.com</p> <p class=\\"body\\">some text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
       +
     </button> <span class=\\"number\\">-4</span> <button class=\\"ratingDown\\">
       -
-    </button></div></div><div class=\\"commentComponent\\"><p class=\\"author\\">other@mail.com</p> <p class=\\"body\\">other text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+    </button></div></div><div class=\\"commentComponent commentPositive\\"><p class=\\"author\\">other@mail.com</p> <p class=\\"body\\">other text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
       +
     </button> <span class=\\"number\\">2</span> <button class=\\"ratingDown\\">
       -

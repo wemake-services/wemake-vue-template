@@ -84,7 +84,7 @@
     "sass-loader": "^7.0.1",
     "vue-property-decorator": "^6.0.0",
     "vuex-class": "^0.3.1",
-    "webpack": "^3.11.0"
+    "webpack": "^4.8.3"
   },
   "devDependencies": {
     "@vue-flow-typed/vuex": "^0.1.4",

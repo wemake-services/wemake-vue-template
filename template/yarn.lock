@@ -3387,9 +3387,9 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/documentation/-/documentation-6.3.2.tgz#30279dba1241b402af1e8270ae4c7c89282e7167"
+documentation@^6.3.3:
+  version "6.3.3"
+  resolved "https://registry.yarnpkg.com/documentation/-/documentation-6.3.3.tgz#4cbd17c80d2a3ed041f9155d17139b43b8d7a886"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"
@@ -3415,7 +3415,7 @@ documentation@^6.3.2:
     globals-docs "^2.4.0"
     highlight.js "^9.12.0"
     js-yaml "^3.10.0"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     mdast-util-inject "^1.1.0"
     micromatch "^3.1.5"
     mime "^2.2.0"
@@ -7181,7 +7181,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.15.0:
+lodash@^4.15.0, lodash@^4.17.10:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 

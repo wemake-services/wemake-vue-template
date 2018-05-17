@@ -6,7 +6,7 @@ import type { ActionContext } from 'vuex'
 import comments from '~/logics/api/comments'
 
 export default {
-  async fetchComments({
+  async fetchComments ({
     commit,
     state
   }: ActionContext<StateType>) {

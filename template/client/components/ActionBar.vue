@@ -29,7 +29,7 @@ export default class ActionBar extends Vue {
    *
    * @returns { VNode } to be rendered by Vue.
    */
-  render() {
+  render () {
     return (
       <div class={this.$style.actions}>
         <button

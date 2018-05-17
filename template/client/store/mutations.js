@@ -41,4 +41,3 @@ export default {
     state.comments[commentIndex].rating += delta
   }
 }
-

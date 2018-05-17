@@ -60,7 +60,7 @@ export default class Comment extends Vue {
    * @param commentId - Comment's identifier to change rating.
    * @param delta - Delta value to change rating value.
    */
-  changeRating(commentId: number, delta: number) {
+  changeRating (commentId: number, delta: number) {
     // Uncomment next line to test typing:
     // console.log(this.comment.missingKey)
     this.updateRating({ commentId, delta })
@@ -71,7 +71,7 @@ export default class Comment extends Vue {
    * Uses `comment`'s rating to choose color.
    * @returns 'className: shouldApply' pair.
    */
-  get computedClasses() {
+  get computedClasses () {
     return {
       [this.$style.commentComponent]: true,
       [this.$style.commentPositive]: this.comment.rating > 0,

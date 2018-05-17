@@ -1,5 +1,3 @@
-// @flow
-
 import Vuex from 'vuex'
 import state from '~/store/state'
 import mutations from '~/store/mutations'

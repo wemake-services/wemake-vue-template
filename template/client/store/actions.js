@@ -1,15 +1,11 @@
 // @flow
 
-import * as mutationTypes from '~/types/mutations'
-import type {
-  StateType
-} from '~/types'
-import type {
-  ActionContext
-} from 'vuex'
+import * as mutationTypes from '~/store/types'
+import type { StateType } from '~/types'
+import type { ActionContext } from 'vuex'
 import comments from '~/logics/api/comments'
 
-export const actions = {
+export default {
   async fetchComments({
     commit,
     state

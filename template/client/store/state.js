@@ -1,5 +1,5 @@
 // @flow
 
-export const state = () => {
+export default () => {
   comments: null
 }

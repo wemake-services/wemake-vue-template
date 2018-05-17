@@ -4,14 +4,11 @@ import type {
   CommentType,
   CommentPayloadType,
   StateType,
-  RawCommentType
-} from '~/types'
+  RawCommentType } from '~/types'
+import * as mutationTypes from '~/store/types'
 
-const SET_COMMENTS = 'root/SET_COMMENTS'
-const UPDATE_RATING = 'root/UPDATE_RATING'
-
-export const mutations = {
-  [SET_COMMENTS]: (
+export default {
+  [mutationTypes.SET_COMMENTS]: (
     state: StateType, comments: Array<RawCommentType>
   ) => {
     const updatedComments: Array<CommentType> = []
@@ -27,7 +24,7 @@ export const mutations = {
     state.comments = updatedComments
   },
 
-  [UPDATE_RATING]: (
+  [mutationTypes.UPDATE_RATING]: (
     state: StateType, {
       commentId,
       delta
@@ -44,3 +41,4 @@ export const mutations = {
     state.comments[commentIndex].rating += delta
   }
 }
+

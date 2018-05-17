@@ -118,7 +118,7 @@
     "stylelint": "^9.2.1",
     "stylelint-config-css-modules": "^1.2.0",
     "stylelint-config-strict-scss": "^0.2.1",
-    "stylelint-webpack-plugin": "^0.10.4",
+    "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^2.5.0"
   }
 }

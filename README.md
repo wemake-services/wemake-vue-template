@@ -51,7 +51,7 @@ We are required to clone the project, since we need the `.git` folder.
 
 ## Running the project
 
-Before going any further make sure that you have red [the docs]().
+Before going any further make sure that you have read [the docs](https://wemake-services.gitbook.io/wemake-vue-template).
 
 - `yarn dev` starts the development server
 - `yarn start` runs the production code in a node server

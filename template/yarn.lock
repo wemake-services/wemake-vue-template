@@ -123,9 +123,9 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
 
-"@vue-flow-typed/vuex@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.1.4.tgz#1125335dc322e03cddb501102177acb51b56b191"
+"@vue-flow-typed/vuex@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.1.7.tgz#6ce30d6a541470dbff398f41d8e61f867505f6aa"
 
 "@vue/test-utils@^1.0.0-beta.16":
   version "1.0.0-beta.16"

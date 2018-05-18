@@ -8,4 +8,4 @@ function createState (): StateType {
   }
 }
 
-export default createState()
+export default createState

@@ -1,11 +1,12 @@
 // @flow
 
+import * as mutationTypes from '~/store/types'
+
 import type {
   CommentType,
   CommentPayloadType,
   StateType,
   RawCommentType } from '~/types'
-import * as mutationTypes from '~/store/types'
 
 const mutations = {
   [mutationTypes.SET_COMMENTS]: (

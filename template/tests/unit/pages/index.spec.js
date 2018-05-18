@@ -3,7 +3,10 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
 
 import Index from '~/pages/index'
-import { actions, getters, state, mutations } from '~/store'
+import state from '~/store/state'
+import mutations from '~/store/mutations'
+import getters from '~/store/getters'
+import actions from '~/store/actions'
 
 import { createStore } from '../../utils/store'
 

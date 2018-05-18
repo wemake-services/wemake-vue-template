@@ -10,8 +10,8 @@ export function createStore (
 
   const store = new Vuex.Store({
     state: deepcopy(mixedState),
-    actions,
     getters,
+    actions,
     mutations
   })
 

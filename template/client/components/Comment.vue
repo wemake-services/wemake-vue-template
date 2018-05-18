@@ -32,7 +32,7 @@ import Component from 'nuxt-class-component'
 import { Prop } from 'vue-property-decorator'
 import { Mutation } from 'vuex-class'
 
-import * as mutationTypes from '~/types/mutations'
+import * as mutationTypes from '~/store/types'
 import type { CommentType, CommentPayloadType } from '~/types'
 
 // @vue/component
@@ -117,7 +117,8 @@ export default class Comment extends Vue {
   left: 50%;
   transform: translateX(-50%);
 
-  .number { // this will be available as `this.$style.number`
+  .number {
+    // This will be available as `this.$style.number`
     font-weight: bold;
   }
 

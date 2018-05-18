@@ -2,8 +2,9 @@ import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
 import Comment from '~/components/Comment'
-import { state, mutations } from '~/store'
-import * as types from '~/types/mutations'
+import state from '~/store/state'
+import mutations from '~/store/mutations'
+import * as types from '~/store/types'
 
 import { createStore } from '../../utils/store'
 

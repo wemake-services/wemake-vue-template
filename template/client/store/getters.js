@@ -2,8 +2,10 @@
 
 import type { StateType } from '~/types'
 
-export default {
+const getters = {
   hasComments (state: StateType): boolean {
     return Boolean(state.comments && state.comments.length > 0)
   }
 }
+
+export default getters

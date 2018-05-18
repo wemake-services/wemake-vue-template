@@ -2,8 +2,10 @@
 
 import type { StateType } from '~/types'
 
-export const state: StateType = {
-  comments: null
+function createState (): StateType {
+  return {
+    comments: null
+  }
 }
 
-export default state
+export default createState()

@@ -7,7 +7,7 @@ import type {
   RawCommentType } from '~/types'
 import * as mutationTypes from '~/store/types'
 
-export default {
+const mutations = {
   [mutationTypes.SET_COMMENTS]: (
     state: StateType, comments: Array<RawCommentType>
   ) => {
@@ -41,3 +41,5 @@ export default {
     state.comments[commentIndex].rating += delta
   }
 }
+
+export default mutations

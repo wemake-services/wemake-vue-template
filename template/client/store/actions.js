@@ -5,7 +5,7 @@ import type { StateType } from '~/types'
 import type { ActionContext } from 'vuex'
 import comments from '~/logics/api/comments'
 
-export default {
+const actions = {
   async fetchComments ({
     commit,
     state
@@ -19,3 +19,5 @@ export default {
     return data
   }
 }
+
+export default actions

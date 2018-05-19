@@ -58,6 +58,15 @@ Before going any further make sure that you have read [the docs](https://wemake-
 - `yarn generate` generates static files to be deployed [anywhere](https://nuxtjs.org/guide/commands/#production-deployment)
 
 
+## Who are using this template?
+
+If you use our template, please add yourself or your company [in the list](https://github.com/wemake-services/wemake-vue-template/wiki/Who-is-using-this-template).
+
+We offer free email support for anyone who is using this.
+If you have any problems or questions, drop us a line at [`contact@wemake.services`](mailto:contact@wemake.services).
+And we will try to help you.
+
+
 ## License
 
 MIT.

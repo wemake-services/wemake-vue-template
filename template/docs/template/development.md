@@ -48,6 +48,18 @@ You will see that two new folders are created:
 - `node_modules` with all your dependencies
 - `flow-typed` with external `flow` type definitions
 
+After each installation `flow` automatically fetches all the available 
+dependencies from `flow-typed`. 
+All dependencies that are not available 
+will be stubbed with modules that always return `any`.
+
+`flow` will show a warning about missing types:
+
+> !! No flow libdefs found in flow-typed for the above untyped dependencies !!
+> 
+> I've generated `any`-typed stubs for these packages, but consider submitting 
+> libdefs for them to https://github.com/flowtype/flow-typed/
+
 
 ## Configuration
 

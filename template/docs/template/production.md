@@ -7,6 +7,17 @@ Before going to production make sure,
 that you have checked your modules' size with `yarn build --analyze`.
 
 
+## Nuxt deployment modes
+
+There are two [deployment modes](https://nuxtjs.org/api/configuration-mode/) 
+available for `nuxt` deployments.
+
+Use `spa` only when you do not need server side rendering.
+By default, we use `universal` mode.
+
+You can also provide `--spa` flag via command line: `yarn build --spa`.
+
+
 ## Static files
 
 The easiest way to deploy your application is just pushing some static files

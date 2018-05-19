@@ -16,7 +16,7 @@ function maybeHandleError <T> (error: ?$AxiosError<T>): void {
   }
 }
 
-export default {
+const methods = {
   /**
   * Fetches comments from the remote API.
   *
@@ -39,3 +39,5 @@ export default {
     return response.data
   }
 }
+
+export default methods

@@ -17,19 +17,22 @@
   },
   "rules": {
     // base
-    "object-curly-spacing": [2, "always"],
-    "arrow-parens": [2, "always"],
+    "object-curly-spacing": ["error", "always"],
+    "arrow-parens": ["error", "always"],
 
     // styling imports
     "import/prefer-default-export": "off",
-    "import/first": 2,
+    "import/first": "error",
+    "import/no-anonymous-default-export": ["error", {
+      "allowCallExpression": false
+    }],
 
     // warn about using console or debugger
     "no-console": 1,
     "no-debugger": 1,
 
     // raise errors on long lines
-    "max-len": [2, {
+    "max-len": ["error", {
       "code": 80,
       "ignoreComments": false,
       "ignoreTrailingComments": false,
@@ -40,14 +43,14 @@
     }],
 
     // use new syntax
-    "prefer-arrow-callback": 2,
-    "generator-star-spacing": [2, "after"],
+    "prefer-arrow-callback": "error",
+    "generator-star-spacing": ["error", "after"],
 
-    "func-style": [2, "declaration", {
+    "func-style": ["error", "declaration", {
       "allowArrowFunctions": true
     }],
-    "no-var": 2,
-    "semi": [2, "never"],
+    "no-var": "error",
+    "semi": ["error", "never"],
     "prefer-const": ["error", {
       "destructuring": "any",
       "ignoreReadBeforeAssign": false

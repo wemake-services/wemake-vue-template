@@ -48,7 +48,7 @@ import type { CommentType, StateType } from '~/types'
 export default class Index extends Vue {
   @State('comments')
   /**
-  * List of predownloaded comments, bound from Vuex
+  * List of predownloaded comments, bound from Vuex.
   */
   comments: Array<CommentType>
 

@@ -53,6 +53,7 @@ module.exports = {
       yarn dev
     `)
 
-    logger.log(`Documentation can be found at https://github.com/wemake-services/wemake-vue-template`)
+    const url = 'https://github.com/wemake-services/wemake-vue-template'
+    logger.log(`Documentation can be found at ${url}`)
   }
 }

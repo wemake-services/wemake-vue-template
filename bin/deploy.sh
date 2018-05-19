@@ -4,6 +4,8 @@ set -o errexit
 set -o nounset
 
 echo 'skipping deployment'
+# Deploy currently does not work:
+# https://github.com/wemake-services/wemake-vue-template/issues/438
 
 # if [ "$TRAVIS_BRANCH" = "master" ]; then
 #   # For some reason `deploy` key did not work for us:

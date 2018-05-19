@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 # Scaffolding a project:
-expect 'tests/scaffold.sh'
+expect 'bin/scaffold.sh'
 cd "$PROJECT_NAME"
 
 # Running integration tests with docker:

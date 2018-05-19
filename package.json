@@ -5,7 +5,27 @@
   "repository": "https://github.com/wemake-services/wemake-vue-template.git",
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",
+  "engines": {
+    "node": "9.10",
+    "yarn": "1.6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest ./tests"
+  },
+  "jest": {
+    "roots": ["tests"]
+  },
   "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^22.4.4",
     "vue-cli": "^2.9.3"
   }
 }

@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "standard"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    // base
+    "object-curly-spacing": [2, "always"],
+    "arrow-parens": [2, "always"],
+
+    // warn about using console
+    "no-console": 1,
+
+    // raise errors on long lines
+    "max-len": [2, {
+      "code": 80,
+      "ignoreComments": false,
+      "ignoreTrailingComments": false,
+      "ignoreUrls": false,
+      "ignoreStrings": false,
+      "ignoreTemplateLiterals": false,
+      "ignoreRegExpLiterals": false
+    }],
+
+    // Use new syntax
+    "prefer-promise-reject-errors": 2,
+    "prefer-arrow-callback": 2,
+    "generator-star-spacing": 0,
+
+    "func-style": [2, "declaration", {
+      "allowArrowFunctions": true
+    }],
+    "no-var": 2,
+    "semi": [2, "never"],
+    "prefer-const": ["error", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": false
+    }],
+  },
+
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  }
+}

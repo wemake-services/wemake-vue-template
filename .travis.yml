@@ -28,10 +28,9 @@ install:
   - yarn install
 
 script:
-  - sh tests/test.sh
-
-after_script:
-  - sh tests/deploy.sh
+  - yarn lint
+  - yarn test
+  - sh bin/test.sh
 
 notifications:
   email:

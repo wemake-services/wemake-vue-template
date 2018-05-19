@@ -11154,6 +11154,12 @@ stylelint-config-strict-scss@^0.2.1:
     stylelint-order "^0.8.1"
     stylelint-scss "^3.1.0"
 
+stylelint-declaration-block-no-ignored-properties@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-declaration-block-no-ignored-properties/-/stylelint-declaration-block-no-ignored-properties-1.1.0.tgz#291e27309a53c176a8c8bafc8bc679de05a397e4"
+  dependencies:
+    postcss "^6.0.11"
+
 stylelint-order@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.8.1.tgz#35f71af3a15954154e0e99e5646ba3d6fbe34f8d"

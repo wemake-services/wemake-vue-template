@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "name",
   "version": "0.1.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -35,11 +35,15 @@
       "stylelint-config-strict-scss",
       "stylelint-config-css-modules"
     ],
+    "plugins": [
+      "stylelint-declaration-block-no-ignored-properties"
+    ],
     "rules": {
       "selector-class-pattern": "^[a-z][a-zA-Z]+$",
       "selector-id-pattern": "^[a-z][a-zA-Z]+$",
       "no-empty-source": null,
-      "at-rule-no-unknown": null
+      "at-rule-no-unknown": null,
+      "plugin/declaration-block-no-ignored-properties": true
     }
   },
   "jest": {
@@ -118,6 +122,7 @@
     "stylelint": "^9.2.1",
     "stylelint-config-css-modules": "^1.2.0",
     "stylelint-config-strict-scss": "^0.2.1",
+    "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^2.6.0"
   }

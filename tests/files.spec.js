@@ -4,11 +4,8 @@
 // Ignored folders: `client/`, `tests/`
 
 const fs = require('fs')
-const path = require('path')
 
-function templatePath (subPath) {
-  return path.resolve(__dirname, '..', 'template', subPath)
-}
+const templatePath = require('./utils').templatePath
 
 function expectAllExist (files) {
   expect.assertions(files.length)

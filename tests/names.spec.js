@@ -1,11 +1,8 @@
 // Tests for template names integrity
 
 const fs = require('fs')
-const path = require('path')
 
-function templatePath (subPath) {
-  return path.resolve(__dirname, '..', 'template', subPath)
-}
+const templatePath = require('./utils').templatePath
 
 describe('template names', () => {
   test('package.json', () => {

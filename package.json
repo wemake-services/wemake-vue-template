@@ -10,10 +10,12 @@
     "test": "jest ./tests"
   },
   "jest": {
-    "roots": ["tests"]
+    "transform": {},
+    "roots": [
+      "tests"
+    ]
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.12.0",

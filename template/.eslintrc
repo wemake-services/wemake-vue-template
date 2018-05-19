@@ -23,9 +23,6 @@
     // styling imports
     "import/prefer-default-export": "off",
     "import/first": "error",
-    "import/no-anonymous-default-export": ["error", {
-      "allowCallExpression": false
-    }],
 
     // warn about using console or debugger
     "no-console": 1,

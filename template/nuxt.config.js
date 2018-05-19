@@ -11,11 +11,12 @@ module.exports = {
   * Headers of the page
   */
   head: {
-    title: 'wemake-vue-demo',
+    htmlAttrs: { lang: 'en' },
+    title: '{{ name }}',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A Vue.js project' }
+      { hid: 'description', name: 'description', content: '{{ description }}' }
     ],
     link: [
       {
@@ -33,11 +34,7 @@ module.exports = {
         sizes: '96x96',
         href: '/favicon-96x96.png'
       }
-    ],
-
-    htmlAttrs: {
-      lang: 'en'
-    }
+    ]
   },
 
   /**

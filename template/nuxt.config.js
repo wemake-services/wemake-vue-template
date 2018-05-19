@@ -48,11 +48,12 @@ module.exports = {
   */
   axios: {
     // See https://axios.nuxtjs.org/options.html
+    debug: process.env.NODE_ENV === 'development',
     https: true,
+    proxyHeadersIgnore: ['accept', 'accept-encoding', 'host'],
     progress: true,
-    retry: true,
     proxy: false,
-    debug: process.env.NODE_ENV === 'development'
+    retry: true
   },
 
   /**

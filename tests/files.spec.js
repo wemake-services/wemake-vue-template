@@ -21,7 +21,7 @@ describe('template files structure', () => {
       '.babelrc',
       '.dockerignore',
       '.editorconfig',
-      '.eslintrc',
+      '.eslintrc.js',
       '.flowconfig',
       '.gitignore',
       '.gitlab-ci.yml',

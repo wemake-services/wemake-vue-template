@@ -131,6 +131,11 @@ bower_components/
 
 dist/
 
+#### eslint ####
+# These rules are required to lint .eslintrc.js
+# It is not related to git in any manner.
+!.eslintrc.js
+
 #### custom ####
 flow-typed/
 .nuxt/

@@ -5,7 +5,8 @@
   // Files
   "files.associations": {
     ".babelrc": "jsonc",
-    ".eslintrc": "jsonc"
+    ".eslintrc": "jsonc",
+    ".flowconfig": "ini"
   },
   "files.exclude": {
     "**/*.log": true,

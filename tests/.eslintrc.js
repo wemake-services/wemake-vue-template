@@ -1,0 +1,8 @@
+module.exports = {
+  'extends': ['plugin:jest/recommended'],
+  'rules': {
+    'jest/consistent-test-it': ['error', { 'fn': 'test' }],
+    'jest/lowercase-name': ['error'],
+    'jest/valid-describe': 'error'
+  }
+}

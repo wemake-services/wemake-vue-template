@@ -1,3 +1,5 @@
+// @flow
+
 import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
@@ -26,6 +28,9 @@ describe('unit tests for Comment component', () => {
       comments: [comment]
     })
   })
+
+  // Uncomment this line to test typing:
+  // test(12, {})
 
   test('should have two buttons', () => {
     const wrapper = mount(Comment, { store, localVue, propsData: { comment } })

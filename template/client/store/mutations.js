@@ -6,7 +6,8 @@ import type {
   CommentType,
   CommentPayloadType,
   StateType,
-  RawCommentType } from '~/types'
+  RawCommentType
+} from '~/types'
 
 const mutations = {
   [mutationTypes.SET_COMMENTS]: (

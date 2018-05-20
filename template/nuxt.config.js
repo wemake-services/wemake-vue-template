@@ -71,7 +71,9 @@ module.exports = {
   /**
   * Custom plugins
   */
-  plugins: [],
+  plugins: [
+    '~/plugins/performance'
+  ],
 
   /**
   * Global CSS

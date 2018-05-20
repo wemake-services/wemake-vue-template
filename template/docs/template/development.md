@@ -89,5 +89,13 @@ If not, create it with `git init` and reinstall dependencies.
 For the best development experience, we can recommend [`vscode`](editors.md).
 
 Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools)
-is an essential add-on for your browser.
+is an essential add-on for your browser. 
+It is distributed as a Google Chrome plugin.
 Make sure you have it.
+
+### Performance toolbar
+
+We also highly recommend to use [`vue-perf-devtool`](https://github.com/vue-perf-devtool/vue-perf-devtool).
+It is also a Google Chrome plugin.
+
+See `~/plugins/performance.js` to see how it is configured.

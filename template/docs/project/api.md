@@ -107,7 +107,7 @@ Mounted as `/` by default.
 
 ### comments
 
-List of predownloaded comments, bound from Vuex
+List of predownloaded comments, bound from Vuex.
 
 Type: [Array][16]&lt;CommentType>
 

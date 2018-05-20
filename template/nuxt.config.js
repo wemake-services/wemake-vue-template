@@ -22,7 +22,7 @@ module.exports = {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico?v=2'
+        href: '/favicon.ico'
       }, {
         rel: 'icon',
         type: 'image/png',
@@ -50,6 +50,7 @@ module.exports = {
     'nuxt-babel',
     'nuxt-imagemin',
 
+    '@nuxtjs/router',
     ['@nuxtjs/dotenv', { path: envPath }],
     '@nuxtjs/axios'
   ],

@@ -107,6 +107,10 @@
     consola "^1.1.4"
     http-proxy-middleware "^0.18.0"
 
+"@nuxtjs/router@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.0.1.tgz#0cd305ab994e701d4e117e677472206d6835f8e7"
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"
@@ -122,6 +126,10 @@
 "@types/strip-json-comments@0.0.30":
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
+
+"@vue-flow-typed/vue-router@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vue-router/-/vue-router-0.0.1.tgz#78cfa9afac00a397b8d4fa597466e12a53a60460"
 
 "@vue-flow-typed/vuex@^0.1.7":
   version "0.1.7"

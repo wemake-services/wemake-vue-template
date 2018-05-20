@@ -36,7 +36,7 @@ describe('e2e tests for index page', () => {
     const { window } = new JSDOM(html).window
 
     const mainHeader = window.document.querySelector('h1')
-    const comments = window.document.querySelector('.index__container_0')
+    const comments = window.document.querySelector('.Index__container_0')
 
     expect(mainHeader.textContent.trim()).toEqual('wemake-vue-template')
     expect(window.getComputedStyle(comments).display).toEqual('flex')

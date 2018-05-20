@@ -72,12 +72,17 @@ render () {
 
 ## vuex
 
-We use [`vuex-modules`](https://vuex.vuejs.org/en/modules.html) that comes with [`nuxt`](https://nuxtjs.org/guide/vuex-store/). 
+We use [`vuex`](https://vuex.vuejs.org) that comes with [`nuxt`](https://nuxtjs.org/guide/vuex-store/). 
+We stick to the [classic mode](https://nuxtjs.org/guide/vuex-store#classic-mode).
 
-You can switch to [classic mode](https://nuxtjs.org/guide/vuex-store#classic-mode) if you want to.
+You can switch to [modules mode](https://nuxtjs.org/guide/vuex-store#modules-mode) 
+at any time if you want to.
 
 
 ## routing
 
-By default we use [`nuxt` pages](https://nuxtjs.org/guide/routing) for routing.
-But, when we will need some complex routes we can always switch to [`router-module`](https://github.com/nuxt-community/router-module).
+We use [`vue-router`](http://router.vuejs.org/) 
+to route between views in our app.
+To bind `nuxt` and `vue-router` together we need an additional [`router-module`](https://github.com/nuxt-community/router-module).
+
+You can disable `vue-router` and switch to [`nuxt` pages](https://nuxtjs.org/guide/routing).

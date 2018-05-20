@@ -67,6 +67,20 @@ Currently we extend build with several rules:
 - settings handy alias for `scss` imports
 - disabling crazy `css` classes names during tests
 
+### generate
+
+[This option](https://nuxtjs.org/api/configuration-generate) is used 
+when we run `yarn generate`.
+
+Sometimes it is required to provide additional pages to prerender,
+or provide dynamic values to the dynamic pages.
+
+See [`routes` key](https://nuxtjs.org/api/configuration-generate#routes) 
+for more information.
+
+When using `spa` mode you will need to add some 
+extra configuration due to [`router-module` usage](https://github.com/nuxt-community/router-module#setup).
+
 
 ## package.json
 

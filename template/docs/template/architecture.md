@@ -26,8 +26,8 @@ Here we define all files and folders that are used in this project.
 - `logics/` - this directory contains your Application Logics. You should put everything that is considered business logic here
 - `middleware/` - this directory contains your [Application Middleware](https://nuxtjs.org/guide/routing#middleware).
 The middleware lets you define custom function to be ran before rendering a page or a group of pages (layouts)
-- `pages/` - this directory contains your Application Views and Routes.
-The framework reads all the `.vue` files inside this directory and [creates the router](https://nuxtjs.org/guide/routing) of your application
+- `views/` - this directory contains your application. We use [`vue-router`](http://router.vuejs.org/) to navigate between these views
+- `router.js` - file is used by [`router-module`](https://github.com/nuxt-community/router-module) for `nuxt` to export a `vue-router` instance
 - `plugins/` - this directory contains your [plugins](https://ru.nuxtjs.org/examples/plugins/) that you want to run before instantiating the root `Vue` application
 - `static/` - the [static](https://nuxtjs.org/guide/assets/#static) files directory. These files are not process by any loaders and just copied as-is
 - `store/` - this directory contains your [Vuex Store](https://nuxtjs.org/guide/vuex-store) files

@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "as",
   "version": "0.1.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -67,6 +67,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",
+    "@nuxtjs/router": "^1.0.1",
     "await-to-js": "^2.0.1",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
@@ -91,6 +92,7 @@
     "webpack": "^3.11.0"
   },
   "devDependencies": {
+    "@vue-flow-typed/vue-router": "^0.0.1",
     "@vue-flow-typed/vuex": "^0.1.7",
     "@vue/test-utils": "^1.0.0-beta.16",
     "axios-mock-adapter": "^1.15.0",

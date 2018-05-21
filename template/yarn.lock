@@ -12211,7 +12211,7 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-class-component@^6.0.0, vue-class-component@^6.2.0:
+vue-class-component@^6.1.0, vue-class-component@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.2.0.tgz#7adb1daa9a868c75f30f97f33f4f1b94aee62089"
 
@@ -12271,12 +12271,12 @@ vue-meta@^1.4.3:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
-vue-property-decorator@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-6.0.0.tgz#bb651b293542e31db0d24f36f4b0250ef08d8515"
+vue-property-decorator@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-6.1.0.tgz#ef97bcc1bfe794ec060133ca04a5aca02e808828"
   dependencies:
     reflect-metadata "^0.1.10"
-    vue-class-component "^6.0.0"
+    vue-class-component "^6.1.0"
 
 vue-router@^3.0.1:
   version "3.0.1"

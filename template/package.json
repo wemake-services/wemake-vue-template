@@ -87,7 +87,7 @@
     "nuxt-imagemin": "^0.1.2",
     "postcss": "^6.0.22",
     "sass-loader": "^7.0.1",
-    "vue-property-decorator": "^6.0.0",
+    "vue-property-decorator": "^6.1.0",
     "vuex-class": "^0.3.1",
     "webpack": "^3.11.0"
   },

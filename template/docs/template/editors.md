@@ -13,12 +13,10 @@ After installing them you will have:
 - Linting of `js`, `scss`, `jsdoc`, and `vue`
 - Formating help from `editoconfig`
 
-
 ## Configuration
 
 We also ship [`.vscode/settings.json`](https://code.visualstudio.com/docs/getstarted/settings#_creating-user-and-workspace-settings)
 which specifies all settings that are used in this project.
-
 
 ## Plugins
 
@@ -35,7 +33,6 @@ There are multiple issues like:
 - broken intellisense
 
 You can try to fix it, and this plugin will be added to the project.
-
 
 ## Running yarn tasks
 

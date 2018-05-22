@@ -6,14 +6,21 @@
 
 This documentation is separated in three main parts:
 
-- `template/` folder, which contains documentation about [`wemake-vue-template`](https://github.com/wemake-services/wemake-vue-template). This folder should be in sync with the latest version in the upstream. You do not need to modify it on most of the times
-- `project/` folder, contains documentation specific to your project. Feel free to add anything into it
-- `documents/` folder contains binary files, such as: images, word documents, and spreadsheets
+- `template/` folder, which contains documentation about 
+  [`wemake-vue-template`][wemake-vue-template]. This folder should be 
+  in sync with the latest version in the upstream. 
+  You do not need to modify it on most of the times
 
+- `project/` folder, contains documentation specific to your project. 
+  Feel free to add anything into it
+
+- `documents/` folder contains binary files, such as: 
+  images, word documents, and spreadsheets
 
 ## Gitbook
 
-We use [`gitbook`](https://github.com/GitbookIO/gitbook) to build and host our documentation.
+We use [`gitbook`](https://github.com/GitbookIO/gitbook) to build 
+and host our documentation.
 Make sure to create an account there to store your own copy.
 
 The [configuration](https://toolchain.gitbook.com/config.html) can be found [here](https://github.com/wemake-services/wemake-vue-template/blob/master/book.json).
@@ -21,22 +28,21 @@ The [configuration](https://toolchain.gitbook.com/config.html) can be found [her
 To build local version of docs, run: `yarn docs:build`.
 You can always preview the docs live with `yarn docs:serve`.
 
-If you want to add new pages, change order or rename something, go to `SUMMARY.md`.
-
+If you want to add new pages, change order 
+or rename something, go to `SUMMARY.md`.
 
 ## documentation.js
 
-We also use [`documentation.js`](https://github.com/documentationjs/documentation) to build our API docs.
+We also use [`documentation.js`](https://github.com/documentationjs/documentation) 
+to build our API docs.
 
 It is then included as `project/api.md`. See [an example](api.md).
 To build it run: `yarn docs:api`.
-
 
 ## Where to go next
 
 You can jump start reading this docs 
 from the [`development`](development.md) part.
-
 
 ## Updating template
 
@@ -46,8 +52,15 @@ it very easy to catch up with the latest changes.
 All you have to do is:
 
 1. Go to your `README.md` file and find an update link
+
 2. You will see a diff of what has changed since your template version
+
 3. Pick things you need from the latest changes
-4. Replace commit hashes in `README.md` with the current commit hash from `master` branch in [the template repo](https://github.com/wemake-services/wemake-vue-template)
+
+4. Replace commit hashes in `README.md` with the current 
+  commit hash from `master` branch in 
+  [the template repo](https://github.com/wemake-services/wemake-vue-template)
 
 Come back for more updates!
+
+[wemake-vue-template]: https://github.com/wemake-services/wemake-vue-template

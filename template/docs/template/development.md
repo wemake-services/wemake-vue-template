@@ -9,12 +9,10 @@ In this part we will discuss native development.
 Read more about [`docker`](docker.md) here.
 Choose the one that fits the best for you.
 
-
 ## Prerequisites
 
 You will need to install [`nvm`](https://github.com/creationix/nvm/blob/master/README.md)
 before starting.
-
 
 ## Setting up
 
@@ -32,7 +30,6 @@ nvm use
 While `nvm install` is a one time action,
 that just downloads the required `node` version,
 do not forget to run `nvm use` each time you open a new terminal window.
-
 
 ## Dependencies
 
@@ -58,20 +55,17 @@ will be stubbed with modules that always return `any`.
 > !! No flow libdefs found in flow-typed for the above untyped dependencies !!
 > 
 > I've generated `any`-typed stubs for these packages, but consider submitting 
-> libdefs for them to https://github.com/flowtype/flow-typed/
-
+> libdefs for them to flowtype/flow-typed
 
 ## Configuration
 
 Do not miss a configuration step.
 You will totally need to [copy/modify `config/.env`](configuration.md#env) file.
 
-
 ## Running
 
 After your dependencies are installed, run `yarn dev`
 to start a development server.
-
 
 ## Making commit
 
@@ -82,7 +76,6 @@ You need to install these hooks only once.
 It is done automatically when you run `yarn install`.
 Make sure that `git` repo exists at this moment. 
 If not, create it with `git init` and reinstall dependencies.
-
 
 ## Dev tools
 

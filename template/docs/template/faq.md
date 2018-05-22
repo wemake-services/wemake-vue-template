@@ -1,6 +1,5 @@
 # Frequently Asked Questions
 
-
 ## Why flow? Why not TypeScript?
 
 `flow` is a static type checker for `javascript`.
@@ -29,7 +28,6 @@ We understand that:
 
 Further reading: [`typescript-vs-flowtype`](https://github.com/niieani/typescript-vs-flowtype).
 
-
 ## Why Nuxt?
 
 `Nuxt` offers a thin abstraction layer for `ssr` and building your project.
@@ -37,7 +35,6 @@ We have struggled with `ssr` for long enough, and we don't want to go back.
 
 Also, `Nuxt`'s predefined build configuration suits us very well.
 Wide choice of plugins also allows to solve problems faster.
-
 
 ## Do you support Prettier?
 
@@ -51,15 +48,13 @@ So any improperly formatted code won't make its way into the build.
 
 We also do not encourage using `eslint --fix`.
 
-
 ## Why do you use `now` for a demo project?
 
 This allows us to show how easy it is to deploy a full featured isomorphic app.
 The main idea of this example is to demonstrate server side rendering features.
 Both with basic client interactions.
 
-
-## Why do use vscode and not vim/sublime/emacs/webstorm?
+## Why do you use vscode and not vim/sublime/emacs/webstorm?
 
 First of all, you don't have to use `vscode`. Use the editor you love.
 Secondly, `vscode` is free (as in freedom), actively supported, 

@@ -11,17 +11,18 @@ by adding the `lang="scss"` and `module` attributes to `<style>` tag:
 </style>
 ```
 
-
 ## Global CSS
 
 If you want to use any global `css` here's what you need to do:
 
 1. Install the library you need: `yarn add normalize.css`
-2. Add the file path to `css` property of [`nuxt.config.js`](configuration.md#nuxt-config-js)
+
+2. Add the file path to `css` 
+   property of [`nuxt.config.js`](configuration.md#nuxt-config-js)
 
 It will look something like so:
 
-```
+```js
   /**
   * Global CSS
   */
@@ -37,7 +38,6 @@ This file will be included into the final build.
 Every layout in `client/layouts/` is not scoped or bundled in module.
 It is required to drop some global styles for all components that are using
 this layout.
-
 
 ## SCSS
 
@@ -58,7 +58,8 @@ That's the bare minimum you need to know to productively use `scss`.
 
 ### Aliases and imports
 
-We have a preconfigured alias `~/scss` inside [`nuxt.config.js`](configuration.md#nuxt-config-js)
+We have a preconfigured `~/scss` alias
+inside [`nuxt.config.js`](configuration.md#nuxt-config-js)
 to [import](https://sass-lang.com/guide#topic-5) local files. 
 You can use it inside `Vue` components like so:
 
@@ -74,14 +75,18 @@ You can use it inside `Vue` components like so:
 
 Things to keep in mind:
 
-- you don't have to specify file extension or leading `_`, this will be considered as a linting error
-- do not import modules that produces `css` output, it will pollute your stylesheets with multiple declarations
-- do not import external `css` libraries, use `nuxt.config.js` for that
+- you don't have to specify file extension or leading `_`, 
+  this will be considered as a linting error
 
+- do not import modules that produces `css` output, 
+  it will pollute your stylesheets with multiple declarations
+
+- do not import external `css` libraries, use `nuxt.config.js` for that
 
 ## CSS Modules
 
-Every `Vue` component should be a [`css` module](https://github.com/css-modules/css-modules).
+Every `Vue` component should 
+be a [`css` module](https://github.com/css-modules/css-modules).
 How does it work? 
 
 The main idea is:
@@ -147,7 +152,8 @@ be flattened for `$style` access:
 </style>
 ```
 
-You can play around with [`:local` selector](https://github.com/css-modules/css-modules#exceptions)
+You can play around with 
+[`:local` selector](https://github.com/css-modules/css-modules#exceptions)
 if you would like to make them nested.
 
 ### Exporting SCSS variables to Javascript
@@ -174,17 +180,22 @@ And use it like so:
 It would be available as `this.$style['var-grid-size']`.
 It might be useful for dynamic colors, grids, blocks, and tables.
 
-
 ## PostCSS
 
-After we have created all our styles they are processed by a [post-processor](https://github.com/postcss/postcss).
+After we have created all our styles 
+they are processed by a [post-processor](https://github.com/postcss/postcss).
 Why? Because it is easier to make optimizations on this step.
 
-It comes [bundled with `nuxt`](https://nuxtjs.org/api/configuration-build#postcss).
+It comes [bundled](https://nuxtjs.org/api/configuration-build#postcss) 
+with `nuxt`. 
 What kind of custom optimizations do we use?
 
-- [`autoprefixer`](https://www.npmjs.com/package/autoprefixer) - which will add missing vendor prefixes into the final `css`. So you don't have to!
-- [`css-mqpacker`](https://www.npmjs.com/package/css-mqpacker) - which allows to combine all `@media` queries into one block 
+- [`autoprefixer`](https://www.npmjs.com/package/autoprefixer) - which will 
+  add missing vendor prefixes into the final `css`. So you don't have to!
+
+- [`css-mqpacker`](https://www.npmjs.com/package/css-mqpacker) - which allows 
+  to combine all `@media` queries into one block 
+
 - some other plugins to inline some assets and imports
 
 These optimizations are applied by `webpack`. 

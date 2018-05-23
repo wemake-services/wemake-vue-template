@@ -33,9 +33,14 @@ We use [`eslint-plugin-flowtype-errors`](https://www.npmjs.com/package/eslint-pl
 to run these checks during linting stage.
 
 You can enable `flow` on a per-file basis. So, it very easy to start.
-When any `js` file starts with `// @flow` comment 
-it means that `flow` is enabled. 
-Otherwise file is ignored by `flow` checker.
+When any `js` or `vue` file starts with `// @flow` comment 
+it means that `flow` is enabled for this file. 
+Otherwise the file is ignored by `flow` checker.
+
+You have full control: what files should be checked 
+and what files should not be checked.
+We recommend to check all files by default. 
+And only exclude ones you have to exclude due to some errors or legacy.
 
 There are two ways to handle `type` imports:
 

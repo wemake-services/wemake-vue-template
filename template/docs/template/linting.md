@@ -8,7 +8,7 @@ Everything is already configured, so you don't have to.
 
 Use `yarn lint` to run everything we have.
 
-## javascript
+## Javascript
 
 [![JavaScript Style Guide][svg]](https://github.com/standard/standard)
 
@@ -27,7 +27,8 @@ We use [`eslint-plugin-flowtype-errors`](https://www.npmjs.com/package/eslint-pl
 to run these checks during linting stage.
 
 You can enable `flow` on a per-file basis. So, it very easy to start.
-When file starts with `// @flow` it means that `flow` is enabled. 
+When any `js` file starts with `// @flow` comment 
+it means that `flow` is enabled. 
 Otherwise file is ignored by `flow` checker.
 
 There are two ways to handle `type` imports:
@@ -85,6 +86,20 @@ Since configuration is rather simple.
 If your configuration requires some complex logic, 
 consider moving to [`stylelint.config.js`][stylelint.config.js]
 
+## Markdown
+
+We lint markdown files with [`remark-lint`](https://github.com/remarkjs/remark-lint).
+This tool allows us to write consistent documentation and `README` files.
+
+To run `md` linting execute: `yarn lint:md`.
+
+### Configuring remark
+
+All configuration is done [inside `package.json`](https://github.com/unifiedjs/unified-engine/blob/master/doc/configure.md). 
+
+We also use [`.remarkignore`][remarkignore] file to ignore 
+programmatically generated files.
+
 ## Afterwords
 
 Linting can be easily changed to any other styles you like (or forced to use).
@@ -92,3 +107,4 @@ Linting can be easily changed to any other styles you like (or forced to use).
 [svg]: https://cdn.rawgit.com/standard/standard/master/badge.svg
 [eslint-plugin-flowtype]: https://github.com/gajus/eslint-plugin-flowtype
 [stylelint.config.js]: https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md
+[remarkignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md

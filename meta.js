@@ -14,7 +14,15 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-      message: 'Project name'
+      message: 'Project name',
+      validate: (name) => {
+        if (!/^[a-z][a-z0-9_]+[a-z0-9]$/.test(name)) {
+          return `Use lowercase letters, underscores, and numbers only. ` +
+          `Note that underscore can not be the last char.`
+        }
+
+        return true
+      }
     },
     description: {
       type: 'string',

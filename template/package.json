@@ -20,7 +20,7 @@
     "test": "npm run test:unit && npm run test:sec && npm run lint && npm run test:e2e",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}'",
-    "lint:md": "remark -i docs/.remarkignore -f .",
+    "lint:md": "remark -f .",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md",
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "npm run docs:build && gitbook serve docs",

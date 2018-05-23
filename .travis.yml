@@ -17,7 +17,7 @@ services:
   - docker
 
 env:
-  - PROJECT_NAME: wemake-vue-demo
+  - PROJECT_NAME: wemake_vue_demo
 
 before_install:
   - sudo apt-get update && sudo apt-get install expect

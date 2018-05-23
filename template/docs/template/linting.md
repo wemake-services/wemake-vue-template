@@ -15,10 +15,16 @@ Use `yarn lint` to run everything we have.
 We use `eslint` to lint `javascript`. We stick to `standard` code style.
 But, we have some additional checks that make our style even more stricter.
 
+To run `js` linting execute: `yarn lint:js`.
+
 ### Configuring eslint
 
-All configuration can be found inside `.eslintrc`.
-To run `js` linting execute: `yarn lint:js`.
+All configuration can be found inside `.eslintrc.js`.
+We also have some specific configuration that is applied for tests only.
+It is located inside `tests/.eslintrc.js` file.
+
+It extends the default configuration with the new rules that are applied for
+test frameworks that we use.
 
 ## flow
 

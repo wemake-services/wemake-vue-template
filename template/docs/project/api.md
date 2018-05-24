@@ -38,7 +38,7 @@ Type: function (): [Promise][15]&lt;[Array][16]&lt;CommentType>>
 
 Render function. It is an equavalent of `<template>` tag.
 
-Returns **VNode** to be rendered by Vue.
+Returns **VNode** Virtual node to be rendered by Vue.
 
 ## Comment
 
@@ -73,7 +73,7 @@ Can be used to increase or decrease comment's rating.
 Defines which color borders are.
 Uses `comment`'s rating to choose color.
 
-Returns **any** 'className: shouldApply' pair.
+Returns **any** Pairs of class names and boolean values if they should be applied.
 
 ## maybeHandleError
 

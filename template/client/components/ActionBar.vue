@@ -25,9 +25,9 @@ export default class ActionBar extends Vue {
 
   /**
   * Render function. It is an equavalent of `<template>` tag.
-  * @see https://vuejs.org/v2/guide/render-function.html
   *
-  * @returns { VNode } to be rendered by Vue.
+  * @see https://vuejs.org/v2/guide/render-function.html
+  * @returns { VNode } Virtual node to be rendered by Vue.
   */
   render () {
     return (

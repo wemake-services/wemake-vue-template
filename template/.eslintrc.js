@@ -3,7 +3,8 @@ module.exports = {
   'extends': [
     'wemake',
     'plugin:vue/recommended',
-    'flowtype-essential'
+    'flowtype-essential',
+    'jsdoc-essential'
   ],
   'plugins': [
     'flowtype-errors',

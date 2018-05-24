@@ -69,7 +69,8 @@ export default class Comment extends Vue {
   /**
   * Defines which color borders are.
   * Uses `comment`'s rating to choose color.
-  * @returns 'className: shouldApply' pair.
+  *
+  * @returns Pairs of class names and boolean values if they should be applied.
   */
   get computedClasses () {
     return {

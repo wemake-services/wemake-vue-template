@@ -20,7 +20,7 @@
     "test": "yarn test:unit && yarn test:sec && yarn lint && yarn test:e2e",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}'",
-    "lint:md": "remark -f .",
+    "lint:md": "remark -S -f .",
     "lint": "yarn lint:js && yarn lint:css && yarn lint:md",
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "yarn docs:build && gitbook serve docs",

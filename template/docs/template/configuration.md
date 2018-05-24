@@ -13,9 +13,9 @@ configuration files to configure many things at once:
 2. We configure `nuxt` app with the help of [`dotenv-module`](https://github.com/nuxt-community/dotenv-module)
 3. We configure our `docker` image with the help of [`env_file`][env] option
 
-It is possible that you may miss `config/.env` file, because it is ignored
+It is possible that you may miss `config/.env` file because it is ignored
 and excluded from `git`. 
-In this case you will just need to copy `config/.env.template` 
+In this case, you will just need to copy `config/.env.template` 
 and fill in all values that you need:
 
 ```bash
@@ -27,12 +27,12 @@ Make sure that `config/.env` is kept **secret**!
 ### API_URL
 
 Variable `API_URL` represent your API server base url.
-It is used a base url for all relative urls we use to make `axios` calls.
+It is used as a base url for all relative urls we use to make `axios` calls.
 
 There are situations when you need to switch between different versions of
 your API: development or production, v1 or v2.
 
-In this case modify this single value inside your `config/.env` file.
+In this case, modify this single value inside your `config/.env` file.
 
 ## nuxt.config.js
 
@@ -53,7 +53,7 @@ Parts that you will need the most:
    which specifies global `css` options
 
 5. [`build`](https://nuxtjs.org/api/configuration-build) option, 
-   which allows to extend the default `webpack` build configuration. 
+   which allows extending the default `webpack` build configuration. 
    Add your own loaders and plugins here in case you need them
 
 ### axios
@@ -69,7 +69,7 @@ See list of available options [here](https://axios.nuxtjs.org/options.html).
 
 ### build
 
-Currently we extend build with several rules:
+Currently, we extend build with several rules:
 
 - enable linting with `eslint` and `stylelint` in development
 - settings handy alias for `scss` imports
@@ -97,8 +97,7 @@ Here's a list of these tools.
 ### husky
 
 [`husky`](https://github.com/typicode/husky) is a pre-commit hooks manager.
-It's configuration is pretty simple. 
-It specifies which task to run on `git` commit event.
+It specifies which `yarn` task to run on `git` commit event.
 
 See how it [is used](development.md#making-commit).
 
@@ -107,7 +106,7 @@ See how it [is used](development.md#making-commit).
 [`stylelint`](https://github.com/stylelint/stylelint) is a linter 
 for your `css`, `scss`, and `postcss`.
 
-It's configuration specifies which styles it should use.
+Its configuration specifies which styles it should use.
 Pretty similar to `eslint`.
 
 Basically we use two configurations: for [`scss`][scss] 

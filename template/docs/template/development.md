@@ -5,7 +5,7 @@ There are two options for the local development:
 1. Native development
 2. `docker` development
 
-In this part we will discuss native development.
+In this part, we will discuss native development.
 Read more about [`docker`](docker.md) here.
 Choose the one that fits the best for you.
 
@@ -88,7 +88,7 @@ Make sure you have it.
 
 ### Performance toolbar
 
-We also highly recommend to use [`vue-perf-devtool`](https://github.com/vue-perf-devtool/vue-perf-devtool).
+We also highly recommend using [`vue-perf-devtool`](https://github.com/vue-perf-devtool/vue-perf-devtool).
 It is also a Google Chrome plugin.
 
 See `~/plugins/performance.js` to see how it is configured.

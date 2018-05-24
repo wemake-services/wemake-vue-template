@@ -12,7 +12,7 @@ This documentation is separated in three main parts:
   You do not need to modify it on most of the times
 
 - `project/` folder, contains documentation specific to your project. 
-  Feel free to add anything into it
+  Feel free to add anything to it
 
 - `documents/` folder contains binary files, such as: 
   images, MS Word documents, and spreadsheets
@@ -20,12 +20,12 @@ This documentation is separated in three main parts:
 ## Where to go next
 
 If you don't know how this project is structured, consider reading
-through [`architecture`](architecture.md) section.
+through [`architecture`](template/architecture.md) section.
 It will give you a brief overview of everything we have inside this project.
 
 Or if you are familiar with this structure, 
-you can jump start reading this docs 
-from the [`development`](development.md) part.
+you can jump start reading these docs 
+from the [`development`](template/development.md) part.
 
 ## Gitbook
 
@@ -35,7 +35,7 @@ Make sure to create an account there to store your own copy.
 
 The [configuration](https://toolchain.gitbook.com/config.html) can be found [here](https://github.com/wemake-services/wemake-vue-template/blob/master/book.json).
 
-To build local version of docs, run: `yarn docs:build`.
+To build a local version of docs, run: `yarn docs:build`.
 You can always preview the docs live with `yarn docs:serve`.
 
 If you want to add new pages, change order 

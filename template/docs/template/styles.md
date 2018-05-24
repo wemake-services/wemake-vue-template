@@ -31,11 +31,11 @@ It will look something like so:
   ],
 ```
 
-This file will be included into the final build.
+This file will be included in the final build.
 
 ### Layout specific styles
 
-Every layout in `client/layouts/` is not scoped or bundled in module.
+Every layout in `client/layouts/` is not scoped or bundled in a module.
 It is required to drop some global styles for all components that are using
 this layout.
 
@@ -75,10 +75,10 @@ You can use it inside `Vue` components like so:
 
 Things to keep in mind:
 
-- you don't have to specify file extension or leading `_`, 
+- you don't have to specify a file extension or leading `_`, 
   this will be considered as a linting error
 
-- do not import modules that produces `css` output, 
+- do not import modules that produce `css` output, 
   it will pollute your stylesheets with multiple declarations
 
 - do not import external `css` libraries, use `nuxt.config.js` for that

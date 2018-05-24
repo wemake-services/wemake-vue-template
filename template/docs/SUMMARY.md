@@ -1,11 +1,11 @@
 # Summary
 
-This file is required for a `gitbook.io` to build beautiful table of contents.
+This file is required for `gitbook.io` to build a beautiful table of contents.
 
 - [Architecture](template/architecture.md)
 - [FAQ](template/faq.md)
-- [Configuration](template/configuration.md)
 - [Development](template/development.md)
+- [Configuration](template/configuration.md)
 - [Editors](template/editors.md)
 - [Babel](template/babel.md)
 - [Vue](template/vue.md)
@@ -18,6 +18,6 @@ This file is required for a `gitbook.io` to build beautiful table of contents.
 
 ---
 
-Project specific files. `api.md` is an example file. It can be removed.
+Project specific files. `api.md` is an example file. It should be removed.
 
 - [API](project/api.md)

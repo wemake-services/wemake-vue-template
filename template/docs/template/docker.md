@@ -26,7 +26,7 @@ That's it. You will see that your development server is up and running.
 
 ## Testing
 
-To test you application run:
+To test your application run:
 
 ```bash
 docker-compose run --rm vue yarn test
@@ -49,7 +49,7 @@ Because you need to answer some questions before doing it:
    Like: `now.sh`, `gh-pages`, `heroku` or so on. 
    If so, do not hesitate to do it
 
-4. Do I really need to scale my server side rendering? If not, use `yarn start`
+4. Do I really need to scale my server-side rendering? If not, use `yarn start`
 
 All in all: if you have some complex private frontend 
 with server-side rendering and complex infrastructure, 

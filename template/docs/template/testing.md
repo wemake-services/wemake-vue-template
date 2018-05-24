@@ -1,7 +1,7 @@
 # Testing
 
 We love tests. And test everything we can.
-In this section we will discuss two types of tests and describe our toolset.
+In this section, we will discuss two types of tests and describe our toolset.
 
 Everything comes configured, so you can just start using it.
 Run `yarn test` to run everything we have.
@@ -27,7 +27,7 @@ Use `yarn test:unit` to run unit tests.
 ### Snapshots
 
 We use [`jest` snapshots][jest-snapshots]
-to be sure that our components rendering did not change without noticing.
+to be sure that our components rendering did not change without notice.
 It saved us million times! 
 
 ```js
@@ -45,17 +45,17 @@ Run `yarn test:unit -u` to update existing snapshots with the updated state.
 
 ## End-to-end tests
 
-End-to-end tests are looking at the situation from much higher point.
+End-to-end tests are looking at the situation from a much higher point.
 We use [`jsdom`](https://github.com/jsdom/jsdom) 
 and [`nuxt-builder`](https://github.com/nuxt/nuxt.js/tree/dev/lib/builder) 
 to run these tests.
 
 That's how it works:
 1. We build our application with the help of `nuxt-builder` 
-   the way it will be build normally
+   the way it will be built normally
 
 2. When it is built, we make requests to the `nuxt` 
-   and get the server side rendered response back
+   and get the server-side rendered response back
 
 3. Then we use `jsdom` to make assertions based on the `nuxt`'s response
 
@@ -64,7 +64,7 @@ That's covers 99% percent of uses case with a simple setup.
 We do not want to use things like [`cypress`](https://www.cypress.io/) 
 or [`puppeteer`](https://github.com/GoogleChrome/puppeteer) 
 because these things are very hard to configure and maintain.
-And it offers not significant value over our setup.
+And it offers no significant value over our setup.
 We have used [`nightwatch`](http://nightwatchjs.org/) [before][before], 
 and not recommend it anymore.
 
@@ -78,7 +78,7 @@ Use `yarn test:e2e` to run end-to-end tests.
 We also run security checks on each CI step.
 We even have special `yarn test:sec` command to run these checks.
 
-What it does? It queries some 3rd party database 
+What does it do? It queries some 3rd party database 
 for known security issues for your dependencies.
 We use [`nsp`](https://github.com/nodesecurity/nsp) for that task.
 
@@ -87,7 +87,7 @@ This way you can lower the risks.
 ## Mocking
 
 Unit tests should not go into the wild and request data.
-We leave this controversy topic to you. 
+We leave this controversial topic to you. 
 
 However, we are using `axios-mock-adapter` to illustrate the point.
 You are free to use any kind of mocks you want.

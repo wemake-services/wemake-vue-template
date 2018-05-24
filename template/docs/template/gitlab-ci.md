@@ -23,12 +23,12 @@ We have two pipelines configured: for `master` and other branches.
 That's how it works: we only run testing for feature branches and do the whole
 building/testing/deploying process for the `master` branch.
 
-This allows us to speed up development process.
+This allows us to speed up the development process.
 
 ## Secret variables
 
 If some real secret variables are required, then you can use [GitLab secrets](https://docs.gitlab.com/ee/ci/variables/#secret-variables).
-And these kind of variables are required *most* of the time.
+And these kinds of variables are required *most* of the time.
 
 See `configuration.md` on how to use `dump-env` and `gitlab-ci` together.
 

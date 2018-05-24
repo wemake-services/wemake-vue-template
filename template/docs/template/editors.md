@@ -6,12 +6,12 @@ Download it for free [here](https://code.visualstudio.com/).
 We ship a [`.vscode/extensions.json`](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 plugin which specifies all required plugins.
 
-What you need to do is install them by navigating to `Plugins -> Recommeneded`.
+What you need to do is install them by navigating to `Plugins -> Recommended`.
 After installing them you will have:
 
 - `Vue` Intellisense
 - Linting of `js`, `scss`, `jsdoc`, and `vue`
-- Formating help from `editoconfig`
+- Formatting help from `editoconfig`
 
 ## Configuration
 

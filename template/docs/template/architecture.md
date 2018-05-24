@@ -13,7 +13,7 @@ Here we define all files and folders that are used in this project.
   for dependencies. It is used to install exactly the same 
   versions of dependencies on each build
 
-- [`nuxt.config.js`](https://nuxtjs.org/guide/configuration/) - main 
+- [`nuxt.config.js`](https://nuxtjs.org/guide/configuration/) - the main 
   configuration file for `Nuxt`. It contains a list of installed 
   plugins and other configuration. It is also used to specify how to 
   build this project
@@ -31,7 +31,7 @@ Here we define all files and folders that are used in this project.
 
 - [`.nvmrc`](https://github.com/creationix/nvm) - file with `node` version 
   specification. Make sure that you have it installed, 
-  or otherwise project will not work at all
+  or otherwise, the project will not work at all
 
 - [`.editorconfig`](http://editorconfig.org/) - file with format specification. 
   You need to install the required plugin for your IDE in order to enable it
@@ -40,14 +40,14 @@ Here we define all files and folders that are used in this project.
   what should we commit into the repository and we should not
 
 - [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/) - this 
-  file specifies `docker` services that are needed for development and testing
+  the file specifies `docker` services that are needed for development and testing
 
 - `.dockerignore` - specifies what files should not be 
   copied to the `docker` image
 
 - [`.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/) - GitLab CI 
   configuration file. It basically defines what to do with your project 
-  after pushing it to the repository. Currently is used for testing 
+  after pushing it to the repository. Currently it is used for testing 
   and releasing a `docker` image
 
 - [`.vscode/`][vscode] - `vscode` IDE integration. 
@@ -70,7 +70,7 @@ Here we define all files and folders that are used in this project.
 
 - `middleware/` - this directory contains your 
   [Application Middleware](https://nuxtjs.org/guide/routing#middleware). 
-  The middleware lets you define custom function to be ran 
+  The middleware lets you define custom function to be run 
   before rendering a page or a group of pages (layouts)
 
 - `views/` - this directory contains your application. 
@@ -86,7 +86,7 @@ Here we define all files and folders that are used in this project.
   to run before instantiating the root `Vue` application
 
 - `static/` - the [static](https://nuxtjs.org/guide/assets/#static) 
-  files directory. These files are not process by any loaders and 
+  files directory. These files are not processed by any loaders and 
   just copied as-is
 
 - `store/` - this directory contains your 

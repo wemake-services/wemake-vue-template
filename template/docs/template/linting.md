@@ -37,11 +37,11 @@ to run these checks during linting stage.
 You can enable `flow` on a per-file basis. So, it very easy to start.
 When any `js` or `vue` file starts with `// @flow` comment 
 it means that `flow` is enabled for this file. 
-Otherwise the file is ignored by `flow` checker.
+Otherwise, the file is ignored by `flow` checker.
 
 You have full control: what files should be checked 
 and what files should not be checked.
-We recommend to check all files by default. 
+We recommend checking all files by default. 
 And only exclude ones you have to exclude due to some errors or legacy.
 
 There are two ways to handle `type` imports:
@@ -60,7 +60,7 @@ packages are you using the most. And what types you need.
 
 ### eslint-plugin-flowtype
 
-We also lint `flow` type annotations themselfs. 
+We also lint `flow` type annotations themselves. 
 We are using [`eslint-plugin-flowtype`][eslint-plugin-flowtype].
 
 ## jsdoc

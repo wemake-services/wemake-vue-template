@@ -14,7 +14,7 @@ Just reconfigure your `.eslintrc` and start using types!
 
 By choosing `flow` instead of `typescript` 
 we choose `javascript` over a new language.
-So, we can write pure `js` and and types where we actually need them.
+So, we can write pure `js` and types where we actually need them.
 Combining this technique with unit and e2e tests makes:
 
 - our build stable
@@ -22,7 +22,7 @@ Combining this technique with unit and e2e tests makes:
 
 We understand that:
 
-1. `typescript` is more mature, it has more language features and type defs
+1. `typescript` is more mature, it has more language features and typedefs
 2. `typescript` is more popular in `Vue`'s world
 3. `flow` has serious drawbacks and limitations
 
@@ -34,7 +34,7 @@ Further reading: [`typescript-vs-flowtype`](https://github.com/niieani/typescrip
 We have struggled with `ssr` for long enough, and we don't want to go back.
 
 Also, `Nuxt`'s predefined build configuration suits us very well.
-Wide choice of plugins also allows to solve problems faster.
+Wide choice of plugins also allows solving problems faster.
 
 ## Do you support Prettier?
 
@@ -50,15 +50,15 @@ We also do not encourage using `eslint --fix`.
 
 ## Why do you use `now` for a demo project?
 
-This allows us to show how easy it is to deploy a full featured isomorphic app.
-The main idea of this example is to demonstrate server side rendering features.
+This allows us to show how easy it is to deploy a full-featured isomorphic app.
+The main idea of this example is to demonstrate server-side rendering features.
 Both with basic client interactions.
 
 ## Why do you use vscode and not vim/sublime/emacs/webstorm?
 
 First of all, you don't have to use `vscode`. Use the editor you love.
 Secondly, `vscode` is free (as in freedom), actively supported, 
-has lot of `js` plugins.
+has a lot of `js` plugins.
 
 That's why we recommend it.
  

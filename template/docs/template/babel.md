@@ -1,7 +1,6 @@
 # Babel
 
-We use [`babel`](https://babeljs.io/) to write modern `javascript` today.
-Our `babel` setup is rather simple.
+We use [`babel`](https://babeljs.io/) to write futuristic `javascript` today.
 
 ## Configuration
 

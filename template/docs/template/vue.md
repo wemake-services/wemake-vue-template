@@ -27,10 +27,10 @@ We do it with the help of several libraries:
    [`vue-class-component`][vue-class-component], but with `nuxt` specific 
    callbacks defined
 
-2. [`vue-property-decorator`][vue-property-decorator] that allows to define 
+2. [`vue-property-decorator`][vue-property-decorator] that allows defining 
    some useful properties using decorators
 
-3. [`vuex-class`][vuex-class] that allows to define bindings to `vuex`
+3. [`vuex-class`][vuex-class] that allows defining bindings to `vuex`
 
 This way we can achieve *some* level of type safety. It is not 100% safe.
 But it is something.
@@ -41,7 +41,7 @@ some linting from [`eslint-plugin-vue`][eslint-plugin-vue].
 ### Fallback to good-old simple components
 
 However, you can fallback to `export default {}` at any time you want.
-This way you won't have almost none type support, but you will have full 
+This way you will have almost none type support, but you will have full 
 linting support from `eslint-plugin-vue` which is a good thing.
 
 It would be also easier for newcomers.

@@ -3310,9 +3310,9 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation@^6.3.3:
-  version "6.3.3"
-  resolved "https://registry.yarnpkg.com/documentation/-/documentation-6.3.3.tgz#4cbd17c80d2a3ed041f9155d17139b43b8d7a886"
+documentation@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/documentation/-/documentation-7.0.0.tgz#27fdd6a3e8496ce0d4473143669a9a577e0733b5"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"

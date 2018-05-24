@@ -15,7 +15,17 @@ This documentation is separated in three main parts:
   Feel free to add anything into it
 
 - `documents/` folder contains binary files, such as: 
-  images, word documents, and spreadsheets
+  images, MS Word documents, and spreadsheets
+
+## Where to go next
+
+If you don't know how this project is structured, consider reading
+through [`architecture`](architecture.md) section.
+It will give you a brief overview of everything we have inside this project.
+
+Or if you are familiar with this structure, 
+you can jump start reading this docs 
+from the [`development`](development.md) part.
 
 ## Gitbook
 
@@ -39,11 +49,6 @@ to build our API docs.
 It is then included as `project/api.md`. See [an example](api.md).
 To build it run: `yarn docs:api`.
 
-## Where to go next
-
-You can jump start reading this docs 
-from the [`development`](development.md) part.
-
 ## Updating template
 
 After you start a project with this template 
@@ -58,8 +63,7 @@ All you have to do is:
 3. Pick things you need from the latest changes
 
 4. Replace commit hashes in `README.md` with the current 
-  commit hash from `master` branch in 
-  [the template repo](https://github.com/wemake-services/wemake-vue-template)
+  commit hash from `master` branch in [the template repo][wemake-vue-template]
 
 Come back for more updates!
 

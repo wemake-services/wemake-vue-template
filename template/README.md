@@ -16,8 +16,10 @@ You will need:
 - `node@9` (see `.nvmrc` file. You can 
   use [`nvm`](https://github.com/creationix/nvm) to manage versions)
 
+You might also want to install:
+
 - [`docker`](https://www.docker.com/community-edition) with version 
-  at least `18.02`
+  at least `18.02` if you really want to develop inside `docker` containers
 
 ## Development
 
@@ -25,3 +27,7 @@ When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
 - [`yarn`](https://yarnpkg.com) with version `1.6` (**required**)
+
+## Documentation
+
+Full documentation is available here: [`docs/`](docs).

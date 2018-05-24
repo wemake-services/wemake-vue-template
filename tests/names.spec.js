@@ -17,6 +17,8 @@ describe('template names', () => {
       private: true
     }
 
+    expect.assertions(patterns.length)
+
     for (const key in patterns) {
       expect(file[key]).toEqual(patterns[key])
     }

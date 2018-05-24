@@ -19,7 +19,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
 
     // raise flow errors
-    'flowtype-errors/show-errors':2,
+    'flowtype-errors/show-errors': 2,
     'flowtype-errors/show-warnings': 1,
     // "flowtype-errors/enforce-min-coverage": [2, 50],
 

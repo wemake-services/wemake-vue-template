@@ -1,3 +1,5 @@
+// @flow
+
 import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 

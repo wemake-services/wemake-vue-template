@@ -3,6 +3,7 @@ const path = require('path')
 
 module.exports = {
   metalsmith: (metalsmith) => {
+    // eslint-disable-next-line security/detect-child-process
     const hash = require('child_process')
       .execSync(`git -C ${metalsmith._directory} rev-parse HEAD`)
       .toString()
@@ -49,6 +50,7 @@ module.exports = {
     const dotenv = path.join(dest, 'config', '.env')
     const dotenvTemplate = path.join(dest, 'config', '.env.template')
 
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     if (!fs.existsSync(dotenv)) {
       fs.copyFileSync(dotenvTemplate, dotenv)
       logger.log(chalk.green(`Created new configuration ${dotenv}`))

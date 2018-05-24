@@ -12,7 +12,9 @@ Use `yarn lint` to run everything we have.
 
 [![JavaScript Style Guide][svg]](https://github.com/standard/standard)
 
-We use `eslint` to lint `javascript`. We stick to `standard` code style.
+We use `eslint` to lint `javascript`. 
+We stick to [`wemake`][wemake] code style.
+It is just like `standard` config, but stricter.
 But, we have some additional checks that make our style even more stricter.
 
 To run `js` linting execute: `yarn lint:js`.
@@ -116,6 +118,7 @@ programmatically generated files.
 Linting can be easily changed to any other styles you like (or forced to use).
 
 [svg]: https://cdn.rawgit.com/standard/standard/master/badge.svg
+[wemake]: https://github.com/wemake-services/eslint-config-wemake
 [eslint-plugin-flowtype]: https://github.com/gajus/eslint-plugin-flowtype
 [stylelint.config.js]: https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md
 [remarkignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md

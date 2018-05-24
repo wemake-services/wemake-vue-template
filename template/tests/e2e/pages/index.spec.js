@@ -7,6 +7,7 @@ import { Nuxt, Builder } from 'nuxt'
 import { JSDOM } from 'jsdom'
 
 const rootDir = resolve(__dirname, '..', '..', '..')
+// eslint-disable-next-line security/detect-non-literal-require
 const config = require(resolve(rootDir, 'nuxt.config.js'))
 
 describe('e2e tests for index page', () => {

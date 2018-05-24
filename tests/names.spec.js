@@ -6,6 +6,7 @@ const templatePath = require('./utils').templatePath
 
 describe('template names', () => {
   test('package.json', () => {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     const file = JSON.parse(fs.readFileSync(templatePath('package.json')))
 
     const patterns = {

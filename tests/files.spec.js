@@ -11,6 +11,7 @@ function expectAllExist (files) {
   expect.assertions(files.length)
 
   for (const file of files) {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
     expect(fs.existsSync(templatePath(file))).toBe(true)
   }
 }

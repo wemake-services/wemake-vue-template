@@ -40,7 +40,8 @@ Here we define all files and folders that are used in this project.
   what should we commit into the repository and we should not
 
 - [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/) - this 
-  the file specifies `docker` services that are needed for development and testing
+  the file specifies `docker` services
+  that are needed for development and testing
 
 - `.dockerignore` - specifies what files should not be 
   copied to the `docker` image

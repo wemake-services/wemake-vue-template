@@ -19,7 +19,7 @@ describe('template names', () => {
 
     expect.assertions(patterns.length)
 
-    for (const key in patterns) {
+    for (const key of Object.keys(patterns)) {
       expect(file[key]).toEqual(patterns[key])
     }
   })

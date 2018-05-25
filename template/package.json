@@ -111,7 +111,7 @@
     "@vue/test-utils": "^1.0.0-beta.16",
     "axios-mock-adapter": "^1.15.0",
     "babel-eslint": "^8.2.3",
-    "babel-jest": "^22.4.4",
+    "babel-jest": "^23.0.0",
     "babel-jest-assertions": "^0.1.0",
     "deepcopy": "^1.0.0",
     "documentation": "^7.0.0",

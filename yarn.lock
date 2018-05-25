@@ -1084,9 +1084,9 @@ eslint-config-standard@^11.0.0:
   version "11.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0.tgz#87ee0d3c9d95382dc761958cbb23da9eea31e0ba"
 
-eslint-config-wemake@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-wemake/-/eslint-config-wemake-0.1.1.tgz#8019f378625316d42355ab6a8389e3f9b531a234"
+eslint-config-wemake@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-wemake/-/eslint-config-wemake-0.2.0.tgz#ea3d54069558821f39ea158d1fc97d299d948523"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"

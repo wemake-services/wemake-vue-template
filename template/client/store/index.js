@@ -8,6 +8,7 @@ import actions from '~/store/actions'
 
 const createStore = () => {
   return new Vuex.Store({
+    strict: process.env.NODE_ENV !== 'production',
     state: createState(),
     getters,
     actions,

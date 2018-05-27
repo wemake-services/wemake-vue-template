@@ -2,7 +2,6 @@ import NuxtSelector from 'testcafe-nuxt-selectors'
 
 fixture('Getting Started')
   .page(`${process.env.BASE_TEST_URL}/`)
-  // eslin-disable-next-line no-return-await
   .beforeEach(async () => await NuxtSelector())
 
 test('nuxt uses correct layout', async (t) => {

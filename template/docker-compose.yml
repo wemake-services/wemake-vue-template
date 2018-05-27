@@ -15,7 +15,7 @@ services:
       - /code/node_modules
       - /code/flow-typed
     ports:
-      - "4000:4000"
+      - "3000:3000"
     networks:
       - webnet
     env_file: ./config/.env

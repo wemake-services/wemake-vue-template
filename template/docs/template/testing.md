@@ -59,14 +59,10 @@ That's how it works:
 
 3. Then we use `jsdom` to make assertions based on the `nuxt`'s response
 
-That's covers 99% percent of uses case with a simple setup.
+That's covers testing production builds with a simple setup.
 
-We do not want to use things like [`cypress`](https://www.cypress.io/) 
-or [`puppeteer`](https://github.com/GoogleChrome/puppeteer) 
-because these things are very hard to configure and maintain.
-And it offers no significant value over our setup.
-We have used [`nightwatch`](http://nightwatchjs.org/) [before][before], 
-and not recommend it anymore.
+There's a significant limitation in this type of tests.
+It does not allow any kind of user interactions.
 
 We have also [used][used] [`Vagrant`][vagrant] 
 to manually test our application on `IE10` and `IE11`.

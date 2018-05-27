@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <main>
     <div>
       <app-logo />
       <action-bar />
@@ -16,7 +16,7 @@
       </section>
 
     </div>
-  </section>
+  </main>
 </template>
 
 <script>

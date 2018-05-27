@@ -83,6 +83,21 @@ module.exports = {
   ],
 
   /**
+  * postcss configuration
+  */
+  postcss: {
+    plugins: {
+      // Default plugins:
+      'postcss-import': {},
+      'postcss-url': {},
+      'postcss-cssnext': { features: { customProperties: false } },
+
+      // Custom:
+      'css-mqpacker': {}
+    }
+  },
+
+  /**
   * Build configuration
   */
   build: {
@@ -114,35 +129,6 @@ module.exports = {
             files: '**/*.{vue,scss}'
           })
         )
-      }
-
-      if (process.env.NODE_ENV === 'test') {
-        // When e2e testing our app, we don't need hashes as css class names,
-        // because we won't be able to `.querySelector()` by class.
-        // Since we don't know it in advance. This technique allows us to
-        // have predictable class name and still test css-module functionality.
-        const vueLoader = config.module.rules.find(
-          ({ loader }) => loader === 'vue-loader'
-        )
-
-        vueLoader.options.cssModules = {
-          localIdentName: '[name]__[local]' // this gives us predictable names
-        }
-      }
-    },
-
-    /**
-    * postcss configuration
-    */
-    postcss: {
-      plugins: {
-        // Default plugins:
-        'postcss-import': {},
-        'postcss-url': {},
-        'postcss-cssnext': { features: { customProperties: false } },
-
-        // Custom:
-        'css-mqpacker': {}
       }
     }
   }

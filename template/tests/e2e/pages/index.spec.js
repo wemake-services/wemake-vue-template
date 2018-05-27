@@ -25,19 +25,13 @@ describe('e2e tests for index page', () => {
     nuxt.listen(4001, 'localhost')
   }, 30000)
 
-  // Example of testing only generated html (as text)
-  test('route / exists', async () => {
-    const { html } = await nuxt.renderRoute('/', {})
-    expect(html.includes('wemake-vue-template')).toBeTruthy()
-  })
-
   // Example of testing via dom checking, using jsdom
   test('route / renders HTML with CSS applied', async () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
 
     const mainHeader = window.document.querySelector('h1')
-    const comments = window.document.querySelector('.Index__container_0')
+    const comments = window.document.querySelector('main section')
 
     expect(mainHeader.textContent.trim()).toEqual('wemake-vue-template')
     expect(window.getComputedStyle(comments).display).toEqual('flex')
@@ -50,9 +44,7 @@ describe('e2e tests for index page', () => {
     const { html } = await nuxt.renderRoute('/', {})
     const { window } = new JSDOM(html).window
 
-    const commentRatings = window.document.querySelectorAll(
-      '.Comment__commentComponent_0 .Comment__number_0'
-    )
+    const commentRatings = window.document.querySelectorAll('section span')
     expect(commentRatings).toHaveLength(10)
 
     for (let i = 0; i < commentRatings.length; i++) {

@@ -14,6 +14,7 @@ This file is required for `gitbook.io` to build a beautiful table of contents.
 - [Testing](template/testing.md)
 - [Docker](template/docker.md)
 - [GitLab CI](template/gitlab-ci.md)
+- [QA](template/qa.md)
 - [Production](template/production.md)
 
 ---

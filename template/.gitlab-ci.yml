@@ -31,6 +31,15 @@ test:
     - docker-compose run vue yarn test
   coverage: '/All files\s*\|\s*([\d\.]+)/'
 
+# QA job to run during test. It is started manually:
+qa:
+  stage: test
+  script:
+    - apk add curl
+    - docker-compose build && docker-compose up -d
+    - BASE_TEST_URL="http://docker:3000" sh docker/testcafe/qa.sh
+  when: manual
+
 # Releasing image, when tests pass:
 release-image:
   stage: deploy

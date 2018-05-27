@@ -47,8 +47,8 @@ describe('e2e tests for index page', () => {
     const commentRatings = window.document.querySelectorAll('section span')
     expect(commentRatings).toHaveLength(10)
 
-    for (let i = 0; i < commentRatings.length; i++) {
-      expect(commentRatings[i].textContent.trim()).toEqual('0')
+    for (const comment of commentRatings) {
+      expect(comment.textContent.trim()).toEqual('0')
     }
   })
 

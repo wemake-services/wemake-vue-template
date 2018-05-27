@@ -1,21 +1,19 @@
 module.exports = {
-  'root': true,
-  'extends': [
+  root: true,
+  
+  extends: [
     'wemake',
     'plugin:vue/recommended',
     'flowtype-essential',
     'jsdoc-essential'
   ],
-  'plugins': [
+  plugins: [
     'flowtype-errors',
     'unicorn',
     'json'
   ],
-  'env': {
-    'node': true,
-    'browser': true
-  },
-  'rules': {
+
+  rules: {
     // jsx
     'jsx-quotes': ['error', 'prefer-single'],
 
@@ -29,25 +27,29 @@ module.exports = {
 
     // rules for vue components
     'vue/html-closing-bracket-newline': ['error', {
-      'singleline': 'never',
-      'multiline': 'always'
+      singleline: 'never',
+      multiline: 'always'
     }],
     'vue/html-closing-bracket-spacing': ['error', {
-      'startTag': 'never',
-      'endTag': 'never',
-      'selfClosingTag': 'always'
+      startTag: 'never',
+      endTag: 'never',
+      selfClosingTag: 'always'
     }],
     'vue/prop-name-casing': ['error', 'camelCase']
   },
 
-  'parser': 'vue-eslint-parser',
-  'parserOptions': {
-    'parser': 'babel-eslint',
-    'ecmaVersion': 2017,
-    'ecmaFeatures': {
-      'experimentalObjectRestSpread': true,
-      'jsx': true
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaVersion: 2017,
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true,
+      jsx: true
     },
-    'sourceType': 'module'
+    sourceType: 'module'
+  },
+  env: {
+    node: true,
+    browser: true
   }
 }

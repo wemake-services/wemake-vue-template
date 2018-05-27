@@ -1,12 +1,11 @@
 module.exports = {
-  'extends': 'plugin:testcafe/recommended',
-  'plugins': [
+  extends: 'plugin:testcafe/recommended',
+  plugins: [
     'testcafe'
   ],
 
-  'rules': {
+  rules: {
     // Disable some rules that are not working well with `testcafe`:
-    'no-return-await': 0,
-    'security/detect-non-literal-fs-filename': 0
+    'no-return-await': 0
   }
 }

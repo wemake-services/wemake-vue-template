@@ -1,8 +1,8 @@
 module.exports = {
-  'extends': ['plugin:jest/recommended'],
-  'rules': {
-    'jest/consistent-test-it': ['error', { 'fn': 'test' }],
-    'jest/lowercase-name': ['error'],
+  extends: ['plugin:jest/recommended'],
+  rules: {
+    'jest/consistent-test-it': ['error', { fn: 'test' }],
+    'jest/lowercase-name': 'error',
     'jest/valid-describe': 'error',
     'jest/no-jest-import': 'error',
     'jest/prefer-to-have-length': 'error',
@@ -11,7 +11,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 'error',
 
     // warn users about too large snapshots:
-    'jest/no-large-snapshots': ['warn', { 'maxSize': 50 }]
+    'jest/no-large-snapshots': ['warn', { maxSize: 50 }]
 
     // we don't use this rule, since we use `babel-jest-assertions`
     // which inserts `expect.assertions()` automatically

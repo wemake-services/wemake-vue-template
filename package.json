@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-config-wemake": "^0.2.0",
+    "eslint-config-wemake": "^0.4.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-node": "^6.0.1",

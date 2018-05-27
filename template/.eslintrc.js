@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  
+
   extends: [
     'wemake',
     'plugin:vue/recommended',

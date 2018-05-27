@@ -5,10 +5,12 @@ module.exports = {
   metalsmith: (metalsmith) => {
     // eslint-disable-next-line security/detect-child-process
     const hash = require('child_process')
+      // eslint-disable-next-line no-underscore-dangle
       .execSync(`git -C ${metalsmith._directory} rev-parse HEAD`)
       .toString()
       .trim()
 
+    // eslint-disable-next-line no-underscore-dangle
     metalsmith._metadata.gitcommit = hash
   },
   prompts: {

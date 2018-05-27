@@ -39,6 +39,9 @@ Here we define all files and folders that are used in this project.
 - [`.gitignore`](https://git-scm.com/docs/gitignore) - file that specifies 
   what should we commit into the repository and we should not
 
+- `docker/` - this folder contains `Dockerfile`s and utility scripts
+  that are used for development and quality assurance
+
 - [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/) - this 
   the file specifies `docker` services
   that are needed for development and testing
@@ -95,5 +98,16 @@ Here we define all files and folders that are used in this project.
 
 - `types/` - this directory contains types, constants, 
   and enums that can be used with [`flow`](https://flow.org)
+
+## Tests
+
+- `e2e/` - this folder contains tests with high abstraction level, 
+  they are required to test that production builds work
+
+- `unit/` - this folder contains regular unit tests
+
+- `utils/` - this folder contains utility files that are used for testing
+
+- `.eslintrc.js` - this file extends linting rules for testing
 
 [vscode]: https://code.visualstudio.com/docs/getstarted/settings

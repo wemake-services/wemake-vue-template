@@ -82,6 +82,13 @@ Why?
 Because you will literally tests how your application behaves in a real world.
 Covering all possible pitfalls and situations.
 
+How to run QA against our test example?
+
+```bash
+# Mind the trailing slash, we don't need it!
+BASE_TEST_URL='https://wemake-vue-demo.now.sh' sh docker/testcafe/qa.sh
+```
+
 At least, you should have a full production copy to run tests against it.
 
 [browser-support-docs]: http://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browsers/browser-support.html

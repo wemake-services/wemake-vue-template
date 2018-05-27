@@ -103,7 +103,7 @@
     "sass-loader": "^7.0.1",
     "vue-property-decorator": "^6.1.0",
     "vuex-class": "^0.3.1",
-    "webpack": "^3.11.0"
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "@vue-flow-typed/vue-router": "^0.0.1",

@@ -62,8 +62,6 @@ TRIES=1
 until test_url_ready; do
   >&2 echo "$BASE_TEST_URL is unavailable - sleeping"
 
-  docker-compose logs --tail=50
-
   if [ "$MAX_WAIT_TRIES" -eq "$TRIES" ]; then
     >&2 echo "$BASE_TEST_URL is unavailable - timeout after $TRIES tries"
     exit 1

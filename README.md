@@ -44,7 +44,7 @@ You will need:
 
 ```bash
 git clone https://github.com/wemake-services/wemake-vue-template.git
-npx vue-cli init ./wemake-vue-template your-vue-project
+npx vue-cli init ./wemake-vue-template your_vue_project
 ```
 
 We are required to clone the project, since we need the `.git` folder.

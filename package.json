@@ -27,6 +27,6 @@
     "eslint-plugin-standard": "^3.1.0",
     "eslint-plugin-unicorn": "^4.0.3",
     "jest": "^22.4.4",
-    "vue-cli": "^2.9.3"
+    "vue-cli": "^2.9.5"
   }
 }

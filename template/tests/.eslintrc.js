@@ -9,6 +9,7 @@ module.exports = {
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect-in-promise': 'error',
+    'jest/no-jasmine-globals': 'error',
 
     // warn users about too large snapshots:
     'jest/no-large-snapshots': ['warn', { maxSize: 50 }]

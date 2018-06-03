@@ -2,6 +2,7 @@
 // See: https://nuxtjs.org/guide/configuration/
 
 const path = require('path')
+const pkg = require('./package.json')
 
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ path: envPath })
@@ -12,11 +13,11 @@ module.exports = {
   */
   head: {
     htmlAttrs: { lang: 'en' },
-    title: '{{ name }}',
+    title: pkg.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '{{ description }}' }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
       {

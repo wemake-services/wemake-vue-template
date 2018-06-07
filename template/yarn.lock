@@ -127,9 +127,9 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
 
-"@vue-flow-typed/vue-router@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vue-router/-/vue-router-0.0.1.tgz#78cfa9afac00a397b8d4fa597466e12a53a60460"
+"@vue-flow-typed/vue-router@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vue-router/-/vue-router-0.1.0.tgz#392a0464b7062ec8231bbb8af52cc9687b80ad29"
 
 "@vue-flow-typed/vuex@^0.1.7":
   version "0.1.7"

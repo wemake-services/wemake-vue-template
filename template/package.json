@@ -48,18 +48,20 @@
     }
   },
   "jest": {
+    "coverageThreshold": { "global": { "statements": 90 }},
+    "coveragePathIgnorePatterns": ["/node_modules/", "tests", ".spec.js"],
     "setupFiles": [
       "<rootDir>/tests/utils/test-setup.js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "vue",
-      "json"
     ],
     "transform": {
       "^.+\\.vue$": "vue-jest",
       "^.+\\.js$": "babel-jest"
     },
+    "moduleFileExtensions": [
+      "js",
+      "vue",
+      "json"
+    ],
     "moduleNameMapper": {
       "^~/(.*)$": "<rootDir>/client/$1"
     },
@@ -136,7 +138,7 @@
     "flow-typed": "^2.4.0",
     "gitbook-cli": "^2.3.2",
     "husky": "^0.14.3",
-    "jest": "^22.4.4",
+    "jest": "^23.1.0",
     "nsp": "^3.2.1",
     "remark-cli": "^5.0.0",
     "remark-lint": "^6.0.2",

@@ -2416,6 +2416,13 @@ color@^2.0.1:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
+color@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.0.0.tgz#d920b4328d534a3ac8295d68f7bd4ba6c427be9a"
+  dependencies:
+    color-convert "^1.9.1"
+    color-string "^1.5.2"
+
 colormin@^1.0.5:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colormin/-/colormin-1.1.2.tgz#ea2f7420a72b96881a38aae59ec124a6f7298133"
@@ -11794,6 +11801,12 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
+stylelint-color-format@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/stylelint-color-format/-/stylelint-color-format-0.1.1.tgz#47f19bba4711d12f3e8b25fc6e97a3b2ffebf723"
+  dependencies:
+    color "^3.0.0"
+
 stylelint-config-css-modules@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-css-modules/-/stylelint-config-css-modules-1.2.0.tgz#8699e556a0d4ae6742bbe7b03138cde847e92699"
@@ -11814,11 +11827,13 @@ stylelint-config-standard@^18.2.0:
   dependencies:
     stylelint-config-recommended "^2.1.0"
 
-stylelint-config-strict-scss@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/stylelint-config-strict-scss/-/stylelint-config-strict-scss-0.2.1.tgz#cb1ee8553aa341cd7f9d9ae5a7e6b821125709d0"
+stylelint-config-strict-scss@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-strict-scss/-/stylelint-config-strict-scss-0.3.0.tgz#170a872c01abd76c96c990f26e7eddba84d89ada"
   dependencies:
+    style-search "^0.1.0"
     stylelint "^9.2.0"
+    stylelint-color-format "^0.1.1"
     stylelint-config-recommended-scss "^3.2.0"
     stylelint-config-standard "^18.2.0"
     stylelint-order "^0.8.1"

@@ -8,7 +8,7 @@ import state from '~/store/state'
 import mutations from '~/store/mutations'
 import * as types from '~/store/types'
 
-import { createStore } from '../../utils/store'
+import { createStore } from '../utils/store'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

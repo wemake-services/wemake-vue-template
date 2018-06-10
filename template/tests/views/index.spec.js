@@ -10,7 +10,7 @@ import mutations from '~/store/mutations'
 import getters from '~/store/getters'
 import actions from '~/store/actions'
 
-import { createStore } from '../../utils/store'
+import { createStore } from '../utils/store'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

@@ -5,8 +5,7 @@ import deepcopy from 'deepcopy'
 export function createStore (
   { actions, getters, state, mutations }, customState
 ) {
-  const callableState = state instanceof Function ? state : () => state
-  const mixedState = Object.assign(callableState(), customState)
+  const mixedState = Object.assign(state(), customState)
 
   const store = new Vuex.Store({
     state: deepcopy(mixedState),
@@ -15,6 +14,7 @@ export function createStore (
     mutations
   })
 
+  // Extending store's context to match `nuxt`'s API:
   store.$axios = axios
   return store
 }

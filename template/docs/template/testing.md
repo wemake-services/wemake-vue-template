@@ -43,31 +43,15 @@ There can be multiple snapshots for different component states.
 
 Run `yarn test:unit -u` to update existing snapshots with the updated state.
 
-## End-to-end tests
+### Mocking
 
-End-to-end tests are looking at the situation from a much higher point.
-We use [`jsdom`](https://github.com/jsdom/jsdom) 
-and [`nuxt-builder`](https://github.com/nuxt/nuxt.js/tree/dev/lib/builder) 
-to run these tests.
+Unit tests should not go into the wild and request data.
+We leave this controversial topic to you. 
 
-That's how it works:
-1. We build our application with the help of `nuxt-builder` 
-   the way it will be built normally
+However, we are using `axios-mock-adapter` to illustrate the point.
+You are free to use any kind of mocks you want.
 
-2. When it is built, we make requests to the `nuxt` 
-   and get the server-side rendered response back
-
-3. Then we use `jsdom` to make assertions based on the `nuxt`'s response
-
-That's covers testing production builds with a simple setup.
-
-There's a significant limitation in this type of tests.
-It does not allow any kind of user interactions.
-
-We have also [used][used] [`Vagrant`][vagrant] 
-to manually test our application on `IE10` and `IE11`.
-
-Use `yarn test:e2e` to run end-to-end tests.
+Consider `jest` for [manual mocking][manual-mocking].
 
 ## Security checks
 
@@ -79,16 +63,6 @@ for known security issues for your dependencies.
 We use [`nsp`](https://github.com/nodesecurity/nsp) for that task.
 
 This way you can lower the risks.
-
-## Mocking
-
-Unit tests should not go into the wild and request data.
-We leave this controversial topic to you. 
-
-However, we are using `axios-mock-adapter` to illustrate the point.
-You are free to use any kind of mocks you want.
-
-Consider `jest` for [manual mocking][manual-mocking].
 
 [jest-snapshots]: https://facebook.github.io/jest/docs/en/snapshot-testing.html
 [before]: https://github.com/wemake-services/wemake-vue-template/tree/90197466fa17b9fb02a0936da04f5b0b53d2d054/template/tests/e2e

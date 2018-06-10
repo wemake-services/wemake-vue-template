@@ -94,6 +94,21 @@ extra configuration due to [`router-module` usage](https://github.com/nuxt-commu
 We also configure several tools inside `package.json` itself.
 Here's a list of these tools.
 
+### browserslist
+
+This setting is very important.
+It specifies all the browsers that we use in our project.
+
+It is required for multiple tools that are used in the project:
+
+- `eslint`
+- `stylelint`
+- `postcss`
+- `babel`
+
+To see what browsers are used in your project run: `npx browserslist`
+Read more about [queries here](https://github.com/browserslist/browserslist).
+
 ### husky
 
 [`husky`](https://github.com/typicode/husky) is a pre-commit hooks manager.

@@ -8,4 +8,4 @@ expect 'bin/scaffold.sh'
 cd "$PROJECT_NAME"
 
 # Running integration tests with docker:
-docker-compose run vue yarn test
+docker-compose run vue 'yarn test && yarn build'

@@ -88,6 +88,10 @@ to route between views in our app.
 To bind `nuxt` and `vue-router` together we need an additional 
 [`router-module`](https://github.com/nuxt-community/router-module).
 
+To use `generate` command you will need to manually specify which pages do 
+you need to generate. 
+Refer to the [`generate` docs][generate-docs] on the possible options.
+
 You can disable `vue-router` and switch 
 to [`nuxt` pages](https://nuxtjs.org/guide/routing).
 
@@ -98,3 +102,4 @@ to [`nuxt` pages](https://nuxtjs.org/guide/routing).
 [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
 [classic-mode]: https://nuxtjs.org/guide/vuex-store#classic-mode
 [modules-mode]: https://nuxtjs.org/guide/vuex-store#modules-mode
+[generate-docs]: https://nuxtjs.org/api/configuration-generate/#routes

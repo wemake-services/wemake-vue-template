@@ -46,7 +46,7 @@ export default class ActionBar extends Vue {
 </script>
 
 <style lang="scss" module>
-@import "~/scss/variables";
+@import '~/scss/variables';
 
 .actions {
   text-align: center;

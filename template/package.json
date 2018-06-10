@@ -14,10 +14,9 @@
     "build": "cross-env NODE_ENV=production nuxt build",
     "start": "cross-env NODE_ENV=production nuxt start",
     "generate": "cross-env NODE_ENV=production nuxt generate",
-    "test:e2e": "cross-env NODE_ENV=test jest tests/e2e",
-    "test:unit": "cross-env NODE_ENV=test jest --coverage tests/unit",
+    "test:unit": "cross-env NODE_ENV=test jest --coverage tests",
     "test:sec": "nsp check --warn-only",
-    "test": "yarn test:unit && yarn test:sec && yarn lint && yarn test:e2e",
+    "test": "yarn test:unit && yarn test:sec && yarn lint",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss}'",
     "lint:md": "remark -q -f .",
@@ -31,25 +30,38 @@
       "pre-commit": "yarn test:unit && yarn test:sec && yarn lint"
     }
   },
+  "browserslist": "> 0.5%, last 2 versions",
   "stylelint": {
     "extends": [
       "stylelint-config-strict-scss",
       "stylelint-config-css-modules"
     ],
     "plugins": [
-      "stylelint-declaration-block-no-ignored-properties"
+      "stylelint-no-unsupported-browser-features"
     ],
     "rules": {
       "selector-class-pattern": "^[a-z][a-zA-Z]+$",
       "selector-id-pattern": "^[a-z][a-zA-Z]+$",
       "no-empty-source": null,
       "at-rule-no-unknown": null,
-      "plugin/declaration-block-no-ignored-properties": true
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "severity": "warning"
+        }
+      ]
     }
   },
   "jest": {
-    "coverageThreshold": { "global": { "statements": 90 }},
-    "coveragePathIgnorePatterns": ["/node_modules/", "tests", ".spec.js"],
+    "coverageThreshold": {
+      "global": {
+        "statements": 90
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ],
     "setupFiles": [
       "<rootDir>/tests/utils/test-setup.js"
     ],
@@ -93,6 +105,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-vue-app": "^2.0.0",
     "babel-runtime": "^6.26.0",
+    "browserslist": "^3.2.8",
     "cross-env": "^5.1.6",
     "css-mqpacker": "^6.0.2",
     "node-sass": "^4.9.0",
@@ -145,8 +158,8 @@
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
     "stylelint": "^9.2.1",
     "stylelint-config-css-modules": "^1.2.0",
-    "stylelint-config-strict-scss": "^0.2.1",
-    "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
+    "stylelint-config-strict-scss": "^0.5.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^2.6.0"
   }

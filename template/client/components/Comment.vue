@@ -83,7 +83,7 @@ export default class Comment extends Vue {
 </script>
 
 <style lang="scss" module>
-@import "~/scss/variables";
+@import '~/scss/variables';
 
 .commentComponent {
   background: $color-white;
@@ -104,7 +104,7 @@ export default class Comment extends Vue {
 
 .author {
   padding-bottom: 0.74rem;
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: 0.12rem solid;
 }
 
@@ -120,7 +120,7 @@ export default class Comment extends Vue {
 
   .number {
     // This will be available as `this.$style.number`
-    font-weight: bold;
+    font-weight: 700;
   }
 
   button {

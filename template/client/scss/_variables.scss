@@ -2,13 +2,14 @@
 // that are used in the project.
 
 // Colors
-$color-white: #fff;
+$color-white: rgb(255, 255, 255);
+$color-black: rgb(0, 0, 0);
 
 // Buttons
-$button-color-green: #a2dca2;
-$button-color-red: #efbcd1;
+$button-color-green: rgb(162, 220, 162);
+$button-color-red: rgb(239, 188, 209);
 
-$button-color-main: #409eff;
+$button-color-main: rgb(64, 158, 255);
 
 // Global exports
 :export {

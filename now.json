@@ -1,7 +1,0 @@
-{
-  "alias": "wemake-vue-demo",
-  "name": "wemake-vue-demo",
-  "env": {
-    "NODE_ENV": "production"
-  }
-}

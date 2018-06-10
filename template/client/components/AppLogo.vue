@@ -15,6 +15,7 @@
 </template>
 
 <style lang="scss" module>
+@import '~/scss/variables';
 @import '~/scss/mixins';
 
 .logo {
@@ -23,7 +24,7 @@
   a,
   a:visited,
   a:active {
-    color: black;
+    color: $color-black;
   }
 }
 </style>

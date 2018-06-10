@@ -88,14 +88,19 @@ module.exports = {
   */
   postcss: {
     plugins: {
-      // Default plugins:
-      'postcss-import': {},
-      'postcss-url': {},
-      'postcss-cssnext': { features: { customProperties: false } },
-
       // Custom:
       'css-mqpacker': {}
     }
+  },
+
+  /**
+  * Configuring how generate command works,
+  * this is required due to router module
+  */
+  generate: {
+    routes: [
+      '/'
+    ]
   },
 
   /**

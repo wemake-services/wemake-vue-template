@@ -2,11 +2,16 @@
 # http://humanstxt.org/
 
 
-## sobolevn <mail@sobolevn.me>
+## {{ organization }}
 
 
 ## Technologies
 
 Language: English
 Doctype: HTML5
-Technologies: JavaScript, Vue, Nuxt
+
+Technologies: 
+JavaScript, Vue, Nuxt
+
+Created with wemake-vue-template
+https://github.com/wemake-services/wemake-vue-template

@@ -1,14 +1,20 @@
 {
   "presets": [
-    ["vue-app", { "useBuiltIns": true }],
+    ["vue-app", {
+      // Is required to use babel-polifil,
+      // otherwise will include polifils twice:
+      "useBuiltIns": true
+    }],
     "flow"
   ],
   "plugins": [
+    // Is required to use class-based components:
     "transform-decorators-legacy",
     "transform-class-properties"
   ],
   "env": {
     "test": {
+      // Inserts `expect.hasAssertions` into tests:
       "plugins": ["babel-jest-assertions"]
     }
   }

@@ -102,7 +102,6 @@ Here we define all files and folders that are used in this project.
 ## Tests
 
 - `utils/` - this folder contains utility files that are used for testing
-
 - `.eslintrc.js` - this file extends linting rules for testing
 
 [vscode]: https://code.visualstudio.com/docs/getstarted/settings

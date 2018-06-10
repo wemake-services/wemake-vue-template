@@ -18,8 +18,8 @@
     "test:sec": "nsp check --warn-only",
     "test": "yarn test:unit && yarn test:sec && yarn lint",
     "lint:js": "eslint --ext .js,.jsx,.vue,.json --ignore-path .gitignore .",
-    "lint:css": "stylelint 'client/**/*.{vue,scss}'",
-    "lint:md": "remark -q -f .",
+    "lint:css": "stylelint 'client/**/*.{vue,scss,css}'",
+    "lint:md": "remark -q -f -r docs/.remarkrc.js .",
     "lint": "yarn lint:js && yarn lint:css && yarn lint:md",
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "yarn docs:build && gitbook serve docs",
@@ -31,69 +31,6 @@
     }
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
-  "stylelint": {
-    "extends": [
-      "stylelint-config-strict-scss",
-      "stylelint-config-css-modules"
-    ],
-    "plugins": [
-      "stylelint-csstree-validator",
-      "stylelint-no-unsupported-browser-features"
-    ],
-    "rules": {
-      "selector-class-pattern": "^[a-z][a-zA-Z]+$",
-      "selector-id-pattern": "^[a-z][a-zA-Z]+$",
-      "no-empty-source": null,
-      "at-rule-no-unknown": null,
-      "csstree/validator": true,
-      "plugin/no-unsupported-browser-features": [
-        true,
-        {
-          "severity": "warning"
-        }
-      ]
-    }
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "statements": 90
-      }
-    },
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/tests/"
-    ],
-    "setupFiles": [
-      "<rootDir>/tests/utils/test-setup.js"
-    ],
-    "transform": {
-      "^.+\\.vue$": "vue-jest",
-      "^.+\\.js$": "babel-jest"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "vue",
-      "json"
-    ],
-    "moduleNameMapper": {
-      "^~/(.*)$": "<rootDir>/client/$1"
-    },
-    "verbose": true
-  },
-  "remarkConfig": {
-    "plugins": [
-      "remark-preset-lint-markdown-style-guide",
-      [
-        "remark-lint-ordered-list-marker-value",
-        "ordered"
-      ],
-      [
-        "remark-lint-list-item-indent",
-        "space"
-      ]
-    ]
-  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/dotenv": "^1.1.1",

@@ -13,12 +13,12 @@ since then.
 
 You will need:
 
-- `node@9` (see `.nvmrc` file. You can 
+- `node@9` (see `.nvmrc` file. You can
   use [`nvm`](https://github.com/creationix/nvm) to manage versions)
 
 You might also want to install:
 
-- [`docker`](https://www.docker.com/community-edition) with version 
+- [`docker`](https://www.docker.com/community-edition) with version
   at least `18.02` if you really want to develop inside `docker` containers
 
 ## Development

@@ -93,11 +93,8 @@ To run `css` linting execute: `yarn lint:css`.
 
 ### Configuring stylelint
 
-All configuration is done [inside `package.json`](configuration.md#stylelint). 
-Since configuration is rather simple.
-
-If your configuration requires some complex logic, 
-consider moving to [`stylelint.config.js`][stylelint.config.js]
+All configuration is done [inside `stylelint.config.js`](configuration.md#stylelint). 
+It stores presets, rules, and plugins.
 
 ## Markdown
 
@@ -108,7 +105,8 @@ To run `md` linting execute: `yarn lint:md`.
 
 ### Configuring remark
 
-All configuration is done [inside `package.json`](https://github.com/unifiedjs/unified-engine/blob/master/doc/configure.md). 
+We use `docs/.remarkrc.js` to configure `remark`.
+Read more about [configuration](https://github.com/unifiedjs/unified-engine/blob/master/doc/configure.md). 
 
 We also use [`.remarkignore`][remarkignore] file to ignore 
 programmatically generated files.

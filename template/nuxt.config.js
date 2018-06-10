@@ -132,7 +132,7 @@ module.exports = {
         // Enabling stylelint:
         config.plugins.push(
           require('stylelint-webpack-plugin')({
-            files: '**/*.{vue,scss}'
+            files: '**/*.{vue,scss,css}'
           })
         )
       }

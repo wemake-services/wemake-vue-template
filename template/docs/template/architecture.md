@@ -29,6 +29,9 @@ Here we define all files and folders that are used in this project.
 - [`.eslintrc`](https://eslint.org/docs/user-guide/configuring) - configuration
   file for `js` files linting
 
+- [`stylelint.config.js`](https://stylelint.io/user-guide/configuration/) -
+  configuration file for `stylelint`, which is used for linting styles
+
 - [`.nvmrc`](https://github.com/creationix/nvm) - file with `node` version
   specification. Make sure that you have it installed,
   or otherwise, the project will not work at all
@@ -103,5 +106,6 @@ Here we define all files and folders that are used in this project.
 
 - `utils/` - this folder contains utility files that are used for testing
 - `.eslintrc.js` - this file extends linting rules for testing
+- `jest.config.js` - this file is used to configure `jest`
 
 [vscode]: https://code.visualstudio.com/docs/getstarted/settings

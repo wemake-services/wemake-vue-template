@@ -30,13 +30,14 @@
       "pre-commit": "yarn test:unit && yarn test:sec && yarn lint"
     }
   },
-  "browserslist": "> 0.5%, last 2 versions",
+  "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
   "stylelint": {
     "extends": [
       "stylelint-config-strict-scss",
       "stylelint-config-css-modules"
     ],
     "plugins": [
+      "stylelint-csstree-validator",
       "stylelint-no-unsupported-browser-features"
     ],
     "rules": {
@@ -44,6 +45,7 @@
       "selector-id-pattern": "^[a-z][a-zA-Z]+$",
       "no-empty-source": null,
       "at-rule-no-unknown": null,
+      "csstree/validator": true,
       "plugin/no-unsupported-browser-features": [
         true,
         {
@@ -159,6 +161,7 @@
     "stylelint": "^9.2.1",
     "stylelint-config-css-modules": "^1.2.0",
     "stylelint-config-strict-scss": "^0.5.0",
+    "stylelint-csstree-validator": "^1.3.0",
     "stylelint-no-unsupported-browser-features": "^3.0.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^2.6.0"

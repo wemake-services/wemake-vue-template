@@ -2893,6 +2893,13 @@ css-tree@1.0.0-alpha.27:
     mdn-data "^1.0.0"
     source-map "^0.5.3"
 
+css-tree@1.0.0-alpha.29:
+  version "1.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha.29.tgz#3fa9d4ef3142cbd1c301e7664c1f352bd82f5a39"
+  dependencies:
+    mdn-data "~1.1.0"
+    source-map "^0.5.3"
+
 css-tree@1.0.0-alpha25:
   version "1.0.0-alpha25"
   resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha25.tgz#1bbfabfbf6eeef4f01d9108ff2edd0be2fe35597"
@@ -7564,6 +7571,10 @@ mdn-data@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.1.2.tgz#ceaa6a831b4de494352af984d301e3a8f2cad6e5"
 
+mdn-data@~1.1.0:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.1.4.tgz#50b5d4ffc4575276573c4eedb8780812a8419f01"
+
 mdurl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
@@ -12058,6 +12069,12 @@ stylelint-config-strict-scss@^0.5.0:
     stylelint-declaration-strict-value "^1.0.4"
     stylelint-order "^0.8.1"
     stylelint-scss "^3.1.0"
+
+stylelint-csstree-validator@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/stylelint-csstree-validator/-/stylelint-csstree-validator-1.3.0.tgz#58293c688a50a02c122897202d60bcb37fae6ff1"
+  dependencies:
+    css-tree "1.0.0-alpha.29"
 
 stylelint-declaration-block-no-ignored-properties@^1.1.0:
   version "1.1.0"

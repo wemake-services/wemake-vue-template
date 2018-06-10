@@ -75,6 +75,7 @@
     "eslint-config-standard": "^11.0.0",
     "eslint-config-wemake": "^0.4.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-compat": "^2.4.0",
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.17.0",

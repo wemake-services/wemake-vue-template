@@ -3862,11 +3862,11 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-flowtype-essential@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-essential/-/eslint-config-flowtype-essential-0.2.1.tgz#ed5e16bceb6f332c4c814876d31f6a27032ad676"
+eslint-config-flowtype-essential@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-flowtype-essential/-/eslint-config-flowtype-essential-0.3.0.tgz#609c3c148c18767a5be2eaa828ee9a43d16381c1"
   dependencies:
-    eslint-plugin-flowtype "^2.47.1"
+    eslint-plugin-flowtype "^2.49.0"
 
 eslint-config-jsdoc-essential@^0.1.1:
   version "0.1.1"
@@ -3923,9 +3923,9 @@ eslint-plugin-flowtype-errors@^3.6.0:
     babel-runtime "^6.26.0"
     slash "^2.0.0"
 
-eslint-plugin-flowtype@^2.47.1:
-  version "2.47.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.47.1.tgz#1be0d6b855dbf8f253fcf49ea3d44bf6c23ff984"
+eslint-plugin-flowtype@^2.49.0:
+  version "2.49.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.49.3.tgz#ccca6ee5ba2027eb3ed36bc2ec8c9a842feee841"
   dependencies:
     lodash "^4.17.10"
 

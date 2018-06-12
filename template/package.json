@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test:unit && yarn test:sec && yarn lint"
+      "pre-commit": "yarn test && yarn build"
     }
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",

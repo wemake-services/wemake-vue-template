@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'wemake',
     'plugin:vue/recommended',
+    'plugin:compat/recommended',
     'flowtype-essential',
     'jsdoc-essential'
   ],
@@ -39,14 +40,11 @@ module.exports = {
       endTag: 'never',
       selfClosingTag: 'always'
     }],
-    'vue/prop-name-casing': ['error', 'camelCase'],
-
-    // writing compatible javascript:
-    'compat/compat': 'error'
+    'vue/prop-name-casing': ['error', 'camelCase']
   },
 
   settings: {
-    // providing polyfills for `compat/compat` rule, see:
+    // providing polyfills for `eslint-plugin-compat` plugin, see:
     // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
     polyfills: []
   },

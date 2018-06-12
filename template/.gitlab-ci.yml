@@ -28,7 +28,7 @@ before_script:
 test:
   stage: test
   script:
-    - docker-compose run vue yarn test
+    - docker-compose run vue sh -c 'yarn test && yarn build'
   coverage: '/All files\s*\|\s*([\d\.]+)/'
 
 # QA job to run during test. It is started manually:

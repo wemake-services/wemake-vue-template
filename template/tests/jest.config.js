@@ -13,9 +13,6 @@ module.exports = {
     '/node_modules/', '/tests/'
   ],
 
-  setupFiles: [
-    '<rootDir>/tests/utils/test-setup.js'
-  ],
   testPathIgnorePatterns: ['/node_modules/', '/docker/testcafe/'],
 
   transform: {

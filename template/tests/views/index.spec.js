@@ -3,6 +3,7 @@
 import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
+import faker from 'faker'
 
 import Index from '~/views/Index'
 import state from '~/store/state'
@@ -15,34 +16,28 @@ import { createStore } from '../utils/store'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-const comments = [{
-  id: 1,
-  email: 'test@mail.com',
-  body: 'some text',
-  rating: -4
-}, {
-  id: 2,
-  email: 'other@mail.com',
-  body: 'other text',
-  rating: 2
-}, {
-  id: 3,
-  email: 'zero@mail.com',
-  body: 'zero test',
-  rating: 0
-}]
+faker.seed(123)
 
-const mockedComment = {
-  id: 4,
-  email: 'mock@mail.com',
-  body: 'mock text',
-  rating: 19
+function fakeComments (number) {
+  const comments = []
+  for (let i = 0; i < number; i += 1) {
+    comments.push({
+      id: faker.random.number(),
+      email: faker.internet.email(),
+      body: faker.lorem.sentences(),
+      rating: faker.random.number({ min: -10, max: 10 })
+    })
+  }
+
+  return comments
 }
 
 describe('unit tests for Index page', () => {
   let store
+  let comments
 
   beforeEach(() => {
+    comments = fakeComments(3)
     store = createStore({ actions, getters, state, mutations }, {
       comments
     })
@@ -54,14 +49,16 @@ describe('unit tests for Index page', () => {
   })
 
   test('should load new comments on actions', async () => {
+    const comment = fakeComments(1)[0]
     const wrapper = mount(Index, { store, localVue, propsData: { comments } })
 
     const mock = new MockAdapter(store.$axios)
-    mock.onGet('/comments').reply(200, [mockedComment])
+    mock.onGet('/comments').reply(200, [comment])
 
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
     expect(wrapper.vm.$store.state.comments).toHaveLength(1)
-    expect(wrapper.vm.$store.state.comments[0].email).toBe(mockedComment.email)
+    expect(wrapper.vm.$store.state.comments[0].id).toEqual(comment.id)
+    expect(wrapper.vm.$store.state.comments[0].email).toEqual(comment.email)
     expect(wrapper.findAll('.commentComponent')).toHaveLength(1)
   })
 

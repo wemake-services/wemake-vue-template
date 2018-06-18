@@ -87,6 +87,7 @@
     "eslint-plugin-testcafe": "^0.2.1",
     "eslint-plugin-unicorn": "^4.0.2",
     "eslint-plugin-vue": "^4.5.0",
+    "faker": "^4.1.0",
     "flow-bin": "^0.74.0",
     "flow-typed": "^2.4.0",
     "gitbook-cli": "^2.3.2",

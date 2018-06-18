@@ -5,17 +5,17 @@ exports[`unit tests for Index page should match the snapshot 1`] = `
       wemake-vue-template
     </a></h1> <h2><a href=\\"https://wemake-services.gitbook.io/wemake-vue-template/\\">
       documentation
-    </a></h2></div> <div class=\\"actions\\"><button class=\\"reload\\">reload comments</button></div> <section class=\\"container\\"><div class=\\"commentComponent commentNegative\\"><p class=\\"author\\">test@mail.com</p> <p class=\\"body\\">some text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+    </a></h2></div> <div class=\\"actions\\"><button class=\\"reload\\">reload comments</button></div> <section class=\\"container\\"><div class=\\"commentComponent commentNegative\\"><p class=\\"author\\">Kane_Greenfelder@gmail.com</p> <p class=\\"body\\">Exercitationem voluptatibus error quaerat porro error sint aut aliquid qui. Minus officiis neque dolorem animi maiores et aliquid. Dolorem beatae et molestiae consequatur sed rerum qui voluptates unde.</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
       +
-    </button> <span class=\\"number\\">-4</span> <button class=\\"ratingDown\\">
+    </button> <span class=\\"number\\">-6</span> <button class=\\"ratingDown\\">
       -
-    </button></div></div><div class=\\"commentComponent commentPositive\\"><p class=\\"author\\">other@mail.com</p> <p class=\\"body\\">other text</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+    </button></div></div><div class=\\"commentComponent commentPositive\\"><p class=\\"author\\">Eleonore.Schumm56@gmail.com</p> <p class=\\"body\\">Et facere rem quod molestias ab. Impedit aliquam quo vel dolorem consequatur.</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
       +
-    </button> <span class=\\"number\\">2</span> <button class=\\"ratingDown\\">
+    </button> <span class=\\"number\\">6</span> <button class=\\"ratingDown\\">
       -
-    </button></div></div><div class=\\"commentComponent\\"><p class=\\"author\\">zero@mail.com</p> <p class=\\"body\\">zero test</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
+    </button></div></div><div class=\\"commentComponent commentNegative\\"><p class=\\"author\\">Marlon_Haag40@gmail.com</p> <p class=\\"body\\">Nam corrupti necessitatibus quas. Ea odio sit odio quae voluptas id error.</p> <div class=\\"rating\\"><button class=\\"ratingUp\\">
       +
-    </button> <span class=\\"number\\">0</span> <button class=\\"ratingDown\\">
+    </button> <span class=\\"number\\">-5</span> <button class=\\"ratingDown\\">
       -
     </button></div></div></section></div></main>"
 `;

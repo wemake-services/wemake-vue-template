@@ -10,7 +10,7 @@ import type { RawCommentType } from '~/types'
 *
 * @param error - Error instance to be thrown.
 */
-function maybeHandleError <T> (error: ?$AxiosError<T>): void {
+function maybeHandleError<T> (error: ?$AxiosError<T>): void {
   if (error) {
     throw new Error(error)
   }

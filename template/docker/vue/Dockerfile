@@ -37,9 +37,8 @@ RUN apk update && apk add --no-cache \
 
 # Creating folders, and files for a project:
 
-RUN mkdir /code
+COPY . /code
 WORKDIR /code
-ADD . /code
 
 
 # Project initialization:

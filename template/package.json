@@ -64,7 +64,7 @@
     "@vue-flow-typed/vuex": "^0.2.0",
     "@vue/test-utils": "^1.0.0-beta.20",
     "axios-mock-adapter": "^1.15.0",
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.5",
     "babel-jest": "^23.0.1",
     "babel-jest-assertions": "^0.1.0",
     "deepcopy": "^1.0.0",

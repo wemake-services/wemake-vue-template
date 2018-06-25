@@ -12060,9 +12060,9 @@ stylelint-color-format@^0.1.1:
   dependencies:
     color "^3.0.0"
 
-stylelint-config-css-modules@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-css-modules/-/stylelint-config-css-modules-1.2.0.tgz#8699e556a0d4ae6742bbe7b03138cde847e92699"
+stylelint-config-css-modules@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-css-modules/-/stylelint-config-css-modules-1.3.0.tgz#4de8c9445ba15150e21cfe61cee16298aba60c23"
 
 stylelint-config-recommended-scss@^3.2.0:
   version "3.2.0"

@@ -23,17 +23,17 @@
     "lint": "yarn lint:js && yarn lint:css && yarn lint:md",
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "yarn docs:build && gitbook serve docs",
-    "docs:build": "yarn docs:api && gitbook build docs"
+    "docs:build": "yarn docs:api && gitbook build docs",
+    "ci": "yarn test && yarn build"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && yarn build"
+      "pre-commit": "yarn ci"
     }
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/dotenv": "^1.1.1",
     "@nuxtjs/router": "^1.0.1",
     "await-to-js": "^2.0.1",
     "axios": "^0.18.0",
@@ -47,6 +47,7 @@
     "browserslist": "^4.0.0",
     "cross-env": "^5.2.0",
     "css-mqpacker": "^6.0.2",
+    "dotenv": "^6.0.0",
     "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.1",

@@ -52,7 +52,6 @@ module.exports = {
     'nuxt-imagemin',
 
     '@nuxtjs/router',
-    ['@nuxtjs/dotenv', { path: envPath }],
     '@nuxtjs/axios'
   ],
 
@@ -94,8 +93,7 @@ module.exports = {
   },
 
   /**
-  * Configuring how generate command works,
-  * this is required due to router module
+  * Configuring how generate command works, this is required with router module
   */
   generate: {
     routes: [

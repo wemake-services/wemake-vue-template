@@ -5,6 +5,9 @@
   "repository": "https://github.com/wemake-services/wemake-vue-template.git",
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",
+  "engines": {
+    "node": "9.10"
+  },
   "scripts": {
     "lint": "eslint .",
     "test": "jest ./tests"

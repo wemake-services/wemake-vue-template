@@ -46,7 +46,7 @@ WORKDIR /code
 RUN set -ex; \
   if [ "$NODE_ENV" = "production" ]; then \
     yarn install --no-cache --frozen-lockfile --production; \
-    yarn build;
+    yarn build; \
   elif [ "$NODE_ENV" = "development" ]; then \
     yarn install --no-cache --frozen-lockfile; \
   fi;

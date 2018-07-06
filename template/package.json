@@ -48,7 +48,7 @@
     "cross-env": "^5.2.0",
     "css-mqpacker": "^6.0.2",
     "dotenv": "^6.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.1",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.1",
     "nuxt-babel": "^0.1.2",

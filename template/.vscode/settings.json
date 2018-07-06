@@ -31,5 +31,7 @@
   "eslint.enable": true,
   "eslint.validate": ["javascript", "javascriptreact", "vue"],
   "stylelint.enable": true,
+  
+  // Disables default checks:
   "javascript.validate.enable": false
 }

@@ -26,6 +26,7 @@
   "html.suggest.angular1": false,
   "html.suggest.ionic": false,
   "json.format.enable": false,
+  "javascript.validate.enable": false,
 
   // Linting:
   "eslint.enable": true,

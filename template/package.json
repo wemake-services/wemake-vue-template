@@ -93,7 +93,7 @@
     "flow-typed": "^2.5.1",
     "gitbook-cli": "^2.3.2",
     "husky": "^0.14.3",
-    "jest": "^23.4.0",
+    "jest": "^23.4.1",
     "nsp": "^3.2.1",
     "remark-cli": "^5.0.0",
     "remark-lint": "^6.0.2",

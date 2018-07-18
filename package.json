@@ -23,7 +23,7 @@
     "eslint-config-standard": "^11.0.0",
     "eslint-config-wemake": "^0.4.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jest": "^21.18.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-security": "^1.4.0",

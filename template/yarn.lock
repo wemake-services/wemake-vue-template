@@ -3434,9 +3434,9 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/documentation/-/documentation-8.0.1.tgz#abe2aa2c04e212860761a27844a28ca9316d1c44"
+documentation@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/documentation/-/documentation-8.0.2.tgz#a646ad2a92f3de04e44db0925a4218085e081c0c"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"
@@ -3456,7 +3456,7 @@ documentation@^8.0.1:
     disparity "^2.0.0"
     doctrine-temporary-fork "2.0.1"
     get-port "^3.2.0"
-    git-url-parse "^9.0.0"
+    git-url-parse "^10.0.1"
     github-slugger "1.2.0"
     glob "^7.1.2"
     globals-docs "^2.4.0"
@@ -5055,12 +5055,11 @@ git-up@^2.0.0:
     is-ssh "^1.3.0"
     parse-url "^1.3.0"
 
-git-url-parse@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-9.0.0.tgz#a82a36acc3544c77ed0984d6488b37fbcfbec24d"
+git-url-parse@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-10.0.1.tgz#75f153b24ac7297447fc583cf9fac23a5ae687c1"
   dependencies:
     git-up "^2.0.0"
-    parse-domain "^2.0.0"
 
 gitbook-cli@^2.3.2:
   version "2.3.2"
@@ -9110,10 +9109,6 @@ parse-asn1@^5.0.0:
     create-hash "^1.1.0"
     evp_bytestokey "^1.0.0"
     pbkdf2 "^3.0.3"
-
-parse-domain@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/parse-domain/-/parse-domain-2.0.0.tgz#e9f42f697c30f7c2051dc5c55ff4d8a80da7943c"
 
 parse-entities@^1.0.2:
   version "1.1.1"

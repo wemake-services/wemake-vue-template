@@ -12324,13 +12324,13 @@ stylelint-declaration-strict-value@^1.0.4:
   dependencies:
     stylelint "^7.6.0"
 
-stylelint-no-unsupported-browser-features@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-3.0.0.tgz#3068bc6d68ad5f87deb54644047b899916524d13"
+stylelint-no-unsupported-browser-features@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-3.0.1.tgz#f22dad07a1ee5aac7e3580201789ac3c1c5fa7d0"
   dependencies:
     doiuse "^4.1.0"
     lodash "^4.17.4"
-    postcss "^6.0.1"
+    postcss "^7.0.0"
 
 stylelint-order@^0.8.1:
   version "0.8.1"

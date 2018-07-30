@@ -4060,9 +4060,9 @@ eslint-plugin-testcafe@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-testcafe/-/eslint-plugin-testcafe-0.2.1.tgz#4089f646dadb69b1376a01d7e608184907e6036b"
 
-eslint-plugin-unicorn@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-4.0.3.tgz#7e9998711bf237809ed1881a51a77000b2f40586"
+eslint-plugin-unicorn@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-5.0.0.tgz#3cd37e9202892c4f819c3ce76dcbcae415c84b1d"
   dependencies:
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.0.0"

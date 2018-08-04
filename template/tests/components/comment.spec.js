@@ -1,32 +1,24 @@
 // @flow
 
-import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
 import Comment from '~/components/Comment'
-import state from '~/store/state'
-import mutations from '~/store/mutations'
 import * as types from '~/store/types'
 
-import { createStore } from '../utils/store'
+import { storeFactory, commentFactory } from '../fixtures/vuex'
 
 const localVue = createLocalVue()
-localVue.use(Vuex)
-
-const comment = {
-  id: 1,
-  email: 'test@mail.com',
-  body: 'some text',
-  rating: 0
-}
 
 describe('unit tests for Comment component', () => {
+  let comment
   let store
 
   beforeEach(() => {
-    store = createStore({ state, mutations }, {
-      comments: [comment]
-    })
+    comment = commentFactory.build({ rating: 0 })
+    store = storeFactory.build(
+      { state: { comments: [comment] } },
+      { localVue }
+    )
   })
 
   // Uncomment this line to test typing:
@@ -52,36 +44,46 @@ describe('unit tests for Comment component', () => {
 
   test('should increment rating', () => {
     const delta = 1
+    const newRating = comment.rating + delta
     const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
       commentId: comment.id,
       delta
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(delta)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(newRating)
 
-    // See https://vue-test-utils.vuejs.org/en/guides/common-tips.html
-    wrapper.setProps({ comment: wrapper.vm.$store.state.comments[0] })
-
-    expect(wrapper.props().comment.rating).toEqual(delta)
+    expect(wrapper.props().comment.rating).toEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentPositive)
   })
 
   test('should decrement rating', async () => {
     const delta = -2
+    const newRating = comment.rating + delta
     const wrapper = mount(Comment, { store, localVue, propsData: { comment } })
 
     wrapper.vm.$store.commit(types.UPDATE_RATING, {
       commentId: comment.id,
       delta
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(delta)
+    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(newRating)
 
-    // See https://vue-test-utils.vuejs.org/en/guides/common-tips.html
-    wrapper.setProps({ comment: wrapper.vm.$store.state.comments[0] })
-
-    expect(wrapper.props().comment.rating).toEqual(delta)
+    expect(wrapper.props().comment.rating).toEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentNegative)
+  })
+})
+
+describe('snapshot tests for Comment component', () => {
+  let comment
+  let store
+
+  beforeAll(() => {
+    // We need a seed here to be consistent for snapshot testing:
+    comment = commentFactory.build({}, { seed: 8874 })
+    store = storeFactory.build(
+      { state: { comments: [comment] } },
+      { localVue }
+    )
   })
 
   test('should match the snapshot', () => {

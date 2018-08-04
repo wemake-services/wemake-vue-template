@@ -67,16 +67,6 @@ You will totally need to [copy/modify `config/.env`](configuration.md#env) file.
 After your dependencies are installed, run `yarn dev`
 to start a development server.
 
-## Making commit
-
-We run tests and linting on each commit to be sure that nothing will break.
-We use [`husky`](https://github.com/typicode/husky) to handle [pre-commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
-
-You need to install these hooks only once.
-It is done automatically when you run `yarn install`.
-Make sure that `git` repo exists at this moment. 
-If not, create it with `git init` and reinstall dependencies.
-
 ## Dev tools
 
 For the best development experience, we can recommend [`vscode`](editors.md).

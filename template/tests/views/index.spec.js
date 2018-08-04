@@ -1,46 +1,20 @@
 // @flow
 
-import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
-import faker from 'faker'
 
 import Index from '~/views/Index'
-import state from '~/store/state'
-import mutations from '~/store/mutations'
-import getters from '~/store/getters'
-import actions from '~/store/actions'
-
-import { createStore } from '../utils/store'
+import { storeFactory, commentFactory } from '../fixtures/vuex'
 
 const localVue = createLocalVue()
-localVue.use(Vuex)
 
-faker.seed(123)
-
-function fakeComments (number) {
-  const comments = []
-  for (let i = 0; i < number; i += 1) {
-    comments.push({
-      id: faker.random.number(),
-      email: faker.internet.email(),
-      body: faker.lorem.sentences(),
-      rating: faker.random.number({ min: -10, max: 10 })
-    })
-  }
-
-  return comments
-}
-
-describe('unit tests for Index page', () => {
+describe('unit tests for Index view', () => {
   let store
   let comments
 
   beforeEach(() => {
-    comments = fakeComments(3)
-    store = createStore({ actions, getters, state, mutations }, {
-      comments
-    })
+    comments = commentFactory.buildList(3)
+    store = storeFactory.build({ state: { comments } }, { localVue })
   })
 
   test('should have three comments', () => {
@@ -49,7 +23,7 @@ describe('unit tests for Index page', () => {
   })
 
   test('should load new comments on actions', async () => {
-    const comment = fakeComments(1)[0]
+    const comment = comments[0]
     const wrapper = mount(Index, { store, localVue, propsData: { comments } })
 
     const mock = new MockAdapter(store.$axios)
@@ -60,6 +34,17 @@ describe('unit tests for Index page', () => {
     expect(wrapper.vm.$store.state.comments[0].id).toEqual(comment.id)
     expect(wrapper.vm.$store.state.comments[0].email).toEqual(comment.email)
     expect(wrapper.findAll('.commentComponent')).toHaveLength(1)
+  })
+})
+
+describe('snapshot test for Index view', () => {
+  let store
+  let comments
+
+  beforeAll(() => {
+    // We need a seed here to be consistent for snapshot testing:
+    comments = commentFactory.buildList(3, {}, { seed: 1342 })
+    store = storeFactory.build({ state: { comments } }, { localVue })
   })
 
   test('should match the snapshot', () => {

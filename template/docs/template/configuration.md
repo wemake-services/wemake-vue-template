@@ -141,13 +141,6 @@ It is required for multiple tools that are used in the project:
 To see what browsers are used in your project run: `npx browserslist`
 Read more about [queries here](https://github.com/browserslist/browserslist).
 
-### husky
-
-[`husky`](https://github.com/typicode/husky) is a pre-commit hooks manager.
-It specifies which `yarn` task to run on `git` commit event.
-
-See how it [is used](development.md#making-commit).
-
 [env]: https://docs.docker.com/compose/environment-variables/#the-env_file-configuration-option
 [scss]: https://github.com/wemake-services/stylelint-config-strict-scss
 [css-modules]: https://github.com/pascalduez/stylelint-config-css-modules

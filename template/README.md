@@ -13,7 +13,7 @@ since then.
 
 You will need:
 
-- `node@9` (see `.nvmrc` file. You can
+- `node` (see `.nvmrc` file. You can
   use [`nvm`](https://github.com/creationix/nvm) to manage versions)
 
 You might also want to install:
@@ -26,7 +26,7 @@ You might also want to install:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`yarn`](https://yarnpkg.com) with version `1.6` (**required**)
+- [`yarn`](https://yarnpkg.com) (**required**)
 
 ## Documentation
 

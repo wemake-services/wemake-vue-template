@@ -1,11 +1,11 @@
-FROM node:9.10-alpine
+FROM node:10.8-alpine
 
 LABEL maintainer="sobolevn@wemake.services"
 LABEL vendor="wemake.services"
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
-ENV YARN_VERSION 1.6.0
+ENV YARN_VERSION 1.9.4
 
 
 # System deps:

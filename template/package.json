@@ -5,8 +5,8 @@
   "author": "{{ author }}",
   "private": true,
   "engines": {
-    "node": "9.10",
-    "yarn": "1.6"
+    "node": "10.8",
+    "yarn": "1.9"
   },
   "scripts": {
     "postinstall": "command -v flow-typed && flow-typed install || true",

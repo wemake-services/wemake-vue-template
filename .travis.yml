@@ -2,7 +2,7 @@ language: node_js
 
 sudo: true
 
-node_js: 9.10.1
+node_js: 10.8.0
 
 addons:
   apt:

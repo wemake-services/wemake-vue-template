@@ -36,8 +36,8 @@ Demo source code is [here](https://wemake-vue-demo.now.sh/_src).
 
 You will need:
 
-- `node@9` (see [`template/.nvmrc`](https://github.com/wemake-services/wemake-vue-template/blob/master/template/.nvmrc))
-- [`yarn@1.6`](https://yarnpkg.com/lang/en/)
+- `node` (see [`template/.nvmrc`](https://github.com/wemake-services/wemake-vue-template/blob/master/template/.nvmrc))
+- [`yarn`](https://yarnpkg.com/lang/en/)
 
 
 ## Installation
@@ -49,13 +49,9 @@ npx vue-cli init ./wemake-vue-template your_vue_project
 
 We are required to clone the project, since we need the `.git` folder.
 
-## Running the project
+## Where to go next
 
 Before going any further make sure that you have read [the docs](https://wemake-services.gitbook.io/wemake-vue-template).
-
-- `yarn dev` starts the development server
-- `yarn start` runs the production code in a node server
-- `yarn generate` generates static files to be deployed [anywhere](https://nuxtjs.org/guide/commands/#production-deployment)
 
 
 ## Who are using this template?

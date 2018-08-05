@@ -6,7 +6,7 @@
   "author": "sobolevn <mail@sobolevn.me>",
   "license": "MIT",
   "engines": {
-    "node": "9.10"
+    "node": "10.8"
   },
   "scripts": {
     "lint": "eslint .",

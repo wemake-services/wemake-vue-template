@@ -1,0 +1,29 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - node-sass > node-gyp > request > hawk > hoek:
+        patched: '2018-08-07T19:32:49.463Z'
+    - node-sass > node-gyp > request > hawk > sntp > hoek:
+        patched: '2018-08-07T19:32:49.463Z'
+    - node-sass > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-08-07T19:32:49.463Z'
+    - node-sass > node-gyp > request > hawk > boom > hoek:
+        patched: '2018-08-07T19:32:49.463Z'
+  'npm:tunnel-agent:20170305':
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-pngquant > pngquant-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'
+    - nuxt-imagemin > imagemin-webpack-plugin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-08-07T19:32:49.463Z'

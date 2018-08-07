@@ -7,18 +7,18 @@ const fs = require('fs')
 
 const templatePath = require('./utils').templatePath
 
-function expectAllExist (files) {
-  expect.assertions(files.length)
+function expectAllExist (filesToChecks) {
+  expect.assertions(filesToChecks.length)
 
-  for (const file of files) {
+  for (const filename of filesToChecks) {
     // eslint-disable-next-line security/detect-non-literal-fs-filename
-    expect(fs.existsSync(templatePath(file))).toBe(true)
+    expect(fs.existsSync(templatePath(filename))).toBe(true)
   }
 }
 
 describe('template files structure', () => {
   test('files exist', () => {
-    const files = [
+    const filesToCheck = [
       '.babelrc',
       '.dockerignore',
       '.editorconfig',
@@ -31,34 +31,34 @@ describe('template files structure', () => {
       'nuxt.config.js',
       'package.json',
       'README.md',
-      'yarn.lock'
+      'yarn.lock',
     ]
 
-    expectAllExist(files)
+    expectAllExist(filesToCheck)
   })
 
   test('vscode files exist', () => {
-    const files = [
+    const filesToCheck = [
       '.vscode/extensions.json',
-      '.vscode/settings.json'
+      '.vscode/settings.json',
     ]
 
-    expectAllExist(files)
+    expectAllExist(filesToCheck)
   })
 
   test('config files exist', () => {
-    const files = [
-      'config/.env.template'
+    const filesToCheck = [
+      'config/.env.template',
     ]
 
-    expectAllExist(files)
+    expectAllExist(filesToCheck)
   })
 
   test('docker files exist', () => {
-    const files = [
-      'docker/vue/Dockerfile'
+    const filesToCheck = [
+      'docker/vue/Dockerfile',
     ]
 
-    expectAllExist(files)
+    expectAllExist(filesToCheck)
   })
 })

@@ -2,7 +2,7 @@
 // in the root folder.
 
 const dotenvMock = {
-  config: jest.fn()
+  'config': jest.fn(),
 }
 
 module.exports = dotenvMock

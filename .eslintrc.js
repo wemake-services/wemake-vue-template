@@ -1,8 +1,8 @@
 module.exports = {
-  extends: [
-    'wemake'
+  'extends': [
+    'wemake',
   ],
-  env: {
-    node: true
-  }
+  'env': {
+    'node': true,
+  },
 }

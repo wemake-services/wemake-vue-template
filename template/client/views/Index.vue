@@ -35,41 +35,39 @@ import type { CommentType, StateType } from '~/types'
 
 // @vue/component
 @Component({
-  components: {
+  'components': {
     ActionBar,
     AppLogo,
-    Comment
-  }
+    Comment,
+  },
 })
 /**
-* Main page (or index page).
-* Mounted as `/` by default.
-*/
+ * Main page (or index page).
+ * Mounted as `/` by default.
+ */
 export default class Index extends Vue {
   @State('comments')
   /**
-  * List of predownloaded comments, bound from Vuex.
-  */
+   * List of predownloaded comments, bound from Vuex.
+   */
   comments: Array<CommentType>
 
   @Getter('hasComments')
   /**
-  * Returns either we have any comments or not.
-  */
+   * Returns either we have any comments or not.
+   */
   hasComments: boolean
 
   /**
-  * Fetches comments from external API from the server side.
-  * This method should preload Vuex store.
-  *
-  * @see https://nuxtjs.org/api/pages-fetch
-  * @param context - Nuxt `context` instance.
-  * @param context.store - Current Vuex store.
-  * @returns List of downloaded comments.
-  */
-  fetch (
-    { store }: { store: Store<StateType> }
-  ): Promise<Array<CommentType>> {
+   * Fetches comments from external API from the server side.
+   * This method should preload Vuex store.
+   *
+   * @see https://nuxtjs.org/api/pages-fetch
+   * @param context - Nuxt `context` instance.
+   * @param context.store - Current Vuex store.
+   * @returns List of downloaded comments.
+   */
+  fetch ({ store }: { store: Store<StateType> }): Promise<Array<CommentType>> {
     // Uncomment the next line to test flow types:
     // console.log(this.comments + store.state.comments.length)
     return store.dispatch('fetchComments')

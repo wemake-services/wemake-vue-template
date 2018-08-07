@@ -9,11 +9,11 @@ Vue.use(Router)
 
 export function createRouter () {
   return new Router({
-    mode: 'history',
-    routes: [
+    'mode': 'history',
+    'routes': [
       // Uncomment the following lint to test type safety:
       // { url: '/home', component: Index },
-      { path: '/', component: Index }
-    ]
+      { 'path': '/', 'component': Index },
+    ],
   })
 }

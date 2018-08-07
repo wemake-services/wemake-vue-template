@@ -11,24 +11,24 @@ import type { CommentType } from '~/types'
 // @vue/component
 @Component()
 /**
-* Actions bar component written in jsx.
-* The main idea of this example is to demostrate flexibility of Vue and jsx.
-* We discourage using `jsx` in a real world apps,
-* unless you know what are you doing!
-*/
+ * Actions bar component written in jsx.
+ * The main idea of this example is to demostrate flexibility of Vue and jsx.
+ * We discourage using `jsx` in a real world apps,
+ * unless you know what are you doing!
+ */
 export default class ActionBar extends Vue {
   @Action('fetchComments')
   /**
-  * Typed alias to Vuex `fetchComments` action.
-  */
+   * Typed alias to Vuex `fetchComments` action.
+   */
   fetchComments: () => Promise<Array<CommentType>>
 
   /**
-  * Render function. It is an equavalent of `<template>` tag.
-  *
-  * @see https://vuejs.org/v2/guide/render-function.html
-  * @returns { VNode } Virtual node to be rendered by Vue.
-  */
+   * Render function. It is an equavalent of `<template>` tag.
+   *
+   * @see https://vuejs.org/v2/guide/render-function.html
+   * @returns { VNode } Virtual node to be rendered by Vue.
+   */
   render () {
     return (
       <div class={this.$style.actions}>

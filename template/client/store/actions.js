@@ -9,16 +9,16 @@ import type { StateType } from '~/types'
 const actions = {
   async fetchComments ({
     commit,
-    state
+    _state,
   }: ActionContext<StateType>) {
-    const data = await comments.fetchComments(this.$axios)
-    commit(mutationTypes.SET_COMMENTS, data)
+    const commentsList = await comments.fetchComments(this.$axios)
+    commit(mutationTypes.SET_COMMENTS, commentsList)
 
     // Uncomment next line to see typing in action:
-    // console.log(state.comments, state.fake)
+    // console.log(_state.comments, _state.fake)
 
-    return data
-  }
+    return commentsList
+  },
 }
 
 export default actions

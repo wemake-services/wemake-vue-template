@@ -14,17 +14,17 @@ describe('unit tests for Index view', () => {
 
   beforeEach(() => {
     comments = commentFactory.buildList(3)
-    store = storeFactory.build({ state: { comments } }, { localVue })
+    store = storeFactory.build({ 'state': { comments } }, { localVue })
   })
 
   test('should have three comments', () => {
-    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
+    const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
     expect(wrapper.findAll('.commentComponent')).toHaveLength(3)
   })
 
   test('should load new comments on actions', async () => {
     const comment = comments[0]
-    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
+    const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
 
     const mock = new MockAdapter(store.$axios)
     mock.onGet('/comments').reply(200, [comment])
@@ -43,12 +43,12 @@ describe('snapshot test for Index view', () => {
 
   beforeAll(() => {
     // We need a seed here to be consistent for snapshot testing:
-    comments = commentFactory.buildList(3, {}, { seed: 1342 })
-    store = storeFactory.build({ state: { comments } }, { localVue })
+    comments = commentFactory.buildList(3, {}, { 'seed': 1342 })
+    store = storeFactory.build({ 'state': { comments } }, { localVue })
   })
 
   test('should match the snapshot', () => {
-    const wrapper = mount(Index, { store, localVue, propsData: { comments } })
+    const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

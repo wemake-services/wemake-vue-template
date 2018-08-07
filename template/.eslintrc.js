@@ -2,23 +2,23 @@
 // See: https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
-  root: true,
+  'root': true,
 
-  extends: [
+  'extends': [
     'wemake',
     'plugin:vue/recommended',
     'plugin:compat/recommended',
     'flowtype-essential',
-    'jsdoc-essential'
+    'jsdoc-essential',
   ],
-  plugins: [
+  'plugins': [
     'flowtype-errors',
     'unicorn',
     'compat',
-    'json'
+    'json',
   ],
 
-  rules: {
+  'rules': {
     // jsx
     'jsx-quotes': ['error', 'prefer-single'],
 
@@ -32,35 +32,35 @@ module.exports = {
 
     // rules for vue components
     'vue/html-closing-bracket-newline': ['error', {
-      singleline: 'never',
-      multiline: 'always'
+      'singleline': 'never',
+      'multiline': 'always',
     }],
     'vue/html-closing-bracket-spacing': ['error', {
-      startTag: 'never',
-      endTag: 'never',
-      selfClosingTag: 'always'
+      'startTag': 'never',
+      'endTag': 'never',
+      'selfClosingTag': 'always',
     }],
-    'vue/prop-name-casing': ['error', 'camelCase']
+    'vue/prop-name-casing': ['error', 'camelCase'],
   },
 
-  settings: {
+  'settings': {
     // providing polyfills for `eslint-plugin-compat` plugin, see:
     // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
-    polyfills: []
+    'polyfills': [],
   },
 
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 2017,
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true,
-      jsx: true
+  'parser': 'vue-eslint-parser',
+  'parserOptions': {
+    'parser': 'babel-eslint',
+    'ecmaVersion': 2017,
+    'ecmaFeatures': {
+      'experimentalObjectRestSpread': true,
+      'jsx': true,
     },
-    sourceType: 'module'
+    'sourceType': 'module',
   },
-  env: {
-    node: true,
-    browser: true
-  }
+  'env': {
+    'node': true,
+    'browser': true,
+  },
 }

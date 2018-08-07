@@ -17,7 +17,7 @@ export const commentFactory = new Factory()
   .sequence('id')
   .attr('email', faker.internet.email)
   .attr('body', faker.lorem.sentences)
-  .attr('rating', () => faker.random.number({ min: -10, max: 10 }))
+  .attr('rating', () => faker.random.number({ 'min': -10, 'max': 10 }))
 
 export const storeFactory = new Factory()
   .option('localVue', null)

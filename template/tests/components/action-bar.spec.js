@@ -14,7 +14,7 @@ describe('unit tests for ActionBar component', () => {
 
   beforeEach(() => {
     actions = {
-      fetchComments: jest.fn() // mocking Vuex action call
+      'fetchComments': jest.fn(), // mocking Vuex action call
     }
 
     store = new Vuex.Store({ actions })

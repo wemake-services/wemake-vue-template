@@ -38,28 +38,28 @@ import type { CommentType, CommentPayloadType } from '~/types'
 // @vue/component
 @Component()
 /**
-* Comment component is used to represent a single user's comment.
-*/
+ * Comment component is used to represent a single user's comment.
+ */
 export default class Comment extends Vue {
   @Mutation(mutationTypes.UPDATE_RATING)
   /**
-  * This is a wrapped mutation from the vuex.
-  */
+   * This is a wrapped mutation from the vuex.
+   */
   updateRating: (CommentPayloadType) => void
 
   @Prop()
   /**
-  * Passed comment from the parent component.
-  */
+   * Passed comment from the parent component.
+   */
   comment: CommentType
 
   /**
-  * Changes comment's rating.
-  * Can be used to increase or decrease comment's rating.
-  *
-  * @param commentId - Comment's identifier to change rating.
-  * @param delta - Delta value to change rating value.
-  */
+   * Changes comment's rating.
+   * Can be used to increase or decrease comment's rating.
+   *
+   * @param commentId - Comment's identifier to change rating.
+   * @param delta - Delta value to change rating value.
+   */
   changeRating (commentId: number, delta: number) {
     // Uncomment next line to test typing:
     // console.log(this.comment.missingKey)
@@ -67,16 +67,16 @@ export default class Comment extends Vue {
   }
 
   /**
-  * Defines which color borders are.
-  * Uses `comment`'s rating to choose color.
-  *
-  * @returns Pairs of class names and boolean values if they should be applied.
-  */
+   * Defines which color borders are.
+   * Uses `comment`'s rating to choose color.
+   *
+   * @returns Pairs of class names and boolean values if they should be applied.
+   */
   get computedClasses () {
     return {
       [this.$style.commentComponent]: true,
       [this.$style.commentPositive]: this.comment.rating > 0,
-      [this.$style.commentNegative]: this.comment.rating < 0
+      [this.$style.commentNegative]: this.comment.rating < 0,
     }
   }
 }

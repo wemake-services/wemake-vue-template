@@ -80,7 +80,7 @@
     "eslint-plugin-compat": "^2.5.1",
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^21.20.2",
+    "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-json": "^1.2.1",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",

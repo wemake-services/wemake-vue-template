@@ -24,10 +24,10 @@ RUN apk add --no-cache \
     libpng-dev \
     make \
     wget \
-  && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
-  && wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.27-r0/glibc-2.27-r0.apk \
-  && apk add glibc-2.27-r0.apk \
-  && rm -rf glibc-2.27-r0.apk \
+  && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
+  && wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk \
+  && apk add glibc-2.28-r0.apk \
+  && rm -rf glibc-2.28-r0.apk \
   && curl -fSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
   && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \

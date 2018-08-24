@@ -3519,9 +3519,9 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation@^8.1.1:
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/documentation/-/documentation-8.1.1.tgz#dc95604886f7ae5e25520e59714ed2d4d73ad968"
+documentation@^8.1.2:
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/documentation/-/documentation-8.1.2.tgz#b449f1d19e96f9bfaa12c58a3845cdf07e0b79d8"
   dependencies:
     ansi-html "^0.0.7"
     babel-core "^6.26.0"
@@ -3553,7 +3553,7 @@ documentation@^8.1.1:
     mime "^2.2.0"
     module-deps-sortable "4.0.6"
     parse-filepath "^1.0.2"
-    pify "^3.0.0"
+    pify "^4.0.0"
     read-pkg-up "^4.0.0"
     remark "^9.0.0"
     remark-html "7.0.0"

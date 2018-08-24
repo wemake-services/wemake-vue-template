@@ -4129,9 +4129,9 @@ eslint-plugin-testcafe@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-testcafe/-/eslint-plugin-testcafe-0.2.1.tgz#4089f646dadb69b1376a01d7e608184907e6036b"
 
-eslint-plugin-unicorn@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-5.0.0.tgz#3cd37e9202892c4f819c3ce76dcbcae415c84b1d"
+eslint-plugin-unicorn@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-6.0.0.tgz#af24ab13f4654865832c78d1a7fc5b0d7de6d30a"
   dependencies:
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.0.0"

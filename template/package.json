@@ -74,7 +74,7 @@
     "eslint": "^5.4.0",
     "eslint-config-flowtype-essential": "^0.3.0",
     "eslint-config-jsdoc-essential": "^0.1.1",
-    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-config-wemake": "^0.5.2",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-compat": "^2.5.1",

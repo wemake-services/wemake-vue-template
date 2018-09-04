@@ -28,7 +28,7 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^6.0.0",
+    "eslint-plugin-unicorn": "^6.0.1",
     "jest": "^23.5.0",
     "vue-cli": "^2.9.6"
   }

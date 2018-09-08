@@ -52,9 +52,9 @@ module.exports = {
   'parser': 'vue-eslint-parser',
   'parserOptions': {
     'parser': 'babel-eslint',
-    'ecmaVersion': 2017,
+    'ecmaVersion': 2018,
     'ecmaFeatures': {
-      'experimentalObjectRestSpread': true,
+      'legacyDecorators': true,
       'jsx': true,
     },
     'sourceType': 'module',

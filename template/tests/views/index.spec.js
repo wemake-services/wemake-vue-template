@@ -15,6 +15,9 @@ describe('unit tests for Index view', () => {
   beforeEach(() => {
     comments = commentFactory.buildList(3)
     store = storeFactory.build({ 'state': { comments } }, { localVue })
+
+    // Clearing mocks:
+    jest.clearAllMocks()
   })
 
   test('should have three comments', () => {
@@ -31,8 +34,9 @@ describe('unit tests for Index view', () => {
 
     await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
     expect(wrapper.vm.$store.state.comments).toHaveLength(1)
-    expect(wrapper.vm.$store.state.comments[0].id).toEqual(comment.id)
-    expect(wrapper.vm.$store.state.comments[0].email).toEqual(comment.email)
+    expect(wrapper.vm.$store.state.comments[0].id).toStrictEqual(comment.id)
+    expect(wrapper.vm.$store.state.comments[0].email)
+      .toStrictEqual(comment.email)
     expect(wrapper.findAll('.commentComponent')).toHaveLength(1)
   })
 })

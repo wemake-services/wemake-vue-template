@@ -10,6 +10,10 @@ module.exports = {
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect-in-promise': 'error',
     'jest/no-jasmine-globals': 'error',
+    'jest/expect-expect': 'error',
+    'jest/prefer-strict-equal': 'error',
+    'jest/no-test-prefixes': 'error',
+    'jest/no-test-return-statement': 'error',
 
     // warn users about too large snapshots:
     'jest/no-large-snapshots': ['warn', { 'maxSize': 50 }],

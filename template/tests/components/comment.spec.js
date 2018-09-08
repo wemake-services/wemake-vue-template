@@ -43,10 +43,10 @@ describe('unit tests for Comment component', () => {
       'propsData': { comment },
     })
 
-    expect(wrapper.find('.body').text().trim()).toEqual(comment.body)
-    expect(wrapper.find('.author').text().trim()).toEqual(comment.email)
+    expect(wrapper.find('.body').text().trim()).toStrictEqual(comment.body)
+    expect(wrapper.find('.author').text().trim()).toStrictEqual(comment.email)
     expect(wrapper.find('.number').text().trim())
-      .toEqual(comment.rating.toString())
+      .toStrictEqual(comment.rating.toString())
   })
 
   test('should increment rating', () => {
@@ -62,9 +62,9 @@ describe('unit tests for Comment component', () => {
       'commentId': comment.id,
       delta,
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(newRating)
+    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
 
-    expect(wrapper.props().comment.rating).toEqual(newRating)
+    expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentPositive)
   })
 
@@ -81,9 +81,9 @@ describe('unit tests for Comment component', () => {
       'commentId': comment.id,
       delta,
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toEqual(newRating)
+    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
 
-    expect(wrapper.props().comment.rating).toEqual(newRating)
+    expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentNegative)
   })
 })

@@ -13,6 +13,8 @@ We configure `jest` inside [our `package.json`](configuration.md#package-json).
 We have two types of test: unit and end-to-end. 
 They differ in complexity, tools, and reasoning.
 
+Are you **new** to testing? Read the [Vue testing full guide](https://lmiller1990.github.io/vue-testing-handbook/).
+
 ## Unit tests
 
 Unit tests are considered much easier to write, but header to maintain.

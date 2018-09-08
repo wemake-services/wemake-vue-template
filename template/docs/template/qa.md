@@ -61,6 +61,14 @@ const comments = NuxtSelector('Nuxt Comment')
 
 See `./docker/testcafe/fixtures` for more examples.
 
+## Visual recorder
+
+We also recommend to use a visual recorder to create fixtures for your tests.
+This way is faster, easier and more reliable.
+
+You can check [TestCafe docs](https://testcafe.devexpress.com/Documentation/Using_TestCafe/Visual_Test_Recorder/) 
+for more information.
+
 ## GitLab CI
 
 We also integrate QA to CI process.

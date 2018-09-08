@@ -94,7 +94,7 @@ How to run QA against our test example?
 
 ```bash
 # Mind the trailing slash, we don't need it!
-BASE_TEST_URL='https://wemake-vue-demo.now.sh' sh docker/testcafe/qa.sh
+BASE_TEST_URL='https://wemake-vue-demo.herokuapp.com' sh docker/testcafe/qa.sh
 ```
 
 At least, you should have a full production copy to run tests against it.

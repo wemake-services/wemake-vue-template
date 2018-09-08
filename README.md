@@ -12,10 +12,7 @@ This project is used to scaffold new `Vue` project structure.
 
 ## Demo
 
-Demo link: https://wemake-vue-demo.now.sh/
-
-Right after the start you will have the same app.
-Demo source code is [here](https://wemake-vue-demo.now.sh/_src).
+Demo link: https://wemake-vue-demo.herokuapp.com/
 
 
 ## Features

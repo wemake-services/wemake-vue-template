@@ -27,11 +27,6 @@
     "docs:build": "yarn docs:api && gitbook build docs",
     "ci": "yarn test && yarn build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn ci"
-    }
-  },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
@@ -90,7 +85,7 @@
     "eslint-plugin-unicorn": "^6.0.1",
     "eslint-plugin-vue": "^4.7.1",
     "faker": "^4.1.0",
-    "flow-bin": "^0.74.0",
+    "flow-bin": "^0.80.0",
     "flow-typed": "^2.5.1",
     "gitbook-cli": "^2.3.2",
     "jest": "^23.5.0",

@@ -17,6 +17,7 @@ untyped-import=off
 untyped-type-import=error
 unsafe-getters-setters=off
 sketchy-null=error
+sketchy-number=error
 
 [options]
 include_warnings=true

@@ -1,12 +1,17 @@
 <script>
 // @flow
-// @jsx ActionBar
+// @jsx jsx
 
 import Vue from 'vue'
 import Component from 'nuxt-class-component'
 import { Action } from 'vuex-class'
 
 import type { CommentType } from '~/types'
+
+// This function is used as a jsx provider,
+// see: https://github.com/wemake-services/wemake-vue-template/issues/683
+// eslint-disable-next-line no-unused-vars
+function jsx (elem: string, props: { class: string }) {}
 
 // @vue/component
 @Component()

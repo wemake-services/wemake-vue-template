@@ -12,7 +12,7 @@ This project is used to scaffold new `Vue` project structure.
 
 ## Demo
 
-Demo link: https://wemake-vue-demo.herokuapp.com/
+https://wemake-vue-demo.herokuapp.com/
 
 
 ## Features

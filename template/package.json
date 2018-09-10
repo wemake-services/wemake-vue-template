@@ -49,7 +49,7 @@
     "nuxt": "^1.4.2",
     "nuxt-babel": "^0.1.2",
     "nuxt-class-component": "^1.2.1",
-    "nuxt-imagemin": "^0.1.2",
+    "nuxt-imagemin": "^1.0.0",
     "postcss": "^7.0.2",
     "sass-loader": "^7.1.0",
     "vue-property-decorator": "^7.0.0",

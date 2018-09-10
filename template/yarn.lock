@@ -8822,9 +8822,9 @@ nuxt-class-component@^1.2.1:
     vue-class-component "^6.2.0"
     vuex-class "^0.3.0"
 
-nuxt-imagemin@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/nuxt-imagemin/-/nuxt-imagemin-0.1.2.tgz#a5271cf09b328c65ace304ad469ebcbe237dbd87"
+nuxt-imagemin@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-imagemin/-/nuxt-imagemin-1.0.0.tgz#2f18f911691033052e7da48249caebbd7ad47b25"
   dependencies:
     imagemin-webpack-plugin "^2.1.1"
 

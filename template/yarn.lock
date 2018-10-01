@@ -166,9 +166,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@nuxtjs/axios@^5.3.2":
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.2.tgz#0b04141f3177ccc83e71ee00b7c57c0d06a38290"
+"@nuxtjs/axios@^5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.3.tgz#0b09604e4c5e4b3ef1b5baac507e34ee25a3f82d"
   dependencies:
     "@nuxtjs/proxy" "^1.2.4"
     axios "^0.18.0"

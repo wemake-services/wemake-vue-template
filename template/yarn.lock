@@ -13753,9 +13753,9 @@ vue-meta@^1.4.3:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
-vue-property-decorator@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.1.1.tgz#0b1eefde50a7451e911ad44b91258010ffc08d01"
+vue-property-decorator@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.2.0.tgz#8e6b0f4dcc630c357135f76366ba7bd91f1db015"
   dependencies:
     vue-class-component "^6.2.0"
 

@@ -25,7 +25,9 @@
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "yarn docs:build && gitbook serve docs",
     "docs:build": "yarn docs:api && gitbook build docs",
-    "ci": "yarn test && yarn build"
+    "ci": "yarn test && yarn build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
   "dependencies": {
@@ -54,7 +56,8 @@
     "sass-loader": "^7.1.0",
     "vue-property-decorator": "^7.2.0",
     "vuex-class": "^0.3.1",
-    "webpack": "^3.12.0"
+    "webpack": "^3.12.0",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "@vue-flow-typed/vue-router": "^0.1.0",
@@ -101,5 +104,6 @@
     "stylelint-no-unsupported-browser-features": "^3.0.2",
     "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^2.6.0"
-  }
+  },
+  "snyk": true
 }

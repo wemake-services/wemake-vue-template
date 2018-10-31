@@ -12734,9 +12734,9 @@ stylelint@^7.6.0:
     svg-tags "^1.0.0"
     table "^4.0.1"
 
-stylelint@^9.2.0, stylelint@^9.7.0:
-  version "9.7.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-9.7.0.tgz#d43de95ff5f875facfa31f811ea7b749020f1620"
+stylelint@^9.2.0, stylelint@^9.7.1:
+  version "9.7.1"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-9.7.1.tgz#522f8795832a9f7e062e5e4105c0e05fb53f827f"
   dependencies:
     autoprefixer "^9.0.0"
     balanced-match "^1.0.0"

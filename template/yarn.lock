@@ -705,9 +705,9 @@ autoprefixer@^9.0.0:
     postcss "^7.0.2"
     postcss-value-parser "^3.2.3"
 
-await-to-js@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/await-to-js/-/await-to-js-2.0.1.tgz#fcb8a2178c763e2970aef1da9daf5c493e3653e0"
+await-to-js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/await-to-js/-/await-to-js-2.1.0.tgz#6391fce43f66ecb09895d934b695f7e104b150f4"
 
 aws-sign2@~0.6.0:
   version "0.6.0"

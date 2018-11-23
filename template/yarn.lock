@@ -11279,9 +11279,9 @@ remark-lint-unordered-list-marker-style@^1.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint@^6.0.0, remark-lint@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-6.0.3.tgz#6387f1123cbc539c577c4c04a5d97520122bdfc8"
+remark-lint@^6.0.0, remark-lint@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-6.0.4.tgz#13def899efd7d7d105188c274663a60e0fe8fa59"
   dependencies:
     remark-message-control "^4.0.0"
 

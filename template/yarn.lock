@@ -4082,9 +4082,9 @@ eslint-plugin-jsdoc@^3.6.3:
     jsdoctypeparser "^2.0.0-alpha-8"
     lodash "^4.17.4"
 
-eslint-plugin-json@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-json/-/eslint-plugin-json-1.3.1.tgz#f6f42820b4dbdcebf4ec8425e33e8676df875e7b"
+eslint-plugin-json@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-json/-/eslint-plugin-json-1.3.2.tgz#63fb1127b44864f2629b2571d7f10d52d81334ab"
   dependencies:
     vscode-json-languageservice "^3.2.1"
 

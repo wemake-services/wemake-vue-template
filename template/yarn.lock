@@ -259,9 +259,9 @@
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.3.0.tgz#25d4b099764f534bcc20dc3ad4812ed216b25fd7"
 
-"@vue/test-utils@^1.0.0-beta.26":
-  version "1.0.0-beta.26"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.26.tgz#1ae7e1dc2bef4f49f9dbfdfecad342d17d6c5c88"
+"@vue/test-utils@^1.0.0-beta.27":
+  version "1.0.0-beta.27"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.27.tgz#7e5f7b7180c00e28a4ca55c0ff0a7e754377fdb2"
   dependencies:
     dom-event-types "^1.0.0"
     lodash "^4.17.4"

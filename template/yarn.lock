@@ -965,9 +965,9 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@vue-flow-typed/vue-router/-/vue-router-0.1.0.tgz#392a0464b7062ec8231bbb8af52cc9687b80ad29"
 
-"@vue-flow-typed/vuex@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.3.0.tgz#25d4b099764f534bcc20dc3ad4812ed216b25fd7"
+"@vue-flow-typed/vuex@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@vue-flow-typed/vuex/-/vuex-0.4.0.tgz#6bcf66d0c7208a9ff3fbef53e639fdfebfa1979f"
 
 "@vue/test-utils@^1.0.0-beta.27":
   version "1.0.0-beta.27"

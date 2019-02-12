@@ -989,9 +989,9 @@
     consola "^1.4.4"
     http-proxy-middleware "^0.19.0"
 
-"@nuxtjs/router@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.0.tgz#2d0a1f6ff59b0a2df6a7257258b4813b66f2489d"
+"@nuxtjs/router@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.1.tgz#830bcd7ca9e9909839da252e15af47d142e9619b"
   dependencies:
     consola "^2.4.0"
 

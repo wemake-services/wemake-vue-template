@@ -30,7 +30,7 @@
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11",
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/router": "^1.2.0",
+    "@nuxtjs/router": "^1.2.1",
     "await-to-js": "^2.1.1",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",

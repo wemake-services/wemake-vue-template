@@ -989,11 +989,11 @@
     consola "^1.4.4"
     http-proxy-middleware "^0.19.0"
 
-"@nuxtjs/router@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.2.1.tgz#830bcd7ca9e9909839da252e15af47d142e9619b"
+"@nuxtjs/router@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.3.0.tgz#ceb8af728499ee145751e0c52d332bf061921bb0"
   dependencies:
-    consola "^2.4.0"
+    consola "^2.4.1"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -3311,9 +3311,9 @@ consola@^1.4.4:
     lodash "^4.17.5"
     std-env "^1.1.0"
 
-consola@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.4.0.tgz#d13c711cd0648a600ca68b399b739cf8f5058097"
+consola@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.4.1.tgz#ad7209c306a2b6fa955b776f88f87bf92f491aa8"
   dependencies:
     chalk "^2.4.2"
     dayjs "^1.8.3"

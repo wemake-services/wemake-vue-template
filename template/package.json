@@ -75,7 +75,7 @@
     "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",

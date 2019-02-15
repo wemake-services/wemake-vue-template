@@ -64,7 +64,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-jest-assertions": "^0.1.0",
-    "deepcopy": "^1.0.1",
+    "deepcopy": "^2.0.0",
     "documentation": "^9.1.1",
     "eslint": "^5.13.0",
     "eslint-config-flowtype-essential": "^1.0.0",

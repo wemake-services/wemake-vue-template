@@ -46,7 +46,7 @@
     "dotenv": "^6.2.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^1.4.2",
+    "nuxt": "^2.4.3",
     "nuxt-babel": "^0.1.2",
     "nuxt-class-component": "^1.2.1",
     "nuxt-imagemin": "^1.0.0",

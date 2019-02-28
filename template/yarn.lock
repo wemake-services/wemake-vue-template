@@ -4116,9 +4116,9 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-documentation@^9.2.1:
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/documentation/-/documentation-9.2.1.tgz#92a81f98af10b9156bd3fc16a861444b8244f043"
+documentation@^9.3.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/documentation/-/documentation-9.3.0.tgz#c69ff7746786fb23c5e044b64a3457c2e4e7fdbb"
   dependencies:
     "@babel/core" "^7.1.2"
     "@babel/generator" "^7.1.3"

@@ -29,7 +29,7 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^7.1.0",
-    "jest": "^24.0.0",
+    "jest": "^24.1.0",
     "vue-cli": "^2.9.6"
   }
 }

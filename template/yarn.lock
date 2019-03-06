@@ -14866,6 +14866,10 @@ vue-class-component@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.2.0.tgz#7adb1daa9a868c75f30f97f33f4f1b94aee62089"
 
+vue-class-component@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.0.1.tgz#7af2225c600667c7042b60712eefdf41dfc6de63"
+
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-5.0.0.tgz#00f4e4da94ec974b821a26ff0ed0f7a78402b8a1"
@@ -14922,11 +14926,11 @@ vue-meta@^1.4.3:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
-vue-property-decorator@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.3.0.tgz#d50d67f0b0f1c814f9f2fba36d6eeccbcc62dbb6"
+vue-property-decorator@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-8.0.0.tgz#a2e9bb2419b638cbf1614e17b99aa675d6d4e9e4"
   dependencies:
-    vue-class-component "^6.2.0"
+    vue-class-component "^7.0.1"
 
 vue-router@^3.0.1:
   version "3.0.1"

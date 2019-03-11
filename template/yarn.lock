@@ -9715,9 +9715,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-babel@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/nuxt-babel/-/nuxt-babel-0.1.2.tgz#925e64d4fe25128a52c8e4db6bf48d10129ae694"
+nuxt-babel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-babel/-/nuxt-babel-1.0.1.tgz#6cf12a6750c39caf4e3571137145f74c9142ec84"
   dependencies:
     find-babel-config "^1.1.0"
 

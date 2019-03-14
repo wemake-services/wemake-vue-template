@@ -43,7 +43,7 @@
     "browserslist": "^4.4.2",
     "cross-env": "^5.2.0",
     "css-mqpacker": "^7.0.0",
-    "dotenv": "^6.2.0",
+    "dotenv": "^7.0.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^1.4.2",

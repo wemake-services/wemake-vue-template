@@ -4656,9 +4656,9 @@ eslint-module-utils@^2.3.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
-eslint-plugin-compat@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-3.0.0.tgz#f05f2e74bf29680ae2b734d97fc9c3b5cde1ad8e"
+eslint-plugin-compat@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-compat/-/eslint-plugin-compat-3.0.1.tgz#46b5b88a27257a153255b91b41f783da7910e864"
   dependencies:
     "@babel/runtime" "^7.3.4"
     ast-metadata-inferer "^0.1.1"

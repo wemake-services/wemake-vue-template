@@ -8,6 +8,7 @@ module.exports = {
     'wemake',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/recommended',
+    'plugin:nuxt/recommended',
     '@vue/typescript',
     'plugin:compat/recommended',
     'jsdoc-essential',

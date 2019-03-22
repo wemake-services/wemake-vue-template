@@ -11,7 +11,8 @@ These images are then pulled into the production servers.
 ## Usage with GitHub
 
 You can store your code inside `GitHub` with no problems.
-Just learn how to configure `GitLab CI` [to be used](https://about.gitlab.com/features/github/) with `GitHub`.
+Just learn how to configure `GitLab CI` 
+[to be used](https://about.gitlab.com/features/github/) with `GitHub`.
 
 ## Configuration
 

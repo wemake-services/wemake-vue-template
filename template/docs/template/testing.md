@@ -4,7 +4,7 @@ We love tests. And test everything we can.
 In this section, we will discuss two types of tests and describe our toolset.
 
 Everything comes configured, so you can just start using it.
-Run `yarn test` to run everything we have.
+Run `npm run test` to run everything we have.
 
 We use [`jest`](https://facebook.github.io/jest/en/) 
 as our test runner for unit tests.
@@ -24,7 +24,7 @@ To make our lives easier
 we use [`vue-test-utils`](https://github.com/vuejs/vue-test-utils) 
 to mount and check our test components.
 
-Use `yarn test:unit` to run unit tests.
+Use `npm run test:unit` to run unit tests.
 
 ### Snapshots
 
@@ -43,7 +43,7 @@ then render it to string, and serialize to the text file inside `__snapshots__`
 folder near the test itself.
 There can be multiple snapshots for different component states.
 
-Run `yarn test:unit -u` to update existing snapshots with the updated state.
+Run `npm run test:unit -u` to update existing snapshots with the updated state.
 
 ### Mocking
 
@@ -58,11 +58,7 @@ Consider `jest` for [manual mocking][manual-mocking].
 ## Security checks
 
 We also run security checks on each CI step.
-We even have special `yarn test:sec` command to run these checks.
-
-What does it do? It queries some 3rd party database 
-for known security issues for your dependencies.
-We use [`nsp`](https://github.com/nodesecurity/nsp) for that task.
+We use `npm audit` to fail your CI when bad packages are found.
 
 This way you can lower the risks.
 

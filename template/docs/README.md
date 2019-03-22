@@ -35,19 +35,13 @@ Make sure to create an account there to store your own copy.
 
 The [configuration](https://toolchain.gitbook.com/config.html) can be found [here](https://github.com/wemake-services/wemake-vue-template/blob/master/book.json).
 
-To build a local version of docs, run: `yarn docs:build`.
-You can always preview the docs live with `yarn docs:serve`.
+To build a local version of docs, run: `npm run docs:build`.
+You can always preview the docs live with `npm run docs:serve`.
 
 If you want to add new pages, change order 
 or rename something, go to `SUMMARY.md`.
 
-## documentation.js
 
-We also use [`documentation.js`](https://github.com/documentationjs/documentation) 
-to build our API docs.
-
-It is then included as `project/api.md`. See [an example](api.md).
-To build it run: `yarn docs:api`.
 
 ## Updating template
 

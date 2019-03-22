@@ -52,9 +52,8 @@ module.exports = {
    * Extra Nuxt modules
    */
   'modules': [
-    // 'nuxt-imagemin',
-
     '@nuxtjs/axios',
+    'nuxt-imagemin',
   ],
 
   /**

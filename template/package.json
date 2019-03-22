@@ -22,7 +22,7 @@
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "npm run docs:build && gitbook serve docs",
     "docs:build": "npm run docs:api && gitbook build docs",
-    "ci": "npm run test && npm run build"
+    "ci": "npm run test && npm run build && npm audit"
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11, not dead",
   "dependencies": {
@@ -33,6 +33,7 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.5.1",
     "nuxt-class-component": "^1.3.0",
+    "nuxt-imagemin": "^1.0.0",
     "nuxt-property-decorator": "2.1.3",
     "postcss": "^7.0.14",
     "sass-loader": "^7.1.0",

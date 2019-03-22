@@ -1,32 +1,9 @@
 # Frequently Asked Questions
 
-## Why flow? Why not TypeScript?
+## Why don't you support Flow anymore?
 
-`flow` is a static type checker for `javascript`.
-`typescript` on the other hand is a typed superset of `javascript` 
-that compiles to plain `javascript`.
-
-Do you see the difference? 
-While `typescript` is a brand new language, `flow` is just a tool.
-We don't need to change anything in our setup, 
-we don't need to rewrite any existing code. 
-Just reconfigure your `.eslintrc` and start using types!
-
-By choosing `flow` instead of `typescript` 
-we choose `javascript` over a new language.
-So, we can write pure `js` and types where we actually need them.
-Combining this technique with unit and e2e tests makes:
-
-- our build stable
-- our development process pretty fast
-
-We understand that:
-
-1. `typescript` is more mature, it has more language features and typedefs
-2. `typescript` is more popular in `Vue`'s world
-3. `flow` has serious drawbacks and limitations
-
-Further reading: [`typescript-vs-flowtype`](https://github.com/niieani/typescript-vs-flowtype).
+It is just buggy. We had a lot of issues with it.
+You can still use (old) version of this template with `flow`: [here is the last release](https://github.com/wemake-services/wemake-vue-template/releases/tag/end-of-flow).
 
 ## Why Nuxt?
 
@@ -48,7 +25,7 @@ So any improperly formatted code won't make its way into the build.
 
 We also do not encourage using `eslint --fix`.
 
-## Why do you use `now` for a demo project?
+## Why do you use `heroku` for a demo project?
 
 This allows us to show how easy it is to deploy a full-featured isomorphic app.
 The main idea of this example is to demonstrate server-side rendering features.

@@ -14,15 +14,12 @@ module.exports = {
     'jest/prefer-strict-equal': 'error',
     'jest/no-test-prefixes': 'error',
     'jest/no-test-return-statement': 'error',
+    'jest/prefer-expect-assertions': 'error',
 
     // warn users about too large snapshots:
     'jest/no-large-snapshots': ['warn', { 'maxSize': 50 }],
 
     // allows to use long functions inside tests:
     'max-lines-per-function': 'off',
-
-    // we don't use this rule, since we use `babel-jest-assertions`
-    // which inserts `expect.assertions()` automatically
-    // 'jest/prefer-expect-assertions': 'error'
   },
 }

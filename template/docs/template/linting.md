@@ -6,18 +6,18 @@ We love linting to be as strict as possible.
 Everything works for raw files and single file components out of the box.
 Everything is already configured, so you don't have to.
 
-Use `yarn lint` to run everything we have.
+Use `npm run lint` to run everything we have.
 
 ## Javascript
 
 [![JavaScript Style Guide][svg]](https://github.com/standard/standard)
 
-We use `eslint` to lint `javascript`. 
+We use `eslint` to lint `javascript` and `typescript`. 
 We stick to [`wemake`][wemake] code style.
 It is just like `standard` config, but stricter.
 But, we have some additional checks that make our style even more stricter.
 
-To run `js` linting execute: `yarn lint:js`.
+To run `js` linting execute: `npm run lint:js`.
 
 ### Configuring eslint
 
@@ -27,41 +27,6 @@ It is located inside `tests/.eslintrc.js` file.
 
 It extends the default configuration with the new rules that are applied for
 test frameworks that we use.
-
-## flow
-
-`flow` is an optional strict typing.
-We use [`eslint-plugin-flowtype-errors`](https://www.npmjs.com/package/eslint-plugin-flowtype-errors) 
-to run these checks during linting stage.
-
-You can enable `flow` on a per-file basis. So, it very easy to start.
-When any `js` or `vue` file starts with `// @flow` comment 
-it means that `flow` is enabled for this file. 
-Otherwise, the file is ignored by `flow` checker.
-
-You have full control: what files should be checked 
-and what files should not be checked.
-We recommend checking all files by default. 
-And only exclude ones you have to exclude due to some errors or legacy.
-
-There are two ways to handle `type` imports:
-
-1. Explicitly importing each type when you need it
-
-2. Implicitly including all your types by preloading them 
-   from [`[libs]`](https://flow.org/en/docs/config/libs/) 
-   section in `.flowconfig`
-
-### vue-flow-typed
-
-We use 3rd party typings for `vue`-related libraries: [`vue-flow-typed`](https://github.com/sobolevn/vue-flow-typed).
-You can install and use each package individually depending on what 
-packages are you using the most. And what types you need.
-
-### eslint-plugin-flowtype
-
-We also lint `flow` type annotations themselves. 
-We are using [`eslint-plugin-flowtype`][eslint-plugin-flowtype].
 
 ## jsdoc
 
@@ -89,7 +54,7 @@ We stick to [`stylelint-config-strict-scss`](https://github.com/wemake-services/
 Other plugins for languages like `stylus`, `sass`, 
 and `post-css` can also be installed if you need them.
 
-To run `css` linting execute: `yarn lint:css`.
+To run `css` linting execute: `npm run lint:css`.
 
 ### Configuring stylelint
 
@@ -101,7 +66,7 @@ It stores presets, rules, and plugins.
 We lint markdown files with [`remark-lint`](https://github.com/remarkjs/remark-lint).
 This tool allows us to write consistent documentation and `README` files.
 
-To run `md` linting execute: `yarn lint:md`.
+To run `md` linting execute: `npm run lint:md`.
 
 ### Configuring remark
 
@@ -117,6 +82,5 @@ Linting can be easily changed to any other styles you like (or forced to use).
 
 [svg]: https://cdn.rawgit.com/standard/standard/master/badge.svg
 [wemake]: https://github.com/wemake-services/eslint-config-wemake
-[eslint-plugin-flowtype]: https://github.com/gajus/eslint-plugin-flowtype
 [stylelint.config.js]: https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md
 [remarkignore]: https://github.com/unifiedjs/unified-engine/blob/master/doc/ignore.md

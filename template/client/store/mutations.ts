@@ -1,8 +1,6 @@
-// @flow
-
 import * as mutationTypes from '~/store/types'
 
-import type {
+import {
   CommentType,
   CommentPayloadType,
   StateType,
@@ -12,9 +10,9 @@ import type {
 const mutations = {
   [mutationTypes.SET_COMMENTS]: (
     state: StateType,
-    comments: Array<RawCommentType>,
+    comments: RawCommentType[],
   ) => {
-    const updatedComments: Array<CommentType> = []
+    const updatedComments: CommentType[] = []
 
     for (const comment of comments.slice(0, 10)) {
       const newOne = {

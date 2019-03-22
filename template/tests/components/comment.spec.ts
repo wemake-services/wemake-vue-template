@@ -1,8 +1,6 @@
-// @flow
-
 import { mount, createLocalVue } from '@vue/test-utils'
 
-import Comment from '~/components/Comment'
+import Comment from '~/components/Comment.vue'
 import * as types from '~/store/types'
 
 import { storeFactory, commentFactory } from '../fixtures/vuex'
@@ -107,6 +105,6 @@ describe('snapshot tests for Comment component', () => {
       localVue,
       'propsData': { comment },
     })
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })

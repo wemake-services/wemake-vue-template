@@ -1,5 +1,3 @@
-// @flow
-
 import Vuex from 'vuex'
 import axios from 'axios'
 import faker from 'faker'

@@ -1,20 +1,23 @@
-<script>
-// @flow
-// @jsx jsx
+<template>
+  <div :class="$style.actions">
+    <button
+      :class="$style.reload"
+      @click="fetchComments"
+    >
+      reload comments
+    </button>
+  </div>
+</template>
 
+<script lang="ts">
 import Vue from 'vue'
 import Component from 'nuxt-class-component'
 import { Action } from 'vuex-class'
 
-import type { CommentType } from '~/types'
-
-// This function is used as a jsx provider,
-// see: https://github.com/wemake-services/wemake-vue-template/issues/683
-// eslint-disable-next-line no-unused-vars
-function jsx (elem: string, props: { class: string }) {}
+import { CommentType } from '~/types'
 
 // @vue/component
-@Component()
+@Component({})
 /**
  * Actions bar component written in jsx.
  * The main idea of this example is to demostrate flexibility of Vue and jsx.
@@ -26,27 +29,7 @@ export default class ActionBar extends Vue {
   /**
    * Typed alias to Vuex `fetchComments` action.
    */
-  fetchComments: () => Promise<Array<CommentType>>
-
-  /**
-   * Render function. It is an equavalent of `<template>` tag.
-   *
-   * @see https://vuejs.org/v2/guide/render-function.html
-   * @returns { VNode } Virtual node to be rendered by Vue.
-   */
-  render () {
-    return (
-      <div class={this.$style.actions}>
-        <button
-          class={this.$style.reload}
-          // Try to use `this.fetchComments(12)` instead to raise type errors
-          onClick={this.fetchComments}
-        >
-          reload comments
-        </button>
-      </div>
-    )
-  }
+  fetchComments!: () => Promise<CommentType[]>
 }
 </script>
 

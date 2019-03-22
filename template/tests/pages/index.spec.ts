@@ -1,9 +1,7 @@
-// @flow
-
 import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
 
-import Index from '~/views/Index'
+import Index from '~/pages/index.vue'
 import { storeFactory, commentFactory } from '../fixtures/vuex'
 
 const localVue = createLocalVue()
@@ -53,6 +51,6 @@ describe('snapshot test for Index view', () => {
 
   test('should match the snapshot', () => {
     const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })

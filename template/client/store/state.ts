@@ -1,10 +1,8 @@
-// @flow
-
-import type { StateType } from '~/types'
+import { StateType } from '~/types'
 
 function createState (): StateType {
   return {
-    'comments': null,
+    'comments': undefined,
   }
 }
 

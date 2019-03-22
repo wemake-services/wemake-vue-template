@@ -20,8 +20,8 @@ https://wemake-vue-demo.herokuapp.com/
 - Proven to work on both small and large scale projects
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - `Vue` + `vuex` + `vue-router` with the latest `es` features
-- [`nuxt`](https://nuxtjs.org/) for server-side rendering
-- Optional strict typing with [`flow`](https://flow.org/)
+- Latest [`nuxt`](https://nuxtjs.org/) for server-side rendering
+- Full `typescript` support
 - Linting with [`eslint`](https://eslint.org/) + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`testcafe`](https://github.com/DevExpress/testcafe) for end-to-end testing
 - [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test` and `deploy` pipeline configured by default
@@ -34,7 +34,6 @@ https://wemake-vue-demo.herokuapp.com/
 You will need:
 
 - `node` (see [`template/.nvmrc`](https://github.com/wemake-services/wemake-vue-template/blob/master/template/.nvmrc))
-- [`yarn`](https://yarnpkg.com/lang/en/)
 
 
 ## Installation

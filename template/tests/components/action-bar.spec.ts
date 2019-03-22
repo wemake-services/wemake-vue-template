@@ -1,9 +1,9 @@
-// @flow
+/// <reference types="jest" />
 
 import Vuex from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
-import ActionBar from '~/components/ActionBar'
+import ActionBar from '~/components/ActionBar.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -39,6 +39,6 @@ describe('unit tests for ActionBar component', () => {
 
   test('should match the snapshot', () => {
     const wrapper = mount(ActionBar, { store, localVue })
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })

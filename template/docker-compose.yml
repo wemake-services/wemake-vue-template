@@ -9,11 +9,10 @@ services:
       dockerfile: ./docker/vue/Dockerfile
       args:
         NODE_ENV: "development"
-    command: yarn dev
+    command: npm run dev
     volumes:
       - .:/code
       - /code/node_modules
-      - /code/flow-typed
     ports:
       - "3000:3000"
     networks:

@@ -2,7 +2,7 @@ language: node_js
 
 sudo: true
 
-node_js: 10.8.0
+node_js: 10.15
 
 addons:
   apt:
@@ -25,11 +25,11 @@ before_install:
   - docker --version && docker-compose --version
 
 install:
-  - yarn install
+  - npm run install
 
 script:
-  - yarn lint
-  - yarn test
+  - npm run lint
+  - npm run test
   - sh bin/test.sh
 
 notifications:

@@ -21,6 +21,7 @@ describe('unit tests for ActionBar component', () => {
   })
 
   test('should have one button', () => {
+    expect.hasAssertions()
     const wrapper = mount(ActionBar, { store, localVue })
 
     expect(wrapper.isVueInstance()).toBeTruthy()
@@ -29,6 +30,7 @@ describe('unit tests for ActionBar component', () => {
   })
 
   test('should call fetchComments action', () => {
+    expect.hasAssertions()
     const wrapper = mount(ActionBar, { store, localVue })
 
     const input = wrapper.find('button')
@@ -38,6 +40,7 @@ describe('unit tests for ActionBar component', () => {
   })
 
   test('should match the snapshot', () => {
+    expect.hasAssertions()
     const wrapper = mount(ActionBar, { store, localVue })
     expect(wrapper).toMatchSnapshot()
   })

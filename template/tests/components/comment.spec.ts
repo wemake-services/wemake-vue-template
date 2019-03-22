@@ -23,6 +23,8 @@ describe('unit tests for Comment component', () => {
   // test(12, {})
 
   test('should have two buttons', () => {
+    expect.hasAssertions()
+
     const wrapper = mount(Comment, {
       store,
       localVue,
@@ -35,6 +37,8 @@ describe('unit tests for Comment component', () => {
   })
 
   test('should have correct values', () => {
+    expect.hasAssertions()
+
     const wrapper = mount(Comment, {
       store,
       localVue,
@@ -48,6 +52,8 @@ describe('unit tests for Comment component', () => {
   })
 
   test('should increment rating', () => {
+    expect.hasAssertions()
+
     const delta = 1
     const newRating = comment.rating + delta
     const wrapper = mount(Comment, {
@@ -60,13 +66,15 @@ describe('unit tests for Comment component', () => {
       'commentId': comment.id,
       delta,
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
 
+    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentPositive)
   })
 
   test('should decrement rating', async () => {
+    expect.hasAssertions()
+
     const delta = -2
     const newRating = comment.rating + delta
     const wrapper = mount(Comment, {
@@ -79,8 +87,8 @@ describe('unit tests for Comment component', () => {
       'commentId': comment.id,
       delta,
     })
-    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
 
+    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style.commentNegative)
   })
@@ -100,6 +108,7 @@ describe('snapshot tests for Comment component', () => {
   })
 
   test('should match the snapshot', () => {
+    expect.hasAssertions()
     const wrapper = mount(Comment, {
       store,
       localVue,

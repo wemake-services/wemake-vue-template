@@ -41,8 +41,6 @@ You can always preview the docs live with `npm run docs:serve`.
 If you want to add new pages, change order 
 or rename something, go to `SUMMARY.md`.
 
-
-
 ## Updating template
 
 After you start a project with this template 

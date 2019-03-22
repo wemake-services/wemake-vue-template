@@ -1,0 +1,33 @@
+{
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+
+  // Files
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+
+  // Disables default checks:
+  "vetur.validation.script": true,
+  "vetur.validation.style": true,
+  "vetur.validation.template": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "json.format.enable": true,
+  "javascript.validate.enable": true,
+
+  // Linting:
+  "eslint.enable": true,
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "stylelint.enable": true
+}

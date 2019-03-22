@@ -13,7 +13,7 @@ describe('template names', () => {
       'name': '{{ name }}',
       'author': '{{ author }}',
       'description': '{{ description }}',
-      'version': '0.1.0',
+      'version': '0.0.0',
       'private': true,
     }
 

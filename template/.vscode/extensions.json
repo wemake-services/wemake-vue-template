@@ -1,0 +1,14 @@
+{
+  // @see https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions
+  "recommendations": [
+    // Syntax highlighting for .vue files
+    "octref.vetur",
+
+    // Code format:
+    "EditorConfig.editorconfig",
+
+    // Linting:
+    "shinnn.stylelint",
+    "dbaeumer.vscode-eslint"
+  ]
+}

@@ -21,7 +21,7 @@ https://wemake-vue-demo.herokuapp.com/
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
 - `Vue` + `vuex` + `vue-router` with the latest `es` features
 - Latest [`nuxt`](https://nuxtjs.org/) for server-side rendering
-- Full `typescript` support
+- Full `typescript` support, including Vue's SFC and tests
 - Linting with [`eslint`](https://eslint.org/) + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`testcafe`](https://github.com/DevExpress/testcafe) for end-to-end testing
 - [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test` and `deploy` pipeline configured by default

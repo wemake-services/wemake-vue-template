@@ -19,10 +19,9 @@ import { CommentType } from '~/types'
 // @vue/component
 @Component({})
 /**
- * Actions bar component written in jsx.
- * The main idea of this example is to demostrate flexibility of Vue and jsx.
- * We discourage using `jsx` in a real world apps,
- * unless you know what are you doing!
+ * Stateless component.
+ * The primary idea of this component is to illustrate,
+ * how `@Action` decorator works.
  */
 export default class ActionBar extends Vue {
   @Action('fetchComments')

@@ -1,8 +1,8 @@
 // This is Nuxt configuration file
 // See: https://nuxtjs.org/guide/configuration/
 
-const path = require('path')
-const pkg = require('./package.json')
+import path from 'path'
+import pkg from './package.json'
 
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ 'path': envPath })
@@ -52,11 +52,8 @@ module.exports = {
    * Extra Nuxt modules
    */
   'modules': [
-    'nuxt-babel',
-    'nuxt-imagemin',
-
-    '@nuxtjs/router',
     '@nuxtjs/axios',
+    'nuxt-imagemin',
   ],
 
   /**
@@ -75,9 +72,7 @@ module.exports = {
   /**
    * Custom plugins
    */
-  'plugins': [
-    '~/plugins/performance',
-  ],
+  'plugins': [],
 
   /**
    * Global CSS
@@ -89,35 +84,12 @@ module.exports = {
   /**
    * postcss configuration
    */
-  'postcss': {
-    'plugins': {
-      // Custom:
-      'css-mqpacker': {},
-    },
-  },
-
-  /**
-   * Configuring how generate command works, this is required with router module
-   */
-  'generate': {
-    'routes': [
-      '/',
-    ],
-  },
+  'postcss': {},
 
   /**
    * Build configuration
    */
   'build': {
-    'analyze': {
-      'analyzerMode': 'static',
-      'openAnalyzer': false,
-    },
-
-    'vendor': [
-      'babel-polyfill',
-    ],
-
     extend (config, { isDev, isClient }) {
       // This line allows us to use `@import "~/scss/..."` in our app:
       config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
@@ -126,7 +98,7 @@ module.exports = {
         // Enabling eslint:
         config.module.rules.push({
           'enforce': 'pre',
-          'test': /\.(js|jsx|vue)$/u,
+          'test': /\.(js|jsx|ts|tsx|vue)$/u,
           'loader': 'eslint-loader',
           'exclude': /(node_modules)/u,
         })

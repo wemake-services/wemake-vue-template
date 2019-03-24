@@ -1,8 +1,12 @@
 <template>
   <div :class="computedClasses">
-    <p :class="$style.author">{{ comment.email }}</p>
+    <p :class="$style.author">
+      {{ comment.email }}
+    </p>
 
-    <p :class="$style.body">{{ comment.body }}</p>
+    <p :class="$style.body">
+      {{ comment.body }}
+    </p>
 
     <div :class="$style.rating">
       <button
@@ -24,19 +28,17 @@
   </div>
 </template>
 
-<script>
-// @flow
-
+<script lang="ts">
 import Vue from 'vue'
 import Component from 'nuxt-class-component'
 import { Prop } from 'vue-property-decorator'
 import { Mutation } from 'vuex-class'
 
 import * as mutationTypes from '~/store/types'
-import type { CommentType, CommentPayloadType } from '~/types'
+import { CommentType, CommentPayloadType } from '~/types'
 
 // @vue/component
-@Component()
+@Component({})
 /**
  * Comment component is used to represent a single user's comment.
  */
@@ -45,13 +47,13 @@ export default class Comment extends Vue {
   /**
    * This is a wrapped mutation from the vuex.
    */
-  updateRating: (CommentPayloadType) => void
+  updateRating!: (payload: CommentPayloadType) => void
 
   @Prop()
   /**
    * Passed comment from the parent component.
    */
-  comment: CommentType
+  comment!: CommentType
 
   /**
    * Changes comment's rating.
@@ -61,8 +63,6 @@ export default class Comment extends Vue {
    * @param delta - Delta value to change rating value.
    */
   changeRating (commentId: number, delta: number) {
-    // Uncomment next line to test typing:
-    // console.log(this.comment.missingKey)
     this.updateRating({ commentId, delta })
   }
 

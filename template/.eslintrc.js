@@ -6,31 +6,30 @@ module.exports = {
 
   'extends': [
     'wemake',
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/recommended',
+    'plugin:nuxt/recommended',
+    '@vue/typescript',
     'plugin:compat/recommended',
-    'flowtype-essential',
     'jsdoc-essential',
   ],
   'plugins': [
-    'flowtype-errors',
     'unicorn',
     'compat',
     'json',
   ],
-
   'rules': {
     // jsx
     'jsx-quotes': ['error', 'prefer-single'],
 
-    // raise flow errors
-    'flowtype-errors/show-errors': 2,
-    'flowtype-errors/show-warnings': 1,
-    // 'flowtype-errors/enforce-min-coverage': [2, 50],
+    // typescript specifics
+    '@typescript-eslint/indent': ['error', 2],
 
     // leave files alone, since js and vue files have different cases
-    'unicorn/filename-case': 0,
+    'unicorn/filename-case': 'off',
 
     // rules for vue components
+    'vue/html-indent': 'error',
     'vue/html-closing-bracket-newline': ['error', {
       'singleline': 'never',
       'multiline': 'always',
@@ -49,16 +48,6 @@ module.exports = {
     'polyfills': [],
   },
 
-  'parser': 'vue-eslint-parser',
-  'parserOptions': {
-    'parser': 'babel-eslint',
-    'ecmaVersion': 2018,
-    'ecmaFeatures': {
-      'legacyDecorators': true,
-      'jsx': true,
-    },
-    'sourceType': 'module',
-  },
   'env': {
     'node': true,
     'browser': true,

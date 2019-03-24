@@ -4,7 +4,7 @@ When going to production you have several options with this template.
 Let's cover all of them.
 
 Before going to production make sure, 
-that you have checked your modules' size with `yarn build --analyze`.
+that you have checked your modules' size with `npm run build --analyze`.
 
 ## Nuxt deployment modes
 
@@ -14,14 +14,14 @@ available for `nuxt` deployments.
 Use `spa` only when you do not need server-side rendering.
 By default, we use `universal` mode.
 
-You can also provide `--spa` flag via command line: `yarn build --spa`.
+You can also provide `--spa` flag via command line: `npm run build --spa`.
 
 ## Static files
 
 The easiest way to deploy your application is just pushing some static files
 to your web server.
 
-Use `yarn generate` to create static files. Then just deploy them.
+Use `npm run generate` to create static files. Then just deploy them.
 
 ## Native 
 

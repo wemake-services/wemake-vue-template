@@ -9,25 +9,23 @@ Here we define all files and folders that are used in this project.
   of the project. It defines the project's dependencies and scripts.
   It is also used to provide meta-data for many other tools
 
-- [`yarn.lock`](https://yarnpkg.com/lang/en/docs/yarn-lock/) - lock file
+- `package-lock.json` - lock file
   for dependencies. It is used to install exactly the same
   versions of dependencies on each build
 
-- [`nuxt.config.js`](https://nuxtjs.org/guide/configuration/) - the main
+- [`nuxt.config.ts`](https://nuxtjs.org/guide/configuration/) - the main
   configuration file for `Nuxt`. It contains a list of installed
   plugins and other configuration. It is also used to specify how to
   build this project
 
-- [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) - is used to specify
-  how to deal with the `js` files in this project.
-  We can introduce new `js` features by adding new plugins inside this file
+- [`tsconfig.json`][tsconfigjson] - is used to specify
+  how to deal with the `ts` files in this project.
+  We can introduce new `ts` features by adding new configuration
 
-- [`.flowconfig`](https://flow.org/en/docs/config/) - we use
-  [`flow`](https://flow.org) for optional static typing.
-  This file is required to make it work
+- `index.d.ts` - file to specify application specific stub files.
 
-- [`.eslintrc`](https://eslint.org/docs/user-guide/configuring) - configuration
-  file for `js` files linting
+- [`.eslintrc.js`](https://eslint.org/docs/user-guide/configuring) - 
+  configuration file for `ts`, `js`, and `vue` files linting
 
 - [`stylelint.config.js`](https://stylelint.io/user-guide/configuration/) -
   configuration file for `stylelint`, which is used for linting styles
@@ -80,17 +78,8 @@ Here we define all files and folders that are used in this project.
   The middleware lets you define custom function to be run
   before rendering a page or a group of pages (layouts)
 
-- `views/` - this directory contains your application.
-  We use [`vue-router`](http://router.vuejs.org/) to navigate
-  between these views
-
-- `router.js` - file is used by
-  [`router-module`](https://github.com/nuxt-community/router-module) for `nuxt`
-  to export a `vue-router` instance
-
-- `plugins/` - this directory contains your
-  [plugins](https://ru.nuxtjs.org/examples/plugins/) that you want
-  to run before instantiating the root `Vue` application
+- `pages/` - this directory contains your application routes.
+  We rely on `Nuxt`'s [builtin routing](https://nuxtjs.org/guide/routing/).
 
 - `static/` - the [static](https://nuxtjs.org/guide/assets/#static)
   files directory. These files are not processed by any loaders and
@@ -100,7 +89,7 @@ Here we define all files and folders that are used in this project.
   [Vuex Store](https://nuxtjs.org/guide/vuex-store) files
 
 - `types/` - this directory contains types, constants,
-  and enums that can be used with [`flow`](https://flow.org)
+  and enums that can be used with `ts`
 
 ## Tests
 
@@ -108,4 +97,5 @@ Here we define all files and folders that are used in this project.
 - `.eslintrc.js` - this file extends linting rules for testing
 - `jest.config.js` - this file is used to configure `jest`
 
+[tsconfigjson]: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 [vscode]: https://code.visualstudio.com/docs/getstarted/settings

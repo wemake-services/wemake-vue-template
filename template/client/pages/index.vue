@@ -10,28 +10,25 @@
       >
         <comment
           v-for="comment in comments"
-          :comment="comment"
           :key="comment.id"
+          :comment="comment"
         />
       </section>
-
     </div>
   </main>
 </template>
 
-<script>
-// @flow
-
+<script lang="ts">
 import Vue from 'vue'
 import { Store } from 'vuex'
 import Component from 'nuxt-class-component'
 import { Getter, State } from 'vuex-class'
 
-import ActionBar from '~/components/ActionBar'
-import AppLogo from '~/components/AppLogo'
-import Comment from '~/components/Comment'
+import ActionBar from '~/components/ActionBar.vue'
+import AppLogo from '~/components/AppLogo.vue'
+import Comment from '~/components/Comment.vue'
 
-import type { CommentType, StateType } from '~/types'
+import { CommentType, StateType } from '~/types'
 
 // @vue/component
 @Component({
@@ -50,13 +47,13 @@ export default class Index extends Vue {
   /**
    * List of predownloaded comments, bound from Vuex.
    */
-  comments: Array<CommentType>
+  comments!: CommentType[]
 
   @Getter('hasComments')
   /**
    * Returns either we have any comments or not.
    */
-  hasComments: boolean
+  hasComments!: boolean
 
   /**
    * Fetches comments from external API from the server side.
@@ -67,9 +64,7 @@ export default class Index extends Vue {
    * @param context.store - Current Vuex store.
    * @returns List of downloaded comments.
    */
-  fetch ({ store }: { store: Store<StateType> }): Promise<Array<CommentType>> {
-    // Uncomment the next line to test flow types:
-    // console.log(this.comments + store.state.comments.length)
+  fetch ({ store }: { store: Store<StateType> }): Promise<CommentType[]> {
     return store.dispatch('fetchComments')
   }
 }

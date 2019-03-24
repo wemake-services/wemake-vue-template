@@ -26,7 +26,7 @@ You might also want to install:
 When developing locally, we use:
 
 - [`editorconfig`](http://editorconfig.org/) plugin (**required**)
-- [`yarn`](https://yarnpkg.com) (**required**)
+- [`vscode`](https://code.visualstudio.com/) editor (optional)
 
 ## Documentation
 

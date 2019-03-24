@@ -13,8 +13,25 @@ describe('template names', () => {
       'name': '{{ name }}',
       'author': '{{ author }}',
       'description': '{{ description }}',
-      'version': '0.1.0',
+      'version': '0.0.0',
       'private': true,
+    }
+
+    expect.assertions(patterns.length)
+
+    for (const key of Object.keys(patterns)) {
+      expect(json[key]).toEqual(patterns[key])
+    }
+  })
+
+  test('package-lock.json', () => {
+    // eslint-disable-next-line security/detect-non-literal-fs-filename
+    const json = JSON.parse(fs.readFileSync(templatePath('package-lock.json')))
+
+    const patterns = {
+      'name': '{{ name }}',
+      'version': '0.0.0',
+      'lockfileVersion': 1,
     }
 
     expect.assertions(patterns.length)

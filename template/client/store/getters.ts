@@ -1,6 +1,4 @@
-// @flow
-
-import type { StateType } from '~/types'
+import { StateType } from '~/types'
 
 const getters = {
   hasComments (state: StateType): boolean {

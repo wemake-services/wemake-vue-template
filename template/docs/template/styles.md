@@ -18,10 +18,10 @@ to keep it consistent and find possible errors early.
 
 If you want to use any global `css` here's what you need to do:
 
-1. Install the library you need: `yarn add normalize.css`
+1. Install the library you need: `npm run add normalize.css`
 
 2. Add the file path to `css`
-   property of [`nuxt.config.js`](configuration.md#nuxt-config-js)
+   property of [`nuxt.config.ts`](configuration.md#nuxt-config-js)
 
 It will look something like so:
 
@@ -62,7 +62,7 @@ That's the bare minimum you need to know to productively use `scss`.
 ### Aliases and imports
 
 We have a preconfigured `~/scss` alias
-inside [`nuxt.config.js`](configuration.md#nuxt-config-js)
+inside [`nuxt.config.ts`](configuration.md#nuxt-config-js)
 to [import](https://sass-lang.com/guide#topic-5) local files.
 You can use it inside `Vue` components like so:
 
@@ -84,7 +84,7 @@ Things to keep in mind:
 - do not import modules that produce `css` output,
   it will pollute your stylesheets with multiple declarations
 
-- do not import external `css` libraries, use `nuxt.config.js` for that
+- do not import external `css` libraries, use `nuxt.config.ts` for that
 
 ## CSS Modules
 

@@ -1,5 +1,3 @@
-// @flow
-
 import Vuex from 'vuex'
 import axios from 'axios'
 import faker from 'faker'
@@ -38,7 +36,6 @@ export const storeFactory = new Factory()
 
     // Extending store's context to match `nuxt`'s API:
 
-    // $FlowFixMe
     store.$axios = axios
     return store
   })

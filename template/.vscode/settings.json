@@ -3,11 +3,6 @@
   "editor.wordWrapColumn": 80,
 
   // Files
-  "files.associations": {
-    ".babelrc": "jsonc",
-    ".eslintrc": "jsonc",
-    ".flowconfig": "ini"
-  },
   "files.exclude": {
     "**/*.log": true,
     "**/*.log*": true,
@@ -16,20 +11,23 @@
   },
 
   // Disables default checks:
-  "vetur.validation.script": false,
-  "vetur.validation.style": false,
-  "vetur.validation.template": false,
+  "vetur.validation.script": true,
+  "vetur.validation.style": true,
+  "vetur.validation.template": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "html.format.enable": false,
-  "html.suggest.angular1": false,
-  "html.suggest.ionic": false,
-  "json.format.enable": false,
-  "javascript.validate.enable": false,
+  "json.format.enable": true,
+  "javascript.validate.enable": true,
 
   // Linting:
   "eslint.enable": true,
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
   "stylelint.enable": true
 }

@@ -9,7 +9,7 @@ We will try to cover the most important parts here.
 We use [`dotenv`](https://www.npmjs.com/package/dotenv)
 configuration files to configure many things at once:
 
-1. We configure `nuxt` loader at build time inside `nuxt.config.js`
+1. We configure `nuxt` loader at build time inside `nuxt.config.ts`
 2. We configure `nuxt` app with the help of [`dotenv-module`](https://github.com/nuxt-community/dotenv-module)
 3. We configure our `docker` image with the help of [`env_file`][env] option
 
@@ -34,7 +34,7 @@ your API: development or production, v1 or v2.
 
 In this case, modify this single value inside your `config/.env` file.
 
-## nuxt.config.js
+## nuxt.config.ts
 
 As it was already said `nuxt` requires a lot of [configuration](https://nuxtjs.org/guide/configuration).
 
@@ -64,7 +64,7 @@ there are tons of goodies that are already included:
 retries, loading indicators, server-side proxy calls,
 `https` enforcement, and so on.
 
-It is all configured under `axios` key in `nuxt.config.js`.
+It is all configured under `axios` key in `nuxt.config.ts`.
 See list of available options [here](https://axios.nuxtjs.org/options.html).
 
 ### build
@@ -78,7 +78,7 @@ Currently, we extend build with several rules:
 ### generate
 
 [This option](https://nuxtjs.org/api/configuration-generate) is used
-when we run `yarn generate`.
+when we run `npm run generate`.
 
 Sometimes it is required to provide additional pages to prerender,
 or provide dynamic values to the dynamic pages.
@@ -136,7 +136,6 @@ It is required for multiple tools that are used in the project:
 - `eslint`
 - `stylelint`
 - `postcss`
-- `babel`
 
 To see what browsers are used in your project run: `npx browserslist`
 Read more about [queries here](https://github.com/browserslist/browserslist).

@@ -37,25 +37,10 @@ After you have activated the correct `node` version it is time to install
 dependencies. Run:
 
 ```bash
-yarn install
+npm install
 ```
 
-You will see that two new folders are created:
-
-- `node_modules` with all your dependencies
-- `flow-typed` with external `flow` type definitions
-
-After each installation `flow` automatically fetches all the available 
-dependencies from `flow-typed`. 
-All dependencies that are not available 
-will be stubbed with modules that always return `any`.
-
-`flow` will show a warning about missing types:
-
-> !! No flow libdefs found in flow-typed for the above untyped dependencies !!
-> 
-> I've generated `any`-typed stubs for these packages, but consider submitting 
-> libdefs for them to flowtype/flow-typed
+You will see that `node_modules` folder is created.
 
 ## Configuration
 
@@ -64,7 +49,7 @@ You will totally need to [copy/modify `config/.env`](configuration.md#env) file.
 
 ## Running
 
-After your dependencies are installed, run `yarn dev`
+After your dependencies are installed, run `npm run dev`
 to start a development server.
 
 ## Dev tools
@@ -75,10 +60,3 @@ Also, [`vue-devtools`](https://github.com/vuejs/vue-devtools)
 is an essential add-on for your browser. 
 It is distributed as a Google Chrome plugin.
 Make sure you have it.
-
-### Performance toolbar
-
-We also highly recommend using [`vue-perf-devtool`](https://github.com/vue-perf-devtool/vue-perf-devtool).
-It is also a Google Chrome plugin.
-
-See `~/plugins/performance.js` to see how it is configured.

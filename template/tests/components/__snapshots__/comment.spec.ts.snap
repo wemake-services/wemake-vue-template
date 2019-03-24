@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot tests for Comment component should match the snapshot 1`] = `
+<div class="commentComponent commentPositive">
+  <p class="author">
+    Mellie_Gibson59@hotmail.com
+  </p>
+  <p class="body">
+    Sequi provident inventore dicta. Quia explicabo assumenda eum.
+  </p>
+  <div class="rating"><button class="ratingUp">
+      +
+    </button> <span class="number">9</span> <button class="ratingDown">
+      -
+    </button></div>
+</div>
+`;

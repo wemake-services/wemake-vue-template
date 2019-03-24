@@ -19,19 +19,20 @@ function expectAllExist (filesToChecks) {
 describe('template files structure', () => {
   test('files exist', () => {
     const filesToCheck = [
-      '.babelrc',
       '.dockerignore',
       '.editorconfig',
       '.eslintrc.js',
-      '.flowconfig',
+      'stylelint.config.js',
+      'tsconfig.json',
       '.gitignore',
       '.gitlab-ci.yml',
       '.nvmrc',
       'docker-compose.yml',
-      'nuxt.config.js',
+      'index.d.ts',
+      'nuxt.config.ts',
       'package.json',
+      'package-lock.json',
       'README.md',
-      'yarn.lock',
     ]
 
     expectAllExist(filesToCheck)

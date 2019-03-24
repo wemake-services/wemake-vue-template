@@ -28,7 +28,7 @@ before_script:
 test:
   stage: test
   script:
-    - docker-compose run vue yarn ci
+    - docker-compose run --rm vue npm run ci
   coverage: '/All files\s*\|\s*([\d\.]+)/'
 
 # QA job to run during test. It is started manually:
@@ -44,7 +44,8 @@ qa:
 release-image:
   stage: deploy
   script:
-    - docker build -t "$CONTAINER_RELEASE_IMAGE" --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
+    - docker build -t "$CONTAINER_RELEASE_IMAGE"
+      --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

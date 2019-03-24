@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test for Index view should match the snapshot 1`] = `
+<main comments="[object Object],[object Object],[object Object]">
+  <div>
+    <div class="logo">
+      <h1><a href="https://github.com/wemake-services/wemake-vue-template">
+          wemake-vue-template
+        </a></h1>
+      <h2><a href="https://wemake-services.gitbook.io/wemake-vue-template/">
+          documentation
+        </a></h2>
+    </div>
+    <div class="actions"><button class="reload">
+        reload comments
+      </button></div>
+    <section class="container">
+      <div class="commentComponent commentNegative">
+        <p class="author">
+          Alfred.Barton@hotmail.com
+        </p>
+        <p class="body">
+          Et perspiciatis facilis sed sit labore. Ipsum mollitia sunt occaecati. Expedita ut perspiciatis quod enim autem eum. Unde quibusdam eligendi deleniti consectetur.
+        </p>
+        <div class="rating"><button class="ratingUp">
+            +
+          </button> <span class="number">-10</span> <button class="ratingDown">
+            -
+          </button></div>
+      </div>
+      <div class="commentComponent commentNegative">
+        <p class="author">
+          Alfred.Barton@hotmail.com
+        </p>
+        <p class="body">
+          Et perspiciatis facilis sed sit labore. Ipsum mollitia sunt occaecati. Expedita ut perspiciatis quod enim autem eum. Unde quibusdam eligendi deleniti consectetur.
+        </p>
+        <div class="rating"><button class="ratingUp">
+            +
+          </button> <span class="number">-10</span> <button class="ratingDown">
+            -
+          </button></div>
+      </div>
+      <div class="commentComponent commentNegative">
+        <p class="author">
+          Alfred.Barton@hotmail.com
+        </p>
+        <p class="body">
+          Et perspiciatis facilis sed sit labore. Ipsum mollitia sunt occaecati. Expedita ut perspiciatis quod enim autem eum. Unde quibusdam eligendi deleniti consectetur.
+        </p>
+        <div class="rating"><button class="ratingUp">
+            +
+          </button> <span class="number">-10</span> <button class="ratingDown">
+            -
+          </button></div>
+      </div>
+    </section>
+  </div>
+</main>
+`;

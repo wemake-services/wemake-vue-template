@@ -24,8 +24,8 @@ describe('unit tests for ActionBar component', () => {
     expect.hasAssertions()
     const wrapper = mount(ActionBar, { store, localVue })
 
-    expect(wrapper.isVueInstance()).toBeTruthy()
-    expect(wrapper.is(ActionBar)).toBeTruthy()
+    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.is(ActionBar)).toBe(true)
     expect(wrapper.findAll('button')).toHaveLength(1)
   })
 

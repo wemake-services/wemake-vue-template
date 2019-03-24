@@ -30,7 +30,7 @@ module.exports = {
 
   'collectCoverage': true,
   'coverageThreshold': {
-    'global': { 'statements': 88 },
+    'global': { 'statements': 90 },
   },
   'coveragePathIgnorePatterns': [
     '/node_modules/',

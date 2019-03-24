@@ -26,9 +26,10 @@ module.exports = {
     '@typescript-eslint/indent': ['error', 2],
 
     // leave files alone, since js and vue files have different cases
-    'unicorn/filename-case': 0,
+    'unicorn/filename-case': 'off',
 
     // rules for vue components
+    'vue/html-indent': 'error',
     'vue/html-closing-bracket-newline': ['error', {
       'singleline': 'never',
       'multiline': 'always',

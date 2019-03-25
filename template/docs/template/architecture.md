@@ -70,7 +70,7 @@ Here we define all files and folders that are used in this project.
 - `layouts/` - this directory contains
   your [Application Layouts](https://nuxtjs.org/guide/views#layouts)
 
-- `logics/` - this directory contains your Application Logics.
+- `logic/` - this directory contains your Application Logics.
   You should put everything that is considered business logic here
 
 - `middleware/` - this directory contains your

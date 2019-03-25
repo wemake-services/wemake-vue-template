@@ -1,3 +1,5 @@
+// This is a definition of domain model for `comments` context.
+
 export interface RawCommentType {
   id: number;
   body: string;
@@ -15,5 +17,5 @@ export interface CommentPayloadType {
 }
 
 export interface StateType {
-  comments?: CommentType[];
+  comments: CommentType[];
 }

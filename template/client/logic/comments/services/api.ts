@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios'
-import { RawCommentType } from '~/types'
+import { RawCommentType } from '~/logic/comments/types'
 
 const methods = {
   /**

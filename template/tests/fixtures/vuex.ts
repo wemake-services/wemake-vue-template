@@ -3,10 +3,7 @@ import axios from 'axios'
 import faker from 'faker'
 import { Factory } from 'rosie'
 
-import createState from '~/store/state'
-import mutations from '~/store/mutations'
-import getters from '~/store/getters'
-import actions from '~/store/actions'
+import { state, actions, mutations, getters } from '~/store/index'
 
 import { fakerFactory } from './faker'
 
@@ -22,8 +19,8 @@ export const storeFactory = new Factory()
   .attr('actions', actions)
   .attr('mutations', mutations)
   .attr('getters', getters)
-  .attr('state', ['state'], (state = {}) => {
-    return { ...createState(), ...state }
+  .attr('state', ['state'], (defaultState = {}) => {
+    return { ...state(), ...defaultState }
   })
   .after((store, options) => {
     if (!options.localVue) {

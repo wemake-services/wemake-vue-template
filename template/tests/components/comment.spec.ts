@@ -1,7 +1,7 @@
 import { mount, createLocalVue } from '@vue/test-utils'
 
 import Comment from '~/components/Comment.vue'
-import * as types from '~/store/types'
+import * as reducers from '~/logic/comments/module/reducers'
 
 import { storeFactory, commentFactory } from '../fixtures/vuex'
 
@@ -62,7 +62,7 @@ describe('unit tests for Comment component', () => {
       'propsData': { comment },
     })
 
-    wrapper.vm.$store.commit(types.UPDATE_RATING, {
+    wrapper.vm.$store.commit(reducers.UPDATE_RATING, {
       'commentId': comment.id,
       delta,
     })
@@ -83,7 +83,7 @@ describe('unit tests for Comment component', () => {
       'propsData': { comment },
     })
 
-    wrapper.vm.$store.commit(types.UPDATE_RATING, {
+    wrapper.vm.$store.commit(reducers.UPDATE_RATING, {
       'commentId': comment.id,
       delta,
     })

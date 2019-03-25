@@ -1,19 +1,8 @@
-import Vuex, { StoreOptions } from 'vuex'
+// We use default Nuxt Module-based store,
+// read more about it here:
+// https://nuxtjs.org/guide/vuex-store
 
-import createState from '~/store/state'
-import mutations from '~/store/mutations'
-import getters from '~/store/getters'
-import actions from '~/store/actions'
-import { StateType } from '~/types'
-
-function createStore (): StoreOptions<StateType> {
-  return new Vuex.Store({
-    'strict': process.env.NODE_ENV !== 'production',
-    'state': createState(),
-    actions,
-    getters,
-    mutations,
-  })
-}
-
-export default createStore
+export { state } from '~/logic/comments/module/state'
+export { getters } from '~/logic/comments/module/getters'
+export { mutations } from '~/logic/comments/module/mutations'
+export { actions } from '~/logic/comments/module/actions'

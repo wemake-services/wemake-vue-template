@@ -28,7 +28,7 @@ import ActionBar from '~/components/ActionBar.vue'
 import AppLogo from '~/components/AppLogo.vue'
 import Comment from '~/components/Comment.vue'
 
-import { CommentType, StateType } from '~/types'
+import { CommentType, StateType } from '~/logic/comments/types'
 
 // @vue/component
 @Component({

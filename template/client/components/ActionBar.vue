@@ -14,7 +14,7 @@ import Vue from 'vue'
 import Component from 'nuxt-class-component'
 import { Action } from 'vuex-class'
 
-import { CommentType } from '~/types'
+import { CommentType } from '~/logic/comments/types'
 
 // @vue/component
 @Component({})

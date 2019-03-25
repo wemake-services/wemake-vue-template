@@ -1,37 +1,35 @@
-import * as mutationTypes from '~/store/types'
+import { MutationTree } from 'vuex'
+
+import * as reducers from '~/logic/comments/module/reducers'
 
 import {
   CommentType,
   CommentPayloadType,
   StateType,
   RawCommentType,
-} from '~/types'
+} from '~/logic/comments/types'
 
-const mutations = {
-  [mutationTypes.SET_COMMENTS]: (
+export const mutations: MutationTree<StateType> = {
+  [reducers.SET_COMMENTS]: (
     state: StateType,
     comments: RawCommentType[],
-  ) => {
+  ): void => {
     const updatedComments: CommentType[] = []
 
     for (const comment of comments.slice(0, 10)) {
-      const newOne = {
-        ...comment,
-        'rating': 0, // try to comment out this line
-      }
-      updatedComments.push(newOne)
+      updatedComments.push({ ...comment, 'rating': 0 })
     }
 
     state.comments = updatedComments
   },
 
-  [mutationTypes.UPDATE_RATING]: (state: StateType, {
-    commentId,
-    delta,
-  }: CommentPayloadType) => {
+  [reducers.UPDATE_RATING]: (
+    state: StateType,
+    { commentId, delta }: CommentPayloadType,
+  ): void => {
     if (!state.comments) return
 
-    const commentIndex = state.comments.findIndex((comment: CommentType) => {
+    const commentIndex = state.comments.findIndex((comment) => {
       return comment.id === commentId
     })
 
@@ -40,5 +38,3 @@ const mutations = {
     state.comments[commentIndex].rating += delta
   },
 }
-
-export default mutations

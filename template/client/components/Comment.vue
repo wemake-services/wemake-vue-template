@@ -34,8 +34,8 @@ import Component from 'nuxt-class-component'
 import { Prop } from 'vue-property-decorator'
 import { Mutation } from 'vuex-class'
 
-import * as mutationTypes from '~/store/types'
-import { CommentType, CommentPayloadType } from '~/types'
+import * as reducers from '~/logic/comments/module/reducers'
+import { CommentType, CommentPayloadType } from '~/logic/comments/types'
 
 // @vue/component
 @Component({})
@@ -43,7 +43,7 @@ import { CommentType, CommentPayloadType } from '~/types'
  * Comment component is used to represent a single user's comment.
  */
 export default class Comment extends Vue {
-  @Mutation(mutationTypes.UPDATE_RATING)
+  @Mutation(reducers.UPDATE_RATING)
   /**
    * This is a wrapped mutation from the vuex.
    */

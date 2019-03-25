@@ -11,7 +11,7 @@ import {
 
 export const mutations: MutationTree<StateType> = {
   [reducers.SET_COMMENTS]: (
-    state: StateType,
+    state,
     comments: RawCommentType[],
   ): void => {
     const updatedComments: CommentType[] = []
@@ -24,7 +24,7 @@ export const mutations: MutationTree<StateType> = {
   },
 
   [reducers.UPDATE_RATING]: (
-    state: StateType,
+    state,
     { commentId, delta }: CommentPayloadType,
   ): void => {
     if (!state.comments) return

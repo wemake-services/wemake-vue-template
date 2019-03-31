@@ -28,7 +28,7 @@ describe('template files structure', () => {
       '.gitlab-ci.yml',
       '.nvmrc',
       'docker-compose.yml',
-      'index.d.ts',
+      'jest.config.js',
       'nuxt.config.ts',
       'package.json',
       'package-lock.json',
@@ -42,6 +42,7 @@ describe('template files structure', () => {
     const filesToCheck = [
       '.vscode/extensions.json',
       '.vscode/settings.json',
+      '.vscode/launch.json',
     ]
 
     expectAllExist(filesToCheck)

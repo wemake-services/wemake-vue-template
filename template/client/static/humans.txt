@@ -10,8 +10,8 @@
 Language: English
 Doctype: HTML5
 
-Technologies: 
+Technologies:
 JavaScript, Vue, Nuxt
 
-Created with wemake-vue-template
+Created with wemake-vue-template:
 https://github.com/wemake-services/wemake-vue-template

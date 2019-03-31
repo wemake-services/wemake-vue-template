@@ -3,14 +3,10 @@
 
 module.exports = {
   // without this line rootDir will be `./tests`
-  'rootDir': '..',
+  // 'rootDir': '..',
 
   'preset': 'ts-jest',
-  'globals': {
-    'ts-jest': {
-      'diagnostics': false,
-    },
-  },
+
   'moduleFileExtensions': [
     'js',
     'ts',

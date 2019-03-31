@@ -13,14 +13,21 @@
     ],
     "experimentalDecorators": true,
     "allowJs": true,
+    "checkJs": true,
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": false,
     "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
         "./client/*"
+      ],
+      "@/*": [
+        "./*"
       ]
     },
     "types": [
@@ -32,6 +39,7 @@
   "include": [
     "client/**/*.vue",
     "client/**/*.ts",
-    "*.ts"
+    "tests/**/*.ts",
+    "index.d.ts"
   ]
 }

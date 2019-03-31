@@ -9,6 +9,9 @@
 
     // Linting:
     "shinnn.stylelint",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+
+    // Testing:
+    "orta.vscode-jest"
   ]
 }

@@ -22,8 +22,6 @@ Here we define all files and folders that are used in this project.
   how to deal with the `ts` files in this project.
   We can introduce new `ts` features by adding new configuration
 
-- `index.d.ts` - file to specify application specific stub files.
-
 - [`.eslintrc.js`](https://eslint.org/docs/user-guide/configuring) - 
   configuration file for `ts`, `js`, and `vue` files linting
 
@@ -54,6 +52,9 @@ Here we define all files and folders that are used in this project.
   configuration file. It basically defines what to do with your project
   after pushing it to the repository. Currently it is used for testing
   and releasing a `docker` image
+
+- `jest.config.js` - this file is used 
+  to configure [`jest`](https://jestjs.io/)
 
 - [`.vscode/`][vscode] - `vscode` IDE integration.
   We store different settings, plugins, and tasks inside this folder
@@ -91,11 +92,16 @@ Here we define all files and folders that are used in this project.
 - `types/` - this directory contains types, constants,
   and enums that can be used with `ts`
 
+- `stubs/` - this directory contains TypeScript 
+  [declaration files][declaration-files],
+  feel free to extend it with your own types
+
 ## Tests
 
 - `utils/` - this folder contains utility files that are used for testing
 - `.eslintrc.js` - this file extends linting rules for testing
-- `jest.config.js` - this file is used to configure `jest`
+- `jest-shims.d.ts` - file to import TypeScript types into current context
 
 [tsconfigjson]: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 [vscode]: https://code.visualstudio.com/docs/getstarted/settings
+[declaration-files]: https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html

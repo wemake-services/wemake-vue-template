@@ -29,5 +29,9 @@
     "javascriptreact",
     "vue"
   ],
-  "stylelint.enable": true
+  "stylelint.enable": true,
+
+  // Testing:
+  "jest.autoEnable": false,
+  "typescript.surveys.enabled": false
 }

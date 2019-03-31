@@ -19,9 +19,6 @@ describe('unit tests for Comment component', () => {
     )
   })
 
-  // Uncomment this line to test typing:
-  // test(12, {})
-
   test('should have two buttons', () => {
     expect.hasAssertions()
 

@@ -14,10 +14,13 @@ Read more about useful options [here](https://www.typescriptlang.org/docs/handbo
 
 ## Declaration files
 
-We use `index.d.ts` to store several [declarations](https://en.wikipedia.org/wiki/TypeScript#Declaration_files) 
+We use `client/shims/*.d.ts` files 
+to store several [declarations](https://en.wikipedia.org/wiki/TypeScript#Declaration_files) 
 that are required for our app. Like:
 
 - `@nuxt/axios` that adds `$axios` property to `vue` and `vuex`
+- `$style` property on `Vue` components to support `css-modules`
+- global `.vue` files support for `typescript`
 
 ## Supporting packages
 

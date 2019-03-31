@@ -19,9 +19,6 @@ module.exports = {
     'json',
   ],
   'rules': {
-    // jsx
-    'jsx-quotes': ['error', 'prefer-single'],
-
     // typescript specifics
     '@typescript-eslint/indent': ['error', 2],
 

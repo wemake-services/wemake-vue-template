@@ -15,7 +15,7 @@
     "generate": "cross-env NODE_ENV=production nuxt generate",
     "test:unit": "cross-env NODE_ENV=test jest",
     "test": "npm run test:unit && npm run lint",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx,.vue,.json --ignore-path .gitignore .",
+    "lint:js": "eslint --ext .js,.ts,.vue,.json --ignore-path .gitignore .",
     "lint:css": "stylelint 'client/**/*.{vue,scss,css}'",
     "lint:md": "remark -q -f -r docs/.remarkrc.js .",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md",

@@ -4,11 +4,12 @@ import faker from 'faker'
 import { Factory } from 'rosie'
 
 import { state, actions, mutations, getters } from '~/store/index'
+import { CommentType } from '~/logic/comments/types'
 
-import { fakerFactory } from './faker'
+import { fakerFactory, FakerFactoryType } from './faker'
 
 export const commentFactory = new Factory()
-  .extend(fakerFactory)
+  .extend<FakerFactoryType & CommentType, FakerFactoryType>(fakerFactory)
   .sequence('id')
   .attr('email', faker.internet.email)
   .attr('body', faker.lorem.sentences)

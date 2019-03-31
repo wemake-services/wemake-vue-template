@@ -98,7 +98,7 @@ module.exports = {
         // Enabling eslint:
         config.module.rules.push({
           'enforce': 'pre',
-          'test': /\.(js|jsx|ts|tsx|vue)$/u,
+          'test': /\.(js|ts|vue)$/u,
           'loader': 'eslint-loader',
           'exclude': /(node_modules)/u,
         })

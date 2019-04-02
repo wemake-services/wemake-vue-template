@@ -70,7 +70,7 @@
     "eslint-plugin-unicorn": "^7.1.0",
     "eslint-plugin-vue": "^5.2.2",
     "faker": "^4.1.0",
-    "jest": "^24.5.0",
+    "jest": "^24.6.0",
     "jest-serializer-vue": "^2.0.2",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",

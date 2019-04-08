@@ -61,8 +61,8 @@ module.exports = {
     logger.log(`To get started:
 
       cd ${dest}
-      yarn install
-      yarn dev
+      npm install
+      npm run dev
     `)
 
     const url = 'https://github.com/wemake-services/wemake-vue-template'

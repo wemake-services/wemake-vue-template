@@ -34,6 +34,8 @@ test:
   script:
     - docker-compose run --rm vue npm run ci
   coverage: '/All files\s*\|\s*([\d\.]+)/'
+  only:
+    - merge_requests
 
 # QA job to run during test. It is started manually:
 qa:

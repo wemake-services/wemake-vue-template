@@ -10,15 +10,16 @@
     "**/coverage": true
   },
 
-  // Disables default checks:
   "vetur.validation.script": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,
+  "json.format.enable": true,
+  "javascript.validate.enable": true,
+
+  // Disables default checks:
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "json.format.enable": true,
-  "javascript.validate.enable": true,
 
   // Linting:
   "eslint.enable": true,
@@ -32,6 +33,5 @@
   "stylelint.enable": true,
 
   // Testing:
-  "jest.autoEnable": false,
-  "typescript.surveys.enabled": false
+  "jest.autoEnable": false
 }

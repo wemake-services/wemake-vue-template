@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "name",
   "version": "0.0.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -13,6 +13,7 @@
     "build": "npm run clean && cross-env NODE_ENV=production nuxt build",
     "start": "cross-env NODE_ENV=production nuxt start",
     "generate": "cross-env NODE_ENV=production nuxt generate",
+    "test:sec": "npm audit || true",
     "test:unit": "cross-env NODE_ENV=test jest",
     "test": "npm run test:unit && npm run lint",
     "lint:js": "eslint --ext .js,.ts,.vue,.json --ignore-path .gitignore .",
@@ -22,7 +23,7 @@
     "docs:api": "documentation build client/** -f md -o docs/project/api.md",
     "docs:serve": "npm run docs:build && gitbook serve docs",
     "docs:build": "npm run docs:api && gitbook build docs",
-    "ci": "npm run test && npm run build && npm audit"
+    "ci": "npm run test && npm run build && npm run test:sec"
   },
   "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11, not dead",
   "dependencies": {
@@ -31,17 +32,18 @@
     "dotenv": "^7.0.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.5.1",
+    "nuxt": "^2.6.1",
     "nuxt-class-component": "^1.3.0",
     "nuxt-imagemin": "^1.0.0",
     "nuxt-property-decorator": "2.1.3",
     "postcss": "^7.0.14",
     "sass-loader": "^7.1.0",
+    "ts-node": "^8.1.0",
     "vuex-class": "0.3.2"
   },
   "devDependencies": {
-    "@nuxt/typescript": "^2.5.1",
-    "@nuxt/vue-app": "^2.5.1",
+    "@nuxt/typescript": "^2.6.1",
+    "@nuxt/vue-app": "^2.6.1",
     "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.11",
     "@types/rosie": "0.0.36",
@@ -58,7 +60,7 @@
     "eslint-config-wemake": "^0.6.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-compat": "^3.1.1",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.1",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-node": "^8.0.1",
@@ -77,7 +79,7 @@
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
     "rosie": "^2.0.1",
     "stylelint": "^9.10.1",
-    "stylelint-config-css-modules": "^1.3.0",
+    "stylelint-config-css-modules": "^1.4.0",
     "stylelint-config-strict-scss": "^0.5.0",
     "stylelint-csstree-validator": "^1.3.0",
     "stylelint-no-unsupported-browser-features": "^3.0.2",

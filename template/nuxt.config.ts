@@ -90,7 +90,7 @@ module.exports = {
    * Build configuration
    */
   'build': {
-    extend (config, { isDev, isClient }) {
+    extend (config, { isDev, isClient }): void {
       // This line allows us to use `@import "~/scss/..."` in our app:
       config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
 

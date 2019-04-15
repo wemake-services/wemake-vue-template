@@ -29,7 +29,7 @@ export const mutations: MutationTree<StateType> = {
   ): void => {
     if (!state.comments) return
 
-    const commentIndex = state.comments.findIndex((comment) => {
+    const commentIndex = state.comments.findIndex((comment): boolean => {
       return comment.id === commentId
     })
 

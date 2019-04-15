@@ -1,31 +1,35 @@
 image: docker:latest
 
 variables:
-  # When using dind, it's wise to use the overlayfs driver for
-  # improved performance:
-  DOCKER_DRIVER: overlay2
   PROJECT_NAME: "{{ name }}"
   GROUP_NAME: "{{ organization }}"
-  REGISTRY: "registry.gitlab.com"
-  CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
 
-services:
-  - docker:dind
-
-before_script:
-  # Installing docker-compose:
-  - apk update && apk upgrade
-  - apk add python python-dev py-pip git build-base
-  - pip install dump-env docker-compose
-  # Creating `.env` configuration file:
-  - dump-env -t config/.env.template -p 'SECRET_' > config/.env
-  # Login into Docker registry:
-  - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
-  # Debug information:
-  - docker info && docker-compose --version && git --version
+# This is a base job template for all `docker`-based jobs. It won't be executed.
+.docker:
+  image: docker:latest
+  variables:
+    # When using dind, it's wise to use the overlayfs driver for
+    # improved performance:
+    DOCKER_DRIVER: overlay2
+    REGISTRY: "registry.gitlab.com"
+    CONTAINER_RELEASE_IMAGE: "$REGISTRY/$GROUP_NAME/$PROJECT_NAME:latest"
+  services:
+    - docker:dind
+  before_script:
+    # Installing global dependencies:
+    - apk update && apk upgrade
+    - apk add python3 python3-dev py3-pip git build-base
+    - pip3 install dump-env docker-image-size-limit 'docker-compose<1.24'
+    # Creating `.env` configuration file:
+    - dump-env -t config/.env.template -p 'SECRET_' > config/.env
+    # Login into Docker registry:
+    - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$REGISTRY"
+    # Debug information:
+    - docker info && docker-compose --version && git --version
 
 # Testing application:
 test:
+  extends: .docker
   stage: test
   script:
     - docker-compose run --rm vue npm run ci
@@ -33,6 +37,7 @@ test:
 
 # QA job to run during test. It is started manually:
 qa:
+  extends: .docker
   stage: test
   script:
     - apk add curl
@@ -40,12 +45,15 @@ qa:
     - BASE_TEST_URL="http://docker:3000" sh docker/testcafe/qa.sh
   when: manual
 
-# Releasing image, when tests pass:
+# Releasing image, when in `master` branch,
+# can be replaced with `kira-release` bot:
+# https://github.com/wemake-services/kira-release
 release-image:
+  extends: .docker
   stage: deploy
   script:
     - docker build -t "$CONTAINER_RELEASE_IMAGE"
-      --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
+      --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

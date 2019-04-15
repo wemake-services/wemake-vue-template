@@ -3,6 +3,16 @@ module.exports = {
     'plugin:jest/recommended',
   ],
   'rules': {
+    // Overrides
+
+    // allows to use long functions inside tests:
+    'max-lines-per-function': 'off',
+
+    // disable explicit return types for tests:
+    '@typescript-eslint/explicit-function-return-type': 'off',
+
+    // Jest rules
+
     // warnings to errors from recommended:
     'jest/no-disabled-tests': 'error',
     'jest/no-jasmine-globals': 'error',
@@ -33,9 +43,6 @@ module.exports = {
 
     // warn users about too large snapshots:
     'jest/no-large-snapshots': ['warn', { 'maxSize': 50 }],
-
-    // allows to use long functions inside tests:
-    'max-lines-per-function': 'off',
 
     // Is not suitable to be used with Vuex actions:
     // 'jest/prefer-called-with': 'error',

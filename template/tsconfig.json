@@ -37,6 +37,7 @@
     ]
   },
   "include": [
+    "nuxt.config.ts",
     "client/**/*.vue",
     "client/**/*.ts",
     "tests/**/*.ts",

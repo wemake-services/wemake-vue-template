@@ -60,7 +60,7 @@
     "eslint-config-wemake": "^0.6.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-compat": "^3.1.1",
-    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-node": "^8.0.1",

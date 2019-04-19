@@ -5,6 +5,8 @@
 It is just buggy. We had a lot of issues with it.
 You can still use (old) version of this template with `flow`: [here is the last release](https://github.com/wemake-services/wemake-vue-template/releases/tag/end-of-flow).
 
+I wrote an article about this, [check it out](https://sobolevn.me/2019/03/from-flow-to-typescript).
+
 ## Why Nuxt?
 
 `Nuxt` offers a thin abstraction layer for `ssr` and building your project.

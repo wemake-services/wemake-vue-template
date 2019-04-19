@@ -5,7 +5,8 @@
   "author": "{{ author }}",
   "private": true,
   "engines": {
-    "node": "10.15"
+    "node": "10.15",
+    "npm": ">=6"
   },
   "scripts": {
     "clean": "rm -rf .nuxt dist",

@@ -12,8 +12,10 @@ RUN npm --version && apk add --no-cache \
     autoconf \
     automake \
     bash \
+    build-base \
     ca-certificates \
     curl \
+    file \
     g++ \
     gcc \
     git \
@@ -21,7 +23,9 @@ RUN npm --version && apk add --no-cache \
     libjpeg-turbo-dev \
     libpng-dev \
     make \
-    wget
+    nasm \
+    wget \
+    zlib-dev
 
 
 # Installing dependencies:

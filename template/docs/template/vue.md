@@ -16,6 +16,9 @@ but gives tons of features, including:
 6. middlewares
 7. much more
 
+Here you can have a brief overview of what is going on inside `Nuxt`:
+[![Nuxt architecture](https://cdn-images-1.medium.com/max/2400/1*lwIEF0F3eDlMKR1hKZic7Q.jpeg)](https://medium.freecodecamp.org/universal-application-code-structure-in-nuxt-js-4cd014cc0baa)
+
 We do not recommend to switch to raw `Vue`, unless you 100% sure.
 
 ## nuxt-class-component

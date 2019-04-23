@@ -5,16 +5,15 @@ module.exports = {
   'root': true,
 
   'extends': [
-    'wemake',
+    '@wemake-services/javascript',
+    '@wemake-services/vue',
+    '@wemake-services/jsdoc',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/recommended',
     'plugin:nuxt/recommended',
     '@vue/typescript',
     'plugin:compat/recommended',
-    'jsdoc-essential',
   ],
   'plugins': [
-    'unicorn',
     'compat',
     'json',
   ],
@@ -24,19 +23,6 @@ module.exports = {
 
     // leave files alone, since js and vue files have different cases
     'unicorn/filename-case': 'off',
-
-    // rules for vue components
-    'vue/html-indent': 'error',
-    'vue/html-closing-bracket-newline': ['error', {
-      'singleline': 'never',
-      'multiline': 'always',
-    }],
-    'vue/html-closing-bracket-spacing': ['error', {
-      'startTag': 'never',
-      'endTag': 'never',
-      'selfClosingTag': 'always',
-    }],
-    'vue/prop-name-casing': ['error', 'camelCase'],
   },
 
   'settings': {

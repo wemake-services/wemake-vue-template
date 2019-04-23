@@ -3,11 +3,10 @@
 
 module.exports = {
   'extends': [
-    'stylelint-config-strict-scss',
+    '@wemake-services/stylelint-config-scss',
     'stylelint-config-css-modules',
   ],
   'plugins': [
-    'stylelint-csstree-validator',
     'stylelint-no-unsupported-browser-features',
   ],
 
@@ -21,7 +20,6 @@ module.exports = {
     'at-rule-no-unknown': null,
 
     // custom plugins to work with
-    'csstree/validator': true,
     'plugin/no-unsupported-browser-features': [
       true, { 'severity': 'warning' },
     ],

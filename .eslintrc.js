@@ -1,6 +1,6 @@
 module.exports = {
   'extends': [
-    'wemake',
+    '@wemake-services/javascript',
   ],
   'env': {
     'node': true,

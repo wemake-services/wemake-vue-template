@@ -50,7 +50,7 @@
     "@types/jest": "^24.0.11",
     "@types/rosie": "0.0.36",
     "@types/webpack-env": "1.13.9",
-    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.6.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.29",
@@ -91,7 +91,7 @@
     "stylelint-no-unsupported-browser-features": "^3.0.2",
     "stylelint-webpack-plugin": "^0.10.5",
     "ts-jest": "^24.0.2",
-    "vue-eslint-parser": "^6.0.3",
+    "vue-eslint-parser": "^6.0.4",
     "vue-jest": "^3.0.4"
   }
 }

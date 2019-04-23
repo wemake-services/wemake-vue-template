@@ -1,6 +1,6 @@
 module.exports = {
   'extends': [
-    '@wemake-services/jsdoc',
+    '@wemake-services/jest',
   ],
   'rules': {
     // Overrides

@@ -3,6 +3,8 @@
 // since it is all tested in the app itself.
 // Ignored folders: `client/`, `tests/`
 
+/* eslint-disable jest/expect-expect */
+
 const fs = require('fs')
 
 const templatePath = require('./utils').templatePath
@@ -18,6 +20,7 @@ function expectAllExist (filesToChecks) {
 
 describe('template files structure', () => {
   test('files exist', () => {
+    expect.hasAssertions()
     const filesToCheck = [
       '.dockerignore',
       '.editorconfig',
@@ -39,6 +42,7 @@ describe('template files structure', () => {
   })
 
   test('vscode files exist', () => {
+    expect.hasAssertions()
     const filesToCheck = [
       '.vscode/extensions.json',
       '.vscode/settings.json',
@@ -49,6 +53,7 @@ describe('template files structure', () => {
   })
 
   test('config files exist', () => {
+    expect.hasAssertions()
     const filesToCheck = [
       'config/.env.template',
     ]
@@ -57,6 +62,7 @@ describe('template files structure', () => {
   })
 
   test('docker files exist', () => {
+    expect.hasAssertions()
     const filesToCheck = [
       'docker/vue/Dockerfile',
     ]

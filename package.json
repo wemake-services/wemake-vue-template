@@ -19,7 +19,7 @@
     ]
   },
   "devDependencies": {
-    "@wemake-services/eslint-config-javascript": "^0.1.4",
+    "@wemake-services/eslint-config-javascript": "^0.1.5",
     "@wemake-services/eslint-config-jest": "^0.1.5",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",

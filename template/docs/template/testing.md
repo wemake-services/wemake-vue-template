@@ -17,7 +17,7 @@ Are you **new** to testing? Read the [Vue testing full guide](https://lmiller199
 
 ## Unit tests
 
-Unit tests are considered much easier to write, but header to maintain.
+Unit tests are considered much easier to write, but harder to maintain.
 Because they are simple and there should be a lot of them.
 
 To make our lives easier 

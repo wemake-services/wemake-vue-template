@@ -2,7 +2,7 @@ language: node_js
 
 sudo: true
 
-node_js: 10.15
+node_js: 10.16
 
 addons:
   apt:

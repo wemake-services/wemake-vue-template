@@ -11,9 +11,16 @@ module.exports = {
   ],
 
   'rules': {
-    // camelCase works better for css-module names:
-    'selector-class-pattern': '^[a-z][a-zA-Z]+$',
-    'selector-id-pattern': '^[a-z][a-zA-Z]+$',
+    // we use kebab-case for classes and ids:
+    'selector-class-pattern': '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',
+    'selector-id-pattern': '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',
+
+    // ignore special `var-` css variables for `:export`
+    'property-no-unknown': [
+      true, {
+        'ignoreProperties': ['/^var-/'],
+      },
+    ],
 
     // fixes for Vue single file components:
     'no-empty-source': null,

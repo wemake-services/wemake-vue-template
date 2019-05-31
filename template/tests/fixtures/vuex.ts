@@ -6,7 +6,7 @@ import { Factory } from 'rosie'
 import { state, actions, mutations, getters } from '~/store/index'
 import { CommentType } from '~/logic/comments/types'
 
-import { fakerFactory, FakerFactoryType } from './faker'
+import { fakerFactory, FakerFactoryType } from '@/fixtures/faker'
 
 export const commentFactory = new Factory()
   .extend<FakerFactoryType & CommentType, FakerFactoryType>(fakerFactory)

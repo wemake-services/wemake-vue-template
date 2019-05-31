@@ -1,14 +1,16 @@
 import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
+import { Store } from 'vuex'
 
+import { CommentType, StateType } from '~/logic/comments/types'
 import Index from '~/pages/index.vue'
-import { storeFactory, commentFactory } from '../fixtures/vuex'
+import { storeFactory, commentFactory } from '@/fixtures/vuex'
 
 const localVue = createLocalVue()
 
 describe('unit tests for Index view', () => {
-  let store
-  let comments
+  let store: Store<StateType>
+  let comments: CommentType[]
 
   beforeEach(() => {
     comments = commentFactory.buildList(3)
@@ -20,14 +22,22 @@ describe('unit tests for Index view', () => {
 
   test('should have three comments', () => {
     expect.hasAssertions()
-    const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
-    expect(wrapper.findAll('.commentComponent')).toHaveLength(3)
+    const wrapper = mount(Index, {
+      store,
+      localVue,
+      'propsData': { comments },
+    })
+    expect(wrapper.findAll('.comment-component')).toHaveLength(3)
   })
 
   test('should load new comments on actions', async () => {
     expect.hasAssertions()
     const comment = comments[0]
-    const wrapper = mount(Index, { store, localVue, 'propsData': { comments } })
+    const wrapper = mount(Index, {
+      store,
+      localVue,
+      'propsData': { comments },
+    })
 
     const mock = new MockAdapter(store.$axios)
     mock.onGet('/comments').reply(200, [comment])
@@ -38,7 +48,7 @@ describe('unit tests for Index view', () => {
     expect(wrapper.vm.$store.state.comments[0].id).toStrictEqual(comment.id)
     expect(wrapper.vm.$store.state.comments[0].email)
       .toStrictEqual(comment.email)
-    expect(wrapper.findAll('.commentComponent')).toHaveLength(1)
+    expect(wrapper.findAll('.comment-component')).toHaveLength(1)
   })
 })
 

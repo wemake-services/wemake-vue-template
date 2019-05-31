@@ -18,6 +18,7 @@ module.exports = {
   },
   'moduleNameMapper': {
     '^~/(.*)$': '<rootDir>/client/$1',
+    '^@/(.*)$': '<rootDir>/tests/$1',
   },
   'testPathIgnorePatterns': [
     '/node_modules/',
@@ -31,6 +32,11 @@ module.exports = {
   'coveragePathIgnorePatterns': [
     '/node_modules/',
     '/tests/',
+  ],
+
+  'setupFilesAfterEnv': [
+    // Add matchers via expect.extend()
+    '<rootDir>/tests/setup.ts',
   ],
 
   'snapshotSerializers': [

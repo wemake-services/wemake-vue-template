@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "name",
   "version": "0.0.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -32,6 +32,7 @@
     "@nuxtjs/axios": "5.4.1",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
+    "jest-matcher-vue-test-utils": "^1.5.1",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.8.0",

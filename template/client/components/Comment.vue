@@ -10,7 +10,7 @@
 
     <div :class="$style.rating">
       <button
-        :class="$style.ratingUp"
+        :class="$style['rating-up']"
         @click="changeRating(comment.id, 1)"
       >
         +
@@ -19,7 +19,7 @@
       <span :class="$style.number">{{ comment.rating }}</span>
 
       <button
-        :class="$style.ratingDown"
+        :class="$style['rating-down']"
         @click="changeRating(comment.id, -1)"
       >
         -
@@ -49,7 +49,7 @@ export default class Comment extends Vue {
    */
   updateRating!: (payload: CommentPayloadType) => void
 
-  @Prop()
+  @Prop({ 'required': true })
   /**
    * Passed comment from the parent component.
    */
@@ -74,9 +74,9 @@ export default class Comment extends Vue {
    */
   get computedClasses () {
     return {
-      [this.$style.commentComponent]: true,
-      [this.$style.commentPositive]: this.comment.rating > 0,
-      [this.$style.commentNegative]: this.comment.rating < 0,
+      [this.$style['comment-component']]: true,
+      [this.$style['comment-positive']]: this.comment.rating > 0,
+      [this.$style['comment-negative']]: this.comment.rating < 0,
     }
   }
 }
@@ -85,7 +85,7 @@ export default class Comment extends Vue {
 <style lang="scss" module>
 @import '~/scss/variables';
 
-.commentComponent {
+.comment-component {
   background: $color-white;
   max-width: 15.6rem;
   border: 0.12rem solid;
@@ -94,11 +94,11 @@ export default class Comment extends Vue {
   position: relative;
 }
 
-.commentPositive {
+.comment-positive {
   border-color: $button-color-green;
 }
 
-.commentNegative {
+.comment-negative {
   border-color: $button-color-red;
 }
 
@@ -132,11 +132,11 @@ export default class Comment extends Vue {
   }
 }
 
-.ratingUp {
+.rating-up {
   background: $button-color-green;
 }
 
-.ratingDown {
+.rating-down {
   background: $button-color-red;
 }
 </style>

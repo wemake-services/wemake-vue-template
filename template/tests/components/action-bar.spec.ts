@@ -1,6 +1,7 @@
-import Vuex from 'vuex'
+import Vuex, { Store } from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
+import { StateType } from '~/logic/comments/types'
 import ActionBar from '~/components/ActionBar.vue'
 
 const localVue = createLocalVue()
@@ -8,7 +9,7 @@ localVue.use(Vuex)
 
 describe('unit tests for ActionBar component', () => {
   let actions
-  let store
+  let store: Store<StateType>
 
   beforeEach(() => {
     actions = {

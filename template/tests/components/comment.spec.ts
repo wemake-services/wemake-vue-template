@@ -1,15 +1,17 @@
 import { mount, createLocalVue } from '@vue/test-utils'
+import { Store } from 'vuex'
 
 import Comment from '~/components/Comment.vue'
+import { CommentType, StateType } from '~/logic/comments/types'
 import * as reducers from '~/logic/comments/module/reducers'
 
-import { storeFactory, commentFactory } from '../fixtures/vuex'
+import { storeFactory, commentFactory } from '@/fixtures/vuex'
 
 const localVue = createLocalVue()
 
 describe('unit tests for Comment component', () => {
-  let comment
-  let store
+  let comment: CommentType
+  let store: Store<StateType>
 
   beforeEach(() => {
     comment = commentFactory.build({ 'rating': 0 })
@@ -17,6 +19,12 @@ describe('unit tests for Comment component', () => {
       { 'state': { 'comments': [comment] } },
       { localVue }
     )
+  })
+
+  test('should have valid props', () => {
+    expect.hasAssertions()
+
+    expect(Comment).toBeValidProps({ comment })
   })
 
   test('should have two buttons', () => {
@@ -66,7 +74,7 @@ describe('unit tests for Comment component', () => {
 
     expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
-    expect(wrapper.classes()).toContain(wrapper.vm.$style.commentPositive)
+    expect(wrapper.classes()).toContain(wrapper.vm.$style['comment-positive'])
   })
 
   test('should decrement rating', async () => {
@@ -87,13 +95,13 @@ describe('unit tests for Comment component', () => {
 
     expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
-    expect(wrapper.classes()).toContain(wrapper.vm.$style.commentNegative)
+    expect(wrapper.classes()).toContain(wrapper.vm.$style['comment-negative'])
   })
 })
 
 describe('snapshot tests for Comment component', () => {
-  let comment
-  let store
+  let comment: CommentType
+  let store: Store<StateType>
 
   beforeAll(() => {
     // We need a seed here to be consistent for snapshot testing:

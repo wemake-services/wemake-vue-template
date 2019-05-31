@@ -3,7 +3,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "target": "esnext",
+    "emitDecoratorMetadata": true,
+    "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
     "lib": [
@@ -27,7 +28,7 @@
         "./client/*"
       ],
       "@/*": [
-        "./*"
+        "./tests/*"
       ]
     },
     "types": [

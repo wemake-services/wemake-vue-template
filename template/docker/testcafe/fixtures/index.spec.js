@@ -27,9 +27,9 @@ test('click on a Comment button increments rating', async (cafe) => {
   const rating = comment.find('span')
 
   await cafe
-    .expect(rating.innerText).contains('0')
+    .expect(rating.textContent).contains('0')
     .click(increment)
-    .expect(rating.innerText).contains('1')
+    .expect(rating.textContent).contains('1')
     .click(decrement)
-    .expect(rating.innerText).contains('0')
+    .expect(rating.textContent).contains('0')
 })

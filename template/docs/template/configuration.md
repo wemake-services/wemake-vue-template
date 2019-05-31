@@ -30,8 +30,9 @@ Variable `API_URL` represent your API server base url.
 It is used as a base url for all relative urls we use to make `axios` calls.
 
 There are situations when you need to switch between different versions of
-your API: development or production, first version of your API or second version. 
-The are multiple usecases!
+your API: development or production, 
+first version of your API or second version. 
+The are multiple use-cases!
 
 In this case, modify this single value inside your `config/.env` file.
 

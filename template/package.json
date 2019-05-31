@@ -27,12 +27,17 @@
     "docs:build": "npm run docs:api && gitbook build docs",
     "ci": "npm run test && npm run build && npm run test:sec"
   },
-  "browserslist": "> 5%, last 2 versions, not ie < 11, not ie_mob < 11, not dead",
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "not ie < 11",
+    "not ie_mob < 11",
+    "not dead"
+  ],
   "dependencies": {
     "@nuxtjs/axios": "5.4.1",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
-    "jest-matcher-vue-test-utils": "^1.5.1",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.8.0",
@@ -82,7 +87,10 @@
     "eslint-plugin-vue": "^5.2.2",
     "faker": "^4.1.0",
     "jest": "^24.8.0",
+    "jest-matcher-vue-test-utils": "^1.5.1",
     "jest-serializer-vue": "^2.0.2",
+    "jest-svg-transformer": "^1.0.0",
+    "jest-transform-stub": "^2.0.0",
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-markdown-style-guide": "^2.1.2",

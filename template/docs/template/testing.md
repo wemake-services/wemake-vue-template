@@ -55,6 +55,17 @@ You are free to use any kind of mocks you want.
 
 Consider `jest` for [manual mocking][manual-mocking].
 
+### Static files and assets
+
+We can use different assets and static files like fonts, images, `svg` icons.
+At some point `jest` might fail to load and transform them.
+
+So, we provide `jest-svg-transformer` 
+and `jest-transform-stub` that will help you in this field.
+
+- `jest-svg-transformer` will load `svg` as fake component
+- `jest-transform-stub` will just stub all static files with no-ops
+
 ## Security checks
 
 We also run security checks on each CI step.

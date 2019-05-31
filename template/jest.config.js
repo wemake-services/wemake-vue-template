@@ -15,6 +15,9 @@ module.exports = {
   ],
   'transform': {
     '.*\\.(vue)$': 'vue-jest',
+    '^.+\\.(svg|svg\\?inline)$': 'jest-svg-transformer',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'jest-transform-stub',
   },
   'moduleNameMapper': {
     '^~/(.*)$': '<rootDir>/client/$1',

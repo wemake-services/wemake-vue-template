@@ -2,6 +2,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import faker from 'faker'
 import { Factory } from 'rosie'
+import { vuexPlugin } from 'jest-matcher-vue-test-utils'
 
 import { state, actions, mutations, getters } from '~/store/index'
 import { CommentType } from '~/logic/comments/types'
@@ -30,7 +31,12 @@ export const storeFactory = new Factory()
     }
 
     options.localVue.use(Vuex)
-    store = new Vuex.Store({ ...store })
+    store = new Vuex.Store({
+      ...store,
+      // We need this plugin to allow jest-matcher-vue-test-utils
+      // assertions for Vuex:
+      'plugins': [vuexPlugin()],
+    })
 
     // Extending store's context to match `nuxt`'s API:
 

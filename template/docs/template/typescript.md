@@ -43,7 +43,9 @@ inside API methods, input validations, etc.
 And since TypeScript types are only allowed during static check, 
 we cannot use them in runtime.
 
-So, we use [`io-ts`]() and [`io-ts-promise`]() to build and validate runtime types.
+So, we use [`io-ts`](https://github.com/gcanti/io-ts) 
+and [`io-ts-promise`](https://github.com/aeirola/io-ts-promise) 
+to build and validate runtime types.
 
 That's how building runtime types is done:
 

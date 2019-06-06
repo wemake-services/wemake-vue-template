@@ -35,7 +35,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@nuxtjs/axios": "5.5.3",
+    "@nuxtjs/axios": "5.5.4",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
     "node-sass": "^4.12.0",

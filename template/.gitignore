@@ -141,5 +141,6 @@ dist/
 #### custom ####
 flow-typed/
 .nuxt/
+.nuxt/*
 docs/_book/
 jest_*/

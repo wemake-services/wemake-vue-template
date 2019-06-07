@@ -18,15 +18,20 @@ module.exports = {
     'compat',
     'json',
   ],
-
   'settings': {
     // providing polyfills for `eslint-plugin-compat` plugin, see:
     // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
     'polyfills': [],
   },
-
   'env': {
     'node': true,
     'browser': true,
   },
+  'overrides': [{
+    // Pages and layouts should have kebab case due to Nuxt's API:
+    'files': ['client/pages/**/*.vue', 'client/layouts/**/*.vue'],
+    'rules': {
+      'unicorn/filename-case': ['error', { 'case': 'kebabCase' }],
+    },
+  }],
 }

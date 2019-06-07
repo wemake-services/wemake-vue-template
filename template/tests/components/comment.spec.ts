@@ -56,10 +56,12 @@ describe('unit tests for Comment component', () => {
       .toStrictEqual(comment.rating.toString())
   })
 
-  test('should increment rating', () => {
+  test.each([
+    { 'delta': 1, 'styleName': 'comment-positive' },
+    { 'delta': -1, 'styleName': 'comment-negative' },
+  ])('should change rating: %p', ({ delta, styleName }) => {
     expect.hasAssertions()
 
-    const delta = 1
     const newRating = comment.rating + delta
     const wrapper = mount(Comment, {
       store,
@@ -74,28 +76,7 @@ describe('unit tests for Comment component', () => {
 
     expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
-    expect(wrapper.classes()).toContain(wrapper.vm.$style['comment-positive'])
-  })
-
-  test('should decrement rating', async () => {
-    expect.hasAssertions()
-
-    const delta = -2
-    const newRating = comment.rating + delta
-    const wrapper = mount(Comment, {
-      store,
-      localVue,
-      'propsData': { comment },
-    })
-
-    wrapper.vm.$store.commit(reducers.UPDATE_RATING, {
-      'commentId': comment.id,
-      delta,
-    })
-
-    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
-    expect(wrapper.props().comment.rating).toStrictEqual(newRating)
-    expect(wrapper.classes()).toContain(wrapper.vm.$style['comment-negative'])
+    expect(wrapper.classes()).toContain(wrapper.vm.$style[styleName])
   })
 })
 

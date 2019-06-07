@@ -2,9 +2,9 @@ import faker from 'faker'
 import { Factory } from 'rosie'
 
 export interface FakerFactoryType {
-  seed: number | null;
-  locale: string | null;
-  faker: typeof faker;
+  seed: number | null
+  locale: string | null
+  faker: typeof faker
 }
 
 export const fakerFactory = new Factory<FakerFactoryType>()

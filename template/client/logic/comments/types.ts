@@ -14,14 +14,14 @@ export type RawCommentType = ts.TypeOf<typeof RawComment>
 
 // We add rating only on the client (for demo purposes)
 export type CommentType = RawCommentType & {
-  rating: number;
+  rating: number
 }
 
 export interface CommentPayloadType {
-  commentId: number;
-  delta: number;
+  commentId: number
+  delta: number
 }
 
 export interface StateType {
-  comments: CommentType[];
+  comments: CommentType[]
 }

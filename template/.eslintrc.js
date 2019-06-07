@@ -6,6 +6,7 @@ module.exports = {
 
   'extends': [
     '@wemake-services/javascript',
+    '@wemake-services/typescript/recommended',
     '@wemake-services/vue',
     '@wemake-services/jsdoc',
     'plugin:@typescript-eslint/recommended',
@@ -17,13 +18,6 @@ module.exports = {
     'compat',
     'json',
   ],
-  'rules': {
-    // typescript specifics
-    '@typescript-eslint/indent': ['error', 2],
-
-    // leave files alone, since js and vue files have different cases
-    'unicorn/filename-case': 'off',
-  },
 
   'settings': {
     // providing polyfills for `eslint-plugin-compat` plugin, see:

@@ -39,7 +39,7 @@
     "@nuxtjs/axios": "5.5.4",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
-    "io-ts": "^1.8.6",
+    "io-ts": "^1.9.0",
     "io-ts-promise": "^1.1.1",
     "io-ts-types": "^0.4.7",
     "monocle-ts": "^1.7.2",

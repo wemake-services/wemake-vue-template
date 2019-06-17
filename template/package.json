@@ -51,7 +51,7 @@
     "nuxt-property-decorator": "2.3.0",
     "postcss": "^7.0.17",
     "sass-loader": "^7.1.0",
-    "ts-node": "^8.1.0",
+    "ts-node": "^8.3.0",
     "vuex-class": "0.3.2"
   },
   "devDependencies": {

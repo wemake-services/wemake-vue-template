@@ -99,7 +99,7 @@
     "jest-transform-stub": "^2.0.0",
     "jscpd": "^2.0.15",
     "remark-cli": "^6.0.1",
-    "remark-lint": "^6.0.4",
+    "remark-lint": "^6.0.5",
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
     "rosie": "^2.0.1",
     "stylelint": "^9.10.1",

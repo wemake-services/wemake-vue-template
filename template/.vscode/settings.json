@@ -23,12 +23,13 @@
 
   // Linting:
   "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
   "eslint.validate": [
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascriptreact",
-    "vue"
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true },
+    { "language": "javascript", "autoFix": true },
+    { "language": "javascriptreact", "autoFix": true },
+    { "language": "vue", "autoFix": true}
   ],
   "stylelint.enable": true,
 

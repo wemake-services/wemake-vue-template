@@ -144,3 +144,4 @@ flow-typed/
 .nuxt/*
 docs/_book/
 jest_*/
+.jscpd/

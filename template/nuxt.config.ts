@@ -73,7 +73,7 @@ module.exports = {
    * Custom plugins
    */
   'plugins': [
-    // Install TypeDI:
+    // Install TypeDI to inject dependencies:
     '~/plugins/type-di',
   ],
 

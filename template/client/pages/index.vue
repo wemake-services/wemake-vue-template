@@ -19,6 +19,7 @@
 </template>
 
 <script lang="ts">
+import { Store } from 'vuex'
 import Component, { mixins } from 'nuxt-class-component'
 import { useStore } from 'vuex-simple'
 
@@ -26,8 +27,9 @@ import ActionBar from '~/components/ActionBar.vue'
 import AppLogo from '~/components/AppLogo.vue'
 import Comment from '~/components/Comment.vue'
 
+import { StateType } from '~/logic/types'
 import TypedStore from '~/logic/store'
-import TypedStoreMixin from '../mixins/typed-store'
+import TypedStoreMixin from '~/mixins/typed-store'
 import { RawCommentType } from '~/logic/comments/models'
 
 // @vue/component
@@ -52,7 +54,7 @@ export default class Index extends mixins(TypedStoreMixin) {
    * @param context.store - Current Vuex store.
    * @returns List of downloaded comments.
    */
-  fetch ({ store }: { store }): Promise<RawCommentType[]> {
+  fetch ({ store }: { store: Store<StateType> }): Promise<RawCommentType[]> {
     // Here we don't have a DI setup yet, so we use the explicit approach:
     const typedStore = useStore<TypedStore>(store)
     return typedStore.comments.fetchComments()

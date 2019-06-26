@@ -1,34 +1,32 @@
-// We use default Nuxt Module-based store,
+// We use default Nuxt index-based store,
 // read more about it here:
 // https://nuxtjs.org/guide/vuex-store
-
-// TODO: document
 
 import Vue from 'vue'
 import Vuex, { Store, Plugin } from 'vuex'
 import { createVuexStore } from 'vuex-simple'
-import { Container } from 'vue-typedi'
 
-import tokens from '~/logic/tokens'
 import TypedStore from '~/logic/store'
 import { StateType } from '~/logic/types'
 
 Vue.use(Vuex)
 
+/**
+ * Creates Vuex.Store to be used and called by Nuxt.
+ *
+ * We also use this store in tests.
+ *
+ * @param ssrContext - Is passed via Nuxt, represents current req / res.
+ * @param extraContext - Extra options to be used in tests.
+ * @returns Global store instance.
+ */
 export default function store (
   ssrContext,
-  { plugins = [] }: { plugins: Plugin<StateType>[] },
+  extraContext: { plugins: Plugin<StateType>[] },
 ): Store<StateType> {
-  if (!Container.has(tokens.AXIOS)) {
-    Container.set(tokens.AXIOS, (): void => {})
-  }
-
   const typedStore = new TypedStore()
 
-  // Registering DI container items:
-  Container.set(tokens.STORE, typedStore)
-
   return createVuexStore(typedStore, {
-    plugins,
+    'plugins': extraContext ? extraContext.plugins : [],
   })
 }

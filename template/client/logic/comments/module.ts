@@ -7,6 +7,12 @@ import { RawCommentType } from '~/logic/comments/models'
 import CommentService from '~/logic/comments/services/api'
 
 @Injectable()
+/**
+ * Represents a typed Vuex module.
+ *
+ * @see https://vuex.vuejs.org/guide/modules.html
+ * @see https://github.com/sascha245/vuex-simple
+ */
 export default class CommentsModule {
   // Dependencies
 

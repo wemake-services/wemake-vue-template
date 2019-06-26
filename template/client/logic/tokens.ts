@@ -1,12 +1,13 @@
 import { Token } from 'vue-typedi'
 
-// TODO: document
-
-// Generate some unique keys to bind our values to:
+/**
+ * Here we generate some unique keys to bind our values to.
+ *
+ * This tokens are unique representation of your dependencies inside the app.
+ * @see https://github.com/sascha245/vue-typedi
+ * @see https://github.com/typestack/typedi
+ */
 export default {
-  // Whole store:
-  'STORE': new Token('store'),
-
   // Comments service:
   'COMMENT_SERVICE': new Token('comment-service'),
 

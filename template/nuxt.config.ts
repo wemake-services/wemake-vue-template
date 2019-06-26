@@ -72,7 +72,10 @@ module.exports = {
   /**
    * Custom plugins
    */
-  'plugins': [],
+  'plugins': [
+    // Install TypeDI:
+    '~/plugins/type-di',
+  ],
 
   /**
    * Global CSS

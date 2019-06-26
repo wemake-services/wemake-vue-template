@@ -2,7 +2,33 @@
 // read more about it here:
 // https://nuxtjs.org/guide/vuex-store
 
-export { state } from '~/logic/comments/module/state'
-export { getters } from '~/logic/comments/module/getters'
-export { mutations } from '~/logic/comments/module/mutations'
-export { actions } from '~/logic/comments/module/actions'
+// TODO: document
+
+import Vue from 'vue'
+import Vuex, { Store, Plugin } from 'vuex'
+import { createVuexStore } from 'vuex-simple'
+import { Container } from 'vue-typedi'
+
+import tokens from '~/logic/tokens'
+import TypedStore from '~/logic/store'
+import { StateType } from '~/logic/types'
+
+Vue.use(Vuex)
+
+export default function store (
+  ssrContext,
+  { plugins = [] }: { plugins: Plugin<StateType>[] },
+): Store<StateType> {
+  if (!Container.has(tokens.AXIOS)) {
+    Container.set(tokens.AXIOS, (): void => {})
+  }
+
+  const typedStore = new TypedStore()
+
+  // Registering DI container items:
+  Container.set(tokens.STORE, typedStore)
+
+  return createVuexStore(typedStore, {
+    plugins,
+  })
+}

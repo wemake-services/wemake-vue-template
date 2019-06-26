@@ -2,7 +2,7 @@
 # http://humanstxt.org/
 
 
-## {{ organization }}
+## wemake.services
 
 
 ## Technologies

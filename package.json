@@ -33,5 +33,6 @@
     "eslint-plugin-unicorn": "^9.1.0",
     "jest": "^24.8.0",
     "vue-cli": "^2.9.6"
-  }
+  },
+  "dependencies": {}
 }

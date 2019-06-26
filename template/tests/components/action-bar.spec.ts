@@ -1,26 +1,25 @@
-import Vuex, { Store } from 'vuex'
+import { Store } from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
 
-import { StateType } from '~/logic/comments/types'
+import { StateType } from '~/logic/types'
 import ActionBar from '~/components/ActionBar.vue'
+import { storeFactory } from '@/fixtures/vuex'
 
 const localVue = createLocalVue()
-localVue.use(Vuex)
 
 describe('unit tests for ActionBar component', () => {
-  let actions
   let store: Store<StateType>
 
   beforeEach(() => {
-    actions = {
-      'fetchComments': jest.fn(), // mocking Vuex action call
-    }
-
-    store = new Vuex.Store({ actions })
+    store = storeFactory.build(undefined, { localVue })
+    // @ts-ignore
+    // eslint-disable-next-line no-underscore-dangle
+    store.__vxs_root__.comments.fetchComments = jest.fn()
   })
 
   test('should have one button', () => {
     expect.hasAssertions()
+
     const wrapper = mount(ActionBar, { store, localVue })
 
     expect(wrapper.isVueInstance()).toBe(true)
@@ -30,17 +29,21 @@ describe('unit tests for ActionBar component', () => {
 
   test('should call fetchComments action', () => {
     expect.hasAssertions()
-    const wrapper = mount(ActionBar, { store, localVue })
 
+    const wrapper = mount(ActionBar, { store, localVue })
     const input = wrapper.find('button')
     input.trigger('click')
 
-    expect(actions.fetchComments).toHaveBeenCalled()
+    // @ts-ignore
+    // eslint-disable-next-line no-underscore-dangle
+    expect(store.__vxs_root__.comments.fetchComments).toHaveBeenCalled()
   })
 
   test('should match the snapshot', () => {
     expect.hasAssertions()
+
     const wrapper = mount(ActionBar, { store, localVue })
+
     expect(wrapper).toMatchSnapshot()
   })
 })

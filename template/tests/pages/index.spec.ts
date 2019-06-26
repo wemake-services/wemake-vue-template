@@ -1,8 +1,13 @@
+import axios from 'axios'
 import { mount, createLocalVue } from '@vue/test-utils'
 import MockAdapter from 'axios-mock-adapter'
 import { Store } from 'vuex'
+import { Container } from 'vue-typedi'
 
-import { CommentType, StateType } from '~/logic/comments/types'
+import { StateType } from '~/logic/types'
+import tokens from '~/logic/tokens'
+import TypedStore from '~/logic/store'
+import { CommentType } from '~/logic/comments/types'
 import Index from '~/pages/index.vue'
 import { storeFactory, commentFactory } from '@/fixtures/vuex'
 
@@ -14,7 +19,12 @@ describe('unit tests for Index view', () => {
 
   beforeEach(() => {
     comments = commentFactory.buildList(3)
-    store = storeFactory.build({ 'state': { comments } }, { localVue })
+    store = storeFactory.build(undefined, {
+      localVue,
+      'state': {
+        'comments': { comments },
+      },
+    })
 
     // Clearing mocks:
     jest.clearAllMocks()
@@ -22,52 +32,60 @@ describe('unit tests for Index view', () => {
 
   test('should have three comments', () => {
     expect.hasAssertions()
+
     const wrapper = mount(Index, {
       store,
       localVue,
       'propsData': { comments },
     })
+
     expect(wrapper.findAll('.comment-component')).toHaveLength(3)
   })
 
   test('should load new comments on actions', async () => {
     expect.hasAssertions()
+
     const comment = comments[0]
     const wrapper = mount(Index, {
       store,
       localVue,
       'propsData': { comments },
     })
+    const typedStore: TypedStore = (wrapper.vm as any).typedStore
 
-    const mock = new MockAdapter(store.$axios)
-    mock.onGet('/comments').reply(200, [comment])
+    new MockAdapter(axios).onGet('/comments').reply(200, [comment])
+    Container.set(tokens.AXIOS, axios)
 
-    await wrapper.vm.$store.dispatch('fetchComments', wrapper.vm)
+    await typedStore.comments.fetchComments()
 
-    expect(wrapper.vm.$store.state.comments).toHaveLength(1)
-    expect(wrapper.vm.$store.state.comments[0].id).toStrictEqual(comment.id)
-    expect(wrapper.vm.$store.state.comments[0].email)
-      .toStrictEqual(comment.email)
+    expect(wrapper.vm.$store.state.comments.comments).toHaveLength(1)
+    expect(wrapper.vm.$store.state.comments.comments[0].id)
+      .toStrictEqual(comment.id)
     expect(wrapper.findAll('.comment-component')).toHaveLength(1)
   })
 })
 
 describe('snapshot test for Index view', () => {
-  let store
-  let comments
+  let store: Store<StateType>
+  let comments: CommentType[]
 
   beforeAll(() => {
     // We need a seed here to be consistent for snapshot testing:
     comments = commentFactory.buildList(3, {}, { 'seed': 1342 })
-    store = storeFactory.build({ 'state': { comments } }, { localVue })
+    store = storeFactory.build(undefined, {
+      localVue,
+      'state': {
+        'comments': { comments },
+      },
+    })
   })
 
   test('should match the snapshot', () => {
     expect.hasAssertions()
+
     const wrapper = mount(Index, {
       store,
       localVue,
-      'propsData': { comments },
     })
 
     expect(wrapper).toMatchSnapshot()

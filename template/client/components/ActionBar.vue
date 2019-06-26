@@ -10,25 +10,25 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'nuxt-class-component'
-import { Action } from 'vuex-class'
+import Component, { mixins } from 'nuxt-class-component'
 
-import { CommentType } from '~/logic/comments/types'
+import TypedStoreMixin from '~/mixins/typed-store'
+import { RawCommentType } from '~/logic/comments/models'
 
 // @vue/component
 @Component({})
 /**
  * Stateless component.
  * The primary idea of this component is to illustrate,
- * how `@Action` decorator works.
+ * how `Action`s from typed `Vuex` work.
  */
-export default class ActionBar extends Vue {
-  @Action('fetchComments')
+export default class ActionBar extends mixins(TypedStoreMixin) {
   /**
    * Typed alias to Vuex `fetchComments` action.
    */
-  fetchComments!: () => Promise<CommentType[]>
+  async fetchComments (): Promise<RawCommentType[]> {
+    return this.typedStore.comments.fetchComments()
+  }
 }
 </script>
 

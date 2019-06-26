@@ -14,6 +14,10 @@
   </div>
 </template>
 
+<script lang="ts">
+export default {}
+</script>
+
 <style lang="scss" module>
 @import '~/scss/variables';
 @import '~/scss/mixins';

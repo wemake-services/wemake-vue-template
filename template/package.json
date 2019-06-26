@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "name",
   "version": "0.0.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -52,7 +52,9 @@
     "postcss": "^7.0.17",
     "sass-loader": "^7.1.0",
     "ts-node": "^8.3.0",
-    "vuex-class": "0.3.2"
+    "vue-typedi": "^1.1.1",
+    "vuex-class": "0.3.2",
+    "vuex-simple": "^2.1.1"
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.8.1",

@@ -5,11 +5,11 @@
       <action-bar />
 
       <section
-        v-if="hasComments"
+        v-if="typedStore.comments.hasComments"
         :class="$style.container"
       >
         <comment
-          v-for="comment in comments"
+          v-for="comment in typedStore.comments.comments"
           :key="comment.id"
           :comment="comment"
         />
@@ -19,16 +19,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { Store } from 'vuex'
-import Component from 'nuxt-class-component'
-import { Getter, State } from 'vuex-class'
+import Component, { mixins } from 'nuxt-class-component'
+import { useStore } from 'vuex-simple'
 
 import ActionBar from '~/components/ActionBar.vue'
 import AppLogo from '~/components/AppLogo.vue'
 import Comment from '~/components/Comment.vue'
 
-import { CommentType, StateType } from '~/logic/comments/types'
+import TypedStore from '~/logic/store'
+import TypedStoreMixin from '../mixins/typed-store'
+import { RawCommentType } from '~/logic/comments/models'
 
 // @vue/component
 @Component({
@@ -42,19 +42,7 @@ import { CommentType, StateType } from '~/logic/comments/types'
  * Main page (or index page).
  * Mounted as `/` by default.
  */
-export default class Index extends Vue {
-  @State('comments')
-  /**
-   * List of predownloaded comments, bound from Vuex.
-   */
-  comments!: CommentType[]
-
-  @Getter('hasComments')
-  /**
-   * Returns either we have any comments or not.
-   */
-  hasComments!: boolean
-
+export default class Index extends mixins(TypedStoreMixin) {
   /**
    * Fetches comments from external API from the server side.
    * This method should preload Vuex store.
@@ -64,8 +52,10 @@ export default class Index extends Vue {
    * @param context.store - Current Vuex store.
    * @returns List of downloaded comments.
    */
-  fetch ({ store }: { store: Store<StateType> }): Promise<CommentType[]> {
-    return store.dispatch('fetchComments')
+  fetch ({ store }: { store }): Promise<RawCommentType[]> {
+    // Here we don't have a DI setup yet, so we use the explicit approach:
+    const typedStore = useStore<TypedStore>(store)
+    return typedStore.comments.fetchComments()
   }
 }
 </script>

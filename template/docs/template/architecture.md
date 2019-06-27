@@ -80,7 +80,10 @@ Here we define all files and folders that are used in this project.
   before rendering a page or a group of pages (layouts)
 
 - `pages/` - this directory contains your application routes.
-  We rely on `Nuxt`'s [builtin routing](https://nuxtjs.org/guide/routing/).
+  We rely on `Nuxt`'s [builtin routing](https://nuxtjs.org/guide/routing/)
+
+- `plugins/` - this directory contains your custom 
+  [plugins](https://nuxtjs.org/examples/plugins/) for `Nuxt`
 
 - `static/` - the [static](https://nuxtjs.org/guide/assets/#static)
   files directory. These files are not processed by any loaders and
@@ -89,16 +92,13 @@ Here we define all files and folders that are used in this project.
 - `store/` - this directory contains your
   [Vuex Store](https://nuxtjs.org/guide/vuex-store) files
 
-- `types/` - this directory contains types, constants,
-  and enums that can be used with `ts`
-
-- `stubs/` - this directory contains TypeScript 
+- `shims/` - this directory contains TypeScript 
   [declaration files][declaration-files],
   feel free to extend it with your own types
 
 ## Tests
 
-- `utils/` - this folder contains utility files that are used for testing
+- `fixtures/` - this folder contains utility files that are used for testing
 - `.eslintrc.js` - this file extends linting rules for testing
 - `jest-shims.d.ts` - file to import TypeScript types into current context
 

@@ -8,7 +8,10 @@ import { RawComment, RawCommentType } from '~/logic/comments/models'
 
 @Service(tokens.COMMENT_SERVICE)
 /**
+ * Service class to fetch comments from the API.
  *
+ * Is injected into the module context to be used.
+ * Should not be used as-is, only as a part of the module.
  */
 export default class CommentService {
   /**

@@ -1,4 +1,10 @@
-// This is a definition of domain model for `comments` context.
+/**
+ * This is a definition of domain model for `comments` context.
+ *
+ * Here we only write classes and types that are shared with the server.
+ * In case you need a type that only work on the client,
+ * then use a regular typescript type and place it in `/types.ts` file.
+ */
 
 import * as ts from 'io-ts'
 

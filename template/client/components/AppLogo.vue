@@ -18,7 +18,11 @@
 import Vue from 'vue'
 import Component from 'nuxt-class-component'
 
+// @vue/component
 @Component({})
+/**
+ * Just an empty class for intilisense to work.
+ */
 export default class AppLogo extends Vue {}
 </script>
 

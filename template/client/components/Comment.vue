@@ -57,7 +57,6 @@ export default class Comment extends mixins(TypedStoreMixin) {
    * @param delta - Delta value to change rating value.
    */
   changeRating (commentId: number, delta: number): void {
-    console.log(commentId)
     this.typedStore.comments.updateRating({ commentId, delta })
   }
 

@@ -19,16 +19,15 @@ https://wemake-vue-demo.herokuapp.com/
 
 - Proven to work on both small and large scale projects
 - Always up-to-date with the help of [`@dependabot`](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
-- `Vue` + `vuex` + `vue-router` with the latest `es` features
 - Latest [`nuxt`](https://nuxtjs.org/) for server-side rendering
-- Full `typescript` support, including Vue's SFC and tests
+- Full `typescript` support, including `Vue`'s SFC, `Vuex`, and tests
 - Tools to write business logics including: DI, IoC, runtime type validation
 - Linting with [`eslint`](https://eslint.org/) + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`testcafe`](https://github.com/DevExpress/testcafe) for end-to-end testing
-- `docker` support for development and production
+- `docker` optional support for development, testing, and production
 - [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test` and `deploy` pipeline configured by default
-- Easy [update process](https://wemake-services.gitbook.io/wemake-vue-template/#updating-template), so your template will always be up-to-date
 - Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project, including [`jsdoc`](http://usejsdoc.org/) annotations
+- Easy [update process](https://wemake-services.gitbook.io/wemake-vue-template/#updating-template), so your template will always be up-to-date
 
 
 ## Requirements
@@ -46,6 +45,7 @@ npx vue-cli init ./wemake-vue-template your_vue_project
 ```
 
 We are required to clone the project, since we need the `.git` folder.
+
 
 ## Where to go next
 

@@ -12,6 +12,7 @@
       <button
         :class="$style['rating-up']"
         @click="changeRating(comment.id, 1)"
+        @keypress.enter.native="changeRating(comment.id, 1)"
       >
         +
       </button>
@@ -21,6 +22,7 @@
       <button
         :class="$style['rating-down']"
         @click="changeRating(comment.id, -1)"
+        @keydown.enter.native="changeRating(comment.id, -1)"
       >
         -
       </button>
@@ -45,7 +47,7 @@ export default class Comment extends mixins(TypedStoreMixin) {
   /**
    * Passed comment from the parent component.
    */
-  comment!: CommentType
+  readonly comment!: CommentType
 
   /**
    * Changes comment's rating.
@@ -55,6 +57,7 @@ export default class Comment extends mixins(TypedStoreMixin) {
    * @param delta - Delta value to change rating value.
    */
   changeRating (commentId: number, delta: number): void {
+    console.log(commentId)
     this.typedStore.comments.updateRating({ commentId, delta })
   }
 
@@ -64,7 +67,7 @@ export default class Comment extends mixins(TypedStoreMixin) {
    *
    * @returns Pairs of class names and boolean values if they should be applied.
    */
-  get computedClasses (): Record<string, boolean> {
+  get computedClasses (): Readonly<Record<string, boolean>> {
     return {
       [this.$style['comment-component']]: true,
       [this.$style['comment-positive']]: this.comment.rating > 0,
@@ -108,17 +111,17 @@ export default class Comment extends mixins(TypedStoreMixin) {
   position: absolute;
   bottom: 0.3rem;
   left: 50%;
+  // stylelint-disable-next-line plugin/no-unsupported-browser-features
   transform: translateX(-50%);
 
   .number {
-    // This will be available as `this.$style.number`
+    // This will be available as `this.$style.number`:
     font-weight: 700;
   }
 
   button {
     margin: 0 0.5rem;
     border: none;
-    outline: none;
     cursor: pointer;
     width: 2rem;
   }

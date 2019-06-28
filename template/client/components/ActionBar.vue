@@ -3,6 +3,7 @@
     <button
       :class="$style.reload"
       @click="fetchComments"
+      @keypress.enter.native="fetchComments"
     >
       reload comments
     </button>
@@ -42,7 +43,6 @@ export default class ActionBar extends mixins(TypedStoreMixin) {
 .reload {
   display: inline-block;
   cursor: pointer;
-  outline: none;
   padding: 5px 10px;
   color: $color-white;
   background-color: $button-color-main;

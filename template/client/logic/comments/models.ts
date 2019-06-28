@@ -12,6 +12,7 @@ import * as ts from 'io-ts'
  * Runtime type, that can be used for schema validation.
  *
  * We call them "models", because they are exchanged between client and server.
+ *
  * @see https://github.com/gcanti/io-ts
  * @see https://github.com/aeirola/io-ts-promise
  */

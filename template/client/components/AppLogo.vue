@@ -15,7 +15,11 @@
 </template>
 
 <script lang="ts">
-export default {}
+import Vue from 'vue'
+import Component from 'nuxt-class-component'
+
+@Component({})
+export default class AppLogo extends Vue {}
 </script>
 
 <style lang="scss" module>

@@ -9,7 +9,7 @@ require('dotenv').config({ 'path': envPath })
 
 module.exports = {
   /**
-   * Headers of the page
+   * Headers of the page.
    */
   'head': {
     'htmlAttrs': { 'lang': 'en' },
@@ -43,13 +43,13 @@ module.exports = {
   },
 
   /**
-   * Specify Nuxt source directory
+   * Specify Nuxt source directory.
    */
   'srcDir': 'client',
   'rootDir': path.resolve(__dirname),
 
   /**
-   * Extra Nuxt modules
+   * Extra Nuxt modules.
    */
   'modules': [
     '@nuxtjs/axios',
@@ -57,7 +57,7 @@ module.exports = {
   ],
 
   /**
-   * Axios settings
+   * Axios settings.
    */
   'axios': {
     // See https://axios.nuxtjs.org/options.html
@@ -70,24 +70,27 @@ module.exports = {
   },
 
   /**
-   * Custom plugins
+   * Custom plugins.
    */
-  'plugins': [],
+  'plugins': [
+    // Install TypeDI to inject dependencies:
+    '~/plugins/type-di',
+  ],
 
   /**
-   * Global CSS
+   * Global CSS.
    */
   'css': [
     'normalize.css/normalize.css',
   ],
 
   /**
-   * postcss configuration
+   * Postcss configuration.
    */
   'postcss': {},
 
   /**
-   * Build configuration
+   * Build configuration.
    */
   'build': {
     extend (config, { isDev, isClient }): void {

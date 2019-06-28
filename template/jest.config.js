@@ -15,8 +15,7 @@ module.exports = {
   ],
   'transform': {
     '.*\\.(vue)$': 'vue-jest',
-    '^.+\\.(svg|svg\\?inline)$': 'jest-svg-transformer',
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|svg|svg\\?inline)$':
       'jest-transform-stub',
   },
   'moduleNameMapper': {

@@ -60,6 +60,116 @@ We stick to the [classic mode][classic-mode].
 
 You can switch to [modules mode][modules-mode] at any time if you want to.
 
+## vuex-simple
+
+We also use [`vuex-simple`](https://github.com/sascha245/vuex-simple)
+to write typed `Vuex` mutations, getters, and actions.
+
+That's how it is defined:
+
+```ts
+import { Action, Mutation, State, Getter } from 'vuex-simple'
+
+export default class TypedStore {
+  @State()
+  public comments: CommentType[] = []
+
+  @Getter()
+  public get hasComments (): boolean {
+    // ...
+  }
+
+  @Mutation()
+  public updateRating ({ commentId, delta }: CommentPayloadType): void {
+    // ...
+  }
+
+  @Action()
+  public async fetchComments (): Promise<RawCommentType[]> {
+    // ...
+  }
+}
+```
+
+And used:
+
+```ts
+import Vue from 'vue'
+import Component from 'nuxt-class-component'
+import { useStore } from 'vuex-simple'
+
+// Import your store:
+import TypedStore from '~/logic/store'
+
+@Component({})
+export default class ComponentName extends Vue {
+  // Later it can be used to perform typed actions, mutations, etc.
+  public typedStore: TypedStore = useStore(this.$store)
+
+  someButtonClicked (commentId: number): void {
+    // This call is fully typed: parameters and return value are known:
+    this.typedStore.updateRating({ commentId, 'delta': 1 })
+  }
+}
+```
+
+We actually provide a utility mixin to inject `typedStore` into all components.
+
+## vue-typedi
+
+We also use 
+[dependency injection (DI)][di] and [inversion of control (IoC)][ioc]
+principles to uncouple different layers of our app.
+
+This allows to write simpler code, abstract things, and reuse code easier.
+
+That's how it works:
+
+```ts
+// module.ts
+
+import { Action } from 'vuex-simple'
+import { Inject, Injectable } from 'vue-typedi'
+
+import tokens from '~/logic/tokens'
+import CommentService from '~/logic/comments/services/api'
+
+@Injectable() // required to make class injectable (to have injections)
+class CommentsModule {
+  @Inject(tokens.COMMENT_SERVICE) // tokens.COMMENT_SERVICE is a unique name
+  public service!: CommentService // we can also type the injected service
+
+  @Action()
+  public async fetchComments () {
+    // Here we use injected service, without explicitly passing it:
+    const commentsList = await this.service.fetchComments()
+    // ...
+  }
+}
+
+// services/api.ts
+
+import { Service } from 'vue-typedi'
+
+import tokens from '~/logic/tokens'
+
+// Here we register our service under a unique name, 
+// it will be used to inject it later:
+@Service(tokens.COMMENT_SERVICE)
+class CommentService {
+  // ...
+}
+```
+
+You can easily mock things in your tests and provide different implementation
+by using this 100% valid way:
+
+```ts
+import { Container } from 'vue-typedi'
+
+import tokens from '~/logic/tokens'
+```
+
 [nuxt-class-component]: https://github.com/nuxt-community/nuxt-class-component
 [vue-class-component]: https://github.com/vuejs/vue-class-component
 [nuxt-property-decorator]: https://github.com/nuxt-community/nuxt-property-decorator
@@ -68,3 +178,5 @@ You can switch to [modules mode][modules-mode] at any time if you want to.
 [classic-mode]: https://nuxtjs.org/guide/vuex-store#classic-mode
 [modules-mode]: https://nuxtjs.org/guide/vuex-store#modules-mode
 [generate-docs]: https://nuxtjs.org/api/configuration-generate/#routes
+[di]: https://en.wikipedia.org/wiki/Dependency_injection
+[ioc]: https://en.wikipedia.org/wiki/Inversion_of_control

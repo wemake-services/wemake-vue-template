@@ -4,6 +4,7 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
@@ -12,7 +13,6 @@
       "esnext.asynciterable",
       "dom"
     ],
-    "experimentalDecorators": true,
     "allowJs": true,
     "checkJs": true,
     "sourceMap": true,

@@ -22,6 +22,7 @@ https://wemake-vue-demo.herokuapp.com/
 - `Vue` + `vuex` + `vue-router` with the latest `es` features
 - Latest [`nuxt`](https://nuxtjs.org/) for server-side rendering
 - Full `typescript` support, including Vue's SFC and tests
+- Tools to write business logics including: DI, IoC, runtime type validation
 - Linting with [`eslint`](https://eslint.org/) + [`stylelint`](https://github.com/wemake-services/stylelint-config-strict-scss)
 - [`jest`](https://facebook.github.io/jest/) for unit tests and [`testcafe`](https://github.com/DevExpress/testcafe) for end-to-end testing
 - `docker` support for development and production

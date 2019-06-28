@@ -66,6 +66,7 @@ export type RawCommentType = ts.TypeOf<typeof RawComment>
 And then validating it:
 
 ```ts
+import * as ts from 'io-ts'
 import * as tPromise from 'io-ts-promise'
 
 async function fetchComments ($axios): Promise<RawCommentType[]> {
@@ -75,4 +76,5 @@ async function fetchComments ($axios): Promise<RawCommentType[]> {
 }
 ```
 
-That's a powerful combination of runtime and static type checking!
+That's a powerful combination of runtime and static type checking that
+enforces strong contracts on data exchange and keeping it up-to-date.

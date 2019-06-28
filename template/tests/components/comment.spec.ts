@@ -2,8 +2,9 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import { Store } from 'vuex'
 
 import Comment from '~/components/Comment.vue'
-import { CommentType, StateType } from '~/logic/comments/types'
-import * as reducers from '~/logic/comments/module/reducers'
+import { StateType } from '~/logic/types'
+import { CommentType } from '~/logic/comments/types'
+import TypedStore from '~/logic/store'
 
 import { storeFactory, commentFactory } from '@/fixtures/vuex'
 
@@ -15,16 +16,19 @@ describe('unit tests for Comment component', () => {
 
   beforeEach(() => {
     comment = commentFactory.build({ 'rating': 0 })
-    store = storeFactory.build(
-      { 'state': { 'comments': [comment] } },
-      { localVue }
-    )
+    store = storeFactory.build(undefined, {
+      localVue,
+      'state': { 'comments': { 'comments': [comment] } },
+    })
   })
 
   test('should have valid props', () => {
     expect.hasAssertions()
 
-    expect(Comment).toBeValidProps({ comment })
+    expect(Comment).toBeValidProps({ comment }, {
+      localVue,
+      store,
+    })
   })
 
   test('should have two buttons', () => {
@@ -68,13 +72,14 @@ describe('unit tests for Comment component', () => {
       localVue,
       'propsData': { comment },
     })
+    const typedStore: TypedStore = (wrapper.vm as any).typedStore
 
-    wrapper.vm.$store.commit(reducers.UPDATE_RATING, {
-      'commentId': comment.id,
-      delta,
-    })
+    typedStore.comments.updateRating({ 'commentId': comment.id, delta })
 
-    expect(wrapper.vm.$store.state.comments[0].rating).toStrictEqual(newRating)
+    expect(wrapper.vm.$store.state.comments.comments[0].rating)
+      .toStrictEqual(newRating)
+    expect(typedStore.comments.comments[0].rating)
+      .toStrictEqual(typedStore.comments.comments[0].rating)
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style[styleName])
   })
@@ -87,19 +92,21 @@ describe('snapshot tests for Comment component', () => {
   beforeAll(() => {
     // We need a seed here to be consistent for snapshot testing:
     comment = commentFactory.build({}, { 'seed': 8874 })
-    store = storeFactory.build(
-      { 'state': { 'comments': [comment] } },
-      { localVue }
-    )
+    store = storeFactory.build(undefined, {
+      localVue,
+      'state': { 'comments': { 'comments': [comment] } },
+    })
   })
 
   test('should match the snapshot', () => {
     expect.hasAssertions()
+
     const wrapper = mount(Comment, {
       store,
       localVue,
       'propsData': { comment },
     })
+
     expect(wrapper).toMatchSnapshot()
   })
 })

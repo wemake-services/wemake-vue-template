@@ -13,6 +13,7 @@
   "vetur.validation.script": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,
+  "vetur.experimental.templateInterpolationService": true,
   "json.format.enable": true,
   "javascript.validate.enable": true,
 

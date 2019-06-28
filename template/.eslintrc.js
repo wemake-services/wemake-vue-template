@@ -13,6 +13,7 @@ module.exports = {
     'plugin:nuxt/recommended',
     '@vue/typescript',
     'plugin:compat/recommended',
+    'plugin:vue-a11y/recommended',
   ],
   'plugins': [
     'compat',

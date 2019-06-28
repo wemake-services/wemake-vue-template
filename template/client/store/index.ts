@@ -1,8 +1,32 @@
-// We use default Nuxt Module-based store,
+// We use default Nuxt index-based store,
 // read more about it here:
 // https://nuxtjs.org/guide/vuex-store
 
-export { state } from '~/logic/comments/module/state'
-export { getters } from '~/logic/comments/module/getters'
-export { mutations } from '~/logic/comments/module/mutations'
-export { actions } from '~/logic/comments/module/actions'
+import Vue from 'vue'
+import Vuex, { Store, Plugin } from 'vuex'
+import { createVuexStore } from 'vuex-simple'
+
+import TypedStore from '~/logic/store'
+import { StateType } from '~/logic/types'
+
+Vue.use(Vuex)
+
+/**
+ * Creates Vuex.Store to be used and called by Nuxt.
+ *
+ * We also use this store in tests.
+ *
+ * @param ssrContext - Is passed via Nuxt, represents current req / res.
+ * @param extraContext - Extra options to be used in tests.
+ * @returns Global store instance.
+ */
+export default function store (
+  ssrContext,
+  extraContext: { plugins: Plugin<StateType>[] },
+): Store<StateType> {
+  const typedStore = new TypedStore()
+
+  return createVuexStore(typedStore, {
+    'plugins': extraContext ? extraContext.plugins : [],
+  })
+}

@@ -12,6 +12,7 @@
       <button
         :class="$style['rating-up']"
         @click="changeRating(comment.id, 1)"
+        @keypress.enter.native="changeRating(comment.id, 1)"
       >
         +
       </button>
@@ -21,6 +22,7 @@
       <button
         :class="$style['rating-down']"
         @click="changeRating(comment.id, -1)"
+        @keydown.enter.native="changeRating(comment.id, -1)"
       >
         -
       </button>
@@ -29,31 +31,23 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'nuxt-class-component'
+import Component, { mixins } from 'nuxt-class-component'
 import { Prop } from 'vue-property-decorator'
-import { Mutation } from 'vuex-class'
 
-import * as reducers from '~/logic/comments/module/reducers'
-import { CommentType, CommentPayloadType } from '~/logic/comments/types'
+import TypedStoreMixin from '~/mixins/typed-store'
+import { CommentType } from '~/logic/comments/types'
 
 // @vue/component
 @Component({})
 /**
  * Comment component is used to represent a single user's comment.
  */
-export default class Comment extends Vue {
-  @Mutation(reducers.UPDATE_RATING)
-  /**
-   * This is a wrapped mutation from the vuex.
-   */
-  updateRating!: (payload: CommentPayloadType) => void
-
+export default class Comment extends mixins(TypedStoreMixin) {
   @Prop({ 'required': true })
   /**
    * Passed comment from the parent component.
    */
-  comment!: CommentType
+  readonly comment!: CommentType
 
   /**
    * Changes comment's rating.
@@ -62,8 +56,8 @@ export default class Comment extends Vue {
    * @param commentId - Comment's identifier to change rating.
    * @param delta - Delta value to change rating value.
    */
-  changeRating (commentId: number, delta: number) {
-    this.updateRating({ commentId, delta })
+  changeRating (commentId: number, delta: number): void {
+    this.typedStore.comments.updateRating({ commentId, delta })
   }
 
   /**
@@ -72,7 +66,7 @@ export default class Comment extends Vue {
    *
    * @returns Pairs of class names and boolean values if they should be applied.
    */
-  get computedClasses () {
+  get computedClasses (): Readonly<Record<string, boolean>> {
     return {
       [this.$style['comment-component']]: true,
       [this.$style['comment-positive']]: this.comment.rating > 0,
@@ -116,17 +110,17 @@ export default class Comment extends Vue {
   position: absolute;
   bottom: 0.3rem;
   left: 50%;
+  // stylelint-disable-next-line plugin/no-unsupported-browser-features
   transform: translateX(-50%);
 
   .number {
-    // This will be available as `this.$style.number`
+    // This will be available as `this.$style.number`:
     font-weight: 700;
   }
 
   button {
     margin: 0 0.5rem;
     border: none;
-    outline: none;
     cursor: pointer;
     width: 2rem;
   }

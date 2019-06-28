@@ -61,6 +61,16 @@ To run `css` linting execute: `npm run lint:css`.
 All configuration is done [inside `stylelint.config.js`](configuration.md#stylelint). 
 It stores presets, rules, and plugins.
 
+## a11y
+
+We also ship a rich set of accessability 
+checks for both `stylelint` and `eslint` with the help of:
+
+- [`eslint-plugin-vue-a11y`](https://github.com/maranran/eslint-plugin-vue-a11y)
+- [`stylelint-a11y`](https://github.com/YozhikM/stylelint-a11y)
+
+Please, do not turn it off! Let's make our apps better!
+
 ## Markdown
 
 We lint markdown files with [`remark-lint`](https://github.com/remarkjs/remark-lint).

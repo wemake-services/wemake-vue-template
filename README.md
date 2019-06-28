@@ -27,6 +27,7 @@ https://wemake-vue-demo.herokuapp.com/
 - `docker` optional support for development, testing, and production
 - [`Gitlab CI`](https://about.gitlab.com/features/gitlab-ci-cd/) with full `test` and `deploy` pipeline configured by default
 - Meaningful [docs](https://wemake-services.gitbook.io/wemake-vue-template/), covering almost every aspect of the project, including [`jsdoc`](http://usejsdoc.org/) annotations
+- Full `vscode` support and list of [suggested settings and plugins](https://github.com/wemake-services/wemake-vue-template/tree/master/template/.vscode)
 - Easy [update process](https://wemake-services.gitbook.io/wemake-vue-template/#updating-template), so your template will always be up-to-date
 
 

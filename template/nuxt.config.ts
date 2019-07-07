@@ -2,6 +2,7 @@
 // See: https://nuxtjs.org/guide/configuration/
 
 import path from 'path'
+
 import pkg from './package.json'
 
 const envPath = path.resolve(__dirname, 'config', '.env')

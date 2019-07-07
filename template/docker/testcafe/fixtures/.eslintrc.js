@@ -10,5 +10,8 @@ module.exports = {
 
     // allows to use long functions inside tests:
     'max-lines-per-function': 'off',
+
+    // we import some stuff that is not installed in a general project:
+    'import/no-unresolved': 'off',
   },
 }

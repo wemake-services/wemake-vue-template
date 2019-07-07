@@ -13,8 +13,8 @@
 <script lang="ts">
 import Component, { mixins } from 'nuxt-class-component'
 
-import TypedStoreMixin from '~/mixins/typed-store'
 import { RawCommentType } from '~/logic/comments/models'
+import TypedStoreMixin from '~/mixins/typed-store'
 
 // @vue/component
 @Component({})

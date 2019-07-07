@@ -34,8 +34,8 @@
 import Component, { mixins } from 'nuxt-class-component'
 import { Prop } from 'vue-property-decorator'
 
-import TypedStoreMixin from '~/mixins/typed-store'
 import { CommentType } from '~/logic/comments/types'
+import TypedStoreMixin from '~/mixins/typed-store'
 
 // @vue/component
 @Component({})

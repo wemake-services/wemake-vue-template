@@ -1,5 +1,5 @@
-import Vue from 'vue'
 import Component from 'nuxt-class-component'
+import Vue from 'vue'
 import { useStore } from 'vuex-simple'
 
 import TypedStore from '~/logic/store'

@@ -2,9 +2,9 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import { Store } from 'vuex'
 
 import Comment from '~/components/Comment.vue'
-import { StateType } from '~/logic/types'
 import { CommentType } from '~/logic/comments/types'
 import TypedStore from '~/logic/store'
+import { StateType } from '~/logic/types'
 
 import { storeFactory, commentFactory } from '@/fixtures/vuex'
 

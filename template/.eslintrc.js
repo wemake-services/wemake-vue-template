@@ -18,11 +18,21 @@ module.exports = {
   'plugins': [
     'compat',
     'json',
+    'eslint-plugin-import-helpers',
   ],
   'settings': {
     // providing polyfills for `eslint-plugin-compat` plugin, see:
     // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
     'polyfills': [],
+  },
+  'rules': {
+    // Sets the import order linting,
+    // see: https://github.com/Tibfib/eslint-plugin-import-helpers
+    'import-helpers/order-imports': ['error', {
+      'newlinesBetween': 'always',
+      'groups': ['module', '/^~//', '/^@//'],
+      'alphabetize': { 'order': 'asc', 'ignoreCase': false },
+    }],
   },
   'env': {
     'node': true,

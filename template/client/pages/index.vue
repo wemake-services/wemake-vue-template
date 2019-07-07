@@ -19,18 +19,17 @@
 </template>
 
 <script lang="ts">
-import { Store } from 'vuex'
 import Component, { mixins } from 'nuxt-class-component'
+import { Store } from 'vuex'
 import { useStore } from 'vuex-simple'
 
 import ActionBar from '~/components/ActionBar.vue'
 import AppLogo from '~/components/AppLogo.vue'
 import Comment from '~/components/Comment.vue'
-
-import { StateType } from '~/logic/types'
-import TypedStore from '~/logic/store'
-import TypedStoreMixin from '~/mixins/typed-store'
 import { RawCommentType } from '~/logic/comments/models'
+import TypedStore from '~/logic/store'
+import { StateType } from '~/logic/types'
+import TypedStoreMixin from '~/mixins/typed-store'
 
 // @vue/component
 @Component({

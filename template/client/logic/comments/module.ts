@@ -1,10 +1,10 @@
-import { Action, Mutation, State, Getter } from 'vuex-simple'
 import { Inject, Injectable } from 'vue-typedi'
+import { Action, Mutation, State, Getter } from 'vuex-simple'
 
-import tokens from '~/logic/tokens'
-import { CommentType, CommentPayloadType } from '~/logic/comments/types'
 import { RawCommentType } from '~/logic/comments/models'
 import CommentService from '~/logic/comments/services/api'
+import { CommentType, CommentPayloadType } from '~/logic/comments/types'
+import tokens from '~/logic/tokens'
 
 @Injectable()
 /**

@@ -1,14 +1,15 @@
-import axios from 'axios'
 import { mount, createLocalVue } from '@vue/test-utils'
+import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
-import { Store } from 'vuex'
 import { Container } from 'vue-typedi'
+import { Store } from 'vuex'
 
-import { StateType } from '~/logic/types'
-import tokens from '~/logic/tokens'
-import TypedStore from '~/logic/store'
 import { CommentType } from '~/logic/comments/types'
+import TypedStore from '~/logic/store'
+import tokens from '~/logic/tokens'
+import { StateType } from '~/logic/types'
 import Index from '~/pages/index.vue'
+
 import { storeFactory, commentFactory } from '@/fixtures/vuex'
 
 const localVue = createLocalVue()

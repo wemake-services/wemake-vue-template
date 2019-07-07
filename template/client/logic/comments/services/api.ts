@@ -1,10 +1,10 @@
 import { AxiosInstance } from 'axios'
-import { Service, Container } from 'vue-typedi'
 import * as ts from 'io-ts'
 import * as tPromise from 'io-ts-promise'
+import { Service, Container } from 'vue-typedi'
 
-import tokens from '~/logic/tokens'
 import { RawComment, RawCommentType } from '~/logic/comments/models'
+import tokens from '~/logic/tokens'
 
 @Service(tokens.COMMENT_SERVICE)
 /**

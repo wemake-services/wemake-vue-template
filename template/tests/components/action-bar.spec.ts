@@ -1,8 +1,9 @@
-import { Store } from 'vuex'
 import { mount, createLocalVue } from '@vue/test-utils'
+import { Store } from 'vuex'
 
-import { StateType } from '~/logic/types'
 import ActionBar from '~/components/ActionBar.vue'
+import { StateType } from '~/logic/types'
+
 import { storeFactory } from '@/fixtures/vuex'
 
 const localVue = createLocalVue()

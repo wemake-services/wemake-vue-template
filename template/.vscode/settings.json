@@ -9,7 +9,15 @@
     "**/dist": true,
     "**/coverage": true
   },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.nuxt": true,
+    "**/coverage": true,
+    "**/dist": true
+  },
 
+  // Defaults override:
   "vetur.validation.script": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,

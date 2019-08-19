@@ -31,7 +31,7 @@
     "eslint-plugin-sonarjs": "^0.4.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^9.1.1",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "vue-cli": "^2.9.6"
   },
   "dependencies": {}

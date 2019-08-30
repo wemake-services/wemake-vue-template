@@ -22,6 +22,11 @@
   "vetur.validation.style": true,
   "vetur.validation.template": true,
   "vetur.experimental.templateInterpolationService": true,
+  "vetur.grammar.customBlocks": {
+    "docs": "md",
+    "i18n": "json",
+    "router": "js"
+  },
   "json.format.enable": true,
   "javascript.validate.enable": true,
 

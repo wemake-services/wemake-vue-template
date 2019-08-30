@@ -50,6 +50,15 @@ module.exports = {
   'rootDir': path.resolve(__dirname),
 
   /**
+   * Modules that are used in build-time only.
+   */
+  'buildModules': [
+    ['@nuxt/typescript-build', {
+      'typeCheck': true,
+    }],
+  ],
+
+  /**
    * Extra Nuxt modules.
    */
   'modules': [

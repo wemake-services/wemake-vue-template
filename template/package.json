@@ -57,7 +57,7 @@
     "vuex-simple": "^2.1.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.1.11",
+    "@nuxt/typescript-build": "^0.2.0",
     "@nuxt/vue-app": "^2.9.2",
     "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.18",

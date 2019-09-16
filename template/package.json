@@ -83,7 +83,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-import-helpers": "^1.0.2",
     "eslint-plugin-jest": "^22.17.0",
-    "eslint-plugin-jsdoc": "^15.9.1",
+    "eslint-plugin-jsdoc": "^15.9.2",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-nuxt": "^0.4.3",

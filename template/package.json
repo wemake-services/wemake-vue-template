@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.0",
-    "@nuxt/vue-app": "^2.9.2",
+    "@nuxt/vue-app": "^2.10.0",
     "@types/faker": "^4.1.6",
     "@types/jest": "^24.0.18",
     "@types/rosie": "0.0.36",

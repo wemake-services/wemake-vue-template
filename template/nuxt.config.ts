@@ -9,6 +9,10 @@ import pkg from './package.json'
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ 'path': envPath })
 
+const ROOT_DIR_PATH: Configuration['rootDir'] = path.resolve(__dirname)
+const SRC_DIR: Configuration['srcDir'] = 'client'
+const SCSS_PATH = path.resolve(ROOT_DIR_PATH, SRC_DIR, 'scss')
+
 const nuxtConfig: Configuration = {
   /**
    * Headers of the page.
@@ -47,8 +51,8 @@ const nuxtConfig: Configuration = {
   /**
    * Specify Nuxt source directory.
    */
-  'srcDir': 'client',
-  'rootDir': path.resolve(__dirname),
+  'srcDir': SRC_DIR,
+  'rootDir': ROOT_DIR_PATH,
 
   /**
    * Modules that are used in build-time only.
@@ -107,7 +111,7 @@ const nuxtConfig: Configuration = {
     extend (config, { isDev, isClient }) {
       if (config.resolve && config.resolve.alias) {
         // This line allows us to use `@import "~/scss/..."` in our app:
-        config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
+        config.resolve.alias['/scss'] = SCSS_PATH
       }
 
       if (isDev && isClient && config.module) {

@@ -9,7 +9,7 @@ import pkg from './package.json'
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ 'path': envPath })
 
-const config: Configuration = {
+const nuxtConfig: Configuration = {
   /**
    * Headers of the page.
    */
@@ -130,4 +130,4 @@ const config: Configuration = {
   },
 }
 
-export default config
+export default nuxtConfig

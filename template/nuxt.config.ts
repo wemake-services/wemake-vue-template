@@ -2,13 +2,14 @@
 // See: https://nuxtjs.org/guide/configuration/
 
 import path from 'path'
+import { Configuration } from '@nuxt/types'
 
 import pkg from './package.json'
 
 const envPath = path.resolve(__dirname, 'config', '.env')
 require('dotenv').config({ 'path': envPath })
 
-module.exports = {
+const config: Configuration = {
   /**
    * Headers of the page.
    */
@@ -104,10 +105,12 @@ module.exports = {
    */
   'build': {
     extend (config, { isDev, isClient }): void {
-      // This line allows us to use `@import "~/scss/..."` in our app:
-      config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
+      if (config.resolve && config.resolve.alias) {
+        // This line allows us to use `@import "~/scss/..."` in our app:
+        config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
+      }
 
-      if (isDev && isClient) {
+      if (isDev && isClient && config.module) {
         // Enabling eslint:
         config.module.rules.push({
           'enforce': 'pre',
@@ -116,11 +119,15 @@ module.exports = {
           'exclude': /(node_modules)/u,
         })
 
-        // Enabling stylelint:
-        config.plugins.push(require('stylelint-webpack-plugin')({
-          'files': 'client/**/*.{vue,scss,css}',
-        }))
+        if (config.plugins) {
+          // Enabling stylelint:
+          config.plugins.push(require('stylelint-webpack-plugin')({
+            'files': 'client/**/*.{vue,scss,css}',
+          }))
+        }
       }
     },
   },
 }
+
+export default config

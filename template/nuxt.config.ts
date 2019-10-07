@@ -2,16 +2,17 @@
 // See: https://nuxtjs.org/guide/configuration/
 
 import { Configuration } from '@nuxt/types'
+import { config as dotenv } from 'dotenv'
 import { resolve } from 'path'
 
 import pkg from './package.json'
 
-const envPath = resolve(__dirname, 'config', '.env')
-require('dotenv').config({ 'path': envPath })
-
 const ROOT_DIR: Configuration['rootDir'] = resolve(__dirname)
 const SRC_DIR: Configuration['srcDir'] = 'client'
 const SCSS_DIR = resolve(ROOT_DIR, SRC_DIR, 'scss')
+const ENV_PATH = resolve(ROOT_DIR, 'config', '.env')
+
+dotenv({ 'path': ENV_PATH })
 
 const nuxtConfig: Configuration = {
   /**

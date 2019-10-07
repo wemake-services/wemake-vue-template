@@ -1,8 +1,8 @@
 // This is Nuxt configuration file
 // See: https://nuxtjs.org/guide/configuration/
 
-import path from 'path'
 import { Configuration } from '@nuxt/types'
+import path from 'path'
 
 import pkg from './package.json'
 

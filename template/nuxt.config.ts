@@ -104,7 +104,7 @@ const config: Configuration = {
    * Build configuration.
    */
   'build': {
-    extend (config, { isDev, isClient }): void {
+    extend (config, { isDev, isClient }) {
       if (config.resolve && config.resolve.alias) {
         // This line allows us to use `@import "~/scss/..."` in our app:
         config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')

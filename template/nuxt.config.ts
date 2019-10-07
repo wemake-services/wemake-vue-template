@@ -1,13 +1,13 @@
 // This is Nuxt configuration file
 // See: https://nuxtjs.org/guide/configuration/
 
-import path from 'path'
+import { resolve } from 'path'
 import { Configuration } from '@nuxt/types'
+import { config } from 'dotenv'
 
 import pkg from './package.json'
 
-const envPath = path.resolve(__dirname, 'config', '.env')
-require('dotenv').config({ 'path': envPath })
+config({ 'path': resolve(__dirname, 'config', '.env') })
 
 const config: Configuration = {
   /**
@@ -48,7 +48,7 @@ const config: Configuration = {
    * Specify Nuxt source directory.
    */
   'srcDir': 'client',
-  'rootDir': path.resolve(__dirname),
+  'rootDir': resolve(__dirname),
 
   /**
    * Modules that are used in build-time only.
@@ -107,7 +107,7 @@ const config: Configuration = {
     extend (config, { isDev, isClient }): void {
       if (config.resolve && config.resolve.alias) {
         // This line allows us to use `@import "~/scss/..."` in our app:
-        config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
+        config.resolve.alias['/scss'] = resolve(__dirname, 'client', 'scss')
       }
 
       if (isDev && isClient && config.module) {

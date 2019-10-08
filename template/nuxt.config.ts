@@ -1,14 +1,20 @@
 // This is Nuxt configuration file
 // See: https://nuxtjs.org/guide/configuration/
 
-import path from 'path'
+import { Configuration } from '@nuxt/types'
+import { config as dotenv } from 'dotenv'
+import { resolve } from 'path'
 
 import pkg from './package.json'
 
-const envPath = path.resolve(__dirname, 'config', '.env')
-require('dotenv').config({ 'path': envPath })
+const ROOT_DIR: Configuration['rootDir'] = resolve(__dirname)
+const SRC_DIR: Configuration['srcDir'] = 'client'
+const SCSS_DIR = resolve(ROOT_DIR, SRC_DIR, 'scss')
+const ENV_PATH = resolve(ROOT_DIR, 'config', '.env')
 
-module.exports = {
+dotenv({ 'path': ENV_PATH })
+
+const nuxtConfig: Configuration = {
   /**
    * Headers of the page.
    */
@@ -46,8 +52,8 @@ module.exports = {
   /**
    * Specify Nuxt source directory.
    */
-  'srcDir': 'client',
-  'rootDir': path.resolve(__dirname),
+  'srcDir': SRC_DIR,
+  'rootDir': ROOT_DIR,
 
   /**
    * Modules that are used in build-time only.
@@ -103,11 +109,14 @@ module.exports = {
    * Build configuration.
    */
   'build': {
+    // eslint-disable-next-line complexity
     extend (config, { isDev, isClient }): void {
-      // This line allows us to use `@import "~/scss/..."` in our app:
-      config.resolve.alias['/scss'] = path.resolve(__dirname, 'client', 'scss')
+      if (config.resolve && config.resolve.alias) {
+        // This line allows us to use `@import "~/scss/..."` in our app:
+        config.resolve.alias['/scss'] = SCSS_DIR
+      }
 
-      if (isDev && isClient) {
+      if (isDev && isClient && config.module) {
         // Enabling eslint:
         config.module.rules.push({
           'enforce': 'pre',
@@ -116,11 +125,15 @@ module.exports = {
           'exclude': /(node_modules)/u,
         })
 
-        // Enabling stylelint:
-        config.plugins.push(require('stylelint-webpack-plugin')({
-          'files': 'client/**/*.{vue,scss,css}',
-        }))
+        if (config.plugins) {
+          // Enabling stylelint:
+          config.plugins.push(require('stylelint-webpack-plugin')({
+            'files': 'client/**/*.{vue,scss,css}',
+          }))
+        }
       }
     },
   },
 }
+
+export default nuxtConfig

@@ -4,6 +4,7 @@
 import { Configuration } from '@nuxt/types'
 import { config as dotenv } from 'dotenv'
 import { resolve } from 'path'
+import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 
 import pkg from './package.json'
 
@@ -127,7 +128,7 @@ const nuxtConfig: Configuration = {
 
         if (config.plugins) {
           // Enabling stylelint:
-          config.plugins.push(require('stylelint-webpack-plugin')({
+          config.plugins.push(new StylelintWebpackPlugin({
             'files': 'client/**/*.{vue,scss,css}',
           }))
         }

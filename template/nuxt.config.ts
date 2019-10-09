@@ -127,8 +127,8 @@ const nuxtConfig: Configuration = {
 
         if (config.plugins) {
           // Enabling stylelint:
-          let styleLintPlugin = require('stylelint-webpack-plugin')
-          config.plugins.push(new styleLintPlugin({
+          const StyleLintPlugin = require('stylelint-webpack-plugin')
+          config.plugins.push(new StyleLintPlugin({
             'files': 'client/**/*.{vue,scss,css}',
           }))
         }

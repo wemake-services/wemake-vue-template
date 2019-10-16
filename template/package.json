@@ -39,7 +39,7 @@
     "@nuxt/typescript-runtime": "^0.2.1",
     "@nuxtjs/axios": "5.6.0",
     "cross-env": "^6.0.3",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "io-ts": "^1.10.4",
     "io-ts-promise": "^1.1.1",
     "io-ts-types": "^0.4.7",

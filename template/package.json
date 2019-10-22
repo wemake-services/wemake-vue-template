@@ -46,7 +46,7 @@
     "monocle-ts": "^1.7.2",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.10.1",
+    "nuxt": "^2.10.2",
     "nuxt-class-component": "^1.3.0",
     "nuxt-imagemin": "^1.0.0",
     "nuxt-property-decorator": "2.5.0",

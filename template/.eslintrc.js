@@ -9,7 +9,6 @@ module.exports = {
     '@wemake-services/typescript/recommended',
     '@wemake-services/vue',
     '@wemake-services/jsdoc',
-    'plugin:@typescript-eslint/recommended',
     'plugin:nuxt/recommended',
     '@vue/typescript',
     'plugin:compat/recommended',
@@ -20,6 +19,9 @@ module.exports = {
     'json',
     'eslint-plugin-import-helpers',
   ],
+  'parserOptions': {
+    'parser': '@typescript-eslint/parser',
+  },
   'settings': {
     // providing polyfills for `eslint-plugin-compat` plugin, see:
     // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills

@@ -1,0 +1,32 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.16]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install prerequisites
+      run: |
+          sudo apt-get update && sudo apt-get install expect
+          sudo pip install -U docker-compose
+          docker --version && docker-compose --version
+          
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }} 
+
+    - name: npm install, build, and test
+      run: |
+        npm run lint
+        npm run test
+      env:
+        PROJECT_NAME: wemake_vue_demo

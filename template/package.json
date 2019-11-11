@@ -113,7 +113,7 @@
     "stylelint-webpack-plugin": "^1.0.3",
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2",
-    "vue-eslint-parser": "^6.0.4",
+    "vue-eslint-parser": "^7.0.0",
     "vue-jest": "^3.0.5"
   }
 }

@@ -102,7 +102,7 @@
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "jscpd": "^2.0.16",
-    "remark-cli": "^7.0.0",
+    "remark-cli": "^7.0.1",
     "remark-lint": "^6.0.5",
     "remark-preset-lint-markdown-style-guide": "^2.1.3",
     "rosie": "^2.0.1",

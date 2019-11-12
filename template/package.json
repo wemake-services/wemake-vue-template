@@ -62,7 +62,7 @@
     "@types/dotenv": "8.2.0",
     "@types/faker": "^4.1.7",
     "@types/jest": "^24.0.19",
-    "@types/rosie": "0.0.36",
+    "@types/rosie": "0.0.37",
     "@types/webpack-env": "1.14.1",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",

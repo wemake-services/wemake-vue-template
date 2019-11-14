@@ -94,7 +94,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-testcafe": "^0.2.1",
     "eslint-plugin-unicorn": "^9.1.1",
-    "eslint-plugin-vue": "^6.0.0",
+    "eslint-plugin-vue": "^6.0.1",
     "eslint-plugin-vue-a11y": "0.0.31",
     "faker": "^4.1.0",
     "jest": "^24.9.0",

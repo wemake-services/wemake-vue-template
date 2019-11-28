@@ -60,7 +60,7 @@
     "@nuxt/typescript-build": "^0.3.4",
     "@nuxt/vue-app": "^2.10.2",
     "@types/dotenv": "8.2.0",
-    "@types/faker": "^4.1.7",
+    "@types/faker": "^4.1.8",
     "@types/jest": "^24.0.19",
     "@types/rosie": "0.0.37",
     "@types/webpack-env": "1.14.1",

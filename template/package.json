@@ -67,7 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "@vue/eslint-config-typescript": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.29",
+    "@vue/test-utils": "^1.0.0-beta.30",
     "@wemake-services/eslint-config-javascript": "^0.3.0",
     "@wemake-services/eslint-config-jest": "^0.1.5",
     "@wemake-services/eslint-config-jsdoc": "^0.3.0",

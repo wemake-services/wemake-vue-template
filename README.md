@@ -53,7 +53,7 @@ We are required to clone the project, since we need the `.git` folder.
 Before going any further make sure that you have read [the docs](https://wemake-services.gitbook.io/wemake-vue-template).
 
 
-## Who are using this template?
+## Who is using this template?
 
 If you use our template, please add yourself or your company [in the list](https://github.com/wemake-services/wemake-vue-template/wiki/Who-is-using-this-template).
 

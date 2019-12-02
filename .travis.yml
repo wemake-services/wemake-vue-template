@@ -21,7 +21,7 @@ env:
 
 before_install:
   - sudo apt-get update && sudo apt-get install expect
-  - sudo pip install -U docker-compose
+  - sudo pip install -U pyOpenSSL docker-compose
   - docker --version && docker-compose --version
 
 install:

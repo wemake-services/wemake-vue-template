@@ -1,5 +1,5 @@
-import Vue from 'vue'
 import { mount, createLocalVue } from '@vue/test-utils'
+import Vue from 'vue'
 import { Store } from 'vuex'
 
 import Comment from '~/components/Comment.vue'

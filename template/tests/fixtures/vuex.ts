@@ -1,7 +1,7 @@
 import axios from 'axios'
 import faker from 'faker'
 import { vuexPlugin } from 'jest-matcher-vue-test-utils'
-import { Factory } from 'rosie'
+import rosie from 'rosie'
 import Vuex, { Store } from 'vuex'
 
 import { CommentType } from '~/logic/comments/types'
@@ -11,14 +11,14 @@ import createStore from '~/store'
 
 import { fakerFactory, FakerFactoryType } from '@/fixtures/faker'
 
-export const commentFactory = new Factory()
+export const commentFactory = new rosie.Factory()
   .extend<FakerFactoryType & CommentType, FakerFactoryType>(fakerFactory)
   .sequence('id')
   .attr('email', faker.internet.email)
   .attr('body', faker.lorem.sentences)
   .attr('rating', () => faker.random.number({ 'min': -10, 'max': 10 }))
 
-export const storeFactory = new Factory<Store<StateType>>()
+export const storeFactory = new rosie.Factory<Store<StateType>>()
   .option('localVue')
   .option('state', null)
   .after((empty, options) => {

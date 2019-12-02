@@ -1,5 +1,5 @@
 import faker from 'faker'
-import { Factory } from 'rosie'
+import rosie from 'rosie'
 
 export interface FakerFactoryType {
   seed: number | null
@@ -7,7 +7,7 @@ export interface FakerFactoryType {
   faker: typeof faker
 }
 
-export const fakerFactory = new Factory<FakerFactoryType>()
+export const fakerFactory = new rosie.Factory<FakerFactoryType>()
   .option('seed', null)
   .option('locale', null)
   .option('faker', ['seed', 'locale'], (seed, locale) => {

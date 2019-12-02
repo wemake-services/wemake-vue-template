@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import { mount, createLocalVue } from '@vue/test-utils'
 import { Store } from 'vuex'
 
@@ -63,7 +64,7 @@ describe('unit tests for Comment component', () => {
   test.each([
     { 'delta': 1, 'styleName': 'comment-positive' },
     { 'delta': -1, 'styleName': 'comment-negative' },
-  ])('should change rating: %p', ({ delta, styleName }) => {
+  ])('should change rating: %p', async ({ delta, styleName }) => {
     expect.hasAssertions()
 
     const newRating = comment.rating + delta
@@ -76,10 +77,15 @@ describe('unit tests for Comment component', () => {
 
     typedStore.comments.updateRating({ 'commentId': comment.id, delta })
 
+    // This is required, because we use new version of
+    // vue-test-utils, which does not have a `sync` mode to render UI:
+    await Vue.nextTick()
+
     expect(wrapper.vm.$store.state.comments.comments[0].rating)
       .toStrictEqual(newRating)
     expect(typedStore.comments.comments[0].rating)
       .toStrictEqual(typedStore.comments.comments[0].rating)
+
     expect(wrapper.props().comment.rating).toStrictEqual(newRating)
     expect(wrapper.classes()).toContain(wrapper.vm.$style[styleName])
   })

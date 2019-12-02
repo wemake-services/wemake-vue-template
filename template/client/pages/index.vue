@@ -1,20 +1,18 @@
 <template>
-  <main>
-    <div>
-      <app-logo />
-      <action-bar />
+  <main :class="$style.main">
+    <app-logo />
+    <action-bar />
 
-      <section
-        v-if="typedStore.comments.hasComments"
-        :class="$style.container"
-      >
-        <comment
-          v-for="comment in typedStore.comments.comments"
-          :key="comment.id"
-          :comment="comment"
-        />
-      </section>
-    </div>
+    <section
+      v-if="typedStore.comments.hasComments"
+      :class="$style.container"
+    >
+      <comment
+        v-for="comment in typedStore.comments.comments"
+        :key="comment.id"
+        :comment="comment"
+      />
+    </section>
   </main>
 </template>
 
@@ -62,6 +60,10 @@ export default class Index extends mixins(TypedStoreMixin) {
 </script>
 
 <style lang="scss" module>
+.main {
+  max-width: 100%;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;

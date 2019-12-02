@@ -19,18 +19,18 @@
     ]
   },
   "devDependencies": {
-    "@wemake-services/eslint-config-javascript": "^0.3.0",
-    "@wemake-services/eslint-config-jest": "^0.1.5",
+    "@wemake-services/eslint-config-javascript": "^0.4.1",
+    "@wemake-services/eslint-config-jest": "^0.2.1",
     "eslint": "^6.7.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.20.0",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^13.0.0",
+    "eslint-plugin-unicorn": "^14.0.1",
     "jest": "^24.9.0",
     "vue-cli": "^2.9.6"
   },

@@ -69,6 +69,7 @@ const nuxtConfig: Configuration = {
    * Extra Nuxt modules.
    */
   'modules': [
+    'nuxt-vuex-router-sync',
     '@nuxtjs/axios',
     'nuxt-imagemin',
   ],

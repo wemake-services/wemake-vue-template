@@ -55,7 +55,7 @@ release-image:
   stage: deploy
   script:
     - docker build -t "$CONTAINER_RELEASE_IMAGE"
-      --build-arg DJANGO_ENV=production -f docker/django/Dockerfile .
+      --build-arg NODE_ENV=production -f docker/vue/Dockerfile .
     - docker push "$CONTAINER_RELEASE_IMAGE"
   only:
     - master

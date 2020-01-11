@@ -3,7 +3,7 @@
     <button
       :class="$style.reload"
       @click="fetchComments"
-      @keypress.enter.native="fetchComments"
+      @keypress.enter="fetchComments"
     >
       reload comments
     </button>

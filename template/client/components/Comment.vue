@@ -12,7 +12,7 @@
       <button
         :class="$style['rating-up']"
         @click="changeRating(comment.id, 1)"
-        @keypress.enter.native="changeRating(comment.id, 1)"
+        @keypress.enter.prevent="changeRating(comment.id, 1)"
       >
         +
       </button>
@@ -22,7 +22,7 @@
       <button
         :class="$style['rating-down']"
         @click="changeRating(comment.id, -1)"
-        @keydown.enter.native="changeRating(comment.id, -1)"
+        @keydown.enter.prevent="changeRating(comment.id, -1)"
       >
         -
       </button>

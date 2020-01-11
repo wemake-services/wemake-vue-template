@@ -2,9 +2,6 @@
 // See: https://facebook.github.io/jest/docs/en/configuration.html
 
 module.exports = {
-  // without this line rootDir will be `./tests`
-  // 'rootDir': '..',
-
   'preset': 'ts-jest',
 
   'moduleFileExtensions': [
@@ -37,7 +34,7 @@ module.exports = {
   ],
 
   'setupFilesAfterEnv': [
-    // Add matchers via expect.extend()
+    // Add matchers via `expect.extend()`
     '<rootDir>/tests/setup.ts',
   ],
 

@@ -18,18 +18,6 @@ please follow it in all your interactions with the project.
 7. Be happy!
 
 
-## Deploying Demo App
-
-To deploy a demo app you will need to:
-
-1. Create an new `wemake-vue-temlpate` app called `wemake_vue_demo`
-2. Run `cd wemake_vue_demo`
-3. Run `npx now deploy --public --npm --dotenv=config/.env`
-4. Run `npx now alias $URL_FROM_THE_LATEST_DEPLOYMENT wemake-vue-demo`
-
-Deploy is finished.
-
-
 ## Code of Conduct
 
 ### Our Pledge

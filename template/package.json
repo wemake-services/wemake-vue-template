@@ -54,7 +54,7 @@
     "nuxt-property-decorator": "2.5.0",
     "nuxt-vuex-router-sync": "0.0.3",
     "postcss": "^7.0.26",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^8.0.2",
     "vue-typedi": "^1.1.1",
     "vuex-class": "0.3.2",
     "vuex-simple": "^2.2.0"

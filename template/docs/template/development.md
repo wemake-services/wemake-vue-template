@@ -42,6 +42,14 @@ npm install
 
 You will see that `node_modules` folder is created.
 
+### Updating dependencies
+
+You can use [`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates)
+to check for dependencies that are updated since your pinned version.
+
+You can also use `@dependabot` or similar services to automatically update
+dependencies for you.
+
 ## Configuration
 
 Do not miss a configuration step.

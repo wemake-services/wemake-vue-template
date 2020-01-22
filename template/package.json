@@ -39,7 +39,7 @@
   ],
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.3.8",
-    "@nuxtjs/axios": "5.9.0",
+    "@nuxtjs/axios": "5.9.3",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
     "io-ts": "^1.10.4",

@@ -96,7 +96,7 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-testcafe": "^0.2.1",
-    "eslint-plugin-unicorn": "^14.0.1",
+    "eslint-plugin-unicorn": "^15.0.1",
     "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vue-a11y": "0.0.31",
     "faker": "^4.1.0",

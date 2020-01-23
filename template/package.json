@@ -74,7 +74,7 @@
     "@wemake-services/eslint-config-jest": "^0.2.1",
     "@wemake-services/eslint-config-jsdoc": "^0.4.1",
     "@wemake-services/eslint-config-typescript": "^0.3.1",
-    "@wemake-services/eslint-config-vue": "^0.2.1",
+    "@wemake-services/eslint-config-vue": "^0.2.2",
     "@wemake-services/stylelint-config-scss": "^0.2.1",
     "axios-mock-adapter": "^1.17.0",
     "babel-core": "^6.26.3",

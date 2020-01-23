@@ -100,7 +100,6 @@
     "eslint-plugin-vue": "^6.1.2",
     "eslint-plugin-vue-a11y": "0.0.31",
     "faker": "^4.1.0",
-    "handlebars": "4.5.0",
     "jest": "^24.9.0",
     "jest-matcher-vue-test-utils": "^1.8.0",
     "jest-serializer-vue": "^2.0.2",

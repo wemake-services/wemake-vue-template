@@ -14,19 +14,13 @@ module.exports = {
     'plugin:compat/recommended',
     'plugin:vue-a11y/recommended',
   ],
+
   'plugins': [
     'compat',
     'json',
     'eslint-plugin-import-helpers',
   ],
-  'parserOptions': {
-    'parser': '@typescript-eslint/parser',
-  },
-  'settings': {
-    // providing polyfills for `eslint-plugin-compat` plugin, see:
-    // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
-    'polyfills': [],
-  },
+
   'rules': {
     // Sets the import order linting,
     // see: https://github.com/Tibfib/eslint-plugin-import-helpers
@@ -36,10 +30,7 @@ module.exports = {
       'alphabetize': { 'order': 'asc', 'ignoreCase': false },
     }],
   },
-  'env': {
-    'node': true,
-    'browser': true,
-  },
+
   'overrides': [{
     // Pages and layouts should have kebab case due to Nuxt's API:
     'files': ['client/pages/**/*.vue', 'client/layouts/**/*.vue'],
@@ -47,4 +38,19 @@ module.exports = {
       'unicorn/filename-case': ['error', { 'case': 'kebabCase' }],
     },
   }],
+
+  'parserOptions': {
+    'parser': '@typescript-eslint/parser',
+  },
+
+  'settings': {
+    // providing polyfills for `eslint-plugin-compat` plugin, see:
+    // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills
+    'polyfills': [],
+  },
+
+  'env': {
+    'node': true,
+    'browser': true,
+  },
 }

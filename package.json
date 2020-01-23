@@ -19,8 +19,8 @@
     ]
   },
   "devDependencies": {
-    "@wemake-services/eslint-config-javascript": "^0.4.1",
-    "@wemake-services/eslint-config-jest": "^0.2.1",
+    "@wemake-services/eslint-config-javascript": "^0.4.2",
+    "@wemake-services/eslint-config-jest": "^0.2.2",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.20.0",

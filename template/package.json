@@ -114,7 +114,7 @@
     "stylelint-a11y": "^1.2.2",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
-    "stylelint-webpack-plugin": "^1.2.1",
+    "stylelint-webpack-plugin": "^1.2.3",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5",
     "vue-eslint-parser": "^7.0.0",

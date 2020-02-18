@@ -38,7 +38,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.3.8",
+    "@nuxt/typescript-runtime": "^0.3.9",
     "@nuxtjs/axios": "5.9.5",
     "cross-env": "^7.0.0",
     "dotenv": "^8.2.0",

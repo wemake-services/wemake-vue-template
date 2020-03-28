@@ -32,7 +32,6 @@
     "test": "run-s test:engine test:unit lint",
     "test:engine": "check-engine",
     "test:sec": "run-s test:sec:*",
-    "test:sec:audit": "npm audit || true",
     "test:sec:lockfile": "lockfile-lint --type npm --path package-lock.json --validate-https --allowed-hosts npm",
     "test:unit": "cross-env NODE_ENV=test jest"
   },

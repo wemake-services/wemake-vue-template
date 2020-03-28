@@ -9,8 +9,9 @@
     "EditorConfig.editorconfig",
 
     // Linting:
-    "shinnn.stylelint",
+    "stylelint.vscode-stylelint",
     "dbaeumer.vscode-eslint",
+    "drewbourne.vscode-remark-lint",
 
     // Testing:
     "orta.vscode-jest"

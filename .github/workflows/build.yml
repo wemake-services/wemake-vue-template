@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: [ 10.16 ]
+        node_version: [12.14]
         os: [ubuntu-latest]
 
     steps:
@@ -26,8 +26,10 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        npm ci
+        npm install
+
         npm run lint
         npm run test
+        sh bin/test.sh
       env:
         PROJECT_NAME: wemake_vue_demo

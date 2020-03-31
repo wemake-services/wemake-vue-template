@@ -67,5 +67,6 @@ module.exports = {
 
     const url = 'https://github.com/wemake-services/wemake-vue-template'
     logger.log(`Documentation can be found at ${url}`)
+    logger.log('Enjoy!')
   },
 }

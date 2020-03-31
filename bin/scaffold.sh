@@ -10,4 +10,4 @@ expect "Project name" { send "\n" }
 expect "Project description" { send "\n" }
 expect "Author" { send "\n" }
 expect "Organization" { send "\n" }
-expect "vue-cli · Generated" { send "\n" }
+expect "Enjoy!" { send "\n" }

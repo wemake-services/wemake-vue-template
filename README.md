@@ -4,7 +4,8 @@
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesomestacks.dev/nuxt-type-script-docker)
 [![Build Status](https://github.com/wemake-services/wemake-vue-template/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/wemake-services/wemake-vue-template/actions?query=workflow%3ABuild)
 [![Docs](https://img.shields.io/badge/docs-success-brightgreen.svg)](https://wemake-services.gitbook.io/wemake-vue-template/)
-[![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot)
+[![Dependencies Status](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/wemake-services/wemake-vue-template/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Aapp%2Fdependabot) 
+[![wemake-frontend-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-frontend-styleguide)
 
 
 Bleeding edge `vue` template focused on code quality and developer happiness.

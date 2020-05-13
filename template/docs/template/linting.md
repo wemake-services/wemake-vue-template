@@ -1,6 +1,7 @@
 # Linting
 
-We lint everything, including: `javascript`, `vue`, `css`, and `scss`.
+We lint everything, including: 
+`javascript`, `typescript`, `vue`, `css`, and `scss`.
 We love linting to be as strict as possible.
 
 Everything works for raw files and single file components out of the box.
@@ -8,7 +9,7 @@ Everything is already configured, so you don't have to.
 
 Use `npm run lint` to run everything we have.
 
-## Javascript
+## JavaScript and TypeScript
 
 [![JavaScript Style Guide][svg]](https://github.com/standard/standard)
 

@@ -51,7 +51,7 @@ export default class Index extends mixins(TypedStoreMixin) {
    * @param context.store - Current Vuex store.
    * @returns List of downloaded comments.
    */
-  fetch ({ store }: { store: Store<StateType> }): Promise<RawCommentType[]> {
+  fetch({ store }: { store: Store<StateType> }): Promise<RawCommentType[]> {
     // Here we don't have a DI setup yet, so we use the explicit approach:
     const typedStore = useStore<TypedStore>(store)
     return typedStore.comments.fetchComments()

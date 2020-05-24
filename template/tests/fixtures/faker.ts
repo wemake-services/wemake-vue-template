@@ -8,8 +8,8 @@ export interface FakerFactoryType {
 }
 
 export const fakerFactory = new rosie.Factory<FakerFactoryType>()
-  .option('seed', null)
-  .option('locale', null)
+  .option('seed', undefined)
+  .option('locale', undefined)
   .option('faker', ['seed', 'locale'], (seed, locale) => {
     if (seed) {
       faker.seed(seed)

@@ -1,6 +1,8 @@
 // Configuration for StyleLint
 // See: https://stylelint.io/user-guide/configuration/
 
+/* eslint-disable unicorn/no-null */
+
 module.exports = {
   'extends': [
     '@wemake-services/stylelint-config-scss',

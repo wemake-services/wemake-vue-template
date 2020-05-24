@@ -27,14 +27,14 @@ export default class CommentsModule {
   // Getters
 
   @Getter()
-  public get hasComments (): boolean {
+  public get hasComments(): boolean {
     return Boolean(this.comments && this.comments.length > 0)
   }
 
   // Mutations
 
   @Mutation()
-  public setComments (payload: RawCommentType[]): void {
+  public setComments(payload: RawCommentType[]): void {
     const updatedComments: CommentType[] = []
 
     for (const comment of payload.slice(0, 10)) {
@@ -46,7 +46,7 @@ export default class CommentsModule {
   }
 
   @Mutation()
-  public updateRating ({ commentId, delta }: CommentPayloadType): void {
+  public updateRating({ commentId, delta }: CommentPayloadType): void {
     if (!this.comments) return
 
     const commentIndex = this.comments.findIndex((comment): boolean => {
@@ -61,7 +61,7 @@ export default class CommentsModule {
   // Actions
 
   @Action()
-  public async fetchComments (): Promise<RawCommentType[]> {
+  public async fetchComments(): Promise<RawCommentType[]> {
     const commentsList = await this.service.fetchComments()
     this.setComments(commentsList)
     return commentsList

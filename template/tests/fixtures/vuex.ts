@@ -20,7 +20,7 @@ export const commentFactory = new rosie.Factory()
 
 export const storeFactory = new rosie.Factory<Store<StateType>>()
   .option('localVue')
-  .option('state', null)
+  .option('state', undefined)
   .after((empty, options) => {
     installDI(options.localVue, axios)
 

@@ -112,7 +112,7 @@ const nuxtConfig: Configuration = {
    */
   'build': {
     // eslint-disable-next-line complexity
-    extend (config, { isDev, isClient }): void {
+    extend(config, { isDev, isClient }): void {
       if (config.resolve && config.resolve.alias) {
         // This line allows us to use `@import "~/scss/..."` in our app:
         config.resolve.alias['/scss'] = SCSS_DIR

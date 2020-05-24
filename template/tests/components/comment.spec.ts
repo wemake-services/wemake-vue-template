@@ -41,8 +41,7 @@ describe('unit tests for Comment component', () => {
       'propsData': { comment },
     })
 
-    expect(wrapper.isVueInstance()).toBe(true)
-    expect(wrapper.is(Comment)).toBe(true)
+    expect(Boolean(wrapper.vm)).toBe(true)
     expect(wrapper.findAll('button')).toHaveLength(2)
   })
 

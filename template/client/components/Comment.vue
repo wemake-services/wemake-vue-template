@@ -56,7 +56,7 @@ export default class Comment extends mixins(TypedStoreMixin) {
    * @param commentId - Comment's identifier to change rating.
    * @param delta - Delta value to change rating value.
    */
-  changeRating (commentId: number, delta: number): void {
+  changeRating(commentId: number, delta: number): void {
     this.typedStore.comments.updateRating({ commentId, delta })
   }
 
@@ -66,7 +66,7 @@ export default class Comment extends mixins(TypedStoreMixin) {
    *
    * @returns Pairs of class names and boolean values if they should be applied.
    */
-  get computedClasses (): Readonly<Record<string, boolean>> {
+  get computedClasses(): Readonly<Record<string, boolean>> {
     return {
       [this.$style['comment-component']]: true,
       [this.$style['comment-positive']]: this.comment.rating > 0,

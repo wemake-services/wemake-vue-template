@@ -33,7 +33,8 @@
     },
     "types": [
       "@nuxt/types",
-      "@types/webpack-env"
+      "@types/webpack-env",
+      "jest"
     ]
   },
   "include": [

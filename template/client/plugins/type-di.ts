@@ -5,7 +5,7 @@ import VueTypeDI, { Container } from 'vue-typedi'
 
 import tokens from '~/logic/tokens'
 
-export function install (
+export function install(
   vueConstructor: VueConstructor,
   $axios: AxiosInstance,
 ): void {

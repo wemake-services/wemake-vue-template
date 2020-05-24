@@ -27,7 +27,7 @@ export default class ActionBar extends mixins(TypedStoreMixin) {
   /**
    * Typed alias to Vuex `fetchComments` action.
    */
-  async fetchComments (): Promise<RawCommentType[]> {
+  async fetchComments(): Promise<RawCommentType[]> {
     return this.typedStore.comments.fetchComments()
   }
 }

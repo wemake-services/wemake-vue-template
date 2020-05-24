@@ -25,7 +25,7 @@ export default class CommentService {
    *
    * @returns Global `axios` instance from the IoC container.
    */
-  protected get $axios (): AxiosInstance {
+  protected get $axios(): AxiosInstance {
     return Container.get(tokens.AXIOS) as AxiosInstance
   }
 
@@ -39,7 +39,7 @@ export default class CommentService {
    *
    * @returns Parsed response data.
    */
-  public async fetchComments (): Promise<RawCommentType[]> {
+  public async fetchComments(): Promise<RawCommentType[]> {
     // Note, that $axios has some custom methods, that are not used on purpose
     // https://github.com/nuxt-community/axios-module#-features
     const response = await this.$axios.get('comments')

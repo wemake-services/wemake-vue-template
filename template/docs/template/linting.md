@@ -87,6 +87,17 @@ Read more about [configuration](https://github.com/unifiedjs/unified-engine/blob
 We also use [`.remarkignore`][remarkignore] file to ignore 
 programmatically generated files.
 
+## package.json
+
+We use [`scriptlint`](https://github.com/peerigon/scriptlint) package
+to force correct `"scripts"` section definition in `package.json`.
+
+It checks for multiple things including: 
+ordering, naming, bashism, aliasing, etc.
+
+This is simple tool, but a very useful one. 
+Check out the docs for more information.
+
 ## Afterwords
 
 Linting can be easily changed to any other styles you like (or forced to use).

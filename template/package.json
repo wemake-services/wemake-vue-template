@@ -128,7 +128,7 @@
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-webpack-plugin": "^1.2.3",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^8.0.0",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.6",
     "vue-eslint-parser": "^7.1.0",

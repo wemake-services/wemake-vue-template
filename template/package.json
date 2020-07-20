@@ -130,7 +130,7 @@
     "stylelint-webpack-plugin": "^1.2.3",
     "ts-loader": "^8.0.1",
     "ts-jest": "^25.5.1",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "vue-eslint-parser": "^7.1.0",
     "vue-jest": "^3.0.6"
   }

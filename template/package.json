@@ -76,7 +76,7 @@
     "@types/jest": "^26.0.5",
     "@types/rosie": "^0.0.37",
     "@types/webpack-env": "^1.15.2",
-    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.6.1",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^1.0.3",

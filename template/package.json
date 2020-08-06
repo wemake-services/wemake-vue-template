@@ -73,7 +73,7 @@
     "@nuxt/typescript-build": "^1.0.3",
     "@nuxt/vue-app": "^2.14.1",
     "@types/faker": "^4.1.12",
-    "@types/jest": "^26.0.8",
+    "@types/jest": "^26.0.9",
     "@types/rosie": "^0.0.37",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^3.8.0",

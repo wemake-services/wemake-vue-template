@@ -109,7 +109,7 @@
     "eslint-plugin-unicorn": "^19.0.0",
     "eslint-plugin-vue": "^6.2.1",
     "eslint-plugin-vue-a11y": "0.0.31",
-    "faker": "^4.1.0",
+    "faker": "^5.1.0",
     "jest": "^25.5.4",
     "jest-matcher-vue-test-utils": "^2.0.1",
     "jest-serializer-vue": "^2.0.2",

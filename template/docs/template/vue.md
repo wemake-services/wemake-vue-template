@@ -26,8 +26,8 @@ We do not recommend to switch to raw `Vue`, unless you 100% sure.
 First of all, we use `class`es to define components. 
 We do it with the help of several libraries:
 
-1. [`nuxt-property-decorator`][nuxt-property-decorator] - pretty much the same as
-   [`vue-class-component`][vue-class-component], but with `nuxt` specific 
+1. [`nuxt-property-decorator`][nuxt-property-decorator] - pretty much the same
+   as [`vue-class-component`][vue-class-component], but with `nuxt` specific 
    callbacks defined & allows defining some useful properties using decorators
 
 2. [`vuex-class`][vuex-class] that allows defining bindings to `vuex`

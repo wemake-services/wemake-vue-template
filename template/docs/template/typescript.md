@@ -28,8 +28,7 @@ that are required for our app. Like:
 
 ## Supporting packages
 
-We use [`nuxt-class-component`](https://github.com/nuxt-community/nuxt-class-component) 
-and [`nuxt-property-decorator`](https://github.com/nuxt-community/nuxt-property-decorator) 
+We use [`nuxt-property-decorator`](https://github.com/nuxt-community/nuxt-property-decorator) 
 to make our `Vue` components type-safe.
 
 We also use [`vuex-class`](https://github.com/ktsn/vuex-class) 

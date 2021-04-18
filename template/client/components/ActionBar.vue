@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import Component, { mixins } from 'nuxt-class-component'
+import { Component, mixins } from 'nuxt-property-decorator'
 
 import { RawCommentType } from '~/logic/comments/models'
 import TypedStoreMixin from '~/mixins/typed-store'

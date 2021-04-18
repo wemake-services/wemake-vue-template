@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import Component, { mixins } from 'nuxt-class-component'
+import { Component, mixins } from 'nuxt-property-decorator'
 import { Store } from 'vuex'
 import { useStore } from 'vuex-simple'
 

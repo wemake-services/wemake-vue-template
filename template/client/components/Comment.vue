@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import Component, { mixins } from 'nuxt-class-component'
+import { Component, mixins } from 'nuxt-property-decorator'
 import { Prop } from 'vue-property-decorator'
 
 import { CommentType } from '~/logic/comments/types'

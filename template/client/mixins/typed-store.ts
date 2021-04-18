@@ -1,4 +1,4 @@
-import Component from 'nuxt-class-component'
+import { Component } from 'nuxt-property-decorator'
 import Vue from 'vue'
 import { useStore } from 'vuex-simple'
 

@@ -21,19 +21,16 @@ Here you can have a brief overview of what is going on inside `Nuxt`:
 
 We do not recommend to switch to raw `Vue`, unless you 100% sure.
 
-## nuxt-class-component
+## nuxt-property-decorator
 
 First of all, we use `class`es to define components. 
 We do it with the help of several libraries:
 
-1. [`nuxt-class-component`][nuxt-class-component] - pretty much the same as
-   [`vue-class-component`][vue-class-component], but with `nuxt` specific 
-   callbacks defined
+1. [`nuxt-property-decorator`][nuxt-property-decorator] - pretty much the same
+   as [`vue-class-component`][vue-class-component], but with `nuxt` specific 
+   callbacks defined & allows defining some useful properties using decorators
 
-2. [`nuxt-property-decorator`][nuxt-property-decorator] that allows defining 
-   some useful properties using decorators
-
-3. [`vuex-class`][vuex-class] that allows defining bindings to `vuex`
+2. [`vuex-class`][vuex-class] that allows defining bindings to `vuex`
 
 This way we can achieve *some* level of type safety. It is not 100% safe.
 But it is something.
@@ -95,7 +92,7 @@ And used:
 
 ```ts
 import Vue from 'vue'
-import Component from 'nuxt-class-component'
+import { Component } from 'nuxt-property-decorator'
 import { useStore } from 'vuex-simple'
 
 // Import your store:
@@ -170,7 +167,6 @@ import { Container } from 'vue-typedi'
 import tokens from '~/logic/tokens'
 ```
 
-[nuxt-class-component]: https://github.com/nuxt-community/nuxt-class-component
 [vue-class-component]: https://github.com/vuejs/vue-class-component
 [nuxt-property-decorator]: https://github.com/nuxt-community/nuxt-property-decorator
 [vuex-class]: https://github.com/ktsn/vuex-class/

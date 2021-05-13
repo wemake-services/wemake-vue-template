@@ -58,7 +58,7 @@
     "monocle-ts": "^1.7.2",
     "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.14.7",
+    "nuxt": "^2.15.6",
     "nuxt-imagemin": "^1.0.0",
     "nuxt-property-decorator": "^2.9.1",
     "nuxt-vuex-router-sync": "0.0.3",

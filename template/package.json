@@ -62,7 +62,7 @@
     "nuxt-imagemin": "^1.0.0",
     "nuxt-property-decorator": "^2.9.1",
     "nuxt-vuex-router-sync": "0.0.3",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.13",
     "sass-loader": "^10.0.2",
     "vue-typedi": "^1.1.1",
     "vuex-class": "0.3.2",
